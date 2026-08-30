@@ -1,0 +1,2105 @@
+# ---------------------------------------------------------------
+# diligence.yaml
+# Used by eval-analyst skill (source: 'diligence')
+#
+# Contains: legal status, IP portfolio, customer references,
+#   tech debt assessment, security posture, compliance status,
+#   and operational due diligence notes.
+# This file is for deep-dive diligence on each company.
+# ---------------------------------------------------------------
+
+delve.co:
+  domain: "delve.co"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2022-12-15"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Clean cap table with standard YC SAFE notes converted
+      at seed. No unusual provisions or side letters. 409A
+      valuation current as of Q3 2025.
+    outstanding_options_pct: 15
+    option_pool_remaining_pct: 8
+  ip_portfolio:
+    patents_filed: 2
+    patents_granted: 0
+    patents_note: >
+      Two provisional patent applications filed for (1)
+      automated anomaly detection methodology and (2)
+      natural language to analytical query translation.
+      Both pending. No granted patents yet.
+    trademarks_registered: 1
+    trademarks_note: "Delve wordmark registered in US"
+    trade_secrets: >
+      Proprietary query optimization algorithms and
+      training data from customer analytics pipelines.
+      Trade secret protection via employee NDAs and
+      restricted access. No formal trade secret audit
+      conducted.
+    open_source_risk: "low"
+    open_source_note: >
+      Product uses standard open-source libraries
+      (DuckDB, React, Python ML stack). No copyleft
+      dependencies in core product. License audit
+      conducted at seed stage.
+  customer_references:
+    total_references_available: 8
+    reference_quality: "medium"
+    reference_note: >
+      8 customers agreed to serve as references. Quality
+      is mixed -- mostly smaller accounts. Largest
+      enterprise customer declined reference request
+      (internal policy). Reference pool is adequate
+      for seed stage but needs strengthening for Series A.
+    sample_quotes:
+      - source: "VP Analytics, mid-market SaaS company"
+        quote: >
+          Delve reduced our time-to-insight from days to
+          minutes. The AI anomaly detection caught a
+          revenue drop we would have missed for weeks.
+      - source: "Head of Data, Series B fintech"
+        quote: >
+          Good product but onboarding was rough. Took
+          3 weeks to get our data pipeline connected.
+          Once running, the team loves it.
+    customer_satisfaction_methodology: >
+      Satisfaction data from NPS survey (n=28) and
+      quarterly check-in calls with CSM team. Survey
+      response rate of 74%. No formal CSAT score tracked.
+  tech_debt_assessment:
+    overall_rating: "moderate"
+    codebase_age_months: 26
+    test_coverage_pct: 62
+    ci_cd_maturity: "moderate"
+    deployment_frequency: "daily"
+    mean_time_to_recovery_hours: 4
+    tech_debt_note: >
+      Moderate tech debt typical of fast-moving seed-stage
+      startup. Main areas of concern: (1) data ingestion
+      pipeline lacks proper error handling for edge cases,
+      (2) authentication system needs rework for enterprise
+      SSO, (3) monitoring and alerting are basic.
+      Test coverage at 62% is below the 75% target.
+    architecture_risks:
+      - "Monolithic backend will need decomposition at scale"
+      - "DuckDB dependency limits horizontal scalability"
+      - "No multi-tenant data isolation (shared DB)"
+    scalability_assessment: >
+      Current architecture supports ~500 concurrent users.
+      Will need significant rework to support enterprise-
+      scale deployments. Migration to distributed query
+      engine planned for Q2 2026.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: false
+    soc2_type2_eta: "Q2 2026"
+    iso27001: false
+    hipaa: false
+    gdpr_compliant: true
+    gdpr_note: >
+      GDPR compliant for EU customers. DPA template
+      available. Data residency in US-East (no EU data
+      center option yet). May need EU hosting for
+      enterprise EU customers.
+    penetration_test_date: "2025-06-15"
+    penetration_test_findings: >
+      Annual pentest by NCC Group. 2 medium findings
+      (both remediated within 30 days). No critical
+      findings. Next pentest scheduled Q2 2026.
+    vulnerability_management: "automated scanning (Snyk)"
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    incident_response_plan: true
+    incident_history: "no security incidents reported"
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type I"
+        status: "certified"
+        date: "2025-04-10"
+      - name: "SOC 2 Type II"
+        status: "in progress"
+        eta: "Q2 2026"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2025-01-15"
+    regulatory_risk: "low"
+    regulatory_note: >
+      Minimal direct regulatory risk. Indirect exposure
+      through customer data handling. Main compliance
+      gap is SOC 2 Type II, which many enterprise buyers
+      require. Type II audit engagement signed.
+  operational_notes: >
+    Seed-stage company with expected operational maturity
+    gaps. Main concerns: (1) no formal disaster recovery
+    plan, (2) single-region deployment, (3) no dedicated
+    security team. These are typical for stage and
+    addressable with Series A funding.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "SOC 2 Type II not yet achieved"
+    - "Test coverage below 75% target"
+    - "Single-region deployment"
+    - "No dedicated security personnel"
+  overall_diligence_rating: "pass with conditions"
+  diligence_rating_note: >
+    Acceptable for seed stage. Must address SOC 2 Type II
+    and multi-region deployment before Series A. Technical
+    debt is manageable but needs dedicated investment.
+  data_confidence: "medium"
+  data_sources: >
+    SOC 2 Type I report, pentest report summary,
+    engineering team interview, code repository metrics,
+    legal document review
+  last_updated: "2025-11-15"
+
+linear.app:
+  domain: "linear.app"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2019-03-20"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Clean cap table with institutional rounds from
+      Sequoia and Accel. No unusual terms. Standard
+      liquidation preferences. Some secondary sales
+      for early employees have been facilitated.
+    outstanding_options_pct: 18
+    option_pool_remaining_pct: 5
+  ip_portfolio:
+    patents_filed: 4
+    patents_granted: 1
+    patents_note: >
+      1 granted patent for real-time sync architecture
+      with offline-first conflict resolution. 3 pending
+      applications for UI rendering optimization, cycle-
+      based workflow management, and triage automation.
+    trademarks_registered: 3
+    trademarks_note: >
+      Linear wordmark, logo mark, and "Linear Method"
+      registered in US and EU.
+    trade_secrets: >
+      Core competitive advantage is engineering know-how
+      in building extremely fast UIs. Real-time sync
+      engine and rendering pipeline are closely guarded.
+      No formal trade secret program but small team
+      limits information spread.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Uses standard open-source
+      dependencies. No copyleft issues. Linear SDK and
+      API client are open-source (MIT license) for
+      ecosystem building.
+  customer_references:
+    total_references_available: 50
+    reference_quality: "high"
+    reference_note: >
+      50+ customers available as references including
+      well-known tech companies. Many customers are
+      vocal advocates on Twitter/X and in developer
+      communities. Reference quality is exceptional.
+    sample_quotes:
+      - source: "CTO, $100M ARR fintech company"
+        quote: >
+          Linear is the best software our engineering
+          team uses. Period. We migrated 200 engineers
+          from Jira and productivity measurably improved.
+      - source: "VP Engineering, Series C devtools company"
+        quote: >
+          The speed is addictive. Our engineers actually
+          enjoy using their issue tracker now, which I
+          never thought I'd say.
+      - source: "Engineering Manager, FAANG company"
+        quote: >
+          We use Linear for our team's sprint planning
+          and the cycle feature transformed how we think
+          about delivery cadence.
+    customer_satisfaction_methodology: >
+      Comprehensive NPS program (2,400 respondents).
+      Quarterly surveys with in-app delivery. Response
+      rate of 35%. CSAT tracked through support
+      interactions (95% satisfaction). G2 reviews
+      analyzed quarterly.
+  tech_debt_assessment:
+    overall_rating: "low"
+    codebase_age_months: 72
+    test_coverage_pct: 85
+    ci_cd_maturity: "advanced"
+    deployment_frequency: "multiple daily"
+    mean_time_to_recovery_hours: 0.5
+    tech_debt_note: >
+      Minimal tech debt. Linear is known for high
+      engineering quality. Offline-first architecture
+      was a deliberate early investment that pays
+      dividends. Main tech debt areas are limited to:
+      (1) Electron desktop app needs modernization,
+      (2) search infrastructure could be improved for
+      large workspaces.
+    architecture_risks:
+      - "Electron dependency for desktop (performance ceiling)"
+      - "PostgreSQL scaling for largest enterprise customers"
+    scalability_assessment: >
+      Architecture supports current scale well. Real-time
+      sync system is the main scaling challenge as user
+      count grows. Horizontal scaling strategy is well-
+      defined and partially implemented.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-08-20"
+    iso27001: false
+    iso27001_note: "Planned for 2026"
+    hipaa: false
+    gdpr_compliant: true
+    gdpr_note: >
+      Fully GDPR compliant. EU data processing
+      agreements available. Data residency options for
+      EU customers (EU-West region).
+    penetration_test_date: "2025-09-01"
+    penetration_test_findings: >
+      Annual pentest by Cure53. 1 low finding (CSRF edge
+      case, remediated). No medium, high, or critical
+      findings. Excellent security posture.
+    vulnerability_management: >
+      Automated scanning (GitHub Advanced Security,
+      Snyk, Dependabot). Weekly vulnerability review.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    sso_support: true
+    scim_support: true
+    incident_response_plan: true
+    incident_history: >
+      One minor availability incident in 2024 (45-minute
+      API degradation due to database migration). No
+      security breaches. Incident postmortem published
+      publicly (transparent incident culture).
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type I"
+        status: "certified"
+        date: "2024-03-15"
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-08-20"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-01-01"
+    regulatory_risk: "very low"
+    regulatory_note: >
+      Minimal regulatory exposure. Standard data
+      protection requirements met. SOC 2 Type II
+      satisfies most enterprise procurement requirements.
+  operational_notes: >
+    Mature operational practices for a Series B company.
+    Strong engineering culture drives quality. Deliberate
+    small team approach reduces coordination overhead.
+    Main operational gap is lack of 24/7 on-call rotation
+    (engineering team handles incidents during business
+    hours with on-call for critical issues).
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "No ISO 27001 certification yet"
+    - "No HIPAA compliance (limits healthcare)"
+  overall_diligence_rating: "strong pass"
+  diligence_rating_note: >
+    Excellent diligence profile. Clean legal, strong
+    security, low tech debt, exceptional customer
+    references. One of the strongest diligence profiles
+    in our portfolio.
+  data_confidence: "high"
+  data_sources: >
+    SOC 2 Type II report, pentest report, code quality
+    metrics, customer references, legal review, public
+    incident postmortems
+  last_updated: "2025-12-01"
+
+notion.so:
+  domain: "notion.so"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2013-06-10"
+    good_standing: true
+    litigation_pending: true
+    litigation_note: >
+      One pending patent infringement claim from a small
+      productivity tool company. Legal team assesses risk
+      as low (frivolous claim, seeking settlement). No
+      material liability expected.
+    litigation_history: >
+      One prior trademark dispute (resolved 2021). No
+      material litigation history.
+    cap_table_clean: true
+    cap_table_note: >
+      Institutional cap table with major VCs. Multiple
+      secondary transactions completed for employee
+      liquidity. Standard liquidation preferences.
+      Complex but clean.
+    outstanding_options_pct: 12
+    option_pool_remaining_pct: 3
+  ip_portfolio:
+    patents_filed: 12
+    patents_granted: 5
+    patents_note: >
+      5 granted patents covering block-based document
+      architecture, real-time collaboration sync, database
+      view rendering, and AI-assisted content generation.
+      7 pending applications. Strong IP portfolio for a
+      productivity tool company.
+    trademarks_registered: 8
+    trademarks_note: >
+      Notion wordmark, logo, and product names registered
+      globally (US, EU, JP, KR, AU). "Notion AI" trademark
+      pending in several jurisdictions.
+    trade_secrets: >
+      Block-based architecture implementation details,
+      collaborative editing algorithms, and AI training
+      data from user interactions (anonymized). Formal
+      trade secret program with classification and
+      access controls.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Open-source dependencies
+      are well-managed with automated license scanning.
+      No copyleft risks identified in latest audit.
+  customer_references:
+    total_references_available: 200
+    reference_quality: "very high"
+    reference_note: >
+      Extensive reference library including Fortune 500
+      companies, major tech companies, and prominent
+      startups. Many customers actively promote Notion
+      through case studies and social media.
+    sample_quotes:
+      - source: "VP Operations, Fortune 500 company"
+        quote: >
+          Notion replaced four separate tools for us.
+          The flexibility is unmatched. Our teams went
+          from fighting tools to actually collaborating.
+      - source: "CEO, $50M ARR SaaS company"
+        quote: >
+          We run our entire company on Notion -- from
+          engineering specs to board decks. It's the
+          operating system for our business.
+      - source: "Director of Engineering, public tech company"
+        quote: >
+          Notion AI has saved each engineer roughly
+          2 hours per week on documentation. The ROI
+          was evident within the first month.
+    customer_satisfaction_methodology: >
+      Robust NPS program (15K respondents, quarterly).
+      CSAT tracked across support channels. Enterprise
+      customer success team conducts quarterly business
+      reviews with top 200 accounts. Third-party
+      satisfaction study conducted annually.
+  tech_debt_assessment:
+    overall_rating: "moderate"
+    codebase_age_months: 120
+    test_coverage_pct: 75
+    ci_cd_maturity: "advanced"
+    deployment_frequency: "daily"
+    mean_time_to_recovery_hours: 1
+    tech_debt_note: >
+      Moderate tech debt accumulated over 10+ years of
+      rapid growth. Main areas: (1) performance issues
+      with large workspaces (known customer complaint),
+      (2) mobile app reliability, (3) search index
+      architecture needs rework, (4) legacy database
+      sharding approach limits flexibility. Active
+      tech debt reduction initiative underway.
+    architecture_risks:
+      - "Large workspace performance is a persistent issue"
+      - "Search infrastructure needs overhaul"
+      - "Mobile app built on older React Native version"
+      - "AI inference cost management at scale"
+    scalability_assessment: >
+      Architecture supports current scale but requires
+      ongoing investment. Notion serves 30M+ users
+      which creates significant infrastructure challenges.
+      Performance team expanded by 50% in 2025.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-06-15"
+    iso27001: true
+    iso27001_date: "2024-11-01"
+    hipaa: true
+    hipaa_note: "Available on Enterprise plan"
+    fedramp: false
+    fedramp_note: "FedRAMP Moderate authorization in progress"
+    gdpr_compliant: true
+    gdpr_note: >
+      Fully GDPR compliant with EU data residency
+      option. Dedicated DPO. Regular DPIA conducted.
+    penetration_test_date: "2025-07-15"
+    penetration_test_findings: >
+      Biannual pentest by NCC Group. 1 medium finding
+      (API rate limiting bypass, remediated within 14
+      days). 3 low findings (all remediated). No high
+      or critical findings.
+    bug_bounty_program: true
+    bug_bounty_note: >
+      Active bug bounty on HackerOne. $5K-$50K bounties.
+      120+ valid submissions resolved since program launch.
+    vulnerability_management: >
+      Comprehensive scanning (Snyk, Dependabot, custom
+      SAST). Weekly vulnerability triage. SLA: critical
+      fixes within 24 hours.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    sso_support: true
+    scim_support: true
+    incident_response_plan: true
+    incident_history: >
+      Two notable incidents: (1) 2023-03 data export
+      bug exposed some workspace metadata (no content
+      data, patched within 2 hours), (2) 2024-08
+      multi-hour outage due to database failover issue.
+      Both incidents had public postmortems. No data
+      breaches.
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-06-15"
+      - name: "ISO 27001"
+        status: "certified"
+        date: "2024-11-01"
+      - name: "HIPAA"
+        status: "compliant"
+        date: "2024-06-01"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2023-01-01"
+      - name: "FedRAMP Moderate"
+        status: "in progress"
+        eta: "Q3 2026"
+    regulatory_risk: "low"
+    regulatory_note: >
+      Comprehensive compliance program. FedRAMP in
+      progress will unlock government sector. EU AI
+      Act compliance being assessed for Notion AI
+      features.
+  operational_notes: >
+    Mature operations for a late-stage company. 24/7
+    on-call rotation. Dedicated security team (12 people).
+    Formal SOC, incident response, and business
+    continuity plans. Main gap is FedRAMP for government.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "Pending patent infringement claim"
+    - "Large workspace performance issues"
+    - "AI cost management at scale"
+  overall_diligence_rating: "strong pass"
+  diligence_rating_note: >
+    Excellent diligence profile for a late-stage company.
+    Comprehensive compliance, strong security, active
+    bug bounty. Minor concerns are performance tech debt
+    and the pending (likely frivolous) patent claim.
+  data_confidence: "high"
+  data_sources: >
+    SOC 2 report, ISO 27001 certificate, pentest report,
+    HackerOne program data, legal review, engineering
+    interviews, public postmortems
+  last_updated: "2025-10-20"
+
+retool.com:
+  domain: "retool.com"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2017-02-14"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Institutional cap table with multiple rounds.
+      Standard 1x non-participating preferred. Secondary
+      transactions facilitated at Series D. Clean
+      structure.
+    outstanding_options_pct: 14
+    option_pool_remaining_pct: 4
+  ip_portfolio:
+    patents_filed: 8
+    patents_granted: 3
+    patents_note: >
+      3 granted patents covering drag-and-drop component
+      composition, data source abstraction layer, and
+      AI-powered app generation from natural language.
+      5 pending applications. Growing IP portfolio.
+    trademarks_registered: 5
+    trademarks_note: >
+      Retool wordmark and logo registered in US, EU,
+      and key markets. "Retool Workflows" and "Retool
+      Mobile" marks pending.
+    trade_secrets: >
+      Core differentiation in the integration layer (80+
+      data source connectors) and the component rendering
+      engine. Integration specifications are closely
+      guarded. AI app generation models are proprietary.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Some developer tools
+      and SDKs are open-source (MIT). Standard open-
+      source dependency management with automated
+      scanning.
+  customer_references:
+    total_references_available: 100
+    reference_quality: "very high"
+    reference_note: >
+      Extensive reference library including Fortune 500
+      and well-known tech companies. Many customers
+      are public case studies on the Retool website.
+      Enterprise references are strong and diverse.
+    sample_quotes:
+      - source: "Director of Engineering, DoorDash"
+        quote: >
+          We built 200+ internal tools on Retool. It
+          saved our engineering team thousands of hours
+          that would have been spent on custom CRUD apps.
+      - source: "VP Ops, Series D fintech"
+        quote: >
+          Retool is the fastest way to get an internal
+          tool in front of our ops team. What used to
+          take 2 weeks now takes 2 days.
+      - source: "CTO, healthcare startup"
+        quote: >
+          The self-hosted option was critical for our
+          HIPAA compliance requirements. No other low-
+          code platform offered this with the same level
+          of sophistication.
+    customer_satisfaction_methodology: >
+      Quarterly NPS survey (1,800 respondents). CSAT
+      tracked through Zendesk (93% satisfaction). Annual
+      customer advisory board with top 50 accounts.
+      Win/loss analysis on all enterprise deals.
+  tech_debt_assessment:
+    overall_rating: "low-moderate"
+    codebase_age_months: 96
+    test_coverage_pct: 78
+    ci_cd_maturity: "advanced"
+    deployment_frequency: "daily"
+    mean_time_to_recovery_hours: 1.5
+    tech_debt_note: >
+      Generally well-managed tech debt. Main areas:
+      (1) self-hosted deployment packaging needs
+      simplification, (2) some older integrations need
+      modernization, (3) mobile app is newer and less
+      mature. AI app builder introduces new architecture
+      that must be stabilized.
+    architecture_risks:
+      - "Self-hosted deployment complexity"
+      - "Integration maintenance burden (80+ connectors)"
+      - "AI app builder architecture still stabilizing"
+    scalability_assessment: >
+      Cloud-hosted scales well. Self-hosted large
+      deployments (1000+ users) require dedicated
+      infrastructure guidance. Architecture supports
+      multi-tenant at scale.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-05-10"
+    iso27001: true
+    iso27001_date: "2025-01-15"
+    hipaa: true
+    hipaa_note: "Compliant for self-hosted deployments"
+    gdpr_compliant: true
+    penetration_test_date: "2025-08-15"
+    penetration_test_findings: >
+      Biannual pentest by Bishop Fox. No critical or high
+      findings. 2 medium findings (both remediated within
+      21 days). Strong security posture.
+    bug_bounty_program: true
+    bug_bounty_note: >
+      Active bug bounty program. Paid $120K in bounties
+      in 2025. Well-maintained program.
+    vulnerability_management: >
+      Comprehensive scanning stack (Snyk, SonarQube,
+      Dependabot). Dedicated security engineering team
+      (5 people). Weekly triage cadence.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    sso_support: true
+    scim_support: true
+    audit_logging: true
+    rbac: true
+    incident_response_plan: true
+    incident_history: >
+      No security breaches. One availability incident
+      in 2024 (cloud-hosted service degradation for 2
+      hours due to CDN issue). Postmortem published.
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-05-10"
+      - name: "ISO 27001"
+        status: "certified"
+        date: "2025-01-15"
+      - name: "HIPAA"
+        status: "compliant"
+        date: "2024-09-01"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-01-01"
+    regulatory_risk: "low"
+    regulatory_note: >
+      Strong compliance posture. Self-hosted option is
+      key for regulated industries. Federal (FedRAMP)
+      is not yet pursued but planned for 2027.
+  operational_notes: >
+    Mature operations. 24/7 on-call. Dedicated security
+    team. Formal vendor risk management program. Self-
+    hosted support team handles complex deployments.
+    Enterprise SLAs are well-defined (99.9% uptime).
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "Self-hosted deployment complexity"
+    - "No FedRAMP authorization"
+  overall_diligence_rating: "strong pass"
+  diligence_rating_note: >
+    Excellent diligence profile. Comprehensive compliance,
+    strong security with bug bounty, clean legal history.
+    Self-hosted offering demonstrates security maturity.
+  data_confidence: "high"
+  data_sources: >
+    SOC 2 report, ISO 27001 certificate, pentest report,
+    bug bounty program data, legal review, engineering
+    team interview, customer reference calls
+  last_updated: "2025-12-10"
+
+resend.com:
+  domain: "resend.com"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2022-11-01"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Simple cap table. Seed round from a16z with
+      standard terms. Two founders hold majority of
+      common stock. Clean and simple.
+    outstanding_options_pct: 20
+    option_pool_remaining_pct: 12
+  ip_portfolio:
+    patents_filed: 0
+    patents_granted: 0
+    patents_note: >
+      No patents filed. Email delivery is largely
+      commodity technology. IP strategy focused on
+      open-source community building rather than
+      patent protection.
+    trademarks_registered: 2
+    trademarks_note: "Resend and React Email marks registered in US"
+    trade_secrets: >
+      Limited trade secrets. Core product is built on
+      standard email infrastructure (AWS SES). Competitive
+      advantage is in UX and developer experience, not
+      proprietary technology.
+    open_source_risk: "medium"
+    open_source_note: >
+      React Email is open-source (MIT license) and is a
+      core part of the product strategy. Risk: if a
+      competitor forks React Email, they get the email
+      component library for free. This is intentional --
+      the open-source project is the marketing engine.
+      The hosted service is the monetization layer.
+  customer_references:
+    total_references_available: 25
+    reference_quality: "medium"
+    reference_note: >
+      25 customers available as references. Mostly
+      developer-led startups. No enterprise references.
+      Open-source community provides informal reference
+      through GitHub stars and Twitter advocacy.
+    sample_quotes:
+      - source: "CTO, YC-backed startup"
+        quote: >
+          Switched from SendGrid to Resend in one
+          afternoon. The API is so much cleaner. React
+          Email components saved us days of email
+          template work.
+      - source: "Solo developer, SaaS product"
+        quote: >
+          Best email DX I've ever used. Went from
+          struggling with MJML to shipping beautiful
+          emails in React. Deliverability has been solid.
+    customer_satisfaction_methodology: >
+      NPS survey (420 respondents, in-app). Community
+      sentiment tracked through GitHub issues, npm
+      reviews, and Twitter mentions. No formal CSAT
+      program.
+  tech_debt_assessment:
+    overall_rating: "low"
+    codebase_age_months: 26
+    test_coverage_pct: 70
+    ci_cd_maturity: "moderate"
+    deployment_frequency: "daily"
+    mean_time_to_recovery_hours: 2
+    tech_debt_note: >
+      Low tech debt for a young codebase. Built on
+      modern stack (TypeScript, Next.js, Rust for
+      performance-critical paths). Main concerns:
+      (1) email deliverability monitoring could be
+      more robust, (2) rate limiting needs improvement
+      for enterprise-scale senders.
+    architecture_risks:
+      - "AWS SES dependency (single email provider)"
+      - "Scaling to high-volume senders (millions/day)"
+      - "Limited multi-region redundancy"
+    scalability_assessment: >
+      Architecture supports current volume well. Will
+      need to diversify beyond AWS SES and add multi-
+      region sending for enterprise customers with
+      high-volume requirements.
+  security_posture:
+    soc2_type1: false
+    soc2_type1_note: "Planned for Q1 2026"
+    soc2_type2: false
+    iso27001: false
+    hipaa: false
+    gdpr_compliant: true
+    penetration_test_date: "none"
+    penetration_test_note: >
+      No formal penetration test conducted. Security
+      review by a16z's security team during seed due
+      diligence. Formal pentest planned for 2026.
+    vulnerability_management: >
+      Basic scanning (GitHub Dependabot, npm audit).
+      No dedicated security tooling or personnel.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    incident_response_plan: false
+    incident_response_note: >
+      No formal incident response plan. Small team
+      handles incidents ad hoc. Acceptable for current
+      stage but needs formalization.
+    incident_history: >
+      One deliverability incident in 2025 (2-hour delay
+      in email delivery due to SES throttling). No
+      security breaches.
+  compliance_status:
+    frameworks:
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-01-01"
+      - name: "CAN-SPAM"
+        status: "compliant"
+        date: "2023-01-01"
+      - name: "SOC 2 Type I"
+        status: "planned"
+        eta: "Q1 2026"
+    regulatory_risk: "low"
+    regulatory_note: >
+      Email delivery has minimal regulatory requirements
+      beyond anti-spam laws. CAN-SPAM and GDPR compliance
+      are straightforward. Enterprise customers may
+      require SOC 2, which is the main compliance gap.
+  operational_notes: >
+    Early-stage operational maturity. Small team operates
+    informally. Acceptable for seed stage but will need
+    rapid maturation for enterprise customers. Main
+    gaps: no formal IR plan, no SOC 2, no pentest.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "No SOC 2 certification"
+    - "No formal penetration test"
+    - "No incident response plan"
+    - "Single email provider dependency (AWS SES)"
+    - "Open-source strategy could benefit competitors"
+  overall_diligence_rating: "conditional pass"
+  diligence_rating_note: >
+    Acceptable for seed stage but significant gaps for
+    enterprise readiness. SOC 2, pentest, and IR plan
+    are prerequisites for Series A. Open-source strategy
+    is a calculated risk that could go either way.
+  data_confidence: "medium"
+  data_sources: >
+    a16z due diligence summary, GitHub repository
+    analysis, legal document review, founder interview
+  last_updated: "2025-11-28"
+
+meridian.bio:
+  domain: "meridian.bio"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2022-01-10"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Clean cap table. NIH grant funding does not affect
+      cap table. SBIR grants have standard IP provisions
+      (government retains march-in rights for government-
+      funded inventions, which is standard and not a
+      concern for commercial applications).
+    outstanding_options_pct: 16
+    option_pool_remaining_pct: 7
+  ip_portfolio:
+    patents_filed: 6
+    patents_granted: 0
+    patents_note: >
+      6 provisional patent applications covering protein
+      structure prediction methodology, multi-omics
+      integration pipeline, automated experiment design
+      algorithm, and wet-lab validation workflow. All
+      pending. Biotech patent prosecution is slow (3-5
+      years typical). Trade secrets may be more valuable
+      than patents in this domain.
+    trademarks_registered: 1
+    trademarks_note: "Meridian Bio wordmark registered in US"
+    trade_secrets: >
+      Proprietary training datasets from pharma
+      partnerships are the most valuable IP asset.
+      Customer data (under strict NDA) is used to train
+      models under data use agreements. Model weights
+      and training procedures are closely guarded.
+      Formal trade secret classification system in place.
+    open_source_risk: "medium"
+    open_source_note: >
+      Company contributes to open-source bioinformatics
+      tools but core models are proprietary. Risk: if
+      AlphaFold or ESMFold significantly improve, the
+      baseline for protein structure prediction rises,
+      reducing Meridian's differentiation.
+  customer_references:
+    total_references_available: 6
+    reference_quality: "high"
+    reference_note: >
+      6 of 18 customers agreed to references. Quality is
+      high (includes top-20 pharma). However, 3 top
+      pharma customers cannot serve as references due to
+      internal policy. Small reference pool but impressive
+      logos for the stage.
+    sample_quotes:
+      - source: "VP Computational Biology, top-20 pharma"
+        quote: >
+          Meridian's predictions have been validated in
+          our wet lab with 85% accuracy. That's
+          significantly better than what we achieve
+          with open-source models alone.
+      - source: "CSO, mid-size biotech"
+        quote: >
+          The platform reduced our target identification
+          timeline from 18 months to 6 months. The wet-
+          lab validation loop is what sets Meridian apart.
+    customer_satisfaction_methodology: >
+      Small customer base (n=18) allows high-touch
+      relationship management. Quarterly review meetings
+      with each customer. No formal NPS due to small
+      sample. Satisfaction assessed through contract
+      renewal discussions and partnership expansion.
+  tech_debt_assessment:
+    overall_rating: "moderate"
+    codebase_age_months: 36
+    test_coverage_pct: 58
+    ci_cd_maturity: "moderate"
+    deployment_frequency: "weekly"
+    mean_time_to_recovery_hours: 6
+    tech_debt_note: >
+      Moderate tech debt with some concerning areas:
+      (1) ML pipeline lacks proper experiment tracking
+      and reproducibility, (2) wet-lab data integration
+      is semi-manual, (3) customer deployment requires
+      significant customization, (4) test coverage is
+      low, especially for ML model validation code.
+    architecture_risks:
+      - "ML pipeline reproducibility concerns"
+      - "Customer-specific customization doesn't scale"
+      - "GPU infrastructure costs are unpredictable"
+      - "Wet-lab data integration is brittle"
+    scalability_assessment: >
+      Current architecture supports ~25 concurrent
+      customers. Scaling beyond 50 will require
+      significant infrastructure investment. Model
+      serving needs optimization for cost efficiency.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-09-01"
+    iso27001: false
+    hipaa: true
+    hipaa_note: >
+      HIPAA compliant for handling patient-derived data
+      in pharma partnerships. BAA available.
+    gdpr_compliant: true
+    gxp_compliant: true
+    gxp_note: >
+      GxP-compliant validated environment for pharma
+      workflows. Required for regulatory submissions.
+      Validation documentation maintained per FDA
+      guidance.
+    penetration_test_date: "2025-05-20"
+    penetration_test_findings: >
+      Annual pentest by Coalfire. 1 medium finding
+      (API authentication bypass in non-production
+      endpoint, remediated). No high or critical findings.
+    vulnerability_management: >
+      Standard scanning tools (Snyk, Dependabot). ML
+      model security (adversarial input detection) is
+      an emerging area that needs more investment.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    incident_response_plan: true
+    incident_history: "no security incidents reported"
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-09-01"
+      - name: "HIPAA"
+        status: "compliant"
+        date: "2024-12-01"
+      - name: "GxP"
+        status: "compliant"
+        date: "2025-03-01"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-06-01"
+    regulatory_risk: "medium"
+    regulatory_note: >
+      Moderate regulatory risk due to FDA scrutiny of AI
+      in drug discovery. Current regulations are evolving.
+      GxP compliance is critical and must be maintained.
+      SBIR grant compliance requirements add overhead.
+  operational_notes: >
+    Biotech-specific operational complexity. Wet lab
+    requires specialized safety and compliance procedures.
+    Data handling agreements with pharma customers are
+    complex and require legal review for each engagement.
+    Two-site operation adds coordination overhead.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "ML pipeline reproducibility concerns"
+    - "Low test coverage (58%)"
+    - "Customer deployment customization doesn't scale"
+    - "FDA regulatory landscape is evolving"
+    - "SBIR march-in rights (standard but noted)"
+  overall_diligence_rating: "pass with conditions"
+  diligence_rating_note: >
+    Adequate for Series A biotech. GxP and HIPAA
+    compliance are strengths. Main concerns are ML
+    pipeline maturity and test coverage. Must invest
+    in engineering discipline before Series B.
+  data_confidence: "medium"
+  data_sources: >
+    SOC 2 report, HIPAA BAA template, GxP validation
+    docs, pentest summary, NIH grant compliance docs,
+    engineering interview
+  last_updated: "2025-11-05"
+
+finstack.io:
+  domain: "finstack.io"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2020-12-15"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Clean institutional cap table. Standard terms
+      across all rounds. No side letters or unusual
+      provisions. Ribbit, Coatue, and Insight all
+      have standard 1x non-participating preferred.
+    outstanding_options_pct: 14
+    option_pool_remaining_pct: 5
+  ip_portfolio:
+    patents_filed: 5
+    patents_granted: 2
+    patents_note: >
+      2 granted patents for real-time ledger architecture
+      and automated KYC/AML decision engine. 3 pending
+      applications covering multi-bank connectivity,
+      compliance automation, and fraud detection
+      algorithms. Strong and relevant IP portfolio.
+    trademarks_registered: 3
+    trademarks_note: >
+      Finstack wordmark and logo registered in US and EU.
+      "Finstack Compliance Cloud" mark pending.
+    trade_secrets: >
+      Bank API integration specifications are proprietary
+      and represent years of partnership development. Each
+      bank integration involves custom work that is not
+      publicly documented. Compliance rule engine contains
+      encoded regulatory expertise.
+    open_source_risk: "very low"
+    open_source_note: >
+      Product is entirely closed-source. No open-source
+      components in customer-facing product. Standard
+      open-source library usage in backend with proper
+      license management.
+  customer_references:
+    total_references_available: 40
+    reference_quality: "high"
+    reference_note: >
+      40 customers available for references. Includes
+      mid-market banks, neobanks, and fintechs. Bank
+      references are particularly valuable and difficult
+      to obtain -- Finstack has 8 bank references.
+    sample_quotes:
+      - source: "CTO, mid-market digital bank"
+        quote: >
+          Finstack replaced our legacy core banking
+          integration layer. What took 6 months of
+          custom development now works out of the box.
+          Compliance automation alone saved us 3 FTEs.
+      - source: "VP Engineering, Series C neobank"
+        quote: >
+          We evaluated Unit, Synctera, and Finstack.
+          Finstack won on compliance automation depth
+          and the breadth of bank partnerships. The real-
+          time ledger is a genuine differentiator.
+      - source: "Chief Compliance Officer, community bank"
+        quote: >
+          The automated SAR filing and KYC workflows
+          have transformed our compliance operations.
+          We passed our OCC exam with zero findings for
+          the first time in 5 years.
+    customer_satisfaction_methodology: >
+      Quarterly NPS (180 respondents). Dedicated CSM
+      for each enterprise customer. Quarterly business
+      reviews with top 30 accounts. Annual compliance
+      effectiveness survey.
+  tech_debt_assessment:
+    overall_rating: "low"
+    codebase_age_months: 54
+    test_coverage_pct: 88
+    ci_cd_maturity: "advanced"
+    deployment_frequency: "daily (canary deployments)"
+    mean_time_to_recovery_hours: 0.5
+    tech_debt_note: >
+      Exceptionally low tech debt. Financial infrastructure
+      demands high code quality and reliability. Main
+      areas of investment: (1) EU regulatory engine for
+      PSD2/DORA compliance, (2) multi-region deployment
+      for EU data residency. These are expansion-related,
+      not legacy debt.
+    architecture_risks:
+      - "EU expansion requires new regulatory engine"
+      - "Multi-region deployment complexity"
+      - "Real-time ledger scaling at very high transaction volumes"
+    scalability_assessment: >
+      Architecture handles current transaction volumes
+      with significant headroom. Real-time ledger
+      supports ~10K transactions/second. Horizontal
+      scaling is well-designed but untested at extreme
+      volumes.
+  security_posture:
+    soc1_type2: true
+    soc1_type2_date: "2025-04-01"
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-07-15"
+    iso27001: true
+    iso27001_date: "2025-02-01"
+    pci_dss_level1: true
+    pci_dss_date: "2025-03-15"
+    hipaa: false
+    gdpr_compliant: true
+    penetration_test_date: "2025-08-01"
+    penetration_test_findings: >
+      Quarterly pentests by NCC Group (financial services
+      standard). Q3 2025: 1 low finding. No medium, high,
+      or critical findings in last 4 quarterly tests.
+      Exceptional security posture.
+    vulnerability_management: >
+      Enterprise-grade scanning (Snyk, Qualys, custom
+      SAST for financial logic). Dedicated security team
+      (4 people). Real-time transaction monitoring for
+      fraud and anomaly detection.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    hardware_security_module: true
+    hsm_note: "AWS CloudHSM for key management"
+    incident_response_plan: true
+    incident_response_note: >
+      Detailed IR plan with 4-hour SLA for critical
+      incidents. Annual tabletop exercise. Integrated
+      with bank partner notification requirements.
+    incident_history: >
+      No security incidents. One minor availability
+      degradation (15 minutes) in Q2 2025 due to
+      database connection pool exhaustion. Well-handled
+      with no customer impact on transaction processing.
+  compliance_status:
+    frameworks:
+      - name: "SOC 1 Type II"
+        status: "certified"
+        date: "2025-04-01"
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-07-15"
+      - name: "ISO 27001"
+        status: "certified"
+        date: "2025-02-01"
+      - name: "PCI DSS Level 1"
+        status: "certified"
+        date: "2025-03-15"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-01-01"
+      - name: "State MTL"
+        status: "48 states licensed"
+        date: "ongoing"
+      - name: "EMI License (EU)"
+        status: "in progress"
+        eta: "Q2 2026"
+    regulatory_risk: "medium"
+    regulatory_note: >
+      Heavily regulated. Compliance is both a moat and
+      a cost. EU EMI license in progress. DORA compliance
+      (EU Digital Operational Resilience Act) must be
+      addressed by 2025 deadline (currently compliant).
+      Regular examinations by bank partner regulators.
+  operational_notes: >
+    Best-in-class operational maturity for this stage.
+    Financial services demands drive higher standards.
+    24/7 NOC and SOC. Quarterly disaster recovery tests.
+    Annual SOX-ready audit trail verification. Bank
+    examiner relationship management is a unique
+    operational requirement.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "EU EMI license not yet obtained"
+    - "DORA compliance requires ongoing investment"
+  overall_diligence_rating: "strong pass"
+  diligence_rating_note: >
+    Outstanding diligence profile. Best compliance
+    posture in our portfolio. PCI DSS Level 1, SOC 1+2,
+    ISO 27001 is a comprehensive stack. Bank examiner
+    relationships are a unique institutional advantage.
+  data_confidence: "high"
+  data_sources: >
+    SOC 1/2 reports, PCI DSS assessment, ISO certificate,
+    pentest reports, regulatory filings (NMLS), bank
+    partnership documentation, compliance team interview
+  last_updated: "2025-12-05"
+
+cloudlane.dev:
+  domain: "cloudlane.dev"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2020-02-28"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: >
+      One resolved trademark dispute with a European
+      cloud company (2022, settled amicably with
+      geographic coexistence agreement). No material
+      litigation.
+    cap_table_clean: true
+    cap_table_note: >
+      Institutional cap table with four rounds. Standard
+      terms. Some secondary sales facilitated at Series C
+      for early employees. Clean and well-structured.
+    outstanding_options_pct: 15
+    option_pool_remaining_pct: 6
+  ip_portfolio:
+    patents_filed: 11
+    patents_granted: 4
+    patents_note: >
+      4 granted patents covering multi-cloud workload
+      orchestration, AI-powered cost optimization
+      algorithm, zero-downtime migration methodology,
+      and custom network acceleration protocol. 7
+      pending. Strong and strategic IP portfolio.
+    trademarks_registered: 4
+    trademarks_note: >
+      Cloudlane wordmark and logo registered in US, EU,
+      and UK. "CloudControl" product mark registered in
+      US.
+    trade_secrets: >
+      Custom network acceleration hardware designs are
+      the most valuable trade secrets. Hardware schematics
+      and firmware are closely guarded with physical
+      security controls. Multi-cloud metadata (cross-
+      cloud performance and cost data) provides proprietary
+      intelligence.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Some monitoring agents
+      and CLI tools are open-source (Apache 2.0) for
+      ecosystem building. Hardware designs are fully
+      proprietary.
+  customer_references:
+    total_references_available: 60
+    reference_quality: "very high"
+    reference_note: >
+      60+ references including Fortune 500 companies
+      and federal agencies. Government references
+      available through GSA schedule and FedRAMP
+      marketplace testimonials. Enterprise references
+      are diverse across industries.
+    sample_quotes:
+      - source: "CIO, Fortune 500 manufacturing company"
+        quote: >
+          Cloudlane saved us $8M annually in cloud spend
+          while improving our deployment reliability.
+          The multi-cloud control plane eliminated vendor
+          lock-in concerns.
+      - source: "CTO, federal agency"
+        quote: >
+          FedRAMP High authorization was the deciding
+          factor. Cloudlane is one of only three startups
+          with this authorization. The technical
+          capabilities exceeded our requirements.
+      - source: "VP Infrastructure, European bank"
+        quote: >
+          We migrated from a single-cloud to multi-cloud
+          architecture with zero downtime using Cloudlane.
+          The migration tooling is genuinely impressive.
+    customer_satisfaction_methodology: >
+      Quarterly NPS (210 respondents). Dedicated CSMs
+      for enterprise and government accounts. Annual
+      customer advisory board. Government customer
+      satisfaction tracked separately per agency.
+  tech_debt_assessment:
+    overall_rating: "low"
+    codebase_age_months: 60
+    test_coverage_pct: 82
+    ci_cd_maturity: "advanced"
+    deployment_frequency: "daily (canary)"
+    mean_time_to_recovery_hours: 0.75
+    tech_debt_note: >
+      Low tech debt. Infrastructure company requires
+      high code quality. Main investment areas: (1)
+      custom hardware firmware needs ongoing
+      optimization, (2) FedRAMP-specific security
+      controls add maintenance overhead, (3) EMEA
+      deployment requires localization work.
+    architecture_risks:
+      - "Custom hardware supply chain dependency"
+      - "FedRAMP environment isolation adds complexity"
+      - "EMEA deployment requires data residency"
+    scalability_assessment: >
+      Architecture scales well horizontally. Control
+      plane supports 10K+ managed cloud accounts.
+      Custom hardware has lead time constraints
+      (12-16 weeks manufacturing cycle).
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-06-01"
+    iso27001: true
+    iso27001_date: "2024-12-01"
+    fedramp_high: true
+    fedramp_date: "2024-08-15"
+    fedramp_note: >
+      FedRAMP High is the highest authorization level.
+      Only ~50 companies have FedRAMP High (most are
+      large enterprises). This is a significant
+      competitive advantage and took 18 months to obtain.
+    itar_compliant: true
+    gdpr_compliant: true
+    cmmc_level2: false
+    cmmc_note: "CMMC Level 2 assessment scheduled Q1 2026"
+    penetration_test_date: "2025-10-01"
+    penetration_test_findings: >
+      Quarterly pentests (federal requirement). Q4 2025:
+      zero findings. Previous quarters: 1 low finding
+      each. Exceptional security posture driven by
+      FedRAMP requirements.
+    vulnerability_management: >
+      Comprehensive stack: Qualys, Tenable, Snyk, custom
+      SAST. Dedicated security team (8 people). FedRAMP
+      continuous monitoring (ConMon) program. Monthly
+      vulnerability scans with 30-day remediation SLA.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    encryption_note: "FIPS 140-2 validated encryption modules"
+    mfa_enforced: true
+    hardware_security_module: true
+    incident_response_plan: true
+    incident_response_note: >
+      Detailed IR plan with government-specific
+      notification requirements (US-CERT, CISA).
+      Annual red team exercise. Quarterly tabletop
+      exercises.
+    incident_history: >
+      No security incidents. Two minor availability
+      events in 2025 (both < 30 minutes, both in
+      commercial environment). Government environment
+      has 100% uptime for 18 months.
+  compliance_status:
+    frameworks:
+      - name: "FedRAMP High"
+        status: "authorized"
+        date: "2024-08-15"
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-06-01"
+      - name: "ISO 27001"
+        status: "certified"
+        date: "2024-12-01"
+      - name: "ITAR"
+        status: "compliant"
+        date: "2024-10-01"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-06-01"
+      - name: "CMMC Level 2"
+        status: "planned"
+        eta: "Q2 2026"
+    regulatory_risk: "low"
+    regulatory_note: >
+      Comprehensive compliance posture. FedRAMP High
+      is the gold standard. ITAR compliance enables
+      defense sector customers. CMMC Level 2 will
+      further expand DoD addressable market.
+  operational_notes: >
+    Extremely mature operations for a Series C company.
+    FedRAMP requirements drive operational excellence.
+    24/7 SOC, dedicated government operations team,
+    continuous monitoring program, annual red team
+    exercises. Hardware supply chain management adds
+    unique operational complexity.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "Custom hardware supply chain risk"
+    - "CMMC Level 2 not yet achieved"
+    - "Resolved trademark dispute (no ongoing risk)"
+  overall_diligence_rating: "strong pass"
+  diligence_rating_note: >
+    Outstanding diligence profile. FedRAMP High
+    authorization is the strongest compliance credential
+    possible. IP portfolio is strategic and growing.
+    Hardware adds operational complexity but also
+    competitive differentiation.
+  data_confidence: "high"
+  data_sources: >
+    FedRAMP authorization package (public), SOC 2 report,
+    ISO certificate, pentest reports, ITAR documentation,
+    hardware supply chain audit, legal review
+  last_updated: "2025-12-15"
+
+learnnext.ai:
+  domain: "learnnext.ai"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2023-12-01"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Very simple cap table. Standard YC SAFE notes from
+      pre-seed. Two founders hold majority common stock.
+      No complexity.
+    outstanding_options_pct: 22
+    option_pool_remaining_pct: 14
+  ip_portfolio:
+    patents_filed: 0
+    patents_granted: 0
+    patents_note: >
+      No patents filed. AI tutoring methodology is
+      primarily based on prompt engineering and fine-
+      tuning of open models, which is difficult to
+      patent. No plans for patent filings.
+    trademarks_registered: 1
+    trademarks_note: "LearnNext wordmark registered in US"
+    trade_secrets: >
+      Proprietary prompt engineering templates and
+      fine-tuning data for educational AI. Spaced
+      repetition algorithm is custom but not significantly
+      differentiated from academic approaches. Limited
+      trade secret value.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Heavy dependency on
+      OpenAI API which is a commercial service, not
+      open-source. No copyleft risks.
+  customer_references:
+    total_references_available: 5
+    reference_quality: "low"
+    reference_note: >
+      5 individual student users agreed to testimonials.
+      No institutional references. University pilot
+      contacts are available but programs are unpaid.
+      Reference pool is thin and not suitable for
+      enterprise or institutional sales.
+    sample_quotes:
+      - source: "UC Berkeley junior, Computer Science"
+        quote: >
+          LearnNext helped me understand recursion better
+          than any YouTube video or textbook. The Socratic
+          approach forces you to actually think instead
+          of just reading the answer.
+      - source: "NYU sophomore, Pre-Med"
+        quote: >
+          I use LearnNext for organic chemistry. It's
+          like having a patient tutor at 2am. Sometimes
+          the answers are wrong for advanced reactions
+          but overall really helpful.
+    customer_satisfaction_methodology: >
+      In-app NPS survey (320 respondents). App Store
+      and Google Play reviews monitored. TikTok comment
+      sentiment tracked informally. No formal CSAT.
+  tech_debt_assessment:
+    overall_rating: "low"
+    codebase_age_months: 14
+    test_coverage_pct: 55
+    ci_cd_maturity: "basic"
+    deployment_frequency: "2-3x per week"
+    mean_time_to_recovery_hours: 3
+    tech_debt_note: >
+      Young codebase with expected early-stage gaps.
+      Main concerns: (1) heavy dependency on OpenAI API
+      with no fallback provider, (2) prompt engineering
+      is brittle and breaks with model updates, (3)
+      learning analytics are basic, (4) test coverage
+      is low, especially for AI response quality.
+    architecture_risks:
+      - "Single LLM provider dependency (OpenAI)"
+      - "Prompt brittleness across model versions"
+      - "No offline capability for students"
+      - "No content moderation for AI responses"
+    scalability_assessment: >
+      Architecture supports current user base. API cost
+      scaling is the primary concern -- each tutoring
+      session costs $0.05-0.15 in API calls, which
+      compresses margins significantly.
+  security_posture:
+    soc2_type1: false
+    soc2_type2: false
+    iso27001: false
+    hipaa: false
+    ferpa: false
+    ferpa_note: >
+      FERPA compliance is NOT achieved. Required for
+      university partnerships that access student records.
+      Current university pilots use anonymized data to
+      avoid FERPA requirements.
+    gdpr_compliant: false
+    gdpr_note: >
+      GDPR compliance is incomplete. Privacy policy exists
+      but data processing agreements and EU data residency
+      are not available. Not serving EU customers actively.
+    penetration_test_date: "none"
+    vulnerability_management: >
+      Basic GitHub Dependabot only. No dedicated security
+      tooling. No security personnel on team.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: false
+    mfa_note: >
+      MFA not enforced for user accounts. Only email +
+      password authentication. Google OAuth available
+      but not mandatory.
+    incident_response_plan: false
+    incident_history: >
+      One incident where AI tutoring responses included
+      incorrect medical advice for a pre-med student
+      (flagged via TikTok, corrected within 48 hours).
+      No formal incident tracking.
+  compliance_status:
+    frameworks:
+      - name: "COPPA"
+        status: "N/A"
+        note: "targeting 18+ users only"
+      - name: "FERPA"
+        status: "not compliant"
+        note: "required for university integrations"
+      - name: "GDPR"
+        status: "partially compliant"
+        note: "not actively serving EU"
+    regulatory_risk: "medium"
+    regulatory_note: >
+      Moderate regulatory risk. FERPA non-compliance
+      blocks deeper university integration. EU AI Act
+      may classify educational AI as high-risk. COPPA
+      is avoided by targeting 18+ users.
+  operational_notes: >
+    Pre-seed operational maturity. Informal processes.
+    No security team, no compliance team, no formal
+    IR plan. Expected for stage but must mature rapidly
+    if pursuing institutional sales. The AI accuracy
+    incident highlights the need for content moderation.
+  diligence_red_flags:
+    - "AI accuracy incident (incorrect medical advice)"
+    - "No FERPA compliance blocks university revenue"
+    - "No content moderation for AI responses"
+  diligence_yellow_flags:
+    - "No security certifications"
+    - "No penetration test"
+    - "Single LLM provider dependency"
+    - "MFA not enforced"
+    - "GDPR incomplete"
+    - "No formal incident response plan"
+    - "Prompt brittleness across model versions"
+  overall_diligence_rating: "conditional pass"
+  diligence_rating_note: >
+    Significant diligence gaps expected at pre-seed but
+    the AI accuracy incident is a yellow flag. FERPA
+    non-compliance and lack of content moderation must
+    be addressed for any institutional growth path. Not
+    enterprise-ready.
+  data_confidence: "low"
+  data_sources: >
+    Y Combinator application materials, founder interview,
+    app store review analysis, TikTok incident tracking,
+    basic security assessment
+  last_updated: "2025-10-30"
+
+shopfront.co:
+  domain: "shopfront.co"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2020-05-15"
+    good_standing: true
+    litigation_pending: true
+    litigation_note: >
+      One pending dispute with a merchant over platform
+      fees and refund policy. Small claims amount (~$15K).
+      Expected to resolve through arbitration. Not
+      material but indicates need for clearer merchant
+      terms of service.
+    litigation_history: >
+      Two prior merchant disputes resolved through
+      arbitration (2023, 2024). Both involved refund
+      policies. All resolved in Shopfront's favor.
+    cap_table_clean: true
+    cap_table_note: >
+      Standard institutional cap table. Tiger Global at
+      Series B has standard terms. Some investor drag-
+      along provisions that are typical for the stage.
+    outstanding_options_pct: 15
+    option_pool_remaining_pct: 5
+  ip_portfolio:
+    patents_filed: 3
+    patents_granted: 1
+    patents_note: >
+      1 granted patent for AI-powered product matching
+      algorithm in marketplace environments. 2 pending
+      for managed fulfillment optimization and white-
+      label marketplace customization engine.
+    trademarks_registered: 3
+    trademarks_note: >
+      Shopfront wordmark and logo registered in US and
+      UK. "Shopfront Managed" service mark pending.
+    trade_secrets: >
+      Marketplace matching algorithms and buyer behavior
+      models are proprietary. Merchant scoring system
+      (quality, reliability) is a competitive advantage.
+      Fulfillment partner integrations involve proprietary
+      API specifications.
+    open_source_risk: "very low"
+    open_source_note: >
+      Product is closed-source. Standard open-source
+      dependencies (Ruby on Rails, React). No copyleft
+      concerns. License audit conducted at Series B.
+  customer_references:
+    total_references_available: 80
+    reference_quality: "medium-high"
+    reference_note: >
+      80 merchants available as references across
+      verticals. Buyer references also available. Mix
+      of large merchants (50+ employees) and small
+      artisan sellers. Quality varies by segment.
+    sample_quotes:
+      - source: "Founder, specialty food merchant"
+        quote: >
+          Shopfront handles everything -- fulfillment
+          coordination, buyer protection, even tax
+          compliance. I can focus on making great
+          products instead of running a logistics
+          operation.
+      - source: "Director, mid-size craft brand"
+        quote: >
+          We launched our own marketplace vertical on
+          Shopfront's white-label platform in 3 weeks.
+          The managed ops team handled all the
+          operational complexity. Sales increased 40%
+          in the first quarter.
+      - source: "Buyer, enterprise procurement team"
+        quote: >
+          Shopfront's curated marketplace gives us
+          confidence in product quality. The buyer
+          protection and dispute resolution have been
+          excellent. Much better than generic B2B
+          platforms.
+    customer_satisfaction_methodology: >
+      Monthly NPS for merchants (1,200 respondents).
+      Buyer satisfaction survey quarterly (5,000
+      respondents). Trust and Safety team tracks
+      dispute resolution satisfaction separately.
+  tech_debt_assessment:
+    overall_rating: "moderate"
+    codebase_age_months: 56
+    test_coverage_pct: 72
+    ci_cd_maturity: "moderate-advanced"
+    deployment_frequency: "daily"
+    mean_time_to_recovery_hours: 2
+    tech_debt_note: >
+      Moderate tech debt accumulated during rapid growth.
+      Main areas: (1) Ruby on Rails monolith needs
+      decomposition for marketplace scale, (2) payment
+      processing integration has accrued complexity,
+      (3) international (UK) deployment requires
+      significant localization, (4) search and
+      recommendation engine needs upgrade.
+    architecture_risks:
+      - "Rails monolith scaling limitations"
+      - "Payment processing complexity"
+      - "Multi-currency and multi-tax jurisdiction"
+      - "Search relevance at marketplace scale"
+    scalability_assessment: >
+      Current architecture supports ~15K concurrent
+      merchants and ~100K daily buyers. UK expansion
+      requires multi-region deployment. Rails monolith
+      is a known scaling constraint that needs
+      architectural investment.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-08-01"
+    iso27001: false
+    pci_dss_level2: true
+    pci_dss_note: >
+      PCI DSS Level 2 (Stripe-integrated). Payment
+      processing handled through Stripe Connect, reducing
+      PCI scope. Adequate for current transaction volume.
+    gdpr_compliant: true
+    gdpr_note: >
+      GDPR compliant for UK expansion. Data processing
+      agreements and EU/UK data residency available.
+    penetration_test_date: "2025-07-20"
+    penetration_test_findings: >
+      Annual pentest by Cobalt. 2 medium findings (both
+      remediated within 30 days): API rate limiting gaps
+      and session management weakness. No high or
+      critical findings.
+    vulnerability_management: >
+      Standard scanning tools (Brakeman for Rails, Snyk,
+      Dependabot). Security review for marketplace
+      features (fraud prevention, dispute resolution).
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    mfa_note: "enforced for merchants; optional for buyers"
+    incident_response_plan: true
+    incident_history: >
+      One fraud incident in 2024 (fake merchant created
+      fraudulent listings, detected within 4 hours and
+      removed). Led to enhanced merchant verification
+      process. No data breaches.
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-08-01"
+      - name: "PCI DSS Level 2"
+        status: "certified"
+        date: "2025-01-15"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-06-01"
+    regulatory_risk: "low-medium"
+    regulatory_note: >
+      Standard e-commerce regulatory requirements. UK
+      expansion introduces Consumer Rights Act compliance.
+      EU Digital Services Act may apply as marketplace
+      grows. Sales tax nexus complexity across US states.
+  operational_notes: >
+    Marketplace operations add significant operational
+    complexity vs pure SaaS. Trust and safety team (8
+    people) handles disputes and fraud. Fulfillment
+    coordination requires real-time operational
+    management. UK launch requires localization and
+    regulatory adaptation.
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "Pending merchant dispute (small but pattern)"
+    - "Rails monolith scaling constraints"
+    - "Prior fraud incident (remediated)"
+    - "No ISO 27001"
+  overall_diligence_rating: "pass"
+  diligence_rating_note: >
+    Solid diligence profile for a marketplace business.
+    SOC 2 Type II and PCI DSS demonstrate maturity.
+    Marketplace-specific risks (fraud, disputes) are
+    being managed. Technical debt in Rails monolith
+    needs investment.
+  data_confidence: "medium-high"
+  data_sources: >
+    SOC 2 report, PCI DSS assessment, pentest report,
+    merchant and buyer surveys, legal review, Trust
+    and Safety team interview
+  last_updated: "2025-11-20"
+
+datavault.io:
+  domain: "datavault.io"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2022-02-01"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Clean cap table with seed and Series A rounds.
+      Boldstart and Menlo have standard terms. No side
+      letters. Simple structure.
+    outstanding_options_pct: 18
+    option_pool_remaining_pct: 8
+  ip_portfolio:
+    patents_filed: 4
+    patents_granted: 1
+    patents_note: >
+      1 granted patent for zero-knowledge encryption
+      applied to data-at-rest classification. 3 pending
+      applications for real-time data flow monitoring,
+      ML-based sensitive data classification, and
+      automated compliance evidence generation. The
+      zero-knowledge encryption patent is strategically
+      valuable.
+    trademarks_registered: 2
+    trademarks_note: >
+      DataVault wordmark and logo registered in US.
+    trade_secrets: >
+      ML classification models trained on labeled
+      sensitive data patterns. Zero-knowledge encryption
+      implementation details. Compliance rule engine
+      with encoded regulatory expertise across multiple
+      frameworks. CTO's cryptography research informs
+      proprietary algorithms.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Company contributes to
+      open-source cryptography libraries (Rust crypto
+      crates) but core product IP is proprietary.
+  customer_references:
+    total_references_available: 20
+    reference_quality: "high"
+    reference_note: >
+      20 customers available as references. Enterprise
+      security buyers value peer references highly.
+      CISO-level references are particularly valuable
+      and Datavault has 8 CISO-level contacts.
+    sample_quotes:
+      - source: "CISO, mid-market financial services firm"
+        quote: >
+          DataVault found sensitive data in 3 cloud
+          services we didn't even know we were using.
+          The automated classification saved our team
+          months of manual discovery work.
+      - source: "VP Security, healthcare company"
+        quote: >
+          Zero-knowledge encryption means we can prove
+          data protection to regulators without exposing
+          the data itself. That's a game-changer for
+          HIPAA compliance.
+      - source: "Director of IT, public tech company"
+        quote: >
+          We deployed DataVault in 2 weeks. Most data
+          security tools take months. The compliance
+          dashboard gave us immediate visibility into
+          our GDPR posture.
+    customer_satisfaction_methodology: >
+      NPS survey (85 respondents, 72% response rate).
+      Quarterly security posture reviews with enterprise
+      customers. CISO advisory board (6 members) meets
+      quarterly. Satisfaction tracked through support
+      ticket resolution metrics.
+  tech_debt_assessment:
+    overall_rating: "low"
+    codebase_age_months: 38
+    test_coverage_pct: 80
+    ci_cd_maturity: "advanced"
+    deployment_frequency: "daily"
+    mean_time_to_recovery_hours: 1
+    tech_debt_note: >
+      Low tech debt. Security company benefits from
+      quality-first engineering culture. Built in Rust
+      and Go from the start for performance and safety.
+      Main areas: (1) ML classification model retraining
+      pipeline needs automation, (2) multi-cloud agent
+      deployment could be simplified.
+    architecture_risks:
+      - "ML model retraining is semi-manual"
+      - "Agent deployment across diverse cloud environments"
+      - "Scaling data flow monitoring at very high volumes"
+    scalability_assessment: >
+      Architecture handles current data volumes well.
+      Designed for horizontal scaling. Rust-based data
+      processing pipeline provides performance headroom.
+      Largest customer processes ~5TB daily without
+      issues.
+  security_posture:
+    soc2_type1: true
+    soc2_type2: true
+    soc2_type2_date: "2025-09-15"
+    iso27001: true
+    iso27001_date: "2025-06-01"
+    hipaa: true
+    hipaa_note: "BAA available for healthcare customers"
+    gdpr_compliant: true
+    penetration_test_date: "2025-10-01"
+    penetration_test_findings: >
+      Biannual pentest by Rapid7. Q4 2025: 1 low finding
+      (informational). No medium, high, or critical
+      findings. Excellent security posture appropriate
+      for a security vendor.
+    vulnerability_management: >
+      Comprehensive stack: Snyk, custom SAST (Rust-
+      specific), Dependabot. Formal secure development
+      lifecycle (SDL). Code review required from 2
+      engineers for all security-critical paths.
+    encryption_at_rest: true
+    encryption_in_transit: true
+    mfa_enforced: true
+    zero_trust_architecture: true
+    zero_trust_note: >
+      Company practices zero-trust internally. All
+      services authenticate via mTLS. No implicit trust.
+      "Eat our own dogfood" -- DataVault monitors its
+      own data flows using its own product.
+    incident_response_plan: true
+    incident_history: >
+      No security incidents. One false alarm (2025-03)
+      when monitoring detected anomalous data access
+      that turned out to be a scheduled backup job.
+      IR process worked correctly and incident was
+      triaged within 15 minutes.
+  compliance_status:
+    frameworks:
+      - name: "SOC 2 Type II"
+        status: "certified"
+        date: "2025-09-15"
+      - name: "ISO 27001"
+        status: "certified"
+        date: "2025-06-01"
+      - name: "HIPAA"
+        status: "compliant"
+        date: "2025-01-01"
+      - name: "GDPR"
+        status: "compliant"
+        date: "2024-06-01"
+    regulatory_risk: "low"
+    regulatory_note: >
+      Strong compliance posture appropriate for a security
+      vendor. Customers expect security companies to lead
+      by example. SEC cyber disclosure rules create demand
+      but also scrutiny on DataVault's own practices.
+  operational_notes: >
+    Mature security operations for Series A stage.
+    Remote-first culture with strong security practices.
+    Dedicated security engineering lead. Formal SDL
+    with code review requirements. Zero-trust internal
+    architecture. Main operational gap is lack of 24/7
+    SOC (on-call rotation covers off-hours).
+  diligence_red_flags: []
+  diligence_yellow_flags:
+    - "No 24/7 SOC (unusual for security vendor)"
+    - "ML model retraining is semi-manual"
+  overall_diligence_rating: "strong pass"
+  diligence_rating_note: >
+    Excellent diligence profile for a Series A security
+    company. Strong compliance stack, zero-trust
+    architecture, and clean legal history. The zero-
+    knowledge encryption patent is a strategic asset.
+    Must establish 24/7 SOC before enterprise scale.
+  data_confidence: "medium"
+  data_sources: >
+    SOC 2 report, ISO certificate, pentest report,
+    CTO interview (cryptography deep-dive), customer
+    reference calls, legal review
+  last_updated: "2025-11-10"
+
+greenpower.energy:
+  domain: "greenpower.energy"
+  legal_status:
+    entity_type: "Delaware C-Corp"
+    incorporation_date: "2023-01-15"
+    good_standing: true
+    litigation_pending: false
+    litigation_history: "none"
+    cap_table_clean: true
+    cap_table_note: >
+      Simple cap table with pre-seed and seed rounds.
+      Standard terms. DOE grant funding does not affect
+      equity structure. Clean and straightforward.
+    outstanding_options_pct: 20
+    option_pool_remaining_pct: 12
+  ip_portfolio:
+    patents_filed: 3
+    patents_granted: 0
+    patents_note: >
+      3 provisional patents filed: (1) IoT sensor design
+      for DER monitoring, (2) AI-powered energy dispatch
+      optimization algorithm, (3) virtual power plant
+      aggregation protocol. All pending. Hardware-related
+      patents may have stronger defensibility than software
+      patents in this space.
+    trademarks_registered: 1
+    trademarks_note: "GreenPower wordmark registered in US"
+    trade_secrets: >
+      IoT sensor hardware designs and firmware are the
+      primary trade secrets. Custom antenna design for
+      long-range wireless communication in building
+      environments. Energy optimization algorithms
+      trained on proprietary sensor data.
+    open_source_risk: "low"
+    open_source_note: >
+      Product is closed-source. Hardware designs are
+      proprietary. Some data visualization components
+      use open-source libraries (Apache 2.0). No
+      copyleft risks.
+  customer_references:
+    total_references_available: 4
+    reference_quality: "medium"
+    reference_note: >
+      4 of 8 customers agreed to serve as references.
+      Includes 1 utility and 3 commercial building
+      operators. Reference pool is thin but adequate
+      for seed stage. Utility reference is particularly
+      valuable.
+    sample_quotes:
+      - source: "Energy manager, regional utility"
+        quote: >
+          GreenPower's sensors give us real-time
+          visibility into DER performance that we
+          never had before. The AI optimization
+          reduced our peak demand charges by 18%.
+      - source: "Building manager, commercial property"
+        quote: >
+          Installation was more complex than expected
+          (took 3 days instead of 1) but the monitoring
+          data is invaluable. We identified a failing
+          inverter that would have cost us thousands
+          in lost generation.
+    customer_satisfaction_methodology: >
+      Direct relationship with all 8 customers.
+      Quarterly check-in calls. No formal NPS or CSAT
+      due to small customer base. Qualitative feedback
+      collection only.
+  tech_debt_assessment:
+    overall_rating: "moderate-high"
+    codebase_age_months: 22
+    test_coverage_pct: 45
+    ci_cd_maturity: "basic"
+    deployment_frequency: "weekly"
+    mean_time_to_recovery_hours: 8
+    tech_debt_note: >
+      Significant tech debt for a hardware-software
+      company: (1) firmware update process is manual
+      (requires physical access to some sensors), (2)
+      software platform is a Django monolith with
+      limited test coverage, (3) no automated hardware
+      testing, (4) data pipeline from sensors to
+      dashboard has reliability issues (packet loss
+      in poor connectivity areas).
+    architecture_risks:
+      - "Manual firmware update process"
+      - "Sensor connectivity in challenging environments"
+      - "Data pipeline reliability"
+      - "Hardware manufacturing quality control"
+      - "Single hardware supplier dependency"
+    scalability_assessment: >
+      Current architecture supports ~100 sensor sites.
+      Scaling to 1000+ will require significant
+      platform investment. Hardware manufacturing has
+      a 12-week lead time that constrains rapid scaling.
+  security_posture:
+    soc2_type1: false
+    soc2_type2: false
+    iso27001: false
+    nerc_cip: false
+    nerc_cip_note: >
+      NERC CIP compliance is NOT yet achieved. Required
+      for utility customers handling bulk electric system
+      data. Current utility customers operate in
+      distribution (not bulk system) so NERC CIP is not
+      yet required but will be needed for larger utilities.
+    gdpr_compliant: false
+    gdpr_note: "Not serving EU customers"
+    penetration_test_date: "none"
+    vulnerability_management: >
+      Basic GitHub Dependabot only. No IoT-specific
+      security testing. No hardware security audit.
+      Firmware update mechanism is not cryptographically
+      signed (security concern).
+    encryption_at_rest: true
+    encryption_in_transit: true
+    encryption_note: >
+      TLS for cloud communication. IoT sensor-to-gateway
+      communication uses AES-128 but key rotation is
+      manual.
+    mfa_enforced: false
+    mfa_note: "MFA available but not enforced"
+    incident_response_plan: false
+    incident_history: >
+      Two hardware incidents: (1) sensor failure in
+      extreme heat (California, July 2025, 3 sensors
+      affected), (2) connectivity loss during power
+      outage revealed lack of battery backup in gateway
+      devices. Both led to product improvements.
+  compliance_status:
+    frameworks:
+      - name: "DOE grant compliance"
+        status: "compliant"
+        date: "2025-08-01"
+      - name: "UL certification (sensors)"
+        status: "in progress"
+        eta: "Q1 2026"
+      - name: "FCC Part 15 (wireless)"
+        status: "certified"
+        date: "2024-11-01"
+    regulatory_risk: "medium-high"
+    regulatory_note: >
+      Energy sector has significant regulatory requirements.
+      No SOC 2, no NERC CIP. UL certification for
+      hardware is in progress and required by some
+      customers. State-level interconnection rules vary
+      and add compliance complexity. DOE grant compliance
+      is maintained.
+  operational_notes: >
+    Early-stage with significant operational gaps.
+    Hardware manufacturing and field deployment add
+    complexity that pure software companies don't face.
+    Firmware update process needs OTA capability. Sensor
+    reliability in extreme conditions needs improvement.
+    Field deployment team (2 people) is a bottleneck.
+  diligence_red_flags:
+    - "Unsigned firmware updates (security risk)"
+    - "Sensor failures in extreme conditions"
+    - "No NERC CIP compliance for utility expansion"
+  diligence_yellow_flags:
+    - "No security certifications"
+    - "No penetration test (hardware or software)"
+    - "Manual IoT key rotation"
+    - "45% test coverage"
+    - "Single hardware supplier"
+    - "No UL certification yet"
+    - "No MFA enforcement"
+    - "No incident response plan"
+  overall_diligence_rating: "conditional pass"
+  diligence_rating_note: >
+    Significant diligence gaps. Hardware security
+    concerns (unsigned firmware) are the most critical.
+    Sensor reliability and field deployment challenges
+    are operational risks. UL certification and NERC CIP
+    compliance are prerequisites for utility market
+    expansion. Acceptable for seed stage but heavy
+    investment needed before Series A.
+  data_confidence: "low"
+  data_sources: >
+    DOE grant documentation, FCC filing, hardware test
+    reports, customer incident logs, engineering team
+    interview, basic security assessment
+  last_updated: "2025-11-22"

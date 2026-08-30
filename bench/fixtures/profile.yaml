@@ -1,0 +1,1159 @@
+# ---------------------------------------------------------------
+# profile.yaml
+# Used by eval-analyst skill (source: 'profile')
+#
+# Contains: composite scores, moat rating, recurring revenue %,
+#   customer metrics, churn, risk factors, and qualitative
+#   assessments. Serves as the "investment profile" view.
+# ---------------------------------------------------------------
+
+delve.co:
+  domain: "delve.co"
+  overall_score: 72
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Seed).
+  growth_score: 85
+  unit_economics_score: 68
+  team_score: 70
+  market_score: 65
+  product_score: 74
+  moat_rating: "weak"
+  moat_components:
+    technology: "moderate"
+    data_network_effects: "none"
+    switching_costs: "low"
+    brand: "nascent"
+    regulatory: "none"
+  recurring_revenue_pct: 94
+  recurring_revenue_note: >
+    94% recurring (annual and monthly subscriptions).
+    6% from one-time onboarding/implementation fees.
+    Strong recurring base for a seed-stage company.
+  total_customers: 38
+  enterprise_customers: 4
+  mid_market_customers: 12
+  smb_customers: 22
+  customer_concentration_pct: 28
+  customer_concentration_note: >
+    Top 3 customers represent 28% of ARR. Moderate
+    concentration risk. Largest single customer is
+    11% of ARR -- needs to diversify.
+  logo_churn_monthly_pct: "8.0"
+  logo_churn_annual_pct: "63"
+  revenue_churn_monthly_pct: "3.2"
+  revenue_churn_annual_pct: "32"
+  churn_note: >
+    Logo churn is high but expected at seed stage with
+    many SMB customers. Revenue churn is significantly
+    lower because larger customers have better retention.
+    Enterprise cohorts show < 1% monthly revenue churn.
+  nps_score: 42
+  nps_note: >
+    Based on survey of 28 respondents (74% response rate).
+    Score is above-average for B2B analytics tools (median
+    32). Detractors cite onboarding complexity.
+  risk_factors:
+    - category: "competitive"
+      severity: "high"
+      description: >
+        Incumbents (Tableau, Looker) rapidly adding AI
+        features. Window of differentiation may close in
+        18-24 months.
+    - category: "concentration"
+      severity: "medium"
+      description: >
+        Top customer is 11% of ARR. Loss would materially
+        impact growth trajectory.
+    - category: "team"
+      severity: "medium"
+      description: >
+        Key-person dependencies on both founders. VP Eng
+        is recent and unproven at this stage.
+    - category: "funding"
+      severity: "medium"
+      description: >
+        14 months runway. Will need to raise Series A in
+        6-8 months or reduce burn.
+  investment_thesis: >
+    Bet on AI-native analytics displacing legacy BI tools.
+    Strong founder-market fit and early product traction.
+    Must demonstrate enterprise sales motion and reduce
+    customer concentration before Series A.
+  key_metrics_to_watch:
+    - "Enterprise customer count (target: 10+ by Q2 2026)"
+    - "Logo churn (target: < 5% monthly)"
+    - "Customer concentration (target: no single > 8%)"
+    - "Gross margin stability above 70%"
+  data_confidence: "medium"
+  data_sources: >
+    Internal scoring model, pitch deck data, Crunchbase,
+    customer survey (partial), competitive analysis
+  last_updated: "2025-11-15"
+
+linear.app:
+  domain: "linear.app"
+  overall_score: 92
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series B).
+  growth_score: 90
+  unit_economics_score: 98
+  team_score: 95
+  market_score: 82
+  product_score: 97
+  moat_rating: "moderate"
+  moat_components:
+    technology: "moderate"
+    data_network_effects: "low"
+    switching_costs: "moderate"
+    brand: "strong"
+    regulatory: "none"
+  recurring_revenue_pct: 99
+  recurring_revenue_note: >
+    99% recurring subscription revenue. Minimal services
+    or one-time revenue. Clean SaaS model.
+  total_customers: 40000
+  total_customers_note: "paying teams/workspaces"
+  enterprise_customers: 850
+  mid_market_customers: 4200
+  smb_customers: 34950
+  customer_concentration_pct: 3
+  customer_concentration_note: >
+    Top 10 customers represent only 3% of ARR. Extremely
+    diversified customer base. No single customer risk.
+    PLG model naturally distributes revenue.
+  logo_churn_monthly_pct: "2.5"
+  logo_churn_annual_pct: "26"
+  revenue_churn_monthly_pct: "0.8"
+  revenue_churn_annual_pct: "9"
+  churn_note: >
+    Logo churn is moderate (many small teams churn) but
+    revenue churn is excellent. Enterprise cohorts show
+    negative net churn (expansion exceeds losses). The
+    gap between logo and revenue churn indicates healthy
+    expansion among retained customers.
+  nps_score: 72
+  nps_note: >
+    Based on in-app survey of 2,400 respondents. Score
+    is exceptional for devtools (median 38). Promoters
+    cite speed and design. Detractors cite lack of
+    advanced reporting.
+  risk_factors:
+    - category: "competitive"
+      severity: "medium"
+      description: >
+        GitHub Projects is free and improving. If GitHub
+        reaches parity on core features, Linear's premium
+        pricing is at risk.
+    - category: "market_ceiling"
+      severity: "medium"
+      description: >
+        Issue tracking TAM may be smaller than estimated.
+        Expansion beyond core product is needed for
+        continued high growth.
+    - category: "pricing"
+      severity: "low"
+      description: >
+        Per-seat pricing faces pressure as companies
+        optimize headcount. Usage-based alternatives
+        may emerge.
+  investment_thesis: >
+    Best-in-class developer tool with exceptional unit
+    economics. Dominant brand in a growing category.
+    Must expand TAM through product adjacencies (project
+    management, documentation) to sustain growth at scale.
+  key_metrics_to_watch:
+    - "Enterprise revenue mix (target: 40%+ by 2027)"
+    - "Product expansion revenue (new modules)"
+    - "GitHub Projects competitive trajectory"
+    - "International revenue growth"
+  data_confidence: "high"
+  data_sources: >
+    Secondary market data, investor briefings, G2 review
+    analysis, NPS survey data, Pitchbook
+  last_updated: "2025-12-01"
+
+notion.so:
+  domain: "notion.so"
+  overall_score: 88
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series C / Late).
+  growth_score: 78
+  unit_economics_score: 88
+  team_score: 82
+  market_score: 92
+  product_score: 95
+  moat_rating: "strong"
+  moat_components:
+    technology: "moderate"
+    data_network_effects: "strong"
+    switching_costs: "strong"
+    brand: "very strong"
+    regulatory: "none"
+  recurring_revenue_pct: 97
+  recurring_revenue_note: >
+    97% subscription revenue. 3% from Notion AI add-on
+    usage-based overage charges. Overage revenue is
+    growing and may shift the mix.
+  total_customers: 4000000
+  total_customers_note: >
+    4M teams/workspaces. ~30M individual users including
+    free tier. Paying conversion rate is ~4%.
+  enterprise_customers: 2800
+  mid_market_customers: 45000
+  smb_customers: 3952200
+  customer_concentration_pct: 1
+  customer_concentration_note: >
+    Top 100 customers represent ~1% of ARR. Extremely
+    diversified. No customer concentration risk. Largest
+    single customer is < 0.1% of ARR.
+  logo_churn_monthly_pct: "3.5"
+  logo_churn_annual_pct: "35"
+  revenue_churn_monthly_pct: "1.5"
+  revenue_churn_annual_pct: "17"
+  churn_note: >
+    Logo churn is moderate due to large SMB base. Revenue
+    churn is good. Enterprise churn is very low (< 5%
+    annual). NRR of 128% demonstrates strong expansion.
+    Notion AI adoption is reducing churn as it increases
+    stickiness.
+  nps_score: 58
+  nps_note: >
+    Based on in-app survey of 15,000 respondents. Strong
+    score for productivity tools. Promoters love
+    flexibility. Detractors cite performance issues with
+    large workspaces and learning curve.
+  risk_factors:
+    - category: "competitive"
+      severity: "medium"
+      description: >
+        Microsoft Loop bundles similar functionality into
+        M365 at no additional cost. Google Docs adding
+        database features.
+    - category: "margin"
+      severity: "medium"
+      description: >
+        AI compute costs (LLM inference) may pressure
+        margins if Notion AI usage grows faster than
+        pricing can offset.
+    - category: "complexity"
+      severity: "low"
+      description: >
+        Product flexibility creates complexity. New users
+        face steep learning curve. Onboarding is a
+        persistent challenge.
+  investment_thesis: >
+    Category-defining product with strong brand moat and
+    data lock-in. AI integration provides a second growth
+    curve. Enterprise expansion is the key value driver.
+    Must manage AI costs and competitive threats from
+    Microsoft bundling.
+  key_metrics_to_watch:
+    - "Enterprise revenue as % of total (target: 30%)"
+    - "Notion AI attach rate and usage"
+    - "Gross margin trend (AI cost impact)"
+    - "Enterprise NRR and logo retention"
+  data_confidence: "high"
+  data_sources: >
+    Secondary market data, NPS survey, press reports,
+    app store reviews, enterprise buyer survey data
+  last_updated: "2025-10-20"
+
+retool.com:
+  domain: "retool.com"
+  overall_score: 90
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series D).
+  growth_score: 82
+  unit_economics_score: 95
+  team_score: 88
+  market_score: 90
+  product_score: 92
+  moat_rating: "strong"
+  moat_components:
+    technology: "strong"
+    data_network_effects: "moderate"
+    switching_costs: "very strong"
+    brand: "strong"
+    regulatory: "low"
+  recurring_revenue_pct: 96
+  recurring_revenue_note: >
+    96% recurring subscription. 4% professional services
+    (implementation, custom integrations). Services revenue
+    declining as % as self-serve improves.
+  total_customers: 12500
+  enterprise_customers: 420
+  mid_market_customers: 3800
+  smb_customers: 8280
+  customer_concentration_pct: 8
+  customer_concentration_note: >
+    Top 10 customers represent 8% of ARR. Well-diversified.
+    Largest single customer is 1.2% of ARR. Enterprise
+    segment growing as % of mix.
+  logo_churn_monthly_pct: "2.0"
+  logo_churn_annual_pct: "22"
+  revenue_churn_monthly_pct: "0.5"
+  revenue_churn_annual_pct: "6"
+  churn_note: >
+    Excellent churn metrics. Revenue churn of 0.5% monthly
+    is top-decile for B2B SaaS. Internal tools become
+    deeply embedded in workflows, creating very high
+    switching costs. NRR of 142% is exceptional and
+    driven by seat-based expansion.
+  nps_score: 65
+  nps_note: >
+    Based on quarterly survey of 1,800 respondents. Score
+    is strong for developer tools. Promoters cite speed
+    of building internal tools. Detractors cite pricing
+    and occasional performance issues.
+  risk_factors:
+    - category: "competitive"
+      severity: "medium"
+      description: >
+        Open-source alternatives (Appsmith, Budibase) are
+        improving rapidly. May put pricing pressure on
+        SMB segment.
+    - category: "platform"
+      severity: "low"
+      description: >
+        AI app builders (v0, Cursor) could reduce demand
+        for no-code internal tool builders. Long-term
+        threat to the category.
+    - category: "execution"
+      severity: "low"
+      description: >
+        Scaling sales org rapidly. New VP Sales needs
+        to prove enterprise motion at scale.
+  investment_thesis: >
+    Category leader with exceptional unit economics and
+    switching costs. AI app builder is the next growth
+    vector. Enterprise expansion and international growth
+    provide clear path to IPO. Low execution risk given
+    strong fundamentals.
+  key_metrics_to_watch:
+    - "NRR sustainability above 130%"
+    - "AI app builder adoption and revenue impact"
+    - "Enterprise customer count growth"
+    - "Open-source competitive impact on SMB"
+  data_confidence: "high"
+  data_sources: >
+    Board materials (partial), NPS survey, G2 reviews,
+    Pitchbook, industry analyst reports
+  last_updated: "2025-12-10"
+
+resend.com:
+  domain: "resend.com"
+  overall_score: 76
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Seed).
+  growth_score: 92
+  unit_economics_score: 88
+  team_score: 65
+  market_score: 60
+  product_score: 82
+  moat_rating: "weak-moderate"
+  moat_components:
+    technology: "low"
+    data_network_effects: "none"
+    switching_costs: "moderate"
+    brand: "strong (in developer community)"
+    regulatory: "none"
+  recurring_revenue_pct: 92
+  recurring_revenue_note: >
+    92% recurring (monthly subscriptions). 8% from
+    usage-based overage charges. Usage-based component
+    growing as customers send more email.
+  total_customers: 6500
+  total_customers_note: "paying accounts"
+  enterprise_customers: 12
+  mid_market_customers: 180
+  smb_customers: 6308
+  customer_concentration_pct: 8
+  customer_concentration_note: >
+    Top 10 customers represent 8% of ARR. Well-diversified
+    for seed stage. Developer API products naturally
+    create broad customer bases.
+  logo_churn_monthly_pct: "3.3"
+  logo_churn_annual_pct: "33"
+  revenue_churn_monthly_pct: "1.8"
+  revenue_churn_annual_pct: "20"
+  churn_note: >
+    Logo churn is moderate -- many small developer
+    accounts churn as projects are abandoned. Revenue
+    churn is better due to growing accounts offsetting
+    losses. API integration switching costs provide
+    natural retention for established customers.
+  nps_score: 68
+  nps_note: >
+    Based on survey of 420 respondents. Exceptional score
+    for email infrastructure (industry median ~25).
+    Promoters cite API design and React Email. Detractors
+    cite deliverability issues with certain providers.
+  risk_factors:
+    - category: "competitive"
+      severity: "high"
+      description: >
+        Email is a commodity. SendGrid, Mailgun, Amazon SES
+        are well-established. Differentiation is primarily
+        DX which is reproducible.
+    - category: "team"
+      severity: "high"
+      description: >
+        Very small team (12 people). Key-person risk on
+        CEO. No enterprise sales team limits upmarket
+        potential.
+    - category: "market"
+      severity: "medium"
+      description: >
+        Transactional email TAM is smaller than broader
+        email market. Must expand into marketing email
+        or adjacent products.
+  investment_thesis: >
+    Bet on developer experience as a durable competitive
+    advantage in a commodity market. Open-source community
+    flywheel creates organic growth. Must prove that DX
+    moat translates to enterprise retention and expansion.
+  key_metrics_to_watch:
+    - "Enterprise customer acquisition"
+    - "Revenue per customer growth (expansion)"
+    - "Deliverability metrics vs. incumbents"
+    - "React Email community growth"
+  data_confidence: "medium"
+  data_sources: >
+    Pitch deck data, npm download analytics, NPS survey,
+    GitHub star data, developer survey responses
+  last_updated: "2025-11-28"
+
+meridian.bio:
+  domain: "meridian.bio"
+  overall_score: 74
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series A).
+  growth_score: 82
+  unit_economics_score: 70
+  team_score: 78
+  market_score: 75
+  product_score: 68
+  moat_rating: "moderate"
+  moat_components:
+    technology: "strong"
+    data_network_effects: "moderate"
+    switching_costs: "high"
+    brand: "moderate (in pharma niche)"
+    regulatory: "moderate"
+  recurring_revenue_pct: 78
+  recurring_revenue_note: >
+    78% recurring (platform subscriptions). 22% from
+    project-based consulting and wet-lab validation
+    services. Recurring % is lower than pure SaaS but
+    typical for biotech platforms.
+  total_customers: 18
+  enterprise_customers: 6
+  mid_market_customers: 8
+  smb_customers: 4
+  customer_concentration_pct: 45
+  customer_concentration_note: >
+    Top 3 customers represent 45% of ARR. HIGH
+    concentration risk. Largest customer (top-10 pharma
+    company) is 22% of ARR. Loss of this customer would
+    materially impact the business. Must diversify.
+  logo_churn_monthly_pct: "1.5"
+  logo_churn_annual_pct: "17"
+  revenue_churn_monthly_pct: "0.8"
+  revenue_churn_annual_pct: "9"
+  churn_note: >
+    Low churn metrics reflect multi-year enterprise
+    contracts. However, small customer base (n=18) means
+    churn statistics are volatile -- one lost customer
+    would spike churn significantly. Renewal data is
+    limited (only 6 customers have renewed so far).
+  nps_score: 52
+  nps_note: >
+    Based on survey of 14 respondents (78% response rate).
+    Score is good for biotech SaaS. Promoters cite
+    prediction accuracy. Detractors cite long onboarding
+    time and integration complexity.
+  risk_factors:
+    - category: "concentration"
+      severity: "very high"
+      description: >
+        Single customer is 22% of ARR. Top 3 are 45%.
+        Business viability depends on retaining key
+        pharma partnerships.
+    - category: "margin"
+      severity: "high"
+      description: >
+        Wet-lab costs and GPU compute reduce margins
+        significantly. Hardware dependency creates
+        scaling challenges.
+    - category: "regulatory"
+      severity: "medium"
+      description: >
+        FDA scrutiny of AI in drug discovery is
+        increasing. Validation requirements may slow
+        product development cycles.
+    - category: "market"
+      severity: "medium"
+      description: >
+        Pharma budget cycles are long and unpredictable.
+        AI hype correction could reduce investment.
+  investment_thesis: >
+    Unique position at the intersection of computational
+    biology and pharma services. Strong founder-market fit
+    and validated by marquee customers. Must diversify
+    customer base and improve margins to become a
+    compelling Series B story.
+  key_metrics_to_watch:
+    - "Customer count (target: 30+ by Series B)"
+    - "Customer concentration (target: no single > 15%)"
+    - "Gross margin improvement trajectory"
+    - "Clinical validation milestones from partner programs"
+  data_confidence: "medium"
+  data_sources: >
+    Series A data room (partial), customer survey,
+    pharma industry benchmarks, founder interview
+  last_updated: "2025-11-05"
+
+finstack.io:
+  domain: "finstack.io"
+  overall_score: 88
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series B).
+  growth_score: 85
+  unit_economics_score: 90
+  team_score: 88
+  market_score: 85
+  product_score: 86
+  moat_rating: "strong"
+  moat_components:
+    technology: "strong"
+    data_network_effects: "moderate"
+    switching_costs: "very strong"
+    brand: "moderate"
+    regulatory: "very strong"
+  recurring_revenue_pct: 95
+  recurring_revenue_note: >
+    95% recurring (platform fees + transaction-based
+    recurring). 5% from implementation and integration
+    services. Clean recurring model with embedded
+    transaction revenue.
+  total_customers: 245
+  enterprise_customers: 28
+  mid_market_customers: 120
+  smb_customers: 97
+  customer_concentration_pct: 15
+  customer_concentration_note: >
+    Top 5 customers represent 15% of ARR. Acceptable
+    concentration. Largest single customer is 4.5%.
+    Fintech customer base is naturally more concentrated
+    than consumer SaaS.
+  logo_churn_monthly_pct: "0.8"
+  logo_churn_annual_pct: "9"
+  revenue_churn_monthly_pct: "0.3"
+  revenue_churn_annual_pct: "4"
+  churn_note: >
+    Exceptional churn metrics. Financial infrastructure
+    is extremely sticky -- compliance audit trails and
+    regulatory integrations create prohibitive switching
+    costs. No enterprise customer has churned in 18
+    months. SMB churn is mostly business closures.
+  nps_score: 55
+  nps_note: >
+    Based on quarterly survey of 180 respondents. Good
+    score for financial infrastructure (median 35).
+    Promoters cite reliability and compliance automation.
+    Detractors cite onboarding time (avg 45 days).
+  risk_factors:
+    - category: "regulatory"
+      severity: "medium"
+      description: >
+        Regulatory landscape changes rapidly. New
+        requirements could require significant engineering
+        investment. EU expansion requires EMI license.
+    - category: "competitive"
+      severity: "medium"
+      description: >
+        Well-funded competitors (Unit, Synctera) are
+        pursuing similar market. Plaid and Stripe are
+        expanding into adjacent territory.
+    - category: "geographic"
+      severity: "low"
+      description: >
+        EU expansion adds regulatory complexity (PSD2,
+        DORA). Different banking systems require
+        significant localization.
+  investment_thesis: >
+    Category-leading financial infrastructure platform with
+    exceptional retention and regulatory moat. Near
+    profitability provides optionality. EU expansion is
+    the key growth catalyst. Strong path to IPO.
+  key_metrics_to_watch:
+    - "EU expansion revenue (target: 15% of ARR by 2027)"
+    - "Bank partner count growth"
+    - "Operating margin trend toward profitability"
+    - "Regulatory license acquisitions"
+  data_confidence: "high"
+  data_sources: >
+    Investor update, NPS survey, regulatory filings,
+    fintech industry benchmarks, Dealroom
+  last_updated: "2025-12-05"
+
+cloudlane.dev:
+  domain: "cloudlane.dev"
+  overall_score: 91
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series C).
+  growth_score: 88
+  unit_economics_score: 90
+  team_score: 85
+  market_score: 92
+  product_score: 90
+  moat_rating: "strong"
+  moat_components:
+    technology: "strong"
+    data_network_effects: "moderate"
+    switching_costs: "very strong"
+    brand: "moderate"
+    regulatory: "very strong (FedRAMP)"
+  recurring_revenue_pct: 93
+  recurring_revenue_note: >
+    93% recurring (annual platform subscriptions). 7%
+    from professional services (migration, integration).
+    Government contracts are multi-year with guaranteed
+    minimums.
+  total_customers: 280
+  enterprise_customers: 85
+  mid_market_customers: 130
+  smb_customers: 65
+  government_customers: 22
+  government_revenue_pct: 20
+  customer_concentration_pct: 12
+  customer_concentration_note: >
+    Top 5 customers represent 12% of ARR. Government
+    customers are individually larger (avg $600K ACV)
+    but distributed across multiple agencies. Largest
+    single customer is 3.8%.
+  logo_churn_monthly_pct: "1.2"
+  logo_churn_annual_pct: "13"
+  revenue_churn_monthly_pct: "0.4"
+  revenue_churn_annual_pct: "5"
+  churn_note: >
+    Low churn driven by infrastructure embedding and
+    government contract minimums. Government churn is
+    effectively zero (no federal customer has churned).
+    Commercial churn is higher (~2% monthly) but offset
+    by strong expansion.
+  nps_score: 58
+  nps_note: >
+    Based on survey of 210 respondents. Strong score for
+    infrastructure tools. Promoters cite cost savings and
+    multi-cloud simplicity. Detractors cite occasional
+    complexity in advanced configurations.
+  risk_factors:
+    - category: "competitive"
+      severity: "medium"
+      description: >
+        HashiCorp (now IBM) has vast resources. Pulumi
+        is well-funded and growing. Hyperscalers may
+        bundle multi-cloud features.
+    - category: "concentration"
+      severity: "low"
+      description: >
+        Government segment is 20% of revenue. Policy
+        changes or budget cuts could impact.
+    - category: "execution"
+      severity: "medium"
+      description: >
+        Simultaneous commercial + federal + international
+        expansion stretches management bandwidth.
+  investment_thesis: >
+    Strong multi-cloud infrastructure play with FedRAMP
+    moat. Cash-flow positive with multiple growth vectors.
+    Federal, enterprise, and international segments each
+    provide independent growth engines. Clear path to
+    IPO within 18-24 months.
+  key_metrics_to_watch:
+    - "Federal revenue growth (target: 25%+ of total)"
+    - "EMEA expansion progress"
+    - "Profitability sustainability"
+    - "Competitive response from IBM/HashiCorp"
+  data_confidence: "high"
+  data_sources: >
+    Series C data room, NPS survey, FedRAMP dashboard,
+    Gartner MQ, government procurement data
+  last_updated: "2025-12-15"
+
+learnnext.ai:
+  domain: "learnnext.ai"
+  overall_score: 58
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Pre-Seed).
+  growth_score: 78
+  unit_economics_score: 52
+  team_score: 55
+  market_score: 50
+  product_score: 65
+  moat_rating: "weak"
+  moat_components:
+    technology: "weak"
+    data_network_effects: "potential"
+    switching_costs: "low"
+    brand: "nascent"
+    regulatory: "none"
+  recurring_revenue_pct: 88
+  recurring_revenue_note: >
+    88% recurring (monthly subscriptions). 12% from
+    one-time course purchases and premium content.
+    Subscription retention is the key metric to watch.
+  total_customers: 5200
+  total_customers_note: "paying individual subscribers"
+  enterprise_customers: 0
+  institutional_customers: 3
+  institutional_note: >
+    3 university pilot programs (not yet paying).
+    Institutional revenue could significantly change the
+    business model if converted.
+  individual_subscribers: 5200
+  customer_concentration_pct: 0
+  customer_concentration_note: >
+    Consumer/prosumer model with no customer concentration
+    risk. No single customer represents meaningful revenue.
+  logo_churn_monthly_pct: "5.0"
+  logo_churn_annual_pct: "46"
+  revenue_churn_monthly_pct: "4.2"
+  revenue_churn_annual_pct: "40"
+  churn_note: >
+    HIGH churn is the primary concern. 5% monthly logo
+    churn is above the 3.5% target. Academic calendar
+    seasonality may be a factor (summer = higher churn).
+    Only 9 months of data -- cohort analysis is premature.
+    Revenue churn closely tracks logo churn (minimal
+    expansion revenue).
+  nps_score: 38
+  nps_note: >
+    Based on in-app survey of 320 respondents. Below
+    the EdTech median of 42. Promoters love the Socratic
+    method. Detractors cite accuracy issues in advanced
+    STEM topics and cost relative to free alternatives.
+  risk_factors:
+    - category: "competitive"
+      severity: "very high"
+      description: >
+        ChatGPT and Claude are free AI tutors. Purpose-
+        built tutoring must demonstrate clear value above
+        free alternatives.
+    - category: "churn"
+      severity: "high"
+      description: >
+        5% monthly churn threatens unit economics. LTV
+        estimates may be overstated if churn doesn't
+        improve.
+    - category: "margin"
+      severity: "high"
+      description: >
+        58% gross margin is below SaaS norms. LLM API
+        costs may not decrease fast enough.
+    - category: "funding"
+      severity: "high"
+      description: >
+        16 months runway. Actively fundraising but
+        EdTech is not a favored VC category currently.
+  investment_thesis: >
+    High-risk, high-reward bet on AI tutoring replacing
+    traditional education support. Strong viral growth
+    but unsustainable unit economics. Must prove retention
+    and reduce LLM costs. University partnerships could
+    be transformative if converted to paid contracts.
+  key_metrics_to_watch:
+    - "Monthly churn (target: < 3.5%)"
+    - "Gross margin (target: > 70%)"
+    - "University pilot conversion to paid"
+    - "Seed round fundraising success"
+  data_confidence: "low"
+  data_sources: >
+    Pre-seed pitch deck, limited financial data, app
+    store reviews, founder interview, Y Combinator
+    batch metrics
+  last_updated: "2025-10-30"
+
+shopfront.co:
+  domain: "shopfront.co"
+  overall_score: 82
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series B).
+  growth_score: 80
+  unit_economics_score: 82
+  team_score: 78
+  market_score: 84
+  product_score: 80
+  moat_rating: "moderate"
+  moat_components:
+    technology: "moderate"
+    data_network_effects: "strong"
+    switching_costs: "moderate"
+    brand: "moderate"
+    regulatory: "low"
+  recurring_revenue_pct: 85
+  recurring_revenue_note: >
+    85% recurring (subscriptions + recurring marketplace
+    commissions). 15% from one-time listing fees and
+    promotional placements. Marketplace commissions are
+    recurring in nature but technically transaction-based.
+  total_customers: 12000
+  total_customers_note: "active merchants on platform"
+  enterprise_customers: 45
+  mid_market_customers: 800
+  smb_customers: 11155
+  buyer_accounts: 850000
+  buyer_note: "registered buyer accounts (demand side)"
+  customer_concentration_pct: 5
+  customer_concentration_note: >
+    Top 10 merchants represent 5% of GMV. Well-diversified
+    marketplace. Long-tail of SMB merchants reduces
+    concentration risk.
+  logo_churn_monthly_pct: "1.9"
+  logo_churn_annual_pct: "20"
+  revenue_churn_monthly_pct: "1.2"
+  revenue_churn_annual_pct: "13"
+  churn_note: >
+    Moderate churn. Merchant churn is higher than pure
+    SaaS benchmarks but typical for marketplace platforms.
+    Churned merchants are often replaced by organic
+    inbound. Enterprise merchants have < 3% annual churn.
+  nps_score: 45
+  nps_note: >
+    Based on merchant survey of 1,200 respondents. Average
+    for marketplace platforms. Promoters cite buyer
+    traffic. Detractors cite commission rates and
+    fulfillment complexity.
+  risk_factors:
+    - category: "competitive"
+      severity: "medium"
+      description: >
+        Shopify B2B and Amazon Business are entering the
+        space. Larger platforms have more buyer traffic.
+    - category: "marketplace_dynamics"
+      severity: "medium"
+      description: >
+        Two-sided marketplace risk: must balance merchant
+        and buyer growth simultaneously. Chicken-and-egg
+        problem in new verticals.
+    - category: "margin"
+      severity: "low"
+      description: >
+        Blended margins are lower than pure SaaS.
+        Fulfillment operations add variable costs.
+  investment_thesis: >
+    Strong vertical marketplace with emerging network
+    effects. Managed marketplace model creates
+    differentiation but also operational complexity.
+    International expansion (UK) is the near-term
+    growth catalyst. Must demonstrate margin improvement
+    as SaaS mix grows.
+  key_metrics_to_watch:
+    - "GMV growth and take rate trajectory"
+    - "SaaS revenue as % of total"
+    - "UK expansion traction"
+    - "Gross margin improvement"
+  data_confidence: "medium-high"
+  data_sources: >
+    Series B data room, merchant survey, marketplace
+    industry benchmarks, Pitchbook, investor update
+  last_updated: "2025-11-20"
+
+datavault.io:
+  domain: "datavault.io"
+  overall_score: 80
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Series A).
+  growth_score: 88
+  unit_economics_score: 82
+  team_score: 82
+  market_score: 78
+  product_score: 76
+  moat_rating: "moderate"
+  moat_components:
+    technology: "strong"
+    data_network_effects: "low"
+    switching_costs: "high"
+    brand: "moderate (in security niche)"
+    regulatory: "moderate"
+  recurring_revenue_pct: 96
+  recurring_revenue_note: >
+    96% recurring subscriptions. 4% from one-time
+    security audit and implementation fees. Clean
+    recurring model typical of cybersecurity platforms.
+  total_customers: 118
+  enterprise_customers: 22
+  mid_market_customers: 58
+  smb_customers: 38
+  customer_concentration_pct: 22
+  customer_concentration_note: >
+    Top 5 customers represent 22% of ARR. Moderate-high
+    concentration. Largest customer is 6.5% of ARR.
+    Concentration will naturally decrease as customer
+    base grows but is a current risk.
+  logo_churn_monthly_pct: "1.2"
+  logo_churn_annual_pct: "13"
+  revenue_churn_monthly_pct: "0.6"
+  revenue_churn_annual_pct: "7"
+  churn_note: >
+    Low churn. Security infrastructure is deeply
+    integrated into data pipelines. Compliance audit
+    trails create switching costs. Only 3 customers
+    churned in the last 12 months (2 were acquired,
+    1 went out of business).
+  nps_score: 55
+  nps_note: >
+    Based on survey of 85 respondents (72% response
+    rate). Good score for security tools. Promoters
+    cite automation and ease of deployment. Detractors
+    cite false positive rates in data classification.
+  risk_factors:
+    - category: "competitive"
+      severity: "high"
+      description: >
+        Cyera raised $300M and is pursuing identical
+        market. Varonis has huge installed base.
+        Crowded category with well-funded players.
+    - category: "concentration"
+      severity: "medium"
+      description: >
+        Top customer at 6.5% of ARR. Must continue
+        diversifying.
+    - category: "execution"
+      severity: "medium"
+      description: >
+        Rapid team growth (35% in 6 months) creates
+        integration challenges. Must maintain product
+        quality during scaling.
+  investment_thesis: >
+    Strong data security platform riding regulatory
+    tailwinds. Excellent growth and retention metrics.
+    Must differentiate clearly against better-funded
+    Cyera and establish category leadership before
+    market consolidation.
+  key_metrics_to_watch:
+    - "Competitive win rate vs. Cyera"
+    - "Customer concentration reduction"
+    - "Series B fundraising metrics"
+    - "Enterprise deal size growth"
+  data_confidence: "medium"
+  data_sources: >
+    Series A investor update, NPS survey, cybersecurity
+    market reports, competitive analysis, CISO survey
+  last_updated: "2025-11-10"
+
+greenpower.energy:
+  domain: "greenpower.energy"
+  overall_score: 52
+  score_methodology: >
+    Weighted composite: growth (30%), unit economics (25%),
+    team (20%), market (15%), product (10%). Scores on
+    0-100 scale. Peer-adjusted for stage (Seed).
+  growth_score: 65
+  unit_economics_score: 35
+  team_score: 60
+  market_score: 70
+  product_score: 45
+  moat_rating: "weak-moderate"
+  moat_components:
+    technology: "moderate (hardware)"
+    data_network_effects: "potential"
+    switching_costs: "moderate"
+    brand: "nascent"
+    regulatory: "moderate"
+  recurring_revenue_pct: 72
+  recurring_revenue_note: >
+    72% recurring (SaaS monitoring subscriptions). 28%
+    from one-time hardware sales and installation. Company
+    plans to shift to hardware-as-a-service model to
+    improve recurring %. Blended model complicates
+    revenue quality assessment.
+  total_customers: 8
+  enterprise_customers: 0
+  utility_customers: 3
+  commercial_customers: 5
+  customer_concentration_pct: 62
+  customer_concentration_note: >
+    VERY HIGH concentration. Top customer (regional
+    utility) is 35% of ARR. Top 3 are 62%. At this
+    stage and customer count, concentration is somewhat
+    expected but remains the primary business risk.
+  logo_churn_monthly_pct: "0.0"
+  logo_churn_annual_pct: "0"
+  revenue_churn_monthly_pct: "0.0"
+  revenue_churn_annual_pct: "0"
+  churn_note: >
+    Zero churn to date but only 14 months of revenue
+    data with 8 customers. Too early for meaningful
+    churn metrics. First contract renewals will occur
+    in Q1-Q2 2026 -- renewal rate will be a critical
+    milestone.
+  nps_score: "N/A"
+  nps_note: >
+    Customer base too small (n=8) for meaningful NPS.
+    Qualitative feedback from 5 customers is positive
+    with caveats about hardware reliability.
+  risk_factors:
+    - category: "unit_economics"
+      severity: "very high"
+      description: >
+        LTV/CAC of 2.4x is below the 3.0x minimum
+        threshold. Hardware costs and long sales cycles
+        make unit economics challenging.
+    - category: "concentration"
+      severity: "very high"
+      description: >
+        Single customer is 35% of ARR. Loss would be
+        catastrophic to the business.
+    - category: "funding"
+      severity: "high"
+      description: >
+        15 months runway. Seed-stage cleantech is
+        difficult to fund. Must demonstrate metrics
+        improvement for Series A.
+    - category: "execution"
+      severity: "high"
+      description: >
+        Hardware + software is operationally complex.
+        Field deployment doesn't scale easily. Team
+        is very small for the ambition.
+    - category: "technology"
+      severity: "medium"
+      description: >
+        Hardware reliability in field conditions is
+        unproven at scale. IoT sensor failures could
+        damage customer relationships.
+  investment_thesis: >
+    High-risk cleantech bet with strong regulatory
+    tailwinds (IRA, FERC 2222). Hardware-software
+    integration is a differentiator but also a burden.
+    Must prove unit economics and customer retention
+    before running out of runway.
+  key_metrics_to_watch:
+    - "First contract renewals (Q1-Q2 2026)"
+    - "LTV/CAC improvement (target: > 3.0x)"
+    - "Hardware reliability metrics"
+    - "Series A fundraising success"
+    - "DOE grant pipeline"
+  data_confidence: "low"
+  data_sources: >
+    Seed pitch deck, DOE grant data, limited financial
+    metrics, customer interviews (n=3), founder call
+  last_updated: "2025-11-22"
+
+# Unknown companies — basic profile data available
+# These represent companies where primary sources (financials,
+# market, team) have no data, but a basic profile exists.
+
+unknown-alpha.io:
+  domain: "unknown-alpha.io"
+  overall_score: 35
+  growth_score: 40
+  unit_economics_score: 30
+  team_score: 35
+  market_score: 30
+  product_score: 40
+  moat_rating: "unknown"
+  recurring_revenue_pct: 0
+  data_confidence: "very low"
+  data_sources: "Public domain registration, LinkedIn company page"
+  last_updated: "2025-12-01"
+  risk_factors: "No verified financial data, no known funding rounds, limited public information"
+
+unknown-beta.io:
+  domain: "unknown-beta.io"
+  overall_score: 30
+  growth_score: 35
+  unit_economics_score: 25
+  team_score: 30
+  market_score: 35
+  product_score: 30
+  moat_rating: "unknown"
+  recurring_revenue_pct: 0
+  data_confidence: "very low"
+  data_sources: "Public domain registration, Crunchbase stub"
+  last_updated: "2025-12-01"
+  risk_factors: "No verified financial data, no known team information"
+
+unknown-gamma.io:
+  domain: "unknown-gamma.io"
+  overall_score: 25
+  growth_score: 30
+  unit_economics_score: 20
+  team_score: 25
+  market_score: 30
+  product_score: 25
+  moat_rating: "unknown"
+  recurring_revenue_pct: 0
+  data_confidence: "very low"
+  data_sources: "Public domain registration only"
+  last_updated: "2025-12-01"
+  risk_factors: "Minimal public presence, no verified data"
+
+unknown-delta.io:
+  domain: "unknown-delta.io"
+  overall_score: 28
+  growth_score: 32
+  unit_economics_score: 22
+  team_score: 28
+  market_score: 32
+  product_score: 28
+  moat_rating: "unknown"
+  recurring_revenue_pct: 0
+  data_confidence: "very low"
+  data_sources: "Public domain registration, job posting analysis"
+  last_updated: "2025-12-01"
+  risk_factors: "No financial data, no funding history"
+
+unknown-epsilon.io:
+  domain: "unknown-epsilon.io"
+  overall_score: 32
+  growth_score: 38
+  unit_economics_score: 26
+  team_score: 30
+  market_score: 34
+  product_score: 32
+  moat_rating: "unknown"
+  recurring_revenue_pct: 0
+  data_confidence: "very low"
+  data_sources: "Public domain registration, LinkedIn presence"
+  last_updated: "2025-12-01"
+  risk_factors: "No verified financial data, limited market information"
+
+unknown-zeta.io:
+  domain: "unknown-zeta.io"
+  overall_score: 30
+  growth_score: 35
+  unit_economics_score: 25
+  team_score: 30
+  market_score: 32
+  product_score: 30
+  moat_rating: "unknown"
+  recurring_revenue_pct: 0
+  data_confidence: "very low"
+  data_sources: "Public domain registration"
+  last_updated: "2025-12-01"
+  risk_factors: "No verified data available"

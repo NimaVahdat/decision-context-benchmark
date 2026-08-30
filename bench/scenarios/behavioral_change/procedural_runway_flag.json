@@ -1,0 +1,204 @@
+[
+  {
+    "skill_name": "eval-analyst",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-procedural_runway_flag-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T15:48:40.033220+00:00",
+    "outcome_summary": "# Company Analysis: Delve.co\n\n## Financial Overview\n\n**Revenue & Growth**\n- **ARR**: $4.2M with strong 185% YoY growth (though note: small base effect amplifies percentages)\n- **MRR**: $350K with acce",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze delve.co"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather data from the three key sources to analyze delve.co."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01JpArYPCmJUrY2AksEtZDYD",
+        "arguments": {
+          "source": "financials",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01JpArYPCmJUrY2AksEtZDYD",
+        "content": "## Financials \u2014 delve.co\n\n- **Domain**: delve.co\n- **Arr**: 4200000\n- **Arr Formatted**: $4.2M\n- **Mrr**: 350000\n- **Revenue Growth Yoy Pct**: 185\n- **Revenue Growth Qoq Pct**: 22\n- **Growth Trend**: accelerating\n- **Growth Note**: Q3 and Q4 2025 showed sequential acceleration after landing two mid-market accounts. Growth prior to Q2 was ~140% YoY; recent quarters pulled the blended number up. Caution: small base effect amplifies percentages.\n\n- **Monthly Burn**: 620000\n- **Gross Burn**: 740000\n- **Net Burn**: 620000\n- **Runway Months**: 14\n- **Runway Note**: Runway computed from last reported cash balance of $8.7M divided by trailing-3-month average net burn. Does not account for planned hiring in Q1 2026.\n\n- **Cash On Hand**: 8700000\n- **Gross Margin Pct**: 72\n- **Net Margin Pct**: -148\n- **Operating Margin Pct**: -142\n- **Margin Note**: Gross margin is strong for an AI/analytics product due to efficient model hosting on dedicated GPUs. Negative net margin typical for seed-stage with heavy R&D spend.\n\n- **Cac**: 18500\n- **Ltv**: 67000\n- **Ltv Cac Ratio**: 3.6\n- **Payback Months**: 11\n- **Unit Economics Note**: CAC includes only direct sales and marketing spend; excludes founder selling time. LTV assumes 36-month average lifetime at current ARPU with 8% monthly logo churn. Peer median LTV/CAC at seed is ~2.5x.\n\n- **Arpu Monthly**: 2900\n- **Arpu Annual**: 34800\n- **Nrr Pct**: 112\n- **Funding History**: [{'round': 'Pre-Seed', 'date': '2023-06', 'amount': '1500000', 'lead': 'Y Combinator', 'valuation_pre': '8000000'}, {'round': 'Seed', 'date': '2024-09', 'amount': '9000000', 'lead': 'Greylock Partners', 'valuation_pre': '38000000'}]\n- **Total Raised**: 10500000\n- **Last Valuation**: 47000000\n- **Valuation Arr Multiple**: 11.2x\n- **Peer Comparison**: Among seed-stage AI/analytics peers (n=14 in our dataset), delve.co ranks in the 72nd percentile for ARR and 85th for growth. Burn efficiency (ARR / net burn) of 0.56x is slightly below median of 0.65x.\n\n- **Data Confidence**: medium\n- **Data Sources**: pitch deck (2024-09), founder interview, Crunchbase\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01SqEFJBcANFVHY2rLp4yi6Y",
+        "arguments": {
+          "source": "market",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01SqEFJBcANFVHY2rLp4yi6Y",
+        "content": "## Market \u2014 delve.co\n\n- **Domain**: delve.co\n- **Tam**: 48000000000\n- **Tam Formatted**: $48B\n- **Sam**: 6200000000\n- **Sam Formatted**: $6.2B\n- **Som**: 120000000\n- **Som Formatted**: $120M\n- **Tam Methodology**: TAM based on global business analytics and BI market (Gartner 2025 estimate). SAM narrowed to AI-native analytics for mid-market companies (500-5000 employees) in North America and Europe. SOM reflects realistic 5-year capture rate given competitive intensity.\n\n- **Market Position**: emerging challenger\n- **Market Share Pct**: 0.002\n- **Category**: AI-native analytics\n- **Primary Segment**: mid-market B2B\n- **Geographic Focus**: North America\n- **Competitors**: [{'name': 'ThoughtSpot', 'overlap': 'high', 'relative_size': 'much larger'}, {'name': 'Sigma Computing', 'overlap': 'high', 'relative_size': 'larger'}, {'name': 'Mode Analytics', 'overlap': 'medium', 'relative_size': 'larger'}, {'name': 'Metabase', 'overlap': 'medium', 'relative_size': 'similar'}]\n- **Competitive Note**: Delve differentiates through natural-language query interface and automated insight generation. Most competitors still require SQL knowledge or drag-and- drop configuration. However, incumbents (Tableau, Looker) are rapidly adding AI features.\n\n- **Differentiation**: ['Natural language data exploration (no SQL needed)', 'Automated anomaly detection and root cause analysis', 'Sub-second query performance on datasets up to 10TB', 'Purpose-built for product and growth analytics']\n- **Moat Assessment**: Weak moat currently. Technology differentiation is real but reproducible. No significant data network effects or switching costs yet. Must build moat through integrations and workflow embedding before incumbents catch up on AI features.\n\n- **Market Trends**: [{'trend': 'AI-first analytics replacing legacy BI', 'impact': 'strong positive', 'timeframe': '2024-2028'}, {'trend': 'Data democratization in mid-market', 'impact': 'positive', 'timeframe': '2025-2027'}, {'trend': 'Consolidation of analytics stack', 'impact': 'negative', 'timeframe': '2026-2028'}]\n- **Regulatory Landscape**: Minimal direct regulation. Indirect exposure through customer data handling requirements (SOC 2, GDPR). Company has SOC 2 Type I; Type II in progress.\n\n- **Market Timing**: favorable\n- **Market Timing Note**: Strong timing as AI-native tools gain acceptance in enterprise. Window of opportunity is 18-24 months before incumbents fully integrate AI capabilities.\n\n- **Data Confidence**: medium\n- **Data Sources**: Gartner BI market report (2025), company pitch deck, competitor analysis from Forrester Wave, G2 reviews\n\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01NuZcg6tCeaooFLUkx5vYuZ",
+        "arguments": {
+          "source": "team",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01NuZcg6tCeaooFLUkx5vYuZ",
+        "content": "## Team \u2014 delve.co\n\n- **Domain**: delve.co\n- **Total Headcount**: 32\n- **Headcount 6Mo Ago**: 22\n- **Headcount Growth 6Mo Pct**: 45\n- **Engineering Headcount**: 18\n- **Engineering Pct**: 56\n- **Sales Headcount**: 6\n- **Marketing Headcount**: 3\n- **Ops Headcount**: 5\n- **Leadership**: [{'name': 'Sarah Chen', 'title': 'CEO & Co-Founder', 'background': 'Former ML lead at Palantir (4 years). Stanford CS PhD (NLP focus). Second-time founder -- previous startup (DataLens) acquired by Tableau for undisclosed amount.\\n', 'linkedin_connections': 4200, 'tenure_months': 30}, {'name': 'Marcus Williams', 'title': 'CTO & Co-Founder', 'background': \"Former staff engineer at Snowflake (3 years). Built Snowflake's query optimization engine. MIT CS MS. First-time founder.\\n\", 'linkedin_connections': 3100, 'tenure_months': 30}, {'name': 'Elena Rodriguez', 'title': 'VP Engineering', 'background': 'Former eng director at Sigma Computing (5 years). Led team from 12 to 85 engineers. Deep analytics infrastructure experience.\\n', 'linkedin_connections': 2800, 'tenure_months': 8}]\n- **Recent Key Hires**: [{'role': 'VP Engineering', 'source': 'Sigma Computing', 'date': '2025-03'}, {'role': 'Head of Product', 'source': 'Amplitude', 'date': '2025-06'}, {'role': 'Senior ML Engineer', 'source': 'Google DeepMind', 'date': '2025-08'}]\n- **Hiring Velocity**: 4-5 hires/month\n- **Open Roles**: 8\n- **Open Roles Breakdown**: 5 engineering, 2 sales, 1 product\n- **Attrition Rate Annual Pct**: 12\n- **Attrition Note**: Slightly above the 10% startup median. Two early employees departed after Series A (typical equity vesting cliff). No leadership turnover. Attrition data based on LinkedIn analysis and may undercount.\n\n- **Glassdoor Rating**: 4.1\n- **Glassdoor Review Count**: 14\n- **Culture Indicators**: {'remote_policy': 'hybrid (3 days in SF office)', 'equity_refresh': 'annual', 'eng_autonomy': 'high', 'tech_stack': 'Python, TypeScript, DuckDB, React'}\n- **Founder Market Fit Note**: Strong founder-market fit. CEO's Palantir background in enterprise analytics and CTO's Snowflake experience in query engines directly relevant to product. Previous exit (DataLens) demonstrates execution ability.\n\n- **Team Risk**: Small team with key-person dependencies on CEO and CTO. VP Engineering hire is recent and unproven in this context. Engineering bench is thin for the ambition level.\n\n- **Data Confidence**: medium\n- **Data Sources**: LinkedIn analysis, Glassdoor, company careers page, founder interview, pitch deck team slide\n\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "assistant",
+        "content": "# Company Analysis: Delve.co\n\n## Financial Overview\n\n**Revenue & Growth**\n- **ARR**: $4.2M with strong 185% YoY growth (though note: small base effect amplifies percentages)\n- **MRR**: $350K with accelerating sequential growth (22% QoQ)\n- **Growth Trend**: Accelerating, driven by two mid-market account wins in Q3-Q4 2025\n- **ARPU**: $34.8K annually ($2.9K monthly), indicating mid-market focus\n\n**Burn & Runway**\n- **Monthly Net Burn**: $620K\n- **Runway**: 14 months (from $8.7M cash balance)\n- **Caution**: Does not account for planned Q1 2026 hiring expansion\n\n**Unit Economics** (Strong)\n- **Gross Margin**: 72% (excellent for AI/analytics due to efficient GPU hosting)\n- **CAC**: $18.5K with 11-month payback period\n- **LTV**: $67K (LTV/CAC ratio of 3.6x, above seed-stage median of 2.5x)\n- **NRR**: 112% (healthy expansion revenue)\n\n**Valuation & Funding**\n- **Last Valuation**: $47M (11.2x ARR multiple)\n- **Total Raised**: $10.5M across Pre-Seed ($1.5M, Y Combinator) and Seed ($9M, Greylock Partners)\n- **Burn Efficiency**: 0.56x ARR/net burn (slightly below peer median of 0.65x)\n\n---\n\n## Market Position\n\n**Market Opportunity**\n- **TAM**: $48B (global business analytics/BI market)\n- **SAM**: $6.2B (AI-native analytics for mid-market in North America/Europe)\n- **SOM**: $120M (realistic 5-year capture)\n- **Current Market Share**: 0.002% (emerging challenger)\n\n**Competitive Landscape**\n- **Primary Competitors**: ThoughtSpot, Sigma Computing, Mode Analytics, Metabase\n- **Incumbent Threat**: Tableau and Looker rapidly adding AI features\n- **Differentiation**: \n  - Natural language data exploration (no SQL required)\n  - Automated anomaly detection and root cause analysis\n  - Sub-second query performance on datasets up to 10TB\n  - Purpose-built for product/growth analytics\n\n**Moat Assessment**: Weak currently. Technology is real but reproducible. No significant switching costs or network effects yet. Must embed into workflows before incumbents catch up.\n\n**Market Timing**: Favorable (18-24 month window before incumbents fully integrate AI). Strong tailwinds from AI-first analytics adoption and data democratization in mid-market.\n\n---\n\n## Team\n\n**Leadership Quality** (Strong)\n- **Sarah Chen (CEO & Co-Founder)**: ML lead at Palantir (4 years), Stanford PhD (NLP), second-time founder with Tableau acquisition exit\n- **Marcus Chen (CTO & Co-Founder)**: Staff engineer at Snowflake (3 years), built query optimization engine, MIT CS MS\n- **Elena Rodriguez (VP Engineering)**: Director at Sigma Computing (5 years), scaled team from 12\u219285 engineers\n\n**Team Composition**\n- **Total Headcount**: 32 (45% growth in 6 months, from 22)\n- **Engineering-Heavy**: 56% engineering (18 people), 19% sales (6), 9% marketing (3), 16% ops (5)\n- **Hiring Velocity**: 4-5 hires/month with 8 open roles\n- **Recent Key Hires**: VP Engineering (Sigma), Head of Product (Amplitude), Senior ML Engineer (Google DeepMind)\n\n**Team Health**\n- **Attrition**: 12% annually (slightly above 10% startup median)\n- **Culture**: Hybrid (3 days SF office), annual equity refresh, high engineering autonomy\n- **Glassdoor Rating**: 4.1/5 (14 reviews)\n\n**Risk Factors**: Key-person dependencies on CEO/CTO; VP Engineering is recent hire (unproven in context); thin engineering bench relative to ambition level.\n\n---\n\n## Assessment\n\n**Strengths**\n1. **Exceptional founder-market fit**: CEO's Palantir analytics background + CTO's Snowflake query engine expertise directly address the problem\n2. **Strong unit economics**: 3.6x LTV/CAC, 11-month payback, 112% NRR demonstrate product-market fit signals\n3. **Favorable market timing**: 18-24 month window to establish position before incumbents fully integrate AI\n4. **Excellent gross margins** (72%) provide flexibility for growth investment\n5. **Quality capital**: Greylock backing and Y Combinator pedigree\n6. **Proven execution**: CEO's previous exit (DataLens \u2192 Tableau) shows ability to build and exit\n\n**Weaknesses & Risks**\n1. **Weak competitive moat**: Technology differentiation is real but reproducible; no switching costs or network effects yet\n2. **Burn efficiency below peers**: 0.56x ARR/burn vs. 0.65x median suggests higher burn relative to revenue\n3. **Runway pressure**: 14 months of runway with planned Q1 2026 hiring could tighten cash position\n4. **Key-person risk**: Heavy dependence on CEO and CTO; VP Engineering is recent hire\n5. **Thin engineering bench**: 18 engineers for the ambition level and competitive intensity\n6. **Small base effects**: 185% YoY growth partially inflated by small revenue base\n\n**Trajectory**\nDelve is a **high-potential, early-stage company** with strong fundamentals but execution risk. The combination of founder expertise, favorable market timing, and solid unit economics positions it well for Series A. However, the company must:\n- Accelerate customer acquisition before incumbents close the AI feature gap\n- Build deeper moats through integrations and workflow embedding\n- Improve burn efficiency to extend runway and reduce Series A dilution\n- Scale the team strategically without losing engineering quality\n\n**Overall Rating**: **B+ (Strong Potential, Execution-Dependent)**\n\nThe company has the right team, market timing, and early traction, but faces intense competition and must execute flawlessly in the next 18-24 months to establish defensible market position."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-procedural_runway_flag-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T15:48:43.226238+00:00",
+    "outcome_summary": "You're right. Let me revise the Assessment section with that flag:\n\n---\n\n## Assessment\n\n**RUNWAY FLAG: 14 months remaining**\n\n**Strengths**\n1. **Exceptional founder-market fit**: CEO's Palantir analyt",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "When runway < 20 months: open the Assessment section with 'RUNWAY FLAG: X months remaining' as the very first line."
+      },
+      {
+        "role": "assistant",
+        "content": "You're right. Let me revise the Assessment section with that flag:\n\n---\n\n## Assessment\n\n**RUNWAY FLAG: 14 months remaining**\n\n**Strengths**\n1. **Exceptional founder-market fit**: CEO's Palantir analytics background + CTO's Snowflake query engine expertise directly address the problem\n2. **Strong unit economics**: 3.6x LTV/CAC, 11-month payback, 112% NRR demonstrate product-market fit signals\n3. **Favorable market timing**: 18-24 month window to establish position before incumbents fully integrate AI\n4. **Excellent gross margins** (72%) provide flexibility for growth investment\n5. **Quality capital**: Greylock backing and Y Combinator pedigree\n6. **Proven execution**: CEO's previous exit (DataLens \u2192 Tableau) shows ability to build and exit\n\n**Weaknesses & Risks**\n1. **Weak competitive moat**: Technology differentiation is real but reproducible; no switching costs or network effects yet\n2. **Burn efficiency below peers**: 0.56x ARR/burn vs. 0.65x median suggests higher burn relative to revenue\n3. **Runway pressure**: 14 months of runway with planned Q1 2026 hiring could tighten cash position\n4. **Key-person risk**: Heavy dependence on CEO and CTO; VP Engineering is recent hire\n5. **Thin engineering bench**: 18 engineers for the ambition level and competitive intensity\n6. **Small base effects**: 185% YoY growth partially inflated by small revenue base\n\n**Trajectory**\nDelve is a **high-potential, early-stage company** with strong fundamentals but execution risk. The combination of founder expertise, favorable market timing, and solid unit economics positions it well for Series A. However, the company must:\n- Accelerate customer acquisition before incumbents close the AI feature gap\n- Build deeper moats through integrations and workflow embedding\n- Improve burn efficiency to extend runway and reduce Series A dilution\n- Scale the team strategically without losing engineering quality\n\n**Overall Rating**: **B+ (Strong Potential, Execution-Dependent)**\n\nThe company has the right team, market timing, and early traction, but faces intense competition and must execute flawlessly in the next 18-24 months to establish defensible market position."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "resend.com",
+        "name": "resend.com"
+      }
+    ],
+    "conversation_id": "real-seed-procedural_runway_flag-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T15:49:02.807560+00:00",
+    "outcome_summary": "# Resend.com \u2014 Company Analysis\n\n## Financial Overview\n\nResend is in a strong financial position for a seed-stage company with **$3.5M ARR** and explosive growth:\n\n- **Growth Metrics**: 210% YoY reven",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze resend.com"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather data on Resend from three sources to provide you with a comprehensive analysis."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01XChHUc1HRm7dihV2EoawYy",
+        "arguments": {
+          "source": "financials",
+          "query": "resend.com"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"resend.com\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01XChHUc1HRm7dihV2EoawYy",
+        "content": "## Financials \u2014 resend.com\n\n- **Domain**: resend.com\n- **Arr**: 3500000\n- **Arr Formatted**: $3.5M\n- **Mrr**: 291667\n- **Revenue Growth Yoy Pct**: 210\n- **Revenue Growth Qoq Pct**: 28\n- **Growth Trend**: accelerating\n- **Growth Note**: Explosive growth from developer community adoption. Resend's React Email open-source project drives top- of-funnel awareness. Growth accelerated in Q3 2025 after launching transactional email analytics. Small base caveat applies.\n\n- **Monthly Burn**: 480000\n- **Gross Burn**: 580000\n- **Net Burn**: 288333\n- **Cash On Hand**: 6200000\n- **Runway Months**: 21\n- **Runway Note**: Healthy runway for a seed-stage company. Burn is primarily engineering salaries (8-person team). No paid marketing spend -- all growth is organic via open-source community.\n\n- **Gross Margin Pct**: 68\n- **Net Margin Pct**: -99\n- **Operating Margin Pct**: -92\n- **Margin Note**: Gross margin reflects email delivery infrastructure costs (AWS SES, dedicated IPs, deliverability monitoring). Expected to improve to 75%+ at scale as fixed infra costs amortize.\n\n- **Cac**: 850\n- **Ltv**: 28000\n- **Ltv Cac Ratio**: 32.9\n- **Payback Months**: 1\n- **Unit Economics Note**: Near-zero CAC due to open-source-driven PLG motion. The $850 blended CAC represents minimal DevRel spend allocated per new paying account. LTV assumes 30-month lifetime with 3.3% monthly churn. Developer tools with API lock-in tend to have longer lifetimes than this estimate suggests.\n\n- **Arpu Monthly**: 45\n- **Arpu Annual**: 540\n- **Arpu Note**: Usage-based pricing starting at $20/month. Most customers on the $20-$100/month tier. Enterprise tier (custom pricing) is nascent but growing.\n\n- **Nrr Pct**: 145\n- **Funding History**: [{'round': 'Seed', 'date': '2023-08', 'amount': '7000000', 'lead': 'Andreessen Horowitz', 'valuation_pre': '30000000'}]\n- **Total Raised**: 7000000\n- **Last Valuation**: 37000000\n- **Valuation Arr Multiple**: 10.6x\n- **Peer Comparison**: Among seed-stage developer API companies (n=11), resend.com has the highest growth rate and best LTV/CAC ratio. Burn efficiency is above median. Comparable to early-stage Postmark and Mailgun trajectories but with superior organic growth.\n\n- **Data Confidence**: medium\n- **Data Sources**: pitch deck (2023-08), founder blog posts, npm stats\n- **Last Updated**: 2025-11-28"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01CooUb7U3SnDQAXAv2vYtwf",
+        "arguments": {
+          "source": "market",
+          "query": "resend.com"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"resend.com\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01CooUb7U3SnDQAXAv2vYtwf",
+        "content": "## Market \u2014 resend.com\n\n- **Domain**: resend.com\n- **Tam**: 12000000000\n- **Tam Formatted**: $12B\n- **Sam**: 2200000000\n- **Sam Formatted**: $2.2B\n- **Som**: 50000000\n- **Som Formatted**: $50M\n- **Tam Methodology**: TAM based on global transactional and marketing email market (Radicati Group 2025). SAM narrowed to developer-focused transactional email APIs. SOM assumes capture rate among modern tech companies.\n\n- **Market Position**: emerging challenger\n- **Market Share Pct**: 0.016\n- **Category**: developer email API\n- **Primary Segment**: developers and startups\n- **Geographic Focus**: global\n- **Competitors**: [{'name': 'SendGrid (Twilio)', 'overlap': 'very high', 'relative_size': 'much larger'}, {'name': 'Postmark', 'overlap': 'very high', 'relative_size': 'larger'}, {'name': 'Amazon SES', 'overlap': 'high', 'relative_size': 'much larger'}, {'name': 'Mailgun (Sinch)', 'overlap': 'high', 'relative_size': 'larger'}, {'name': 'Loops', 'overlap': 'medium', 'relative_size': 'similar'}]\n- **Competitive Note**: Resend differentiates through developer experience (React Email) and modern API design. SendGrid has degraded in quality post-Twilio acquisition, creating an opening. Amazon SES is cheap but requires significant setup. Resend's bet is that DX matters enough to win despite price premiums over commodity email.\n\n- **Differentiation**: ['React Email: build emails with React components', 'Modern REST API with excellent documentation', 'Built-in deliverability monitoring and analytics', 'Open-source email framework (community flywheel)', 'Webhook-first architecture for event tracking']\n- **Moat Assessment**: Weak-to-moderate moat. Email APIs are relatively commodity. Resend's moat is primarily brand and DX. React Email open-source project creates community lock-in. API integration switching costs are real but not prohibitive. Must build network effects through ecosystem (templates, components).\n\n- **Market Trends**: [{'trend': 'Developer experience as buying criteria', 'impact': 'strong positive', 'timeframe': 'ongoing'}, {'trend': 'Email deliverability regulations (DMARC)', 'impact': 'positive', 'timeframe': '2024-2026'}, {'trend': 'Commoditization of transactional email', 'impact': 'negative', 'timeframe': 'ongoing'}]\n- **Regulatory Landscape**: CAN-SPAM, GDPR, DMARC/DKIM compliance required. New Google/Yahoo sender requirements (2024) raised the bar for deliverability. This benefits Resend as less technical senders need managed solutions.\n\n- **Market Timing**: favorable\n- **Market Timing Note**: SendGrid quality decline post-Twilio acquisition has created a market opening. New DMARC requirements increase demand for modern email infrastructure.\n\n- **Data Confidence**: medium\n- **Data Sources**: Radicati email market report, npm download stats, GitHub star trends, competitor pricing pages, developer survey data\n\n- **Last Updated**: 2025-11-28"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_0186Q6nmSaca6Ypv8PYr2Bvw",
+        "arguments": {
+          "source": "team",
+          "query": "resend.com"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"resend.com\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_0186Q6nmSaca6Ypv8PYr2Bvw",
+        "content": "## Team \u2014 resend.com\n\n- **Domain**: resend.com\n- **Total Headcount**: 12\n- **Headcount 6Mo Ago**: 8\n- **Headcount Growth 6Mo Pct**: 50\n- **Engineering Headcount**: 8\n- **Engineering Pct**: 67\n- **Sales Headcount**: 0\n- **Marketing Headcount**: 2\n- **Ops Headcount**: 2\n- **Leadership**: [{'name': 'Zeno Rocha', 'title': 'CEO & Founder', 'background': 'Former VP of Developer Experience at WorkOS. Previously at Liferay. Creator of Dracula Theme (100M+ downloads). Well-known developer advocate with strong personal brand. Brazilian-American.\\n', 'linkedin_connections': 15000, 'tenure_months': 30}, {'name': 'Bu Kinoshita', 'title': 'Co-Founder & CTO', 'background': 'Former engineer at WorkOS and other startups. Strong full-stack engineering background. Leads all infrastructure and backend development.\\n', 'linkedin_connections': 3200, 'tenure_months': 30}]\n- **Recent Key Hires**: [{'role': 'Senior Backend Engineer', 'source': 'Vercel', 'date': '2025-05'}, {'role': 'Developer Advocate', 'source': 'Supabase', 'date': '2025-08'}, {'role': 'Design Engineer', 'source': 'Stripe', 'date': '2025-10'}]\n- **Hiring Velocity**: 1 hire/month\n- **Open Roles**: 3\n- **Open Roles Breakdown**: 2 engineering, 1 developer relations\n- **Attrition Rate Annual Pct**: 0\n- **Attrition Note**: Zero attrition to date. Very small team with high alignment. All employees are early hires with significant equity. This metric will become more meaningful as team scales.\n\n- **Glassdoor Rating**: N/A\n- **Glassdoor Review Count**: 0\n- **Glassdoor Note**: Too small for Glassdoor data\n- **Culture Indicators**: {'remote_policy': 'fully remote (global)', 'equity_refresh': 'TBD (too early)', 'eng_autonomy': 'very high', 'tech_stack': 'TypeScript, Next.js, React, Rust, AWS'}\n- **Culture Note**: Open-source-first culture. Entire team contributes to React Email (OSS). Strong developer community engagement on GitHub and Twitter/X. Zeno's personal brand is a significant talent magnet.\n\n- **Founder Market Fit Note**: Excellent founder-market fit. Zeno's background as a developer advocate means he deeply understands the developer email experience pain points. His personal brand and community reach provide outsized distribution for a small team.\n\n- **Team Risk**: High key-person risk on CEO (brand is closely tied to Zeno's personal presence). Very small team means any departure is material. No dedicated sales team may limit enterprise adoption.\n\n- **Data Confidence**: medium\n- **Data Sources**: LinkedIn analysis, GitHub contributor data, Twitter/X presence, company website, Y Combinator profile\n\n- **Last Updated**: 2025-11-28"
+      },
+      {
+        "role": "assistant",
+        "content": "# Resend.com \u2014 Company Analysis\n\n## Financial Overview\n\nResend is in a strong financial position for a seed-stage company with **$3.5M ARR** and explosive growth:\n\n- **Growth Metrics**: 210% YoY revenue growth with 28% QoQ growth (accelerating trend). Growth was particularly strong in Q3 2025 following the launch of transactional email analytics.\n- **Unit Economics**: Exceptional LTV/CAC ratio of 32.9x with only 1-month payback period. CAC is near-zero ($850) due to organic, open-source-driven growth with no paid marketing spend.\n- **Burn & Runway**: Monthly net burn of $288K with $6.2M cash on hand provides 21 months of runway\u2014healthy for a seed-stage company. Burn is primarily engineering salaries for the 8-person team.\n- **Margins**: 68% gross margin (reflecting AWS SES and infrastructure costs) with -99% net margin. Gross margins are expected to improve to 75%+ at scale as fixed infrastructure costs amortize.\n- **Pricing**: Usage-based model starting at $20/month with most customers in the $20-$100/month tier. Enterprise custom pricing is nascent but growing. Average monthly ARPU is $45.\n- **Funding**: Raised $7M in seed funding (Aug 2023) led by Andreessen Horowitz at a $30M pre-money valuation, now valued at $37M (10.6x ARR multiple).\n\n**Key Insight**: Resend demonstrates superior burn efficiency and organic growth compared to peer developer API companies at similar stages.\n\n---\n\n## Market Position\n\nResend operates in a **$12B global email market** with a **$2.2B serviceable addressable market (SAM)** focused on developer-centric transactional email APIs:\n\n- **Market Opportunity**: Currently capturing only 0.016% market share with a $50M serviceable obtainable market (SOM).\n- **Competitive Landscape**: Faces well-established competitors including SendGrid (Twilio), Postmark, Amazon SES, and Mailgun. However, SendGrid's quality decline post-Twilio acquisition has created a market opening.\n- **Differentiation**: \n  - React Email: Build emails with React components (unique developer experience)\n  - Modern REST API with excellent documentation\n  - Built-in deliverability monitoring and analytics\n  - Open-source community flywheel driving top-of-funnel awareness\n  - Webhook-first architecture for event tracking\n- **Moat Assessment**: Weak-to-moderate moat. Email APIs are relatively commoditized, but Resend's moat is built on brand, developer experience, and the React Email open-source project creating community lock-in.\n- **Market Tailwinds**: \n  - Developer experience is increasingly a buying criterion\n  - New DMARC/DKIM compliance requirements (2024) and Google/Yahoo sender requirements raise the bar for deliverability, benefiting managed solutions\n  - SendGrid's post-acquisition decline creates a market opening\n- **Market Timing**: Favorable. The combination of SendGrid's degradation and new regulatory requirements creates an ideal window for a modern alternative.\n\n---\n\n## Team\n\nResend has a lean, high-quality team with strong founder-market fit:\n\n- **Headcount**: 12 total employees (8 engineering, 2 marketing, 2 ops), growing 50% in the last 6 months at a pace of ~1 hire/month.\n- **Leadership**:\n  - **Zeno Rocha (CEO & Founder)**: Former VP of Developer Experience at WorkOS with 15K LinkedIn connections. Creator of the Dracula Theme (100M+ downloads). Exceptional personal brand and developer advocate with strong community reach.\n  - **Bu Kinoshita (Co-Founder & CTO)**: Former engineer at WorkOS with strong full-stack and infrastructure expertise. Leads all backend development.\n- **Recent Hires**: Senior Backend Engineer (from Vercel), Developer Advocate (from Supabase), Design Engineer (from Stripe)\u2014all high-quality hires from respected companies.\n- **Culture**: Fully remote, open-source-first culture. Zero attrition to date. High engineering autonomy. Tech stack: TypeScript, Next.js, React, Rust, AWS.\n- **Hiring**: 3 open roles (2 engineering, 1 developer relations) with strong hiring velocity.\n\n**Team Risks**: \n- High key-person risk on CEO (brand closely tied to Zeno's personal presence)\n- Very small team means any departure is material\n- No dedicated sales team may limit enterprise adoption\n\n**Founder-Market Fit**: Excellent. Zeno's background as a developer advocate means he deeply understands the pain points in the developer email experience, and his personal brand provides outsized distribution for a small team.\n\n---\n\n## Assessment\n\n**Strengths:**\n1. **Exceptional Growth & Unit Economics**: 210% YoY growth with 32.9x LTV/CAC ratio and 1-month payback is best-in-class for seed-stage developer API companies.\n2. **Organic Growth Engine**: React Email open-source project drives top-of-funnel awareness with zero paid marketing spend\u2014a powerful moat builder.\n3. **Founder-Market Fit**: Zeno Rocha's personal brand and developer advocate background provide outsized distribution and credibility.\n4. **Healthy Financials**: 21-month runway, 68% gross margins, and strong NRR (145%) indicate a sustainable business model.\n5. **Market Timing**: SendGrid's decline and new regulatory requirements create a favorable window for a modern alternative.\n\n**Weaknesses & Risks:**\n1. **Weak Moat**: Email APIs are commoditized. Resend's differentiation (React Email, DX) is valuable but not defensible long-term without ecosystem network effects.\n2. **Key-Person Risk**: CEO brand is tightly coupled to company brand. Zeno's departure would be material.\n3. **No Sales Motion**: Zero sales headcount may limit enterprise adoption and revenue ceiling.\n4. **Small Base Caveat**: $3.5M ARR is still small; growth rates may not sustain as the company scales.\n5. **Competitive Pressure**: Well-funded incumbents (SendGrid, Postmark) can respond with improved DX if threatened.\n\n**Trajectory:**\nResend is on a strong trajectory with excellent founder-market fit, exceptional organic growth, and healthy unit economics. The company is well-positioned to capture market share from SendGrid's decline and benefit from new regulatory tailwinds. However, long-term success depends on building ecosystem network effects (templates, integrations, community) to strengthen the moat and eventually building a sales motion for enterprise customers. The 21-month runway provides sufficient time to prove out the enterprise motion before needing additional capital.\n\n**Overall Rating**: **Strong** \u2014 A well-executed seed-stage company with exceptional growth, excellent founder-market fit, and favorable market timing. Primary risks are key-person dependency and the need to build a defensible moat beyond DX."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "resend.com",
+        "name": "resend.com"
+      }
+    ],
+    "conversation_id": "real-seed-procedural_runway_flag-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T15:49:08.126146+00:00",
+    "outcome_summary": "You're absolutely right. Let me revise the Assessment section to flag the runway concern upfront:\n\n---\n\n## Assessment\n\n**\u26a0\ufe0f RUNWAY ALERT: 21 months is borderline for a seed-stage company.** While heal",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "resend.com has 21 months \u2014 borderline. Always flag short runway at the start of Assessment."
+      },
+      {
+        "role": "assistant",
+        "content": "You're absolutely right. Let me revise the Assessment section to flag the runway concern upfront:\n\n---\n\n## Assessment\n\n**\u26a0\ufe0f RUNWAY ALERT: 21 months is borderline for a seed-stage company.** While healthy in absolute terms, this leaves limited runway to prove enterprise motion and achieve meaningful scale before needing Series A funding. Burn rate of $288K/month is manageable but leaves little margin for error if growth slows or burn increases.\n\n**Strengths:**\n1. **Exceptional Growth & Unit Economics**: 210% YoY growth with 32.9x LTV/CAC ratio and 1-month payback is best-in-class for seed-stage developer API companies.\n2. **Organic Growth Engine**: React Email open-source project drives top-of-funnel awareness with zero paid marketing spend\u2014a powerful moat builder.\n3. **Founder-Market Fit**: Zeno Rocha's personal brand and developer advocate background provide outsized distribution and credibility.\n4. **Healthy Gross Margins**: 68% gross margins indicate a sustainable business model with room to improve at scale.\n5. **Market Timing**: SendGrid's decline and new regulatory requirements create a favorable window for a modern alternative.\n\n**Weaknesses & Risks:**\n1. **Borderline Runway**: 21 months provides limited time to prove enterprise motion and achieve Series A readiness. Any slowdown in growth or increase in burn becomes critical.\n2. **Weak Moat**: Email APIs are commoditized. Resend's differentiation (React Email, DX) is valuable but not defensible long-term without ecosystem network effects.\n3. **Key-Person Risk**: CEO brand is tightly coupled to company brand. Zeno's departure would be material.\n4. **No Sales Motion**: Zero sales headcount may limit enterprise adoption and revenue ceiling.\n5. **Small Base Caveat**: $3.5M ARR is still small; growth rates may not sustain as the company scales.\n\n**Trajectory:**\nResend is on a strong trajectory with exceptional organic growth and excellent founder-market fit. However, the 21-month runway creates urgency to either (1) accelerate growth to reach Series A metrics faster, or (2) build an enterprise sales motion to increase ARPU and improve unit economics. The company has sufficient time to prove the business but limited margin for error.\n\n**Overall Rating**: **Strong with Caution** \u2014 Excellent growth and founder-market fit, but borderline runway requires disciplined execution and clear Series A milestones."
+      }
+    ]
+  }
+]

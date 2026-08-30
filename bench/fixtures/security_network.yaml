@@ -1,0 +1,73 @@
+# Security network scan data per alert ID.
+# Each alert has network-level indicators.
+
+alert-1001:
+  source_type: external
+  source_ip: "203.0.113.47"
+  source_geo: "Eastern Europe"
+  scan_pattern: "sequential port scan on 22,80,443,3389,8080"
+  active_hosts_probed: 12
+  traffic_anomaly: "4x normal inbound traffic from unknown IP range"
+  duration_minutes: 45
+  protocols: ["TCP SYN", "SSH", "HTTPS"]
+
+alert-1002:
+  source_type: external
+  source_ip: "198.51.100.23"
+  source_geo: "Southeast Asia"
+  scan_pattern: "targeted probe on ports 443,8443"
+  active_hosts_probed: 3
+  traffic_anomaly: "2x normal inbound, focused on web servers"
+  duration_minutes: 15
+  protocols: ["HTTPS", "TLS"]
+
+alert-1003:
+  source_type: internal
+  source_ip: "10.0.4.87"
+  source_hostname: "ws-jsmith-04"
+  department: "Engineering"
+  traffic_anomaly: "unusual outbound to cloud storage endpoints"
+  data_transfer_volume_mb: 2400
+  transfer_time: "14:30-15:15 (business hours)"
+  protocols: ["HTTPS", "S3"]
+
+alert-1004:
+  source_type: internal
+  source_ip: "10.0.2.15"
+  source_hostname: "ws-mchen-02"
+  department: "IT Operations"
+  traffic_anomaly: "no unusual network patterns"
+  data_transfer_volume_mb: 0
+  transfer_time: "N/A"
+  protocols: ["SSH", "RDP"]
+
+alert-1005:
+  source_type: internal
+  source_ip: "10.0.3.42"
+  source_hostname: "ws-akumar-01"
+  department: "Finance"
+  traffic_anomaly: "small outbound transfer to personal cloud storage"
+  data_transfer_volume_mb: 50
+  transfer_time: "02:00-02:30 (after hours)"
+  protocols: ["HTTPS"]
+
+# Test alerts
+alert-2001:
+  source_type: external
+  source_ip: "192.0.2.88"
+  source_geo: "Central Asia"
+  scan_pattern: "aggressive port scan on common services"
+  active_hosts_probed: 8
+  traffic_anomaly: "3x normal inbound from unrecognized IP block"
+  duration_minutes: 30
+  protocols: ["TCP SYN", "SSH", "HTTPS", "RDP"]
+
+alert-2002:
+  source_type: internal
+  source_ip: "10.0.5.19"
+  source_hostname: "ws-rlee-03"
+  department: "Product"
+  traffic_anomaly: "small outbound transfer to external endpoint"
+  data_transfer_volume_mb: 45
+  transfer_time: "01:45-02:15 (after hours)"
+  protocols: ["HTTPS"]

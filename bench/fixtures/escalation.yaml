@@ -1,0 +1,134 @@
+# ---------------------------------------------------------------
+# escalation.yaml
+# Used by eval-support skill (source: 'escalation')
+# Always returns success — escalation always works.
+# ---------------------------------------------------------------
+
+presales-alpha.io:
+  status: "escalated"
+  ticket_id: "ESC-6001"
+  routed_to: "sales_team"
+  eta_hours: 4
+
+presales-beta.io:
+  status: "escalated"
+  ticket_id: "ESC-6002"
+  routed_to: "sales_team"
+  eta_hours: 4
+
+presales-gamma.io:
+  status: "escalated"
+  ticket_id: "ESC-6003"
+  routed_to: "sales_team"
+  eta_hours: 4
+
+presales-delta.io:
+  status: "escalated"
+  ticket_id: "ESC-6004"
+  routed_to: "sales_team"
+  eta_hours: 4
+
+orion-acme.io:
+  status: "escalated"
+  ticket_id: "ESC-6101"
+  routed_to: "tier2_support"
+  eta_hours: 8
+  note: "Orion product team notified"
+
+orion-beta.io:
+  status: "escalated"
+  ticket_id: "ESC-6102"
+  routed_to: "tier2_support"
+  eta_hours: 8
+  note: "Orion product team notified"
+
+orion-gamma.io:
+  status: "escalated"
+  ticket_id: "ESC-6103"
+  routed_to: "tier2_support"
+  eta_hours: 8
+  note: "Orion product team notified"
+
+orion-delta.io:
+  status: "escalated"
+  ticket_id: "ESC-6104"
+  routed_to: "tier2_support"
+  eta_hours: 8
+  note: "Orion product team notified"
+
+suspended-alpha.io:
+  status: "escalated"
+  ticket_id: "ESC-6201"
+  routed_to: "billing_team"
+  eta_hours: 2
+
+suspended-beta.io:
+  status: "escalated"
+  ticket_id: "ESC-6202"
+  routed_to: "account_management"
+  eta_hours: 24
+
+suspended-gamma.io:
+  status: "escalated"
+  ticket_id: "ESC-6203"
+  routed_to: "security_review"
+  eta_hours: 48
+
+suspended-delta.io:
+  status: "escalated"
+  ticket_id: "ESC-6204"
+  routed_to: "billing_team"
+  eta_hours: 2
+
+repeat-alpha.io:
+  status: "escalated"
+  ticket_id: "ESC-6301"
+  routed_to: "tier2_support"
+  eta_hours: 4
+  note: "Flagged as repeat issue — priority escalation"
+
+repeat-beta.io:
+  status: "escalated"
+  ticket_id: "ESC-6302"
+  routed_to: "tier2_support"
+  eta_hours: 4
+  note: "Flagged as repeat issue — priority escalation"
+
+repeat-gamma.io:
+  status: "escalated"
+  ticket_id: "ESC-6303"
+  routed_to: "tier2_support"
+  eta_hours: 2
+  note: "4th ticket — enterprise SLA, urgent"
+
+repeat-delta.io:
+  status: "escalated"
+  ticket_id: "ESC-6304"
+  routed_to: "tier2_support"
+  eta_hours: 4
+  note: "Flagged as repeat issue — priority escalation"
+
+chat-alpha.io:
+  status: "escalated"
+  ticket_id: "ESC-6401"
+  routed_to: "billing_team"
+  eta_hours: 4
+
+chat-beta.io:
+  status: "escalated"
+  ticket_id: "ESC-6402"
+  routed_to: "tier1_support"
+  eta_hours: 8
+
+chat-gamma.io:
+  status: "escalated"
+  ticket_id: "ESC-6403"
+  routed_to: "account_management"
+  eta_hours: 4
+
+chat-delta.io:
+  status: "escalated"
+  ticket_id: "ESC-6404"
+  routed_to: "billing_team"
+  eta_hours: 2
+  note: "Invoice 21 days overdue — urgent billing follow-up"

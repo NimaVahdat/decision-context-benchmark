@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+build/
+.env
+results/
+
+# Local-only example impls (agent_*_as_conv_turn.py, _in_session.py, _standalone.py,
+# helper modules, vendor subdirs, comparison runners) live alongside the
+# wrappers but ship with the approaches repo, not here. Ignore everything
+# under examples/ by default, then explicitly track the wrappers + template.
+examples/*
+!examples/__init__.py
+!examples/agent_template.py
+!examples/agent_doc_chunk.py
+!examples/agent_doc_naive.py
+!examples/agent_forge_dc.py
+!examples/agent_forge_dc_reasoning.py
+!examples/agent_hybrid_raw.py
+!examples/agent_lucid_dc.py
+!examples/agent_mem0.py
+!examples/agent_zep.py
+
+# Unified channel-API example adapters (new, demonstrate the approaches
+# expressed via bench.core.channels). Proven adapters above stay as-is.
+!examples/channels/
+!examples/channels/*.py
+
+*.log
+bench/results_*

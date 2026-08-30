@@ -1,0 +1,39 @@
+# Configuration for actions/dependency-review-action
+# Docs: https://github.com/actions/dependency-review-action
+
+# Fail on high-severity vulnerabilities.
+fail-on-severity: high
+
+# Explicit license allowlist. Includes ZPL-2.1 because pytz is
+# dual-licensed as `MIT AND ZPL-2.1` and the default allowlist
+# rejects ZPL-2.1 even though it is OSI-approved and permissive.
+allow-licenses:
+  - MIT
+  - MIT-0
+  - Apache-2.0
+  - BSD-2-Clause
+  - BSD-3-Clause
+  - BSD-3-Clause-Clear
+  - 0BSD
+  - ISC
+  - MPL-2.0
+  - Python-2.0
+  - Python-2.0.1
+  - PSF-2.0
+  - Unlicense
+  - WTFPL
+  - CC0-1.0
+  - CC-BY-3.0
+  - CC-BY-4.0
+  - ZPL-2.1
+  - Zlib
+  - LGPL-2.1
+  - LGPL-3.0
+  - HPND
+  - X11
+
+# Packages with valid OSI licenses that some scanners report as
+# Unknown. Add overrides here if the lockfile gains a transitive
+# dependency with missing metadata.
+allow-dependencies-licenses:
+  []

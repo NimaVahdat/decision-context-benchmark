@@ -1,0 +1,212 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "repeat-alpha.io",
+        "name": "repeat-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_repeat_escalate-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:49.853259+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active (ACC-3301, Growth tier, Professional plan)\n\n**Issue Context:**\n- This is the **3rd billing discrepancy report this month**\n- Prior unresolved tick",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for repeat-alpha.io: billing discrepancy (3rd report this month)"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the necessary information to address this billing discrepancy ticket."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_016KPeuKcL6wiafyzu4NjPxC",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016KPeuKcL6wiafyzu4NjPxC",
+        "content": "## Lookup Account \u2014 repeat-alpha.io\n\n- **Account Id**: ACC-3301\n- **Email**: ops@repeat-alpha.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Open Tickets**: 3\n- **Prior Ticket Ids**: TKT-8801, TKT-8720, TKT-8655\n- **Note**: Repeat billing discrepancies \u2014 3 tickets this month, unresolved"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01QjzKtJfMBHhwanqXHoNu3w",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01QjzKtJfMBHhwanqXHoNu3w",
+        "content": "## Check Order Status \u2014 repeat-alpha.io\n\n- **Latest Order Id**: ORD-31101\n- **Status**: active\n- **Plan**: Professional\n- **Billing Cycle**: annual\n- **Outstanding Balance Usd**: 0\n- **Last Payment**: 2026-03-01"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01958jxW9143zQMB1HKh8MWA",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01958jxW9143zQMB1HKh8MWA",
+        "content": "## Search Knowledge Base \u2014 repeat-alpha.io\n\n- **Results Count**: 3\n- **Articles**: [{'title': 'How to reconcile billing discrepancies', 'url': 'kb/billing-reconciliation', 'summary': 'Steps to audit and correct billing line items'}, {'title': 'Understanding invoice generation', 'url': 'kb/invoice-generation', 'summary': 'How invoices are generated and when charges appear'}, {'title': 'Billing dispute process', 'url': 'kb/billing-dispute', 'summary': 'How to file a formal billing dispute'}]"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active (ACC-3301, Growth tier, Professional plan)\n\n**Issue Context:**\n- This is the **3rd billing discrepancy report this month**\n- Prior unresolved tickets: TKT-8801, TKT-8720, TKT-8655\n- Current order (ORD-31101) is active with $0 outstanding balance\n- Annual billing cycle\n\n**Relevant KB Articles Found:**\n1. \"How to reconcile billing discrepancies\" \u2014 Steps to audit and correct billing line items\n2. \"Understanding invoice generation\" \u2014 How invoices are generated and when charges appear\n3. \"Billing dispute process\" \u2014 How to file a formal billing dispute\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** This is a recurring issue (3 reports in one month with prior tickets unresolved). While KB articles exist for self-service reconciliation, the pattern of repeated discrepancies indicates a systemic problem that requires tier-2 investigation.\n\n**Escalation Details:**\n- **Account:** ACC-3301 (repeat-alpha.io)\n- **Contact:** ops@repeat-alpha.io\n- **Priority:** High (recurring issue, customer frustration risk)\n- **Context for Tier-2:** Review all three prior tickets (TKT-8801, TKT-8720, TKT-8655) for common root cause. Investigate billing system for potential calculation errors on Professional plan with annual cycle.\n\n**Next Steps:**\n1. Escalate to tier-2 support immediately\n2. Tier-2 should audit the last 3 billing cycles for ACC-3301\n3. Provide root cause analysis and permanent fix to prevent recurrence"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "repeat-beta.io",
+        "name": "repeat-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_repeat_escalate-c1",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:56.187826+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active (ACC-3302, Startup tier, Starter plan)\n\n**Issue Context:** \n- Recurring sync failure \u2014 this is the **third report** of the same issue\n- Prior fix ",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for repeat-beta.io: sync failure (reported again after prior fix)"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01VyGcC874wi4htrNW6WifRr",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "repeat-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"repeat-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01VyGcC874wi4htrNW6WifRr",
+        "content": "## Lookup Account \u2014 repeat-beta.io\n\n- **Account Id**: ACC-3302\n- **Email**: it@repeat-beta.io\n- **Tier**: startup\n- **Status**: active\n- **Plan**: Starter\n- **Open Tickets**: 2\n- **Prior Ticket Ids**: TKT-9010, TKT-8901\n- **Note**: Recurring sync failure \u2014 reported twice, prior fix did not hold"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01QqJcRkp1QGFAZMATSPnzk6",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "repeat-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"repeat-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01QqJcRkp1QGFAZMATSPnzk6",
+        "content": "## Search Knowledge Base \u2014 repeat-beta.io\n\n- **Results Count**: 2\n- **Articles**: [{'title': 'Troubleshooting sync failures', 'url': 'kb/sync-troubleshooting', 'summary': 'Common causes and fixes for sync failures'}, {'title': 'Sync configuration guide', 'url': 'kb/sync-config', 'summary': 'How to configure sync settings for your workspace'}]"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_018JPsfXZ3LiQvfnUzLtaDkz",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "repeat-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"repeat-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_018JPsfXZ3LiQvfnUzLtaDkz",
+        "content": "## Check Order Status \u2014 repeat-beta.io\n\n- **Latest Order Id**: ORD-31205\n- **Status**: active\n- **Plan**: Starter\n- **Billing Cycle**: monthly\n- **Outstanding Balance Usd**: 0\n- **Last Payment**: 2026-04-01"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active (ACC-3302, Startup tier, Starter plan)\n\n**Issue Context:** \n- Recurring sync failure \u2014 this is the **third report** of the same issue\n- Prior fix (TKT-9010, TKT-8901) did not resolve the problem permanently\n- Account has 2 open tickets currently\n\n**Relevant KB Articles Found:**\n1. \"Troubleshooting sync failures\" \u2014 Common causes and fixes\n2. \"Sync configuration guide\" \u2014 How to configure sync settings\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** This is a recurring issue where a previous fix failed to hold. The customer has reported the same sync failure multiple times, indicating either:\n- The root cause was not properly identified in the prior fix\n- A configuration regression occurred\n- An underlying system issue requires deeper investigation\n\n**Escalation Details:**\n- **Escalate to:** Tier-2 support team\n- **Priority:** High (recurring issue, customer frustration risk)\n- **Context for Tier-2:** \n  - Reference prior tickets TKT-9010 and TKT-8901\n  - Note that standard troubleshooting (KB articles) has already been attempted\n  - Request root cause analysis and permanent fix validation\n  - Customer is on Starter plan with active billing \u2014 retention concern\n\nThe Tier-2 team should review the prior fix implementation and investigate whether there's a systemic issue or configuration drift causing the recurrence."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "repeat-gamma.io",
+        "name": "repeat-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_repeat_escalate-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:27:01.924881+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active (Enterprise tier)  \n**Account ID:** ACC-3303  \n**Email:** admin@repeat-gamma.io  \n**Open Tickets:** 4 (this is the 4th login issue)  \n**Prior Tick",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for repeat-gamma.io: login issue (same customer, 4th ticket)"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this repeat customer's login issue."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01UmeAJmzvLFTbfBu3EskkMB",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "repeat-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"repeat-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01UmeAJmzvLFTbfBu3EskkMB",
+        "content": "## Lookup Account \u2014 repeat-gamma.io\n\n- **Account Id**: ACC-3303\n- **Email**: admin@repeat-gamma.io\n- **Tier**: enterprise\n- **Status**: active\n- **Plan**: Enterprise\n- **Open Tickets**: 4\n- **Prior Ticket Ids**: TKT-9201, TKT-9155, TKT-9088, TKT-9012\n- **Note**: Login issue recurring \u2014 4th ticket, tier-2 intervention required"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01V1Jgph6dcLGc8xXQKbMEaj",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "repeat-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"repeat-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01V1Jgph6dcLGc8xXQKbMEaj",
+        "content": "## Search Knowledge Base \u2014 repeat-gamma.io\n\n- **Results Count**: 3\n- **Articles**: [{'title': 'Login troubleshooting guide', 'url': 'kb/login-troubleshooting', 'summary': 'Steps to resolve common login issues'}, {'title': 'SSO configuration', 'url': 'kb/sso-config', 'summary': 'How to set up and debug SSO'}, {'title': 'Password reset process', 'url': 'kb/password-reset', 'summary': 'How customers can reset their password'}]"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active (Enterprise tier)  \n**Account ID:** ACC-3303  \n**Email:** admin@repeat-gamma.io  \n**Open Tickets:** 4 (this is the 4th login issue)  \n**Prior Tickets:** TKT-9201, TKT-9155, TKT-9088, TKT-9012\n\n**KB Articles Found:**\n- Login troubleshooting guide\n- SSO configuration\n- Password reset process\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** This is a recurring login issue (4th ticket from same customer). The account notes explicitly flag that \"tier-2 intervention required.\" Standard KB solutions have clearly not resolved the underlying problem across multiple support interactions.\n\n**Escalation Details:**\n- **Route to:** Tier-2 Support Team\n- **Priority:** High (repeat customer, enterprise tier, recurring issue)\n- **Context:** Customer has already received standard troubleshooting guidance. Escalation should investigate:\n  - Potential SSO configuration problems\n  - Account-level authentication issues\n  - Possible infrastructure or integration problems specific to this customer\n  - Review of all 4 prior tickets (TKT-9201, TKT-9155, TKT-9088, TKT-9012) to identify patterns\n\nThis customer requires hands-on technical investigation beyond self-service KB articles."
+      }
+    ]
+  }
+]

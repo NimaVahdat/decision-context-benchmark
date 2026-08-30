@@ -1,0 +1,234 @@
+[
+  {
+    "skill_name": "eval-security-assessor",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "alert-1001",
+        "name": "alert-1001"
+      }
+    ],
+    "conversation_id": "real-seed-security_external_vs_patched-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-03T21:28:23.965728+00:00",
+    "outcome_summary": "I apologize, but I'm unable to complete the security incident assessment. The available tool in my environment is designed to look up company evaluation data (such as financials, market data, team inf",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Assess security alert alert-1001"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll investigate security alert alert-1001 by gathering data from the available sources."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01DX1Y4aVpuKYFMh63qXUPB4",
+        "arguments": {
+          "source": "network",
+          "query": "alert-1001"
+        },
+        "content": "[eval_lookup({\"source\": \"network\", \"query\": \"alert-1001\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01DX1Y4aVpuKYFMh63qXUPB4",
+        "content": "{\"error\": \"Unknown data source: network\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01WTkYubn1cfyFXAPW6ihuwd",
+        "arguments": {
+          "source": "auth",
+          "query": "alert-1001"
+        },
+        "content": "[eval_lookup({\"source\": \"auth\", \"query\": \"alert-1001\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01WTkYubn1cfyFXAPW6ihuwd",
+        "content": "{\"error\": \"Unknown data source: auth\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01ADbFNFotngiRkgcVyT1Gih",
+        "arguments": {
+          "source": "vulnerabilities",
+          "query": "alert-1001"
+        },
+        "content": "[eval_lookup({\"source\": \"vulnerabilities\", \"query\": \"alert-1001\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01ADbFNFotngiRkgcVyT1Gih",
+        "content": "{\"error\": \"Unknown data source: vulnerabilities\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01AWCgG6jLV3nurHo2eb9mry",
+        "arguments": {
+          "source": "behavior",
+          "query": "alert-1001"
+        },
+        "content": "[eval_lookup({\"source\": \"behavior\", \"query\": \"alert-1001\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01AWCgG6jLV3nurHo2eb9mry",
+        "content": "{\"error\": \"Unknown data source: behavior\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "I apologize, but I'm unable to complete the security incident assessment. The available tool in my environment is designed to look up company evaluation data (such as financials, market data, team information, profiles, and briefs), not security incident data.\n\nTo properly assess security alert alert-1001, I would need access to data sources such as:\n- **Network activity logs** - to analyze traffic patterns and connections\n- **Authentication logs** - to review login attempts and access events\n- **Vulnerability databases** - to check for known exploits\n- **User behavior analysis** - to detect anomalous activities\n\n**Recommendation:** Please provide access to your security incident management system or SIEM (Security Information and Event Management) platform where I can query the actual alert data for alert-1001. Alternatively, if you can provide the raw alert details, I can help analyze and assess them based on the information provided."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-security-assessor",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "alert-1001",
+        "name": "alert-1001"
+      }
+    ],
+    "conversation_id": "real-seed-security_external_vs_patched-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-03T21:28:27.578545+00:00",
+    "outcome_summary": "Understood. I've noted the escalation criteria:\n\n**SEVERITY-1: IMMEDIATE ESCALATION** label should be applied when ALL three conditions are present:\n1. External scanning detected\n2. Authentication fai",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "When external scanning is combined with auth failures AND unpatched critical CVEs, label the alert as 'SEVERITY-1: IMMEDIATE ESCALATION' at the top of the assessment. This specific label is required for our SOC workflow."
+      },
+      {
+        "role": "assistant",
+        "content": "Understood. I've noted the escalation criteria:\n\n**SEVERITY-1: IMMEDIATE ESCALATION** label should be applied when ALL three conditions are present:\n1. External scanning detected\n2. Authentication failures observed\n3. Unpatched critical CVEs present\n\nThis label will be placed at the top of the assessment report for SOC workflow purposes.\n\nHowever, I still need access to the actual security data sources to investigate alert-1001. The current tool available to me only accesses company evaluation data (financials, market data, team info, etc.), not security incident data.\n\n**To proceed with the assessment, I need:**\n- Access to your SIEM or security incident management system, OR\n- The raw alert details for alert-1001 including:\n  - Network activity information\n  - Authentication log entries\n  - Vulnerability scan results\n  - User behavior analysis data\n\nOnce you provide this information or grant access to the appropriate security data sources, I'll conduct a full investigation and apply the SEVERITY-1 label if all three conditions are met."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-security-assessor",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "alert-1002",
+        "name": "alert-1002"
+      }
+    ],
+    "conversation_id": "real-seed-security_external_vs_patched-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-03T21:28:32.892588+00:00",
+    "outcome_summary": "I apologize, but I'm unable to complete the security incident assessment. The available data sources in my current environment do not include the security-specific sources needed to investigate this a",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Assess security alert alert-1002"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll investigate security alert alert-1002 by gathering data from the available sources."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01V5bf4SZPwH53qaazJefhzz",
+        "arguments": {
+          "source": "network",
+          "query": "alert-1002"
+        },
+        "content": "[eval_lookup({\"source\": \"network\", \"query\": \"alert-1002\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01V5bf4SZPwH53qaazJefhzz",
+        "content": "{\"error\": \"Unknown data source: network\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01DjnQsCWjZs48S2cKDbyBsd",
+        "arguments": {
+          "source": "auth",
+          "query": "alert-1002"
+        },
+        "content": "[eval_lookup({\"source\": \"auth\", \"query\": \"alert-1002\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01DjnQsCWjZs48S2cKDbyBsd",
+        "content": "{\"error\": \"Unknown data source: auth\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01GAnq8WRJ2CGx5kGCgRMHSi",
+        "arguments": {
+          "source": "vulnerabilities",
+          "query": "alert-1002"
+        },
+        "content": "[eval_lookup({\"source\": \"vulnerabilities\", \"query\": \"alert-1002\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01GAnq8WRJ2CGx5kGCgRMHSi",
+        "content": "{\"error\": \"Unknown data source: vulnerabilities\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_016LjQvchN5ZmLjXfccV1E4U",
+        "arguments": {
+          "source": "behavior",
+          "query": "alert-1002"
+        },
+        "content": "[eval_lookup({\"source\": \"behavior\", \"query\": \"alert-1002\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016LjQvchN5ZmLjXfccV1E4U",
+        "content": "{\"error\": \"Unknown data source: behavior\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "I apologize, but I'm unable to complete the security incident assessment. The available data sources in my current environment do not include the security-specific sources needed to investigate this alert:\n\n- Network activity logs\n- Authentication logs\n- Vulnerability databases\n- User behavior analysis\n\nThe tool I have access to is designed for company/business data lookup (financials, market data, team information, etc.), not security incident investigation.\n\n**To properly assess alert-1002, I would need:**\n1. Access to network traffic logs and IDS/IPS data\n2. Authentication and access logs from your identity management system\n3. Vulnerability scanning and patch management data\n4. User and entity behavior analytics (UEBA) data\n5. Endpoint detection and response (EDR) logs\n\n**Recommendation:** Please provide the alert details directly, or ensure I have access to your security information and event management (SIEM) system or security data sources to conduct a proper investigation."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-security-assessor",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "alert-1002",
+        "name": "alert-1002"
+      }
+    ],
+    "conversation_id": "real-seed-security_external_vs_patched-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-03T21:28:36.659007+00:00",
+    "outcome_summary": "Thank you for clarifying the assessment criteria. I understand the classification rules:\n\n**Alert Classification Rule:**\n- **SEVERITY-4: ROUTINE PROBE** applies when:\n  - External scanning detected\n  ",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "When external scanning has auth failures but all systems are patched with no successful logins, label as 'SEVERITY-4: ROUTINE PROBE'. Do NOT use SEVERITY-1. Patched systems with failed logins are routine."
+      },
+      {
+        "role": "assistant",
+        "content": "Thank you for clarifying the assessment criteria. I understand the classification rules:\n\n**Alert Classification Rule:**\n- **SEVERITY-4: ROUTINE PROBE** applies when:\n  - External scanning detected\n  - Authentication failures present\n  - All systems are patched (no vulnerabilities)\n  - No successful logins achieved\n  - This represents routine reconnaissance activity, not a threat\n\n**Key Points Noted:**\n- Do NOT use SEVERITY-1 classification\n- Patched systems with failed login attempts = routine activity\n- This is standard external probing behavior\n\nHowever, I still need access to the actual security data for alert-1002 to apply this classification. The available tools in my environment don't have access to security event data sources.\n\n**To proceed with assessing alert-1002, please provide:**\n1. Network scanning activity details\n2. Authentication failure logs\n3. System patch status\n4. Login attempt results\n\nOnce you provide these details, I can immediately classify the alert as **SEVERITY-4: ROUTINE PROBE** if it matches the criteria you've outlined, or determine the appropriate severity level if other factors are present."
+      }
+    ]
+  }
+]

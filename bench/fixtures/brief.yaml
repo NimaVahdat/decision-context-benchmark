@@ -1,0 +1,679 @@
+# ---------------------------------------------------------------
+# brief.yaml
+# Used by eval-analyst skill (source: 'brief')
+#
+# Contains: product summary, traction highlights, funding,
+#   headcount, founding date, HQ location, and key facts.
+# This is the "quick reference" source for each company.
+# ---------------------------------------------------------------
+
+delve.co:
+  domain: "delve.co"
+  company_name: "Delve"
+  tagline: "AI-native analytics for modern data teams"
+  product_summary: >
+    Delve is an AI-powered analytics platform that enables
+    data teams to explore datasets using natural language
+    queries instead of SQL. The platform automatically
+    detects anomalies, identifies root causes, and generates
+    shareable insights. Designed for product analytics and
+    growth teams at mid-market companies.
+  product_status: "generally available"
+  founded: "2023-01"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Seed"
+  arr: "$4.2M"
+  total_raised: "$10.5M"
+  last_round_amount: "$9M"
+  last_round_date: "2024-09"
+  lead_investor: "Greylock Partners"
+  headcount: 32
+  headcount_note: >
+    32 FTEs. Primarily engineering (56%). No offshore
+    or contractor workforce reported.
+  traction_highlights:
+    - "185% YoY revenue growth"
+    - "38 paying customers including 4 enterprise"
+    - "72% gross margin"
+    - "$34.8K average annual contract value"
+    - "NRR of 112%"
+  key_customers:
+    - "3 mid-market SaaS companies (names redacted)"
+    - "1 public fintech company"
+    - "Several YC-batch startups"
+  technology_stack: "Python, TypeScript, DuckDB, React"
+  business_model: "subscription SaaS (annual + monthly)"
+  category: "AI/Analytics"
+  yc_batch: "W23"
+  notable_facts:
+    - "CEO's previous startup acquired by Tableau"
+    - "CTO built Snowflake's query optimization engine"
+    - "Y Combinator W23 batch"
+  data_confidence: "medium"
+  data_sources: "pitch deck, Crunchbase, founder interview"
+  last_updated: "2025-11-15"
+
+linear.app:
+  domain: "linear.app"
+  company_name: "Linear"
+  tagline: "The issue tracking tool you'll enjoy using"
+  product_summary: >
+    Linear is a project and issue tracking tool built for
+    software development teams. Known for its speed,
+    keyboard-first UX, and opinionated workflows (cycles,
+    triage, project views). Features offline-first
+    architecture with real-time sync and deep integrations
+    with GitHub, GitLab, Slack, and Figma.
+  product_status: "generally available"
+  founded: "2019-04"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Series B"
+  arr: "$28M"
+  total_raised: "$89.2M"
+  last_round_amount: "$50M"
+  last_round_date: "2023-03"
+  lead_investor: "Accel"
+  headcount: 85
+  headcount_note: >
+    85 FTEs. Fully remote with SF HQ for offsites.
+    Deliberately lean team -- Linear is known for
+    maintaining small, senior headcount.
+  traction_highlights:
+    - "95% YoY revenue growth"
+    - "40,000+ paying teams"
+    - "88% gross margin"
+    - "135% NRR"
+    - "NPS of 72 (top-decile for devtools)"
+    - "Near cash-flow positive"
+  key_customers:
+    - "Vercel"
+    - "Ramp"
+    - "Loom"
+    - "Mercury"
+    - "Watershed"
+    - "Multiple FAANG engineering teams"
+  technology_stack: "TypeScript, React, Electron, PostgreSQL"
+  business_model: "subscription SaaS (per-seat pricing)"
+  category: "DevTools"
+  notable_facts:
+    - "Co-founders from Airbnb and Uber"
+    - "Product-led growth with minimal paid marketing"
+    - "Considered the fastest UI in devtools"
+    - "44x LTV/CAC ratio"
+  data_confidence: "high"
+  data_sources: >
+    Pitchbook, secondary market data, press, developer
+    survey data
+  last_updated: "2025-12-01"
+
+notion.so:
+  domain: "notion.so"
+  company_name: "Notion"
+  tagline: "The connected workspace for wiki, docs & projects"
+  product_summary: >
+    Notion is an all-in-one workspace that combines notes,
+    docs, wikis, databases, project management, and AI
+    assistant capabilities into a single flexible platform.
+    Built on a block-based architecture that enables users
+    to create custom workflows. Notion AI provides
+    integrated writing assistance, Q&A, and autofill
+    capabilities powered by LLMs.
+  product_status: "generally available"
+  founded: "2013-01"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Series C"
+  arr: "$250M"
+  total_raised: "$337M"
+  last_round_amount: "$275M"
+  last_round_date: "2021-10"
+  lead_investor: "Sequoia Capital"
+  headcount: 650
+  headcount_note: >
+    650 FTEs across SF, NYC, and London offices. Hybrid
+    work model (2 days in office). Significant hiring in
+    enterprise sales and AI engineering.
+  traction_highlights:
+    - "42% YoY revenue growth"
+    - "4M+ paying teams, 30M+ users"
+    - "82% gross margin"
+    - "128% NRR"
+    - "$10B+ valuation"
+    - "Notion AI generating ~$30-40M incremental ARR"
+  key_customers:
+    - "Samsung"
+    - "Figma"
+    - "Pixar"
+    - "Nike"
+    - "Toyota"
+    - "Many Fortune 500 companies"
+  technology_stack: "TypeScript, React, Kotlin, PostgreSQL"
+  business_model: >
+    subscription SaaS (per-user, tiered: Free, Plus,
+    Business, Enterprise) + AI add-on
+  category: "Productivity"
+  notable_facts:
+    - "Nearly died before finding product-market fit"
+    - "One of the most valuable private SaaS companies"
+    - "Block-based architecture inspired many competitors"
+    - "Strong template ecosystem and community"
+  data_confidence: "high"
+  data_sources: >
+    Press reports, secondary market, Pitchbook, industry
+    analyst briefings
+  last_updated: "2025-10-20"
+
+retool.com:
+  domain: "retool.com"
+  company_name: "Retool"
+  tagline: "Build internal tools, remarkably fast"
+  product_summary: >
+    Retool is a low-code platform for building internal
+    tools. Engineers connect to databases and APIs via 80+
+    native integrations, then build UIs using drag-and-drop
+    components. Features include Retool Workflows (backend
+    automation), Retool Mobile, and an AI-powered app
+    generator that creates tools from natural language
+    descriptions. Self-hosted option available.
+  product_status: "generally available"
+  founded: "2017-03"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Series D"
+  arr: "$100M"
+  total_raised: "$268.6M"
+  last_round_amount: "$120M"
+  last_round_date: "2024-12"
+  lead_investor: "Insight Partners"
+  headcount: 420
+  headcount_note: >
+    420 FTEs. Hybrid model with SF HQ and NYC office.
+    50% engineering. Recently hired VP AI from Anthropic
+    and Head of Federal Sales from Palantir.
+  traction_highlights:
+    - "55% YoY revenue growth"
+    - "12,500+ customers"
+    - "85% gross margin"
+    - "142% NRR (exceptional)"
+    - "$3.3B valuation"
+    - "AI app builder launched 2025"
+  key_customers:
+    - "DoorDash"
+    - "Amazon"
+    - "NBC Universal"
+    - "Brex"
+    - "Plaid"
+    - "Multiple Fortune 500 companies"
+  technology_stack: >
+    TypeScript, React, Node.js, PostgreSQL, Go
+  business_model: >
+    subscription SaaS (per-user, tiered) + self-hosted
+    enterprise licenses
+  category: "Internal Tools"
+  notable_facts:
+    - "Defined the 'internal tools' category"
+    - "Y Combinator alumni"
+    - "Self-hosted option is key competitive advantage"
+    - "142% NRR is top-decile among all SaaS"
+  data_confidence: "high"
+  data_sources: >
+    Series D coverage, Pitchbook, G2, industry analyst
+    reports
+  last_updated: "2025-12-10"
+
+resend.com:
+  domain: "resend.com"
+  company_name: "Resend"
+  tagline: "Email for developers"
+  product_summary: >
+    Resend provides a modern email API for developers to
+    send transactional emails. Built around React Email,
+    an open-source framework for building emails with
+    React components. Features include deliverability
+    monitoring, webhook-based event tracking, domain
+    verification, and built-in analytics. Designed as a
+    developer-first alternative to SendGrid and Mailgun.
+  product_status: "generally available"
+  founded: "2023-01"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Seed"
+  arr: "$3.5M"
+  total_raised: "$7M"
+  last_round_amount: "$7M"
+  last_round_date: "2023-08"
+  lead_investor: "Andreessen Horowitz"
+  headcount: 12
+  headcount_note: >
+    12 FTEs. Fully remote. 67% engineering. No dedicated
+    sales team -- all growth is product-led.
+  traction_highlights:
+    - "210% YoY revenue growth"
+    - "6,500+ paying accounts"
+    - "React Email: 15K+ GitHub stars"
+    - "Near-zero CAC (open-source-driven)"
+    - "145% NRR"
+    - "Backed by a16z"
+  key_customers:
+    - "cal.com"
+    - "Supabase"
+    - "Clerk"
+    - "Dub.co"
+    - "Many Y Combinator startups"
+  technology_stack: "TypeScript, Next.js, React, Rust, AWS"
+  business_model: >
+    subscription SaaS (usage-based tiers starting
+    at $20/month)
+  category: "Email API"
+  notable_facts:
+    - "CEO Zeno Rocha created Dracula Theme (100M+ DLs)"
+    - "React Email open-source project drives all growth"
+    - "Zero paid marketing spend"
+    - "Fastest-growing email API company"
+  data_confidence: "medium"
+  data_sources: "pitch deck, GitHub stats, npm downloads, founder blog"
+  last_updated: "2025-11-28"
+
+meridian.bio:
+  domain: "meridian.bio"
+  company_name: "Meridian Bio"
+  tagline: "AI-powered computational biology for drug discovery"
+  product_summary: >
+    Meridian Bio is a computational biology platform that
+    accelerates drug discovery through AI-powered protein
+    structure prediction, multi-omics data integration,
+    and automated experiment design. The platform combines
+    proprietary ML models with a wet-lab validation loop
+    to provide pharma customers with experimentally
+    validated computational predictions.
+  product_status: "generally available (limited GA)"
+  founded: "2022-01"
+  hq_city: "Boston"
+  hq_state: "MA"
+  hq_country: "US"
+  secondary_office: "San Francisco, CA (engineering)"
+  stage: "Series A"
+  arr: "$8M"
+  total_raised: "$22.2M"
+  last_round_amount: "$15M"
+  last_round_date: "2024-10"
+  lead_investor: "a16z Bio + Health"
+  headcount: 45
+  headcount_note: >
+    45 FTEs. Unique split: 33% engineering, 40% science
+    (PhDs). Dual-site (Boston lab + SF engineering).
+  traction_highlights:
+    - "120% YoY revenue growth"
+    - "18 paying customers including 3 top-20 pharma"
+    - "$444K average annual contract value"
+    - "$2M NIH SBIR grant received"
+    - "12 published papers in peer-reviewed journals"
+  key_customers:
+    - "3 top-20 pharmaceutical companies (names under NDA)"
+    - "2 mid-size biotech companies"
+    - "Several academic medical centers"
+  technology_stack: "Python, PyTorch, JAX, Kubernetes, AWS"
+  business_model: >
+    platform subscription + project-based services
+    (wet-lab validation)
+  category: "Biotech"
+  notable_facts:
+    - "CTO contributed to AlphaFold2 at DeepMind"
+    - "Platform-only model (no competing drug programs)"
+    - "NIH SBIR grant validates scientific merit"
+    - "Wet-lab validation loop is unique differentiator"
+  data_confidence: "medium"
+  data_sources: >
+    Series A data room (partial), NIH filings, conference
+    presentations, Crunchbase
+  last_updated: "2025-11-05"
+
+finstack.io:
+  domain: "finstack.io"
+  company_name: "Finstack"
+  tagline: "Modern financial infrastructure for banks & fintechs"
+  product_summary: >
+    Finstack is a financial infrastructure platform
+    providing unified APIs for payments, accounts, cards,
+    and compliance automation. Built for mid-market banks
+    and fintechs migrating from legacy core banking
+    systems. Features include built-in KYC/AML, real-time
+    ledger, multi-bank connectivity (35+ bank partners),
+    and SOX-ready audit trails.
+  product_status: "generally available"
+  founded: "2021-01"
+  hq_city: "New York"
+  hq_state: "NY"
+  hq_country: "US"
+  secondary_office: "London, UK"
+  stage: "Series B"
+  arr: "$35M"
+  total_raised: "$62.5M"
+  last_round_amount: "$40M"
+  last_round_date: "2024-06"
+  lead_investor: "Insight Partners"
+  headcount: 180
+  headcount_note: >
+    180 FTEs. Includes dedicated 15-person compliance
+    team (unusual at this stage). NYC HQ + London office
+    for EU expansion.
+  traction_highlights:
+    - "72% YoY revenue growth"
+    - "245 customers including 28 enterprise"
+    - "78% gross margin"
+    - "132% NRR"
+    - "Near cash-flow positive"
+    - "35+ bank partnerships"
+    - "PCI DSS Level 1 certified"
+  key_customers:
+    - "3 mid-market banks (names under NDA)"
+    - "Multiple neobanks and fintechs"
+    - "2 insurance companies"
+  technology_stack: "Go, Rust, TypeScript, PostgreSQL, Kafka"
+  business_model: >
+    platform subscription + transaction-based fees
+  category: "Fintech"
+  notable_facts:
+    - "CEO from Stripe (Treasury product)"
+    - "CTO from Plaid (real-time APIs)"
+    - "PCI DSS Level 1, SOC 1/2, 48-state MTL"
+    - "Targeting profitability without additional funding"
+  data_confidence: "high"
+  data_sources: >
+    Investor update, regulatory filings, Pitchbook,
+    Dealroom
+  last_updated: "2025-12-05"
+
+cloudlane.dev:
+  domain: "cloudlane.dev"
+  company_name: "Cloudlane"
+  tagline: "Unified multi-cloud control plane"
+  product_summary: >
+    Cloudlane provides a unified control plane for multi-
+    cloud infrastructure orchestration. The platform
+    enables enterprises to manage workloads across AWS,
+    Azure, GCP, and on-prem environments with AI-powered
+    cost optimization, zero-downtime migration tooling,
+    and FedRAMP-authorized security controls. Custom
+    network acceleration hardware provides performance
+    advantages.
+  product_status: "generally available"
+  founded: "2020-03"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  secondary_office: "Washington, DC (federal team)"
+  stage: "Series C"
+  arr: "$65M"
+  total_raised: "$175.5M"
+  last_round_amount: "$90M"
+  last_round_date: "2025-02"
+  lead_investor: "General Catalyst"
+  headcount: 310
+  headcount_note: >
+    310 FTEs. 55% engineering. 28 employees hold active
+    security clearances for federal work. Dual offices
+    (SF commercial + DC federal).
+  traction_highlights:
+    - "82% YoY revenue growth"
+    - "280 customers including 22 government agencies"
+    - "74% gross margin"
+    - "138% NRR"
+    - "FedRAMP High authorized"
+    - "Cash-flow positive"
+    - "$1.29B valuation (unicorn)"
+  key_customers:
+    - "3 Fortune 500 companies"
+    - "Multiple federal agencies (DoD, DHS, VA)"
+    - "2 major European banks"
+    - "Several healthcare systems"
+  technology_stack: "Go, Rust, C++, Kubernetes, Terraform"
+  business_model: >
+    subscription SaaS (platform fee + usage-based)
+  category: "Cloud Infra"
+  notable_facts:
+    - "CEO is ex-AWS, CTO is ex-Google Cloud (GKE)"
+    - "FedRAMP High authorization (rare for startups)"
+    - "Custom network acceleration hardware"
+    - "Unicorn status achieved at Series C"
+    - "32% average cost savings for customers"
+  data_confidence: "high"
+  data_sources: >
+    Series C data room, FedRAMP marketplace, press
+    coverage, Pitchbook
+  last_updated: "2025-12-15"
+
+learnnext.ai:
+  domain: "learnnext.ai"
+  company_name: "LearnNext"
+  tagline: "Your AI study partner that adapts to you"
+  product_summary: >
+    LearnNext is an AI-powered tutoring platform that
+    provides personalized Socratic-method instruction
+    across academic subjects. The platform adapts in
+    real-time to student understanding, generates custom
+    practice problems with spaced repetition, supports
+    multi-modal input (handwritten math, diagrams), and
+    offers study group AI facilitation for collaborative
+    learning.
+  product_status: "generally available (since Q1 2025)"
+  founded: "2024-01"
+  hq_city: "San Francisco"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Pre-Seed"
+  arr: "$1.8M"
+  total_raised: "$3M"
+  last_round_amount: "$3M"
+  last_round_date: "2024-02"
+  lead_investor: "Reach Capital"
+  headcount: 8
+  headcount_note: >
+    8 FTEs. Fully remote (US timezones). 63% engineering.
+    Very lean team. Average age 27.
+  traction_highlights:
+    - "320% YoY revenue growth"
+    - "5,200 paying subscribers"
+    - "Viral TikTok content (2M+ views)"
+    - "3 university pilot programs"
+    - "Y Combinator W24 batch"
+  key_customers:
+    - "5,200 individual paying subscribers"
+    - "3 university pilot programs (UC Berkeley, NYU, MIT)"
+    - "No enterprise paying customers yet"
+  technology_stack: "Python, TypeScript, Next.js, OpenAI API"
+  business_model: >
+    subscription SaaS (B2C: $29/month, student discount
+    $19/month)
+  category: "EdTech/AI"
+  notable_facts:
+    - "CEO from Quizlet, CTO from Duolingo"
+    - "Y Combinator W24 batch"
+    - "TikTok as primary acquisition channel"
+    - "University pilots could transform business model"
+  data_confidence: "low"
+  data_sources: >
+    Pre-seed pitch deck, Y Combinator profile, TikTok
+    analytics, founder interview
+  last_updated: "2025-10-30"
+
+shopfront.co:
+  domain: "shopfront.co"
+  company_name: "Shopfront"
+  tagline: "The managed marketplace for specialty commerce"
+  product_summary: >
+    Shopfront is a vertical B2B marketplace platform with
+    managed operations. The platform connects specialty
+    merchants (food, craft, artisan goods) with buyers,
+    handling fulfillment coordination, payment processing,
+    buyer protection, and dispute resolution. Features
+    include AI-powered product matching, vertical-specific
+    storefronts, and white-label marketplace options for
+    brands.
+  product_status: "generally available"
+  founded: "2020-06"
+  hq_city: "New York"
+  hq_state: "NY"
+  hq_country: "US"
+  secondary_office: "Austin, TX"
+  stage: "Series B"
+  arr: "$45M"
+  total_raised: "$72M"
+  last_round_amount: "$45M"
+  last_round_date: "2024-01"
+  lead_investor: "Tiger Global"
+  headcount: 220
+  headcount_note: >
+    220 FTEs. 43% engineering, large ops team (21%)
+    reflecting managed marketplace model. NYC HQ +
+    Austin office.
+  traction_highlights:
+    - "62% YoY revenue growth"
+    - "$900M trailing GMV"
+    - "12,000 active merchants"
+    - "850,000 registered buyers"
+    - "5.0% take rate (up from 4.2%)"
+    - "125% NRR"
+    - "Near break-even"
+  key_customers:
+    - "12,000 active merchants across verticals"
+    - "Food & beverage (35% of GMV)"
+    - "Craft & artisan (25% of GMV)"
+    - "Home & garden (20% of GMV)"
+    - "Fashion & accessories (20% of GMV)"
+  technology_stack: "Ruby on Rails, React, Python, PostgreSQL"
+  business_model: >
+    marketplace commission (5% take rate) + SaaS
+    subscription for merchant tools
+  category: "Marketplace"
+  notable_facts:
+    - "CEO from Etsy, CTO from Shopify"
+    - "$900M GMV makes it a top-20 B2B marketplace"
+    - "Managed ops model differentiates from pure software"
+    - "UK expansion launched Q3 2025"
+  data_confidence: "medium-high"
+  data_sources: >
+    Series B data room, investor update, Pitchbook,
+    marketplace benchmarks
+  last_updated: "2025-11-20"
+
+datavault.io:
+  domain: "datavault.io"
+  company_name: "DataVault"
+  tagline: "Data security that sees everything, blocks threats"
+  product_summary: >
+    DataVault is a data-centric security platform that
+    provides real-time monitoring of data flows across
+    cloud environments. Features include automated
+    sensitive data classification using ML, zero-knowledge
+    encryption, compliance automation (SOX, GDPR, CCPA,
+    HIPAA), and data lineage tracking with complete audit
+    trails. Designed for enterprises handling sensitive
+    customer and financial data.
+  product_status: "generally available"
+  founded: "2022-03"
+  hq_city: "New York"
+  hq_state: "NY"
+  hq_country: "US"
+  stage: "Series A"
+  arr: "$12M"
+  total_raised: "$18.8M"
+  last_round_amount: "$14M"
+  last_round_date: "2024-03"
+  lead_investor: "Menlo Ventures"
+  headcount: 65
+  headcount_note: >
+    65 FTEs. Remote-first with quarterly NYC offsites.
+    54% engineering. Rapidly growing (35% headcount
+    increase in 6 months).
+  traction_highlights:
+    - "95% YoY revenue growth"
+    - "118 customers including 22 enterprise"
+    - "80% gross margin"
+    - "130% NRR"
+    - "Zero enterprise customer churn in 18 months"
+    - "Regulatory tailwinds driving demand"
+  key_customers:
+    - "Multiple financial services firms"
+    - "2 healthcare systems"
+    - "Several tech companies with SOC 2 requirements"
+  technology_stack: "Rust, Go, TypeScript, PostgreSQL, gRPC"
+  business_model: >
+    subscription SaaS (platform fee + data volume pricing)
+  category: "Data Security"
+  notable_facts:
+    - "CEO from Datadog (security), CTO from HashiCorp (Vault)"
+    - "CTO published researcher in homomorphic encryption"
+    - "Zero enterprise churn is remarkable"
+    - "Positioned for Series B at $200M+ pre-money"
+  data_confidence: "medium"
+  data_sources: >
+    Series A investor update, Crunchbase, cybersecurity
+    market reports
+  last_updated: "2025-11-10"
+
+greenpower.energy:
+  domain: "greenpower.energy"
+  company_name: "GreenPower"
+  tagline: >
+    Intelligent monitoring for distributed energy resources
+  product_summary: >
+    GreenPower provides a hardware-software platform for
+    monitoring and optimizing distributed energy resources
+    (solar, battery storage, EV chargers). Proprietary
+    IoT sensors collect real-time generation and consumption
+    data, while the AI-powered software platform optimizes
+    energy dispatch, enables virtual power plant
+    aggregation, and provides grid services. Serves
+    utilities and commercial building operators.
+  product_status: "early GA (limited deployment)"
+  founded: "2023-01"
+  hq_city: "Oakland"
+  hq_state: "CA"
+  hq_country: "US"
+  stage: "Seed"
+  arr: "$0.5M"
+  total_raised: "$5.2M"
+  last_round_amount: "$4M"
+  last_round_date: "2024-07"
+  lead_investor: "Congruent Ventures"
+  headcount: 22
+  headcount_note: >
+    22 FTEs. Unique mix: 36% software engineering, 23%
+    hardware engineering, 14% field operations. Hybrid
+    work (Oakland office + field sites).
+  traction_highlights:
+    - "150% YoY revenue growth"
+    - "8 paying customers (3 utilities, 5 commercial)"
+    - "$800K DOE grant received"
+    - "Proprietary IoT sensors deployed at 45 sites"
+    - "IRA incentive eligibility for customers"
+  key_customers:
+    - "1 regional utility (California)"
+    - "2 municipal utilities"
+    - "5 commercial building operators"
+  technology_stack: >
+    Python, C/C++ (firmware), TypeScript, AWS IoT,
+    InfluxDB
+  business_model: >
+    SaaS monitoring subscription + one-time hardware
+    sales + installation services
+  category: "CleanTech"
+  notable_facts:
+    - "CEO from Stem Inc, CTO from Tesla Energy"
+    - "VP Energy Systems from NREL"
+    - "DOE-validated energy savings methodology"
+    - "IRA and FERC 2222 create strong regulatory tailwinds"
+    - "Hardware-software integration is rare in category"
+  data_confidence: "low"
+  data_sources: >
+    Seed pitch deck, DOE grant database, founder
+    interview, cleantech conferences
+  last_updated: "2025-11-22"

@@ -1,0 +1,308 @@
+[
+  {
+    "skill_name": "eval-analyst-async",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-alpha.io",
+        "name": "unknown-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-alpha.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:04:21.754931+00:00",
+    "outcome_summary": "## Analysis: unknown-alpha.io\n\n### Financial Overview\n**Status**: No verified financial data available\n- Recurring Revenue: 0%\n- Overall financial metrics cannot be assessed due to lack of verified da",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-alpha.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll analyze unknown-alpha.io for you. Let me start by gathering data from the premium source."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01JUpGWbpBwjJz3rRrqj93Uv",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01JUpGWbpBwjJz3rRrqj93Uv",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-alpha.io' is in progress. Attempt 1. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The premium data is still processing. Let me retry after a moment."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_016LaNkjugTAWwZJ7yTMtdw7",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016LaNkjugTAWwZJ7yTMtdw7",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-alpha.io' is in progress. Attempt 2. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Still processing. Let me try once more."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01J8tAqdB4SnFnuYZGczMKqe",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01J8tAqdB4SnFnuYZGczMKqe",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-alpha.io' is in progress. Attempt 3. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The premium source is still processing after 3 attempts. Let me fall back to the basic source."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01DTHeDXSJFd4DjrTxFkdNNh",
+        "arguments": {
+          "source": "basic",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[async_lookup({\"source\": \"basic\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01DTHeDXSJFd4DjrTxFkdNNh",
+        "content": "## Profile \u2014 unknown-alpha.io\n\n- **Domain**: unknown-alpha.io\n- **Overall Score**: 35\n- **Growth Score**: 40\n- **Unit Economics Score**: 30\n- **Team Score**: 35\n- **Market Score**: 30\n- **Product Score**: 40\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration, LinkedIn company page\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: No verified financial data, no known funding rounds, limited public information"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis: unknown-alpha.io\n\n### Financial Overview\n**Status**: No verified financial data available\n- Recurring Revenue: 0%\n- Overall financial metrics cannot be assessed due to lack of verified data\n- No known funding rounds or investment history\n- Data confidence is very low\n\n### Market Position\n**Market Score**: 30/100\n- Limited public information available\n- Market presence and competitive positioning unclear\n- Insufficient data to assess market opportunity or competitive advantage\n\n### Team\n**Team Score**: 35/100\n- Information sourced from LinkedIn company page\n- Limited visibility into team composition, experience, and expertise\n- Insufficient data for comprehensive team assessment\n\n### Product & Growth\n**Product Score**: 40/100\n**Growth Score**: 40/100\n- Product details are not well-documented publicly\n- Growth trajectory cannot be reliably assessed\n- Limited evidence of market traction\n\n### Assessment\n\n**Overall Score: 35/100** \u2014 **High Risk / Insufficient Data**\n\n**Key Concerns:**\n- \u26a0\ufe0f **No verified financial data** \u2014 Cannot assess business viability\n- \u26a0\ufe0f **No funding history** \u2014 Unclear capitalization and investor backing\n- \u26a0\ufe0f **Very low data confidence** \u2014 Minimal public information available\n- \u26a0\ufe0f **Zero recurring revenue** \u2014 Business model sustainability unclear\n- \u26a0\ufe0f **Unknown moat** \u2014 Competitive advantages not evident\n\n**Recommendation**: This company presents significant analytical challenges due to extremely limited public information. Before any engagement or investment consideration, you would need to:\n1. Request direct company information and financial statements\n2. Conduct primary research with company leadership\n3. Verify business model and revenue streams\n4. Assess team credentials and experience\n\nThe low scores across all metrics reflect data scarcity rather than confirmed weaknesses, but the lack of transparency itself is a red flag."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst-async",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-beta.io",
+        "name": "unknown-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-beta.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:04:30.826058+00:00",
+    "outcome_summary": "## Analysis: unknown-beta.io\n\n### Financial Overview\n**Status**: No verified financial data available\n- Recurring Revenue: 0%\n- Unit Economics Score: 25/100 (very poor)\n- Overall financial health cann",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-beta.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll analyze unknown-beta.io for you. Let me start by gathering data from the premium source."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_015tK2HfqMjLmNQEe3CPWHwP",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-beta.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_015tK2HfqMjLmNQEe3CPWHwP",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-beta.io' is in progress. Attempt 1. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The premium data is still processing. Let me retry after a moment."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01HMWfpdnnjBHQQBnbkqq4jn",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-beta.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01HMWfpdnnjBHQQBnbkqq4jn",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-beta.io' is in progress. Attempt 2. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Still processing. Let me try once more."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01GuJcEUMoZPWJsAaZ7Z3p6a",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-beta.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01GuJcEUMoZPWJsAaZ7Z3p6a",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-beta.io' is in progress. Attempt 3. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The premium source is still processing after 3 attempts. Let me fall back to the basic source."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01MnEWwsCpmyTNBokFL5Y5k6",
+        "arguments": {
+          "source": "basic",
+          "query": "unknown-beta.io"
+        },
+        "content": "[async_lookup({\"source\": \"basic\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01MnEWwsCpmyTNBokFL5Y5k6",
+        "content": "## Profile \u2014 unknown-beta.io\n\n- **Domain**: unknown-beta.io\n- **Overall Score**: 30\n- **Growth Score**: 35\n- **Unit Economics Score**: 25\n- **Team Score**: 30\n- **Market Score**: 35\n- **Product Score**: 30\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration, Crunchbase stub\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: No verified financial data, no known team information"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis: unknown-beta.io\n\n### Financial Overview\n**Status**: No verified financial data available\n- Recurring Revenue: 0%\n- Unit Economics Score: 25/100 (very poor)\n- Overall financial health cannot be assessed due to lack of verified data\n\n### Market Position\n**Status**: Extremely limited visibility\n- Market Score: 35/100 (weak)\n- Growth Score: 35/100 (weak)\n- No clear market positioning or competitive advantage identified\n- Moat Rating: Unknown\n\n### Team\n**Status**: No known team information\n- Team Score: 30/100 (poor)\n- No verified leadership or organizational structure data available\n\n### Assessment\n\n**Overall Score: 30/100** \u2014 This is a **high-risk, low-confidence evaluation**\n\n**Key Concerns:**\n- \u26a0\ufe0f **Extremely limited data**: Only public domain registration and a Crunchbase stub available\n- \u26a0\ufe0f **No financial verification**: Zero recurring revenue and no financial metrics\n- \u26a0\ufe0f **Unknown team**: No verified team information or leadership details\n- \u26a0\ufe0f **Very low data confidence**: The analysis is based on minimal information\n- \u26a0\ufe0f **Early/stealth stage**: Appears to be either a very early-stage project or a private/undisclosed venture\n\n**Recommendation**: This company is essentially unknown to public data sources. Before any investment or partnership consideration, you would need to:\n1. Conduct direct outreach to verify the company's existence and operations\n2. Request detailed financial statements and business documentation\n3. Verify team credentials and experience\n4. Understand the actual business model and market opportunity\n\nThis domain may be reserved for a future project, a stealth startup, or a company with minimal public presence."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst-async",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-gamma.io",
+        "name": "unknown-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-gamma.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:04:41.261631+00:00",
+    "outcome_summary": "## Analysis: unknown-gamma.io\n\n### Financial Overview\n**Status**: Insufficient Data\n- No financial information available\n- Recurring revenue: 0%\n- The company has minimal public presence with no verif",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-gamma.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll analyze unknown-gamma.io for you. Let me start by gathering data from the premium source."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_019urcHRXRdNRtebJvuXZU6M",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_019urcHRXRdNRtebJvuXZU6M",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-gamma.io' is in progress. Attempt 1. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The premium data is still processing. Let me retry after a moment."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01DgCRkF3Qpcq48ZC2PJfjwq",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01DgCRkF3Qpcq48ZC2PJfjwq",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-gamma.io' is in progress. Attempt 2. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Still processing. Let me try once more."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_01LosePNDd3aQWqhmZ6kXaQq",
+        "arguments": {
+          "source": "premium",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[async_lookup({\"source\": \"premium\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01LosePNDd3aQWqhmZ6kXaQq",
+        "content": "{\"status\": \"processing\", \"message\": \"Data collection for 'unknown-gamma.io' is in progress. Attempt 3. The data is being fetched from external sources and may take a few moments. Please retry shortly.\", \"retry_after_seconds\": 5, \"estimated_completion\": \"soon\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The premium source is still processing after 3 attempts. Let me fall back to the basic source."
+      },
+      {
+        "role": "tool_call",
+        "name": "async_lookup",
+        "call_id": "toolu_vrtx_015eWPXRyqQwyinGfukZGv4i",
+        "arguments": {
+          "source": "basic",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[async_lookup({\"source\": \"basic\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_015eWPXRyqQwyinGfukZGv4i",
+        "content": "## Profile \u2014 unknown-gamma.io\n\n- **Domain**: unknown-gamma.io\n- **Overall Score**: 25\n- **Growth Score**: 30\n- **Unit Economics Score**: 20\n- **Team Score**: 25\n- **Market Score**: 30\n- **Product Score**: 25\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration only\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: Minimal public presence, no verified data"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis: unknown-gamma.io\n\n### Financial Overview\n**Status**: Insufficient Data\n- No financial information available\n- Recurring revenue: 0%\n- The company has minimal public presence with no verified financial data\n\n### Market Position\n**Score**: 30/100 (Very Low)\n- Market score indicates very limited market presence or validation\n- No public market data available\n- Risk factor: Minimal public presence\n\n### Team\n**Score**: 25/100 (Very Low)\n- No team information available\n- Data confidence is very low\n\n### Product\n**Score**: 25/100 (Very Low)\n- Limited product information available\n- No verified product-market fit indicators\n\n### Assessment\n\n**Overall Score: 25/100** \u2014 This is a **high-risk profile**\n\n**Key Findings:**\n- \u26a0\ufe0f **Minimal Public Presence**: The company has virtually no verifiable online presence beyond domain registration\n- \u26a0\ufe0f **No Financial Data**: Zero recurring revenue and no financial metrics available\n- \u26a0\ufe0f **Very Low Data Confidence**: Only public domain registration data is available\n- \u26a0\ufe0f **Unknown Moat**: No competitive advantages identified\n\n**Recommendation**: \nThis company appears to be either:\n1. **Very early stage** (pre-launch or stealth mode)\n2. **Inactive** or dormant\n3. **Not a legitimate operating business**\n\n**Due Diligence Required**: Before any engagement, you would need to:\n- Verify the company's actual operations and legitimacy\n- Request direct financial statements and business documentation\n- Confirm team credentials and experience\n- Understand the actual business model and market opportunity\n\nThis profile suggests extreme caution is warranted."
+      }
+    ]
+  }
+]

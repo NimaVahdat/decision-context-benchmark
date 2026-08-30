@@ -1,0 +1,62 @@
+# Security vulnerability status per alert ID.
+
+alert-1001:
+  patch_status: "3 critical CVEs unpatched"
+  critical_cves:
+    - id: "CVE-2024-3094"
+      severity: 9.8
+      description: "XZ Utils backdoor — remote code execution"
+      patch_available: true
+      patched: false
+    - id: "CVE-2024-21762"
+      severity: 9.6
+      description: "FortiOS out-of-bound write — RCE"
+      patch_available: true
+      patched: false
+    - id: "CVE-2024-1709"
+      severity: 10.0
+      description: "ConnectWise ScreenConnect auth bypass"
+      patch_available: true
+      patched: false
+  exposed_services: ["SSH (22)", "HTTPS (443)", "RDP (3389)"]
+  overall_risk: "CRITICAL — actively exploitable vulnerabilities on internet-facing services"
+
+alert-1002:
+  patch_status: "all systems patched and current"
+  critical_cves: []
+  exposed_services: ["HTTPS (443)", "HTTPS (8443)"]
+  last_patch_date: "2024-11-28"
+  overall_risk: "LOW — no known exploitable vulnerabilities"
+
+alert-1003:
+  patch_status: "1 medium CVE, non-critical"
+  critical_cves: []
+  medium_cves:
+    - id: "CVE-2024-5432"
+      severity: 5.3
+      description: "Information disclosure in logging"
+      patched: false
+  overall_risk: "LOW — no remote exploitation vectors"
+
+alert-1004:
+  patch_status: "all systems patched and current"
+  critical_cves: []
+  overall_risk: "LOW"
+
+alert-1005:
+  patch_status: "systems current, 1 informational finding"
+  critical_cves: []
+  overall_risk: "LOW — no exploitation vectors"
+
+# Test alerts
+alert-2001:
+  patch_status: "all systems patched and current"
+  critical_cves: []
+  exposed_services: ["HTTPS (443)", "SSH (22)"]
+  last_patch_date: "2024-12-01"
+  overall_risk: "LOW — no known exploitable vulnerabilities"
+
+alert-2002:
+  patch_status: "systems current"
+  critical_cves: []
+  overall_risk: "LOW — no exploitation vectors"

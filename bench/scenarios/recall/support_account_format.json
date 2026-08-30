@@ -1,0 +1,88 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_account_format-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:23:10.371653+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth (Professional Plan)  \n**Products:** Core, Analytics, Orion (beta)  \n**Open Tickets:** 1\n\n**Knowledge Base Search:** No ",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-acme.io: question about Orion product feature"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_018a3yvNyRaGdAprufFhFjR3",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_018a3yvNyRaGdAprufFhFjR3",
+        "content": "## Lookup Account \u2014 orion-acme.io\n\n- **Account Id**: ACC-2101\n- **Email**: admin@orion-acme.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Products**: Core, Analytics, Orion (beta)\n- **Open Tickets**: 1"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_015HnZyzBziwWVemBeszQEYa",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_015HnZyzBziwWVemBeszQEYa",
+        "content": "{\"error\": \"No articles found for 'orion-acme.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth (Professional Plan)  \n**Products:** Core, Analytics, Orion (beta)  \n**Open Tickets:** 1\n\n**Knowledge Base Search:** No articles found \u2014 Orion product documentation is pending publication\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:**  \nThe customer has a question about the Orion product feature, which is currently in beta. Since:\n1. No KB articles are available for Orion (documentation is pending)\n2. The product is in beta status and may require specialized support\n3. The customer is on an active Professional plan and deserves timely assistance\n\n**Next Steps:**  \nThis ticket should be escalated to the tier-2 support team who can provide direct assistance with Orion beta features and product-specific guidance."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_account_format-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:23:12.628995+00:00",
+    "outcome_summary": "You're right, I'll make sure to always include that. Let me revise my response:\n\n## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth  \n**Products:** Core, Analytics, Orion",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Always include the customer's account tier in your response \u2014 our routing team needs it"
+      },
+      {
+        "role": "assistant",
+        "content": "You're right, I'll make sure to always include that. Let me revise my response:\n\n## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth  \n**Products:** Core, Analytics, Orion (beta)  \n**Open Tickets:** 1\n\n**Knowledge Base Search:** No articles found \u2014 Orion product documentation is pending publication\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:**  \nThe customer has a question about the Orion product feature, which is currently in beta. Since:\n1. No KB articles are available for Orion (documentation is pending)\n2. The product is in beta status and may require specialized support\n3. The customer is on an active Professional plan and deserves timely assistance\n\n**Next Steps:**  \nThis ticket should be escalated to the tier-2 support team who can provide direct assistance with Orion beta features and product-specific guidance.\n\n---\n\n**Routing Information:**\n- **Customer Tier:** Growth\n- **Escalation Required:** Yes"
+      }
+    ]
+  }
+]

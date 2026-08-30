@@ -1,0 +1,76 @@
+# Security user behavior analysis per alert ID.
+
+alert-1001:
+  user: "N/A (external source)"
+  anomaly_score: 0.2
+  behavior_summary: "No internal user behavior anomalies. All internal accounts show normal patterns."
+  data_access_pattern: "normal"
+  data_transfer: "none from internal sources"
+
+alert-1002:
+  user: "N/A (external source)"
+  anomaly_score: 0.1
+  behavior_summary: "No internal anomalies. External probes did not result in any internal compromise."
+  data_access_pattern: "normal"
+  data_transfer: "none"
+
+alert-1003:
+  user: "jsmith (Senior Engineer)"
+  anomaly_score: 0.85
+  behavior_summary: "jsmith accessed 340 files across 12 repositories in 45 minutes, including restricted HR and finance directories. Normal daily access is 20-30 files in engineering repos only."
+  data_access_pattern: "anomalous — breadth and volume far exceed baseline"
+  data_transfer:
+    volume_mb: 2400
+    destination: "personal AWS S3 bucket (s3://jsmith-backup-2024)"
+    timing: "14:30-15:15 (business hours)"
+    file_types: ["source code", "design docs", "financial reports"]
+  risk_indicators: ["accessed files outside normal scope", "large transfer to personal storage", "no business justification"]
+
+alert-1004:
+  user: "mchen (IT Operations Lead)"
+  anomaly_score: 0.15
+  behavior_summary: "mchen performed standard server maintenance activities consistent with scheduled maintenance window MW-2024-0847. All accessed systems are within normal operational scope."
+  data_access_pattern: "normal — consistent with IT ops role"
+  data_transfer: "none"
+  risk_indicators: []
+
+alert-1005:
+  user: "akumar (Financial Analyst)"
+  anomaly_score: 0.92
+  behavior_summary: "akumar accessed compensation data, M&A planning documents, and board materials at 2:00 AM. Normal work hours are 9 AM - 6 PM. 50MB transferred to external endpoint."
+  data_access_pattern: "highly anomalous — after-hours access to sensitive materials outside normal role"
+  data_transfer:
+    volume_mb: 50
+    destination: "external cloud endpoint (encrypted, unresolvable)"
+    timing: "02:00-02:30 (after hours)"
+    file_types: ["compensation data", "M&A docs", "board materials"]
+  risk_indicators:
+    - "after-hours access (2 AM)"
+    - "accessed files far outside normal role (finance analyst accessing M&A/board docs)"
+    - "small but targeted transfer — selected high-value documents"
+    - "encrypted destination prevents content inspection"
+    - "no calendar entry or justification"
+
+# Test alerts
+alert-2001:
+  user: "N/A (external source)"
+  anomaly_score: 0.15
+  behavior_summary: "No internal user anomalies detected. External probes have not resulted in any successful access or lateral movement."
+  data_access_pattern: "normal"
+  data_transfer: "none"
+
+alert-2002:
+  user: "rlee (Product Manager)"
+  anomaly_score: 0.88
+  behavior_summary: "rlee accessed customer database exports, pricing strategy documents, and product roadmap at 1:45 AM. Normal hours are 9 AM - 7 PM. 45MB transferred to personal cloud storage."
+  data_access_pattern: "highly anomalous — after-hours, outside role scope"
+  data_transfer:
+    volume_mb: 45
+    destination: "personal cloud storage endpoint"
+    timing: "01:45-02:15 (after hours)"
+    file_types: ["customer data", "pricing docs", "roadmap"]
+  risk_indicators:
+    - "after-hours access (1:45 AM)"
+    - "sensitive data outside normal PM scope"
+    - "small targeted transfer of high-value documents"
+    - "no justification or approval"

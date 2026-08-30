@@ -1,0 +1,216 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_new_product_gap-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:14.874580+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth (Professional Plan)  \n**Products:** Core, Analytics, Orion (beta)  \n**Open Tickets:** 1\n\n**Knowledge Base Search:** No ",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-acme.io: question about Orion product feature"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_011ibEw3nXFM62kv1tf8LH8w",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_011ibEw3nXFM62kv1tf8LH8w",
+        "content": "## Lookup Account \u2014 orion-acme.io\n\n- **Account Id**: ACC-2101\n- **Email**: admin@orion-acme.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Products**: Core, Analytics, Orion (beta)\n- **Open Tickets**: 1"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Qq8Ci2mbakTEkE53JvfM7d",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Qq8Ci2mbakTEkE53JvfM7d",
+        "content": "{\"error\": \"No articles found for 'orion-acme.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth (Professional Plan)  \n**Products:** Core, Analytics, Orion (beta)  \n**Open Tickets:** 1\n\n**Knowledge Base Search:** No articles found \u2014 Orion product documentation is pending publication\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:**  \nThe customer has a question about the Orion product feature, which is currently in beta. Since:\n1. No KB articles are available for Orion (documentation is pending)\n2. The product is in beta status and may require specialized support\n3. The customer is on an active Professional plan and deserves timely assistance\n\n**Next Steps:**  \nThis ticket should be escalated to the tier-2 support team who can provide direct assistance with Orion beta features and product-specific guidance."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-beta.io",
+        "name": "orion-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_new_product_gap-c1",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:21.699835+00:00",
+    "outcome_summary": "**Escalation Confirmed:**\n- **Escalation ID:** ESC-6102\n- **Routed To:** Tier-2 Support\n- **ETA:** 8 hours\n- **Note:** Orion product team has been notified\n\nThe customer can expect a response from the",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-beta.io: Orion onboarding issue"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Pv39LjuV7Z8CBGzYrPmGz5",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Pv39LjuV7Z8CBGzYrPmGz5",
+        "content": "## Lookup Account \u2014 orion-beta.io\n\n- **Account Id**: ACC-2102\n- **Email**: admin@orion-beta.io\n- **Tier**: startup\n- **Status**: active\n- **Plan**: Starter\n- **Products**: Core, Orion (beta)\n- **Open Tickets**: 1"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01U1ccw19vJYonFkZN1DJVpM",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01U1ccw19vJYonFkZN1DJVpM",
+        "content": "{\"error\": \"No articles found for 'orion-beta.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account ID:** ACC-2102  \n**Tier:** Startup (Starter Plan)  \n**Products:** Core, Orion (beta)  \n**Open Tickets:** 1\n\n**Knowledge Base Search:** No articles found \u2014 Orion product documentation is pending publication\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:**  \nThe customer is experiencing an onboarding issue with Orion, which is currently in beta. Since:\n1. No knowledge base articles are available for Orion (documentation is pending)\n2. This is a beta product with limited support resources\n3. The account is active and in good standing\n\nThis ticket requires escalation to the tier-2 support team who can provide specialized assistance with the beta onboarding process.\n\nLet me escalate this now:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01X5qtXcD8sVtb2Hk4R8hJ1j",
+        "arguments": {
+          "source": "escalation",
+          "query": "orion-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"escalation\", \"query\": \"orion-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01X5qtXcD8sVtb2Hk4R8hJ1j",
+        "content": "## Escalation \u2014 orion-beta.io\n\n- **Status**: escalated\n- **Ticket Id**: ESC-6102\n- **Routed To**: tier2_support\n- **Eta Hours**: 8\n- **Note**: Orion product team notified"
+      },
+      {
+        "role": "assistant",
+        "content": "**Escalation Confirmed:**\n- **Escalation ID:** ESC-6102\n- **Routed To:** Tier-2 Support\n- **ETA:** 8 hours\n- **Note:** Orion product team has been notified\n\nThe customer can expect a response from the specialized Orion support team within 8 hours."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-gamma.io",
+        "name": "orion-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_new_product_gap-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:26.980967+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Enterprise  \n**Account ID:** ACC-2103  \n**Email:** admin@orion-gamma.io\n\n**Order Information:**\n- Latest Order ID: ORD-40410\n-",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-gamma.io: Orion billing confusion"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_016EUPcd224eHZvoQLU6bCWJ",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016EUPcd224eHZvoQLU6bCWJ",
+        "content": "## Lookup Account \u2014 orion-gamma.io\n\n- **Account Id**: ACC-2103\n- **Email**: admin@orion-gamma.io\n- **Tier**: enterprise\n- **Status**: active\n- **Plan**: Enterprise\n- **Products**: Core, Analytics, Orion (beta), API\n- **Open Tickets**: 2"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_016HcuAktvp2xDALVNW4fHwV",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016HcuAktvp2xDALVNW4fHwV",
+        "content": "## Check Order Status \u2014 orion-gamma.io\n\n- **Latest Order Id**: ORD-40410\n- **Status**: active\n- **Plan**: Enterprise\n- **Billing Cycle**: annual\n- **Next Renewal**: 2027-03-01\n- **Amount Usd**: 24000"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01B8BFVfT1d7HB9RHAi71hC5",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01B8BFVfT1d7HB9RHAi71hC5",
+        "content": "{\"error\": \"No articles found for 'orion-gamma.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Enterprise  \n**Account ID:** ACC-2103  \n**Email:** admin@orion-gamma.io\n\n**Order Information:**\n- Latest Order ID: ORD-40410\n- Status: Active\n- Plan: Enterprise (annual billing cycle)\n- Annual Amount: $24,000 USD\n- Next Renewal: March 1, 2027\n\n**Knowledge Base:** No articles found (Orion product documentation is pending publication)\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** While the account is active and in good standing, the customer has reported billing confusion. Given that:\n1. No relevant KB articles are available for the Orion product\n2. Billing inquiries often require detailed account review and may involve adjustments or clarifications\n3. The account has 2 open tickets already, suggesting ongoing issues\n4. The customer is on an Enterprise plan with a significant annual commitment ($24,000)\n\nThis ticket should be escalated to tier-2 support for detailed billing review and clarification."
+      }
+    ]
+  }
+]

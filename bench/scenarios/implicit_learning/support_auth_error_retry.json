@@ -1,0 +1,182 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "suspended-alpha.io",
+        "name": "suspended-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_auth_error_retry-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:32.100342+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED (Account ID: ACC-7701)\n- **Suspended Since:** March 12, 2026\n- **Reason:** Payment overdue\n- **KB Articles Found:** None\n\n## Recommended Action",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for suspended-alpha.io: customer locked out after password reset"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the necessary information to resolve this support ticket."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01DT6kK9qUVmtVbxMKN95dTu",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "suspended-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"suspended-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01DT6kK9qUVmtVbxMKN95dTu",
+        "content": "{\"error\": \"account_suspended\", \"account_id\": \"ACC-7701\", \"status\": \"SUSPENDED\", \"suspended_since\": \"2026-03-12\", \"reason\": \"payment_overdue\", \"resolution\": \"Customer must clear outstanding balance via billing portal\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Lyf5rBMo72mf44PdvJRRUz",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "suspended-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"suspended-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Lyf5rBMo72mf44PdvJRRUz",
+        "content": "{\"error\": \"No data found for 'suspended-alpha.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED (Account ID: ACC-7701)\n- **Suspended Since:** March 12, 2026\n- **Reason:** Payment overdue\n- **KB Articles Found:** None\n\n## Recommended Action: ESCALATE\n\n**Reason for Escalation:**\n\nThis ticket cannot be resolved through standard password reset procedures because the account is currently **suspended due to payment issues**. The customer's lockout is a secondary symptom of the account suspension.\n\n**Key Issue:**\n- The account suspension is blocking access regardless of password reset status\n- The underlying issue is an outstanding balance that must be cleared\n\n**Escalation Details:**\n- **Route to:** Tier-2 Support / Billing Team\n- **Priority:** High (customer is locked out and account is suspended)\n- **Required Action:** \n  1. Verify customer identity and payment status\n  2. Provide instructions for clearing the outstanding balance via the billing portal\n  3. Once payment is resolved, reinstate the account\n  4. Assist with password reset if needed after account reactivation\n\n**Customer Communication:**\nInform the customer that their account suspension is preventing access. They must resolve the outstanding payment balance through the billing portal before account access can be restored. Tier-2 support will provide specific payment instructions and timeline for reactivation."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "suspended-beta.io",
+        "name": "suspended-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_auth_error_retry-c1",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:36.401932+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED (Account ID: ACC-7702)\n- **Suspended Since:** 2026-03-18\n- **Reason:** Account deactivated by customer request\n- **KB Articles Found:** None\n\n-",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for suspended-beta.io: auth token expired after account deactivation"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Qf5m27LDcuSL93GM15ySu4",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "suspended-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"suspended-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Qf5m27LDcuSL93GM15ySu4",
+        "content": "{\"error\": \"account_suspended\", \"account_id\": \"ACC-7702\", \"status\": \"SUSPENDED\", \"suspended_since\": \"2026-03-18\", \"reason\": \"account_deactivated\", \"resolution\": \"Account deactivated by customer request \\u2014 requires reactivation form\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01SQTStSMwLo3oAziZygY3XS",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "suspended-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"suspended-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01SQTStSMwLo3oAziZygY3XS",
+        "content": "{\"error\": \"No data found for 'suspended-beta.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED (Account ID: ACC-7702)\n- **Suspended Since:** 2026-03-18\n- **Reason:** Account deactivated by customer request\n- **KB Articles Found:** None\n\n---\n\n## Recommended Action: ESCALATE\n\n**Reason for Escalation:**\n\nThis ticket requires tier-2 support intervention because:\n\n1. **Account is suspended** \u2014 The account was deactivated by customer request, which automatically invalidated all active auth tokens\n2. **Token expiration is expected behavior** \u2014 Auth tokens are revoked when an account is deactivated for security reasons\n3. **Reactivation required** \u2014 According to the account notes, the customer must submit a reactivation form to restore access\n\n**Next Steps for Tier-2 Support:**\n- Verify the customer's identity and intent to reactivate\n- Provide the account reactivation form (ACC-7702)\n- Upon reactivation, issue new auth tokens\n- Confirm token validity before closing the ticket\n\nThis is not a technical issue but rather an account lifecycle matter that requires manual intervention and verification."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "suspended-gamma.io",
+        "name": "suspended-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_auth_error_retry-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:43.470911+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED (Account ID: ACC-7703)\n- **Suspended Since:** 2026-04-01\n- **Reason:** Security hold\n- **KB Articles Found:** None\n\n## Recommended Action: ESCA",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for suspended-gamma.io: SSO fails after org migration"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01X8qyDfMuvPTyjcwQXtRCfw",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "suspended-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"suspended-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01X8qyDfMuvPTyjcwQXtRCfw",
+        "content": "{\"error\": \"account_suspended\", \"account_id\": \"ACC-7703\", \"status\": \"SUSPENDED\", \"suspended_since\": \"2026-04-01\", \"reason\": \"security_hold\", \"resolution\": \"Security team hold \\u2014 escalate to security review queue\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_011z94HcqMVNzk9cejERdnT8",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "suspended-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"suspended-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_011z94HcqMVNzk9cejERdnT8",
+        "content": "{\"error\": \"No data found for 'suspended-gamma.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED (Account ID: ACC-7703)\n- **Suspended Since:** 2026-04-01\n- **Reason:** Security hold\n- **KB Articles Found:** None\n\n## Recommended Action: ESCALATE\n\n**Reason for Escalation:**\nThe account for suspended-gamma.io is currently under a **security hold** and has been suspended since April 1, 2026. The SSO failure after org migration cannot be resolved through standard support procedures while the account is in this state.\n\n**Next Steps:**\n1. This ticket must be escalated to the **Security Review Queue** to address the underlying security hold\n2. Once the security team clears the account, the SSO configuration can be reviewed and reconfigured for the new organization structure\n3. The customer should be informed that SSO restoration is contingent on security clearance\n\n**Escalation Required:** Yes \u2014 Route to Security Team for account review and clearance before proceeding with SSO troubleshooting."
+      }
+    ]
+  }
+]

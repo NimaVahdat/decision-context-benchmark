@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------
+# search_by_email.yaml
+# Used by eval-support skill (source: 'search_by_email')
+# Query: company domain
+# For chat-channel tickets where account_id is not available.
+# ---------------------------------------------------------------
+
+chat-alpha.io:
+  account_id: "ACC-5501"
+  email: "user@chat-alpha.io"
+  tier: "growth"
+  status: "active"
+  plan: "Professional"
+  open_tickets: 1
+  balance_usd: 0
+  latest_invoice_id: "INV-10221"
+  latest_invoice_status: "overdue"
+  note: "Invoice overdue 14 days — payment reminder sent"
+
+chat-beta.io:
+  account_id: "ACC-5502"
+  email: "admin@chat-beta.io"
+  tier: "startup"
+  status: "active"
+  plan: "Starter"
+  open_tickets: 0
+  current_plan_since: "2025-11-01"
+  subscription_tier: "Starter"
+  note: "Recently upgraded from Free — still onboarding"
+
+chat-gamma.io:
+  account_id: "ACC-5503"
+  email: "billing@chat-gamma.io"
+  tier: "enterprise"
+  status: "active"
+  plan: "Enterprise"
+  open_tickets: 0
+  contract_end_date: "2027-06-30"
+  usage_this_month_pct: 78
+  note: "High usage this month — may need plan upgrade"
+
+chat-delta.io:
+  account_id: "ACC-5504"
+  email: "finance@chat-delta.io"
+  tier: "growth"
+  status: "active"
+  plan: "Professional"
+  open_tickets: 1
+  latest_invoice_id: "INV-10450"
+  latest_invoice_status: "overdue"
+  overdue_days: 21
+  note: "Invoice overdue 21 days — escalation recommended"

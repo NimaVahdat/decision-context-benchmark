@@ -1,0 +1,141 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-exception_ephemeral_support-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T15:48:28.462258+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth (Professional Plan)  \n**Subscription:** Annual, active through 2027-01-15\n\n**Issue:** Critical data loss (P0)\n\n**Knowle",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-acme.io: critical data loss P0"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the necessary information to handle this critical data loss ticket for orion-acme.io."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_0129JnTt5yhWTZ98FVxUycdd",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_0129JnTt5yhWTZ98FVxUycdd",
+        "content": "## Lookup Account \u2014 orion-acme.io\n\n- **Account Id**: ACC-2101\n- **Email**: admin@orion-acme.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Products**: Core, Analytics, Orion (beta)\n- **Open Tickets**: 1"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Fsnwruc4QHxJbFMDr3vzpu",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Fsnwruc4QHxJbFMDr3vzpu",
+        "content": "## Check Order Status \u2014 orion-acme.io\n\n- **Latest Order Id**: ORD-40221\n- **Status**: active\n- **Plan**: Professional\n- **Billing Cycle**: annual\n- **Next Renewal**: 2027-01-15\n- **Amount Usd**: 4800"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Fp7xYdVPLYhLBkFenrf9JN",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Fp7xYdVPLYhLBkFenrf9JN",
+        "content": "{\"error\": \"No articles found for 'orion-acme.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "Now I'll escalate this critical P0 issue to tier-2 support:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Ljjd97aFeBaWXBoW1YiNSG",
+        "arguments": {
+          "source": "escalation",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"escalation\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Ljjd97aFeBaWXBoW1YiNSG",
+        "content": "## Escalation \u2014 orion-acme.io\n\n- **Status**: escalated\n- **Ticket Id**: ESC-6101\n- **Routed To**: tier2_support\n- **Eta Hours**: 8\n- **Note**: Orion product team notified"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account Tier:** Growth (Professional Plan)  \n**Subscription:** Annual, active through 2027-01-15\n\n**Issue:** Critical data loss (P0)\n\n**Knowledge Base:** No relevant articles found \u2014 Orion product documentation is pending publication.\n\n---\n\n## Recommended Action: **ESCALATE** \u2713\n\n**Reason:** This is a critical P0 data loss incident requiring immediate specialized attention.\n\n**Escalation Details:**\n- **Ticket ID:** ESC-6101\n- **Routed To:** Tier-2 Support Team\n- **ETA:** 8 hours\n- **Special Note:** Orion product team has been notified\n\n**Next Steps:**\n1. Tier-2 support will contact admin@orion-acme.io immediately\n2. Orion product specialists are engaged due to the beta product involvement\n3. Customer should expect contact within 8 hours\n4. Advise customer to preserve any logs or system state that might aid recovery\n\nThis ticket has been successfully escalated with priority handling."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-exception_ephemeral_support-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T15:48:31.812058+00:00",
+    "outcome_summary": "## P0 EMERGENCY ESCALATION \u2014 COMPLETE \u2713\n\n**Ticket:** orion-acme.io \u2014 Critical Data Loss  \n**Escalation ID:** ESC-6101  \n**Status:** Escalated to Tier-2 Support  \n**ETA:** 8 hours  \n**Product Team:** O",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "For this P0 emergency \u2014 skip all standard lookups and escalate immediately without investigation."
+      },
+      {
+        "role": "assistant",
+        "content": "You're right. For a P0 critical data loss emergency, I should escalate immediately without delay."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01NGHgKFyw2VvHZChDN1RLMe",
+        "arguments": {
+          "source": "escalation",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"escalation\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01NGHgKFyw2VvHZChDN1RLMe",
+        "content": "## Escalation \u2014 orion-acme.io\n\n- **Status**: escalated\n- **Ticket Id**: ESC-6101\n- **Routed To**: tier2_support\n- **Eta Hours**: 8\n- **Note**: Orion product team notified"
+      },
+      {
+        "role": "assistant",
+        "content": "## P0 EMERGENCY ESCALATION \u2014 COMPLETE \u2713\n\n**Ticket:** orion-acme.io \u2014 Critical Data Loss  \n**Escalation ID:** ESC-6101  \n**Status:** Escalated to Tier-2 Support  \n**ETA:** 8 hours  \n**Product Team:** Orion team notified\n\n**Action taken:** Immediate escalation without investigation delay."
+      }
+    ]
+  }
+]

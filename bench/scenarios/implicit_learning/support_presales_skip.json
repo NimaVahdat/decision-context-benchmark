@@ -1,0 +1,182 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "presales-alpha.io",
+        "name": "presales-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_presales_skip-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:00.610498+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Not found \u2014 presales-alpha.io is not a registered customer (pre-sales prospect)\n\n**Relevant KB Articles Found:**\n1. **Pricing overview** (kb/pricing) \u2014 P",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for presales-alpha.io: pre-sales pricing question"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_014dSMaNfwLnSYbhAMggz9es",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "presales-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"presales-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_014dSMaNfwLnSYbhAMggz9es",
+        "content": "{\"error\": \"No account found \\u2014 'presales-alpha.io' is not a registered customer\", \"hint\": \"Contact appears to be pre-sales. No account record exists.\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01Gfd8rCMaWBHJjFk9fCUEe2",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "presales-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"presales-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Gfd8rCMaWBHJjFk9fCUEe2",
+        "content": "## Search Knowledge Base \u2014 presales-alpha.io\n\n- **Results Count**: 3\n- **Articles**: [{'title': 'Pricing overview', 'url': 'kb/pricing', 'summary': 'Plans, pricing tiers, and volume discounts'}, {'title': 'Integration guide', 'url': 'kb/integrations', 'summary': 'Supported integrations and setup instructions'}, {'title': 'Free trial FAQ', 'url': 'kb/trial-faq', 'summary': 'How to start a trial and what is included'}]"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Not found \u2014 presales-alpha.io is not a registered customer (pre-sales prospect)\n\n**Relevant KB Articles Found:**\n1. **Pricing overview** (kb/pricing) \u2014 Plans, pricing tiers, and volume discounts\n2. **Free trial FAQ** (kb/trial-faq) \u2014 How to start a trial and what is included\n3. **Integration guide** (kb/integrations) \u2014 Supported integrations and setup instructions\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** This is a pre-sales inquiry from a non-registered prospect. While we have relevant pricing documentation available, pre-sales pricing questions typically require:\n- Personalized pricing consultation\n- Custom quote generation (if applicable)\n- Account setup and trial activation\n- Sales team engagement for enterprise/volume discussions\n\n**Next Steps:**\n- Route to Sales/Pre-Sales team for direct engagement\n- Provide prospect with links to public pricing documentation (kb/pricing and kb/trial-faq)\n- Offer free trial activation if interested\n- Sales team can discuss custom pricing, volume discounts, or enterprise plans as needed"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "presales-beta.io",
+        "name": "presales-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_presales_skip-c1",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:05.428683+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Company:** presales-beta.io  \n**Issue:** Pre-sales integration question\n\n---\n\n### Account Status\n**Not Found** \u2014 This is a pre-sales prospect with no existing customer acc",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for presales-beta.io: pre-sales integration question"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01HrkahH9KH9kVfqoQVNEyV2",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "presales-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"presales-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01HrkahH9KH9kVfqoQVNEyV2",
+        "content": "{\"error\": \"No account found \\u2014 'presales-beta.io' is not a registered customer\", \"hint\": \"Contact appears to be pre-sales. No account record exists.\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_018Zd5o1eXECbQUveXA6QBuA",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "presales-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"presales-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_018Zd5o1eXECbQUveXA6QBuA",
+        "content": "## Search Knowledge Base \u2014 presales-beta.io\n\n- **Results Count**: 2\n- **Articles**: [{'title': 'Integration guide', 'url': 'kb/integrations', 'summary': 'Supported integrations and setup instructions'}, {'title': 'API documentation', 'url': 'kb/api-docs', 'summary': 'REST API reference and authentication'}]"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Company:** presales-beta.io  \n**Issue:** Pre-sales integration question\n\n---\n\n### Account Status\n**Not Found** \u2014 This is a pre-sales prospect with no existing customer account in our system.\n\n### Relevant Resources Found\nThe knowledge base contains two relevant articles:\n1. **Integration Guide** (kb/integrations) \u2014 Supported integrations and setup instructions\n2. **API Documentation** (kb/api-docs) \u2014 REST API reference and authentication\n\n---\n\n### Recommended Action: **ESCALATE**\n\n**Reason:** This is a pre-sales inquiry from a prospect without an existing account. While we have integration documentation available, pre-sales integration questions typically require:\n- Personalized guidance on their specific use case\n- Evaluation of custom integration requirements\n- Sales team coordination for onboarding\n\n**Next Steps:**\n1. Route to the pre-sales/sales engineering team\n2. Provide the prospect with links to our Integration Guide and API Documentation as initial resources\n3. Schedule a technical discovery call to understand their integration needs and timeline\n\nThis ensures the prospect receives appropriate attention and can move toward a successful evaluation and potential customer onboarding."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "presales-gamma.io",
+        "name": "presales-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_presales_skip-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:26:10.287628+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Company:** presales-gamma.io  \n**Issue:** Pre-sales trial request\n\n---\n\n### Account Status\n**Not Found** \u2014 presales-gamma.io is not yet a registered customer. This is a pr",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for presales-gamma.io: pre-sales trial request"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this pre-sales trial request ticket."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01RmySC4CwpDCQairUKv7qy1",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "presales-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"presales-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01RmySC4CwpDCQairUKv7qy1",
+        "content": "{\"error\": \"No account found \\u2014 'presales-gamma.io' is not a registered customer\", \"hint\": \"Contact appears to be pre-sales. No account record exists.\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01MKt5Ru8kvjpEcyq8Vcm8hN",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "presales-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"presales-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01MKt5Ru8kvjpEcyq8Vcm8hN",
+        "content": "## Search Knowledge Base \u2014 presales-gamma.io\n\n- **Results Count**: 2\n- **Articles**: [{'title': 'Free trial FAQ', 'url': 'kb/trial-faq', 'summary': 'How to start a trial and what is included'}, {'title': 'Onboarding guide', 'url': 'kb/onboarding', 'summary': 'Steps to get started after signing up'}]"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Company:** presales-gamma.io  \n**Issue:** Pre-sales trial request\n\n---\n\n### Account Status\n**Not Found** \u2014 presales-gamma.io is not yet a registered customer. This is a pre-sales inquiry.\n\n### Relevant Knowledge Base Articles Found\n1. **Free trial FAQ** (kb/trial-faq) \u2014 How to start a trial and what is included\n2. **Onboarding guide** (kb/onboarding) \u2014 Steps to get started after signing up\n\n---\n\n### Recommended Action: **ESCALATE**\n\n**Reason:** This is a pre-sales trial request from a non-registered prospect. While we have KB articles on trial setup, this requires:\n- Trial account creation\n- Potential custom configuration or demo setup\n- Sales engagement to understand their needs and ensure proper onboarding\n\n**Next Steps:**\n1. Route to Sales/Pre-sales team for trial provisioning\n2. Provide prospect with links to trial FAQ and onboarding guide\n3. Sales team should follow up to customize trial based on their use case\n\nThis ticket should be escalated to the pre-sales/sales team rather than handled through standard support channels."
+      }
+    ]
+  }
+]

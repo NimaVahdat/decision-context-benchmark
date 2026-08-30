@@ -1,0 +1,1614 @@
+# ---------------------------------------------------------------
+# competitors.yaml
+# Used by eval-analyst skill (source: 'competitors')
+#
+# Contains: direct and indirect competitors, threat level,
+#   win rate data, competitive positioning, strengths/weaknesses,
+#   and deal loss reasons. Deep competitive intelligence view.
+# ---------------------------------------------------------------
+
+delve.co:
+  domain: "delve.co"
+  competitive_landscape_summary: >
+    Delve operates in a crowded analytics market transitioning
+    from legacy BI to AI-native tools. Established players
+    (Tableau, Looker, Power BI) are adding AI features while
+    newer entrants (ThoughtSpot, Sigma) compete on modern
+    architecture. Delve's window of differentiation is
+    estimated at 18-24 months.
+  direct_competitors:
+    - name: "ThoughtSpot"
+      domain: "thoughtspot.com"
+      stage: "Late / Public-ready"
+      arr_estimate: "$250M+"
+      threat_level: "high"
+      overlap_pct: 75
+      strengths:
+        - "Established enterprise customer base"
+        - "Strong NLP search interface (pioneered category)"
+        - "Deeper analytics capabilities"
+      weaknesses:
+        - "Legacy architecture, slower iteration"
+        - "Higher price point excludes mid-market"
+        - "UI feels dated compared to modern tools"
+      differentiation_vs: >
+        Delve's AI is generative (creates insights
+        proactively) vs ThoughtSpot's search-based approach.
+        Delve is 60% cheaper at mid-market price points.
+    - name: "Sigma Computing"
+      domain: "sigmacomputing.com"
+      stage: "Series C"
+      arr_estimate: "$80M"
+      threat_level: "high"
+      overlap_pct: 70
+      strengths:
+        - "Spreadsheet-like interface familiar to analysts"
+        - "Strong cloud data warehouse integration"
+        - "Well-funded ($300M+ raised)"
+      weaknesses:
+        - "Requires more technical setup than Delve"
+        - "AI features are bolt-on, not native"
+        - "Slower product iteration cycle"
+      differentiation_vs: >
+        Delve is AI-first; Sigma is spreadsheet-first
+        adding AI. Delve targets less technical users
+        who want answers, not pivot tables.
+    - name: "Metabase"
+      domain: "metabase.com"
+      stage: "Series D"
+      arr_estimate: "$40M"
+      threat_level: "medium"
+      overlap_pct: 55
+      strengths:
+        - "Open-source version creates wide funnel"
+        - "Simple setup and self-serve deployment"
+        - "Strong developer community"
+      weaknesses:
+        - "Limited AI capabilities"
+        - "Not designed for large-scale analytics"
+        - "Revenue model still maturing"
+      differentiation_vs: >
+        Delve provides automated insights that Metabase
+        users must discover manually. Delve handles
+        larger datasets more efficiently.
+  indirect_competitors:
+    - name: "Tableau (Salesforce)"
+      domain: "tableau.com"
+      threat_level: "medium"
+      overlap_note: >
+        Indirect because Tableau targets enterprise
+        analysts who know SQL/viz; Delve targets less
+        technical users. Overlap grows as Tableau
+        adds AI features (Einstein Discovery).
+    - name: "Looker (Google)"
+      domain: "looker.com"
+      threat_level: "medium"
+      overlap_note: >
+        Indirect competitor through Google Cloud.
+        Looker's semantic layer could integrate AI
+        search similar to Delve's approach. Gemini
+        AI integration announced.
+    - name: "ChatGPT Advanced Data Analysis"
+      domain: "openai.com"
+      threat_level: "medium-high"
+      overlap_note: >
+        Not a direct BI tool but increasingly used
+        for ad-hoc data analysis. Existential risk
+        if general AI assistants commoditize the
+        insights layer.
+  win_rate_overall_pct: 32
+  win_rate_note: >
+    Based on 85 tracked competitive opportunities in
+    CRM over the past 6 months. Win rate is 32% across
+    all competitors. Higher vs Metabase (48%) and
+    lower vs ThoughtSpot (18%). Small sample size
+    limits statistical confidence.
+  win_rate_by_competitor:
+    - competitor: "ThoughtSpot"
+      win_rate_pct: 18
+      sample_size: 22
+    - competitor: "Sigma Computing"
+      win_rate_pct: 28
+      sample_size: 18
+    - competitor: "Metabase"
+      win_rate_pct: 48
+      sample_size: 25
+    - competitor: "Tableau"
+      win_rate_pct: 35
+      sample_size: 20
+  primary_loss_reasons:
+    - reason: "Feature gap (advanced visualizations)"
+      frequency_pct: 35
+    - reason: "Incumbent vendor renewal"
+      frequency_pct: 28
+    - reason: "Price (perceived value vs established tools)"
+      frequency_pct: 20
+    - reason: "Security/compliance requirements"
+      frequency_pct: 17
+  competitive_moat_durability: "12-18 months"
+  competitive_moat_note: >
+    AI advantage is real but temporary. ThoughtSpot and
+    Sigma are investing heavily in AI features. Delve
+    must build deeper integrations and workflow embedding
+    to create durable differentiation before incumbents
+    catch up.
+  data_confidence: "medium"
+  data_sources: >
+    CRM opportunity data, G2 comparison reviews,
+    Gartner Peer Insights, win/loss interviews (n=15),
+    competitor product teardowns
+  last_updated: "2025-11-15"
+
+linear.app:
+  domain: "linear.app"
+  competitive_landscape_summary: >
+    Linear competes in the issue tracking and project
+    management space dominated by Jira (Atlassian). The
+    market is undergoing a generational shift as engineering
+    teams demand faster, better-designed tools. GitHub's
+    expanding project management features represent the
+    most significant long-term threat.
+  direct_competitors:
+    - name: "Jira (Atlassian)"
+      domain: "atlassian.com"
+      stage: "Public"
+      arr_estimate: "$3B+ (Jira product line)"
+      threat_level: "medium"
+      overlap_pct: 90
+      strengths:
+        - "Massive installed base and enterprise contracts"
+        - "Deep integrations with Atlassian ecosystem"
+        - "Comprehensive feature set for large organizations"
+      weaknesses:
+        - "Widely considered slow and bloated"
+        - "Complex configuration overwhelms small teams"
+        - "User satisfaction scores are poor"
+      differentiation_vs: >
+        Linear wins on speed, UX, and simplicity. Jira
+        wins on customization, enterprise features, and
+        existing contracts. Migration friction is the
+        main barrier -- once teams try Linear, most prefer
+        it.
+    - name: "Shortcut (formerly Clubhouse)"
+      domain: "shortcut.com"
+      stage: "Series B"
+      arr_estimate: "$15M"
+      threat_level: "medium"
+      overlap_pct: 85
+      strengths:
+        - "Similar modern UX philosophy"
+        - "Good API and integrations"
+        - "Competitive pricing"
+      weaknesses:
+        - "Slower product development pace"
+        - "Weaker brand recognition"
+        - "Missing some power-user features"
+      differentiation_vs: >
+        Linear is faster and more opinionated. Shortcut
+        is more flexible but less polished. Linear's
+        brand is significantly stronger in the developer
+        community.
+    - name: "GitHub Issues/Projects"
+      domain: "github.com"
+      stage: "Public (Microsoft)"
+      arr_estimate: "bundled (free for GitHub users)"
+      threat_level: "high"
+      overlap_pct: 60
+      strengths:
+        - "Free with GitHub subscription"
+        - "Deepest code-to-issue integration possible"
+        - "Massive existing user base"
+        - "Microsoft resources behind development"
+      weaknesses:
+        - "Feature set is still basic vs Linear"
+        - "UI/UX is not optimized for project management"
+        - "Slow product iteration on project features"
+      differentiation_vs: >
+        Linear offers a purpose-built experience that
+        GitHub Projects can't match yet. The risk is
+        GitHub reaching "good enough" for most teams,
+        eliminating the reason to pay for Linear.
+  indirect_competitors:
+    - name: "Asana"
+      domain: "asana.com"
+      threat_level: "low"
+      overlap_note: >
+        Asana targets general project management, not
+        software development specifically. Overlap is
+        primarily in cross-functional teams. Different
+        buyer persona.
+    - name: "ClickUp"
+      domain: "clickup.com"
+      threat_level: "low"
+      overlap_note: >
+        ClickUp is a general-purpose PM tool adding
+        developer features. Broad but shallow approach
+        vs Linear's deep, opinionated take.
+    - name: "Notion Projects"
+      domain: "notion.so"
+      threat_level: "low-medium"
+      overlap_note: >
+        Notion's project management features are improving
+        but not purpose-built for software development.
+        Some teams use Notion for planning and Linear
+        for execution.
+  win_rate_overall_pct: 68
+  win_rate_note: >
+    Based on 340 tracked competitive evaluations over
+    12 months. Win rate is exceptional at 68%. Linear
+    almost always wins when the buyer is an engineering
+    team. Losses are primarily in enterprise procurement
+    where Jira has incumbent advantage.
+  win_rate_by_competitor:
+    - competitor: "Jira"
+      win_rate_pct: 55
+      sample_size: 150
+    - competitor: "Shortcut"
+      win_rate_pct: 78
+      sample_size: 60
+    - competitor: "GitHub Projects"
+      win_rate_pct: 72
+      sample_size: 80
+    - competitor: "Asana"
+      win_rate_pct: 82
+      sample_size: 50
+  primary_loss_reasons:
+    - reason: "Enterprise Jira contract lock-in"
+      frequency_pct: 42
+    - reason: "GitHub Projects is free/bundled"
+      frequency_pct: 25
+    - reason: "Missing enterprise features (SSO, SCIM)"
+      frequency_pct: 18
+    - reason: "Price sensitivity (per-seat costs)"
+      frequency_pct: 15
+  competitive_moat_durability: "3-5 years"
+  competitive_moat_note: >
+    Linear's brand and UX advantage is durable. The main
+    threat is GitHub Projects reaching parity (unlikely
+    in < 3 years given Microsoft's slow iteration). Jira
+    migration friction works in both directions -- hard
+    to leave Jira, but also hard to leave Linear once
+    adopted.
+  data_confidence: "high"
+  data_sources: >
+    Company-reported win/loss data, G2 Grid, Gartner
+    Peer Insights, developer surveys, Okta Businesses
+    at Work
+  last_updated: "2025-12-01"
+
+notion.so:
+  domain: "notion.so"
+  competitive_landscape_summary: >
+    Notion competes across multiple categories (docs, wikis,
+    project management, databases) which makes competitive
+    analysis complex. The primary threat is Microsoft
+    bundling similar features into M365 at no additional
+    cost. Notion's moat is flexibility and brand loyalty.
+  direct_competitors:
+    - name: "Coda"
+      domain: "coda.io"
+      stage: "Series D"
+      arr_estimate: "$50M"
+      threat_level: "medium"
+      overlap_pct: 80
+      strengths:
+        - "More powerful data manipulation (formulas)"
+        - "Better automation capabilities"
+        - "Doc-first approach resonates with some teams"
+      weaknesses:
+        - "Much smaller user base and network effects"
+        - "Steeper learning curve"
+        - "Weaker brand recognition"
+      differentiation_vs: >
+        Notion wins on breadth and ecosystem. Coda wins
+        on depth of doc-as-app functionality. Notion's
+        larger community and template ecosystem create
+        stronger network effects.
+    - name: "Confluence (Atlassian)"
+      domain: "atlassian.com"
+      stage: "Public"
+      arr_estimate: "$1B+ (Confluence product line)"
+      threat_level: "medium-high"
+      overlap_pct: 70
+      strengths:
+        - "Deep Jira integration for dev teams"
+        - "Massive enterprise installed base"
+        - "Atlassian ecosystem lock-in"
+      weaknesses:
+        - "Widely considered slow and cluttered"
+        - "Search is notoriously poor"
+        - "Modern UX is an afterthought"
+      differentiation_vs: >
+        Notion is universally considered a better product.
+        Confluence wins on existing enterprise contracts
+        and Jira integration. Teams migrate from
+        Confluence to Notion, rarely the reverse.
+    - name: "Microsoft Loop"
+      domain: "microsoft.com"
+      stage: "Public"
+      arr_estimate: "bundled with M365"
+      threat_level: "high"
+      overlap_pct: 65
+      strengths:
+        - "Bundled free with M365 (billions of users)"
+        - "Microsoft ecosystem integration"
+        - "Enterprise IT approval is automatic"
+      weaknesses:
+        - "Feature set is immature vs Notion"
+        - "Microsoft's track record on productivity"
+        - "Less flexible than Notion's block architecture"
+      differentiation_vs: >
+        Notion is years ahead on product capabilities.
+        Loop's threat is distribution, not product quality.
+        If Loop reaches 70% of Notion's functionality,
+        the free bundling becomes a serious threat.
+  indirect_competitors:
+    - name: "Google Docs/Sites"
+      domain: "google.com"
+      threat_level: "medium"
+      overlap_note: >
+        Google Docs is ubiquitous but lacks Notion's
+        database and project features. Google is adding
+        more structured data features that could increase
+        overlap.
+    - name: "Slite"
+      domain: "slite.com"
+      threat_level: "low"
+      overlap_note: >
+        Slite targets team knowledge bases specifically.
+        Smaller, more focused competitor. Not a
+        significant threat at Notion's scale.
+    - name: "Obsidian"
+      domain: "obsidian.md"
+      threat_level: "low"
+      overlap_note: >
+        Local-first personal knowledge management.
+        Competes at the individual user level, not
+        team/enterprise. Different philosophy (files
+        on disk vs cloud-native).
+  win_rate_overall_pct: 72
+  win_rate_note: >
+    Based on 500+ enterprise sales opportunities tracked
+    over 12 months. Notion wins most competitive
+    evaluations but loses to Microsoft when IT mandates
+    M365-only tooling.
+  win_rate_by_competitor:
+    - competitor: "Confluence"
+      win_rate_pct: 78
+      sample_size: 180
+    - competitor: "Coda"
+      win_rate_pct: 82
+      sample_size: 90
+    - competitor: "Microsoft Loop"
+      win_rate_pct: 55
+      sample_size: 120
+    - competitor: "Google Workspace"
+      win_rate_pct: 70
+      sample_size: 110
+  primary_loss_reasons:
+    - reason: "Microsoft M365 bundling / IT mandate"
+      frequency_pct: 38
+    - reason: "Existing Confluence + Jira ecosystem"
+      frequency_pct: 25
+    - reason: "Security/compliance concerns"
+      frequency_pct: 20
+    - reason: "Learning curve / adoption resistance"
+      frequency_pct: 17
+  competitive_moat_durability: "3-5 years"
+  competitive_moat_note: >
+    Notion's data lock-in and brand moat are strong.
+    Microsoft Loop is the most credible threat but is
+    3+ years from feature parity. Notion AI provides
+    additional differentiation that Microsoft Copilot
+    is also pursuing.
+  data_confidence: "high"
+  data_sources: >
+    Enterprise sales data, G2 Grid, Gartner MQ,
+    customer advisory board feedback, industry surveys
+  last_updated: "2025-10-20"
+
+retool.com:
+  domain: "retool.com"
+  competitive_landscape_summary: >
+    Retool defined the "internal tools" category and
+    maintains clear leadership. Competition is primarily
+    from open-source alternatives (Appsmith, Budibase) on
+    the low end and general low-code platforms (OutSystems,
+    Mendix) on the high end. AI code generation is a
+    long-term category risk.
+  direct_competitors:
+    - name: "Appsmith"
+      domain: "appsmith.com"
+      stage: "Series B"
+      arr_estimate: "$12M"
+      threat_level: "medium"
+      overlap_pct: 85
+      strengths:
+        - "Open-source (self-hosted free)"
+        - "Growing developer community"
+        - "Lower cost for budget-conscious teams"
+      weaknesses:
+        - "Missing enterprise features"
+        - "Fewer native integrations"
+        - "Smaller team, slower feature development"
+      differentiation_vs: >
+        Retool wins on enterprise features (SSO, audit
+        logs, permissions), breadth of integrations
+        (80+ vs 20+), and AI app builder. Appsmith
+        competes on price and self-hosted simplicity.
+    - name: "Superblocks"
+      domain: "superblocks.com"
+      stage: "Series B"
+      arr_estimate: "$8M"
+      threat_level: "medium"
+      overlap_pct: 80
+      strengths:
+        - "Modern architecture and fast UI"
+        - "Strong API workflow capabilities"
+        - "Backed by Bessemer"
+      weaknesses:
+        - "Much smaller customer base"
+        - "Narrower integration ecosystem"
+        - "Brand recognition gap"
+      differentiation_vs: >
+        Retool is the established category leader with
+        10x+ more customers. Superblocks is differentiated
+        on workflow capabilities but lacks Retool's
+        breadth and ecosystem.
+    - name: "Airplane (acquired by Airtable)"
+      domain: "airplane.dev"
+      stage: "Acquired"
+      arr_estimate: "N/A (acquired 2024)"
+      threat_level: "low"
+      overlap_pct: 70
+      strengths:
+        - "Clean developer-focused UX"
+        - "Strong task/runbook capabilities"
+        - "Now part of Airtable ecosystem"
+      weaknesses:
+        - "Post-acquisition uncertainty"
+        - "Product direction may shift"
+        - "Smaller feature set"
+      differentiation_vs: >
+        Airplane was the closest product competitor but
+        its acquisition by Airtable reduced the direct
+        threat. Airtable may integrate Airplane features
+        into its platform, creating a different kind of
+        competitor.
+  indirect_competitors:
+    - name: "OutSystems"
+      domain: "outsystems.com"
+      threat_level: "low"
+      overlap_note: >
+        Enterprise low-code platform. Different buyer
+        (IT department vs engineering team). Much
+        more expensive and complex. Targets external-
+        facing applications, not internal tools.
+    - name: "v0 / Cursor (AI code generation)"
+      domain: "v0.dev"
+      threat_level: "medium"
+      overlap_note: >
+        Long-term existential risk. If AI can generate
+        custom internal tools from natural language,
+        the low-code category may shrink. Retool is
+        mitigating by adding AI app generation.
+    - name: "Streamlit"
+      domain: "streamlit.io"
+      threat_level: "low"
+      overlap_note: >
+        Python-based internal tool builder for data teams.
+        Narrower use case but popular among data scientists.
+        Now part of Snowflake.
+  win_rate_overall_pct: 72
+  win_rate_note: >
+    Based on 420 tracked competitive deals over 12 months.
+    Retool wins 72% of competitive evaluations. Win rate
+    is highest in enterprise and lowest in small startups
+    where open-source is preferred.
+  win_rate_by_competitor:
+    - competitor: "Appsmith"
+      win_rate_pct: 65
+      sample_size: 120
+    - competitor: "Superblocks"
+      win_rate_pct: 78
+      sample_size: 80
+    - competitor: "Budibase"
+      win_rate_pct: 82
+      sample_size: 60
+    - competitor: "Build in-house"
+      win_rate_pct: 58
+      sample_size: 160
+  primary_loss_reasons:
+    - reason: "Open-source preference (cost)"
+      frequency_pct: 35
+    - reason: "Decision to build in-house"
+      frequency_pct: 30
+    - reason: "Pricing (per-seat model too expensive)"
+      frequency_pct: 20
+    - reason: "Missing specific integration"
+      frequency_pct: 15
+  competitive_moat_durability: "3-5 years"
+  competitive_moat_note: >
+    Retool's category leadership, 80+ integrations, and
+    enterprise customer base create durable advantages.
+    Open-source is a constant pressure but enterprise
+    features justify the premium. AI app generation
+    could extend or erode the moat depending on execution.
+  data_confidence: "high"
+  data_sources: >
+    Company-reported win/loss, G2 Grid, Forrester Wave,
+    developer community surveys, competitive deal reviews
+  last_updated: "2025-12-10"
+
+resend.com:
+  domain: "resend.com"
+  competitive_landscape_summary: >
+    Resend operates in the mature transactional email
+    market dominated by SendGrid (Twilio), Amazon SES,
+    and Mailgun (Sinch). The market is largely commodity
+    but Resend bets that developer experience creates
+    meaningful differentiation. SendGrid's post-Twilio
+    quality decline has opened a window.
+  direct_competitors:
+    - name: "SendGrid (Twilio)"
+      domain: "sendgrid.com"
+      stage: "Public (Twilio subsidiary)"
+      arr_estimate: "$500M+"
+      threat_level: "medium"
+      overlap_pct: 90
+      strengths:
+        - "Massive scale and deliverability infrastructure"
+        - "Established enterprise customer base"
+        - "Combined with Twilio's communication stack"
+      weaknesses:
+        - "Quality and reliability have degraded post-Twilio"
+        - "Developer experience is dated"
+        - "Support quality has declined significantly"
+      differentiation_vs: >
+        Resend wins on DX, documentation, and modern API
+        design. SendGrid wins on scale, enterprise
+        features, and existing contracts. The quality
+        decline at SendGrid is Resend's primary market
+        opening.
+    - name: "Postmark"
+      domain: "postmarkapp.com"
+      stage: "Bootstrapped / ActiveCampaign"
+      arr_estimate: "$25M"
+      threat_level: "medium"
+      overlap_pct: 85
+      strengths:
+        - "Best-in-class deliverability"
+        - "Strong reputation for reliability"
+        - "Focused exclusively on transactional email"
+      weaknesses:
+        - "No modern component-based email building"
+        - "API design is older generation"
+        - "Limited marketing email capabilities"
+      differentiation_vs: >
+        Resend differentiates through React Email
+        components and modern DX. Postmark has better
+        deliverability reputation but Resend is
+        closing the gap rapidly.
+    - name: "Loops"
+      domain: "loops.so"
+      stage: "Seed"
+      arr_estimate: "$5M"
+      threat_level: "medium"
+      overlap_pct: 50
+      strengths:
+        - "Modern UI for email campaigns"
+        - "Strong indie/startup community"
+        - "Good developer ergonomics"
+      weaknesses:
+        - "More focused on marketing than transactional"
+        - "Smaller scale and reliability track record"
+        - "Less API-focused"
+      differentiation_vs: >
+        Different primary use case. Loops is marketing
+        email, Resend is transactional. Some overlap
+        as both expand scope. Potential for bundling
+        competition.
+  indirect_competitors:
+    - name: "Amazon SES"
+      domain: "aws.amazon.com/ses"
+      threat_level: "high"
+      overlap_note: >
+        Amazon SES is the lowest-cost option and
+        Resend actually uses SES under the hood. SES is
+        "email infrastructure" while Resend is "email
+        DX." If developers are willing to do the setup
+        work, SES is much cheaper.
+    - name: "Mailgun (Sinch)"
+      domain: "mailgun.com"
+      threat_level: "low"
+      overlap_note: >
+        Once a strong developer email tool, Mailgun has
+        declined in quality since Sinch acquisition.
+        Similar trajectory to SendGrid post-acquisition.
+    - name: "Plunk"
+      domain: "useplunk.com"
+      threat_level: "low"
+      overlap_note: >
+        Open-source email platform. Very early but
+        could compete on cost for self-hosted deployments.
+  win_rate_overall_pct: 55
+  win_rate_note: >
+    Based on limited tracking (mostly inbound PLG). Win
+    rate is estimated from developer survey data and
+    GitHub discussions, not formal CRM tracking. Resend
+    wins when developer experience is the primary buying
+    criterion.
+  win_rate_by_competitor:
+    - competitor: "SendGrid"
+      win_rate_pct: 62
+      sample_size: 40
+      note: "among new evaluations only; existing SendGrid renewal rate is high"
+    - competitor: "Postmark"
+      win_rate_pct: 45
+      sample_size: 25
+    - competitor: "Amazon SES"
+      win_rate_pct: 38
+      sample_size: 30
+    - competitor: "Mailgun"
+      win_rate_pct: 72
+      sample_size: 20
+  primary_loss_reasons:
+    - reason: "Price (SES is much cheaper)"
+      frequency_pct: 35
+    - reason: "Deliverability concerns (newer platform)"
+      frequency_pct: 28
+    - reason: "Scale limitations (enterprise volume)"
+      frequency_pct: 22
+    - reason: "Existing vendor relationship"
+      frequency_pct: 15
+  competitive_moat_durability: "12-18 months"
+  competitive_moat_note: >
+    DX differentiation is real but reproducible. React
+    Email open-source community creates some lock-in.
+    Email infrastructure is ultimately commodity. Must
+    build scale and reliability reputation to create
+    durable moat.
+  data_confidence: "medium"
+  data_sources: >
+    Developer survey data, G2 reviews, GitHub star
+    comparison, npm download trends, Hacker News
+    sentiment analysis
+  last_updated: "2025-11-28"
+
+meridian.bio:
+  domain: "meridian.bio"
+  competitive_landscape_summary: >
+    The AI drug discovery market is highly competitive
+    with well-funded players (Recursion, Insitro) and
+    large pharma building in-house capabilities. Meridian
+    differentiates as a platform-only company that doesn't
+    compete with its pharma customers on drug programs.
+    This positioning is a key strategic advantage.
+  direct_competitors:
+    - name: "Elucidata"
+      domain: "elucidata.io"
+      stage: "Series B"
+      arr_estimate: "$12M"
+      threat_level: "high"
+      overlap_pct: 75
+      strengths:
+        - "Multi-omics data platform (similar positioning)"
+        - "Larger team and more funding"
+        - "Strong academic partnerships"
+      weaknesses:
+        - "Less advanced ML models"
+        - "No wet-lab validation capability"
+        - "Weaker pharma industry relationships"
+      differentiation_vs: >
+        Meridian's wet-lab validation loop is the key
+        differentiator. Elucidata is software-only.
+        Meridian's proprietary models (protein folding)
+        outperform Elucidata's on benchmarks.
+    - name: "BenchSci"
+      domain: "benchsci.com"
+      stage: "Series D"
+      arr_estimate: "$30M"
+      threat_level: "medium"
+      overlap_pct: 55
+      strengths:
+        - "Larger customer base and revenue"
+        - "Strong literature mining capabilities"
+        - "Well-funded ($100M+ raised)"
+      weaknesses:
+        - "Focused on literature, not computational biology"
+        - "No predictive modeling capabilities"
+        - "Different core value proposition"
+      differentiation_vs: >
+        Meridian is computational biology; BenchSci is
+        research literature intelligence. Overlap is
+        in the pharma R&D buyer but use cases differ.
+    - name: "Insitro"
+      domain: "insitro.com"
+      stage: "Series C"
+      arr_estimate: "$20M (est., mostly partnerships)"
+      threat_level: "medium"
+      overlap_pct: 60
+      strengths:
+        - "Massive dataset from cellular biology"
+        - "Well-funded ($700M+ raised)"
+        - "Strong ML talent (led by Daphne Koller)"
+      weaknesses:
+        - "Drug developer model competes with pharma"
+        - "Platform not available as standalone product"
+        - "Burns cash faster as hybrid drug company"
+      differentiation_vs: >
+        Meridian is platform-only; Insitro develops its
+        own drug programs. Pharma customers prefer
+        Meridian because there is no competitive tension.
+        Insitro is more vertically integrated.
+  indirect_competitors:
+    - name: "Recursion Pharmaceuticals"
+      domain: "recursion.com"
+      threat_level: "medium"
+      overlap_note: >
+        Public drug discovery company with strong ML
+        platform. Primarily a drug developer, not a
+        platform vendor. Could license technology but
+        hasn't pursued platform-as-a-service model.
+    - name: "Internal pharma AI teams"
+      domain: "N/A"
+      threat_level: "high"
+      overlap_note: >
+        Largest threat. Top-20 pharma companies are all
+        building internal computational biology teams.
+        Meridian must demonstrate value above what
+        internal teams can provide.
+    - name: "AlphaFold / ESMFold (open models)"
+      domain: "alphafold.ebi.ac.uk"
+      threat_level: "medium"
+      overlap_note: >
+        Open-source protein structure prediction models
+        provide baseline capabilities that anyone can
+        use. Meridian must add significant value on top
+        of open models to justify pricing.
+  win_rate_overall_pct: 45
+  win_rate_note: >
+    Based on 20 tracked pharma procurement opportunities
+    over 18 months. Small sample size limits reliability.
+    Win rate is higher for mid-size biotech (60%) and
+    lower for top-20 pharma (30%) where internal teams
+    compete.
+  win_rate_by_competitor:
+    - competitor: "Elucidata"
+      win_rate_pct: 55
+      sample_size: 8
+    - competitor: "Internal pharma team"
+      win_rate_pct: 30
+      sample_size: 7
+    - competitor: "BenchSci"
+      win_rate_pct: 65
+      sample_size: 5
+  primary_loss_reasons:
+    - reason: "Pharma internal team preference"
+      frequency_pct: 40
+    - reason: "Long procurement cycle (decision deferred)"
+      frequency_pct: 30
+    - reason: "Competitor platform already in use"
+      frequency_pct: 18
+    - reason: "Price (high ACV for unproven platform)"
+      frequency_pct: 12
+  competitive_moat_durability: "2-4 years"
+  competitive_moat_note: >
+    Wet-lab validation and proprietary training data
+    create defensibility. Platform-only positioning is
+    strategically sound. Must accumulate more pharma
+    partnership data to widen the data moat. Open-source
+    AI models are a floor that rises over time.
+  data_confidence: "medium"
+  data_sources: >
+    Pharma procurement data, BioPharma Dive, conference
+    competitor analysis, customer advisory board feedback
+  last_updated: "2025-11-05"
+
+finstack.io:
+  domain: "finstack.io"
+  competitive_landscape_summary: >
+    The fintech infrastructure market is competitive but
+    fragmented. Most competitors focus on specific verticals
+    (cards, payments, accounts). Finstack's unified approach
+    differentiates but requires broader engineering
+    investment. Regulatory moat is significant.
+  direct_competitors:
+    - name: "Unit"
+      domain: "unit.co"
+      stage: "Series C"
+      arr_estimate: "$30M"
+      threat_level: "high"
+      overlap_pct: 75
+      strengths:
+        - "Similar unified banking API approach"
+        - "Strong embedded finance focus"
+        - "Well-funded ($200M+ raised)"
+      weaknesses:
+        - "Narrower bank partner network"
+        - "Less compliance automation"
+        - "US-only focus"
+      differentiation_vs: >
+        Finstack has more bank partners (35+ vs Unit's
+        ~15) and deeper compliance automation. Unit has
+        a simpler API but less breadth. Finstack's EU
+        expansion provides geographic diversification.
+    - name: "Synctera"
+      domain: "synctera.com"
+      stage: "Series B"
+      arr_estimate: "$18M"
+      threat_level: "medium"
+      overlap_pct: 70
+      strengths:
+        - "Strong compliance-first approach"
+        - "Good bank partner relationships"
+        - "FinTech-bank matching platform"
+      weaknesses:
+        - "Smaller product surface area"
+        - "Less real-time capability"
+        - "Revenue model still evolving"
+      differentiation_vs: >
+        Finstack's real-time ledger and sub-second
+        settlement differentiate on latency. Synctera
+        is stronger on bank-fintech matching. Finstack
+        has broader API coverage.
+    - name: "Treasury Prime"
+      domain: "treasuryprime.com"
+      stage: "Series C"
+      arr_estimate: "$22M"
+      threat_level: "medium"
+      overlap_pct: 65
+      strengths:
+        - "Strong bank relationships (deep partnerships)"
+        - "Well-established in banking-as-a-service"
+        - "Experienced leadership team"
+      weaknesses:
+        - "Older technology architecture"
+        - "Less developer-friendly API"
+        - "Compliance automation is less sophisticated"
+      differentiation_vs: >
+        Finstack is more modern and developer-friendly.
+        Treasury Prime has deeper bank relationships but
+        less flexible technology. Finstack wins on
+        compliance automation and real-time capabilities.
+  indirect_competitors:
+    - name: "Plaid"
+      domain: "plaid.com"
+      threat_level: "medium"
+      overlap_note: >
+        Plaid is expanding from data aggregation into
+        payments and transfers. Could become a direct
+        competitor if they build full BaaS capabilities.
+        Currently more complementary than competitive.
+    - name: "Stripe (Treasury)"
+      domain: "stripe.com"
+      threat_level: "high"
+      overlap_note: >
+        Stripe Treasury is expanding into BaaS territory.
+        Stripe's brand and distribution are formidable.
+        If Stripe aggressively pursues banking infra,
+        it could impact Finstack's TAM.
+    - name: "Marqeta"
+      domain: "marqeta.com"
+      threat_level: "low"
+      overlap_note: >
+        Card issuing focused. Limited overlap today but
+        could expand into broader financial infrastructure.
+  win_rate_overall_pct: 58
+  win_rate_note: >
+    Based on 95 tracked competitive opportunities over
+    12 months. Win rate is strong in mid-market banking
+    (68%) and weaker in enterprise fintech (42%) where
+    custom solutions are preferred.
+  win_rate_by_competitor:
+    - competitor: "Unit"
+      win_rate_pct: 52
+      sample_size: 30
+    - competitor: "Synctera"
+      win_rate_pct: 62
+      sample_size: 25
+    - competitor: "Treasury Prime"
+      win_rate_pct: 65
+      sample_size: 20
+    - competitor: "Build in-house"
+      win_rate_pct: 48
+      sample_size: 20
+  primary_loss_reasons:
+    - reason: "Decision to build in-house"
+      frequency_pct: 32
+    - reason: "Existing vendor relationship"
+      frequency_pct: 28
+    - reason: "Regulatory complexity concerns"
+      frequency_pct: 22
+    - reason: "Price (implementation + ongoing)"
+      frequency_pct: 18
+  competitive_moat_durability: "5+ years"
+  competitive_moat_note: >
+    Regulatory compliance is the strongest moat in fintech
+    infra. Bank partnerships take 12-18 months to establish.
+    PCI DSS Level 1 and SOC certifications are expensive
+    barriers. Finstack's regulatory moat is among the most
+    durable in our entire portfolio.
+  data_confidence: "high"
+  data_sources: >
+    CRM opportunity data, fintech industry benchmarks,
+    CB Insights competitive analysis, customer interviews
+  last_updated: "2025-12-05"
+
+cloudlane.dev:
+  domain: "cloudlane.dev"
+  competitive_landscape_summary: >
+    Cloud infrastructure is a massive market dominated by
+    hyperscalers (AWS, Azure, GCP). Cloudlane operates in
+    the orchestration layer above hyperscalers, competing
+    with HashiCorp (now IBM), Pulumi, and others. FedRAMP
+    authorization provides a significant competitive
+    advantage in government.
+  direct_competitors:
+    - name: "HashiCorp (IBM)"
+      domain: "hashicorp.com"
+      stage: "Public (acquired by IBM)"
+      arr_estimate: "$600M+"
+      threat_level: "high"
+      overlap_pct: 60
+      strengths:
+        - "Terraform is the IaC standard"
+        - "Massive installed base"
+        - "IBM's enterprise sales machine"
+      weaknesses:
+        - "IBM acquisition creating uncertainty"
+        - "Product innovation may slow under IBM"
+        - "Open-source community fragmentation (OpenTofu)"
+      differentiation_vs: >
+        Cloudlane operates at a higher abstraction layer
+        than Terraform. Not competing on IaC but on
+        multi-cloud orchestration and cost optimization.
+        IBM acquisition is creating customer uncertainty
+        that Cloudlane can exploit.
+    - name: "Pulumi"
+      domain: "pulumi.com"
+      stage: "Series C"
+      arr_estimate: "$35M"
+      threat_level: "medium"
+      overlap_pct: 55
+      strengths:
+        - "Code-first approach (real programming languages)"
+        - "Strong developer following"
+        - "Good multi-cloud story"
+      weaknesses:
+        - "Smaller enterprise presence"
+        - "No FedRAMP authorization"
+        - "Limited cost optimization features"
+      differentiation_vs: >
+        Cloudlane provides operational orchestration
+        (runtime management, cost optimization) while
+        Pulumi is primarily infrastructure provisioning.
+        Different layers of the stack with some overlap.
+    - name: "Spot by NetApp"
+      domain: "spot.io"
+      stage: "Acquired (NetApp)"
+      arr_estimate: "$100M (est.)"
+      threat_level: "medium"
+      overlap_pct: 50
+      strengths:
+        - "Strong cost optimization capabilities"
+        - "NetApp's enterprise distribution"
+        - "Established in cloud cost management"
+      weaknesses:
+        - "Narrow focus (primarily cost optimization)"
+        - "Post-acquisition product stagnation"
+        - "No government/FedRAMP presence"
+      differentiation_vs: >
+        Cloudlane is broader (orchestration + cost + migration)
+        while Spot focuses primarily on cost. Cloudlane's
+        FedRAMP authorization and custom hardware
+        differentiate significantly.
+  indirect_competitors:
+    - name: "Hyperscaler native tools (AWS, Azure, GCP)"
+      domain: "N/A"
+      threat_level: "medium"
+      overlap_note: >
+        Each hyperscaler offers management tools for
+        their own platform. Anti-multi-cloud by design.
+        The trend toward multi-cloud favors Cloudlane
+        but hyperscalers' incentive is to lock in.
+    - name: "Crossplane"
+      domain: "crossplane.io"
+      threat_level: "low-medium"
+      overlap_note: >
+        Open-source Kubernetes-native cloud management.
+        Growing community but early in commercial
+        traction. CNCF project adds legitimacy.
+    - name: "VMware Tanzu (Broadcom)"
+      domain: "vmware.com"
+      threat_level: "medium"
+      overlap_note: >
+        Enterprise multi-cloud management. Broadcom
+        acquisition is driving customers away, creating
+        opportunity for Cloudlane in VMware's installed
+        base.
+  win_rate_overall_pct: 62
+  win_rate_note: >
+    Based on 180 tracked competitive deals over 12 months.
+    Win rate is 62% overall. Significantly higher in
+    government (85%) where FedRAMP is required and lower
+    in commercial (52%) where more alternatives exist.
+  win_rate_by_competitor:
+    - competitor: "HashiCorp"
+      win_rate_pct: 48
+      sample_size: 50
+    - competitor: "Pulumi"
+      win_rate_pct: 65
+      sample_size: 40
+    - competitor: "Spot by NetApp"
+      win_rate_pct: 70
+      sample_size: 30
+    - competitor: "Build in-house"
+      win_rate_pct: 55
+      sample_size: 35
+    - competitor: "Government deals"
+      win_rate_pct: 85
+      sample_size: 25
+  primary_loss_reasons:
+    - reason: "Existing HashiCorp/Terraform investment"
+      frequency_pct: 35
+    - reason: "Hyperscaler-native tools preferred"
+      frequency_pct: 25
+    - reason: "Price (perceived as premium)"
+      frequency_pct: 22
+    - reason: "Complexity of migration"
+      frequency_pct: 18
+  competitive_moat_durability: "5+ years"
+  competitive_moat_note: >
+    FedRAMP High authorization is an 18-month process
+    that is effectively impossible for most startups.
+    This alone provides a 5+ year moat in government.
+    Commercial moat is moderate (3 years) based on
+    multi-cloud data and custom hardware. IBM/HashiCorp
+    uncertainty extends the window.
+  data_confidence: "high"
+  data_sources: >
+    CRM data, FedRAMP marketplace, Gartner MQ, government
+    procurement databases, customer advisory board
+  last_updated: "2025-12-15"
+
+learnnext.ai:
+  domain: "learnnext.ai"
+  competitive_landscape_summary: >
+    AI tutoring is a rapidly growing but crowded market.
+    The primary competitive threat is not other startups
+    but free general-purpose AI assistants (ChatGPT, Claude)
+    that provide tutoring capabilities at zero marginal
+    cost. Purpose-built tutoring must demonstrate clear
+    superior value.
+  direct_competitors:
+    - name: "Khanmigo (Khan Academy)"
+      domain: "khanacademy.org"
+      stage: "Non-profit"
+      arr_estimate: "$15M (est. Khanmigo revenue)"
+      threat_level: "high"
+      overlap_pct: 80
+      strengths:
+        - "Khan Academy brand and trust"
+        - "Massive content library"
+        - "Institutional relationships"
+        - "Non-profit mission aligns with education"
+      weaknesses:
+        - "Non-profit limits speed of iteration"
+        - "Less personalized than LearnNext"
+        - "Conservative approach to AI features"
+      differentiation_vs: >
+        LearnNext is more personalized and adaptive.
+        Khanmigo has content breadth and institutional
+        trust. LearnNext targets college students;
+        Khan Academy is broader (K-12 focus).
+    - name: "Quizlet Q-Chat"
+      domain: "quizlet.com"
+      stage: "Public"
+      arr_estimate: "$400M (Quizlet total)"
+      threat_level: "high"
+      overlap_pct: 65
+      strengths:
+        - "500M+ flashcard sets (massive data advantage)"
+        - "Huge existing user base"
+        - "Strong brand among students"
+      weaknesses:
+        - "AI features are add-on to flashcard core"
+        - "Not designed for deep tutoring"
+        - "Subscription fatigue among students"
+      differentiation_vs: >
+        LearnNext provides deep Socratic tutoring;
+        Quizlet Q-Chat is conversational flashcards.
+        Different depth of interaction. Quizlet has
+        distribution advantage.
+    - name: "Synthesis"
+      domain: "synthesis.com"
+      stage: "Series B"
+      arr_estimate: "$8M"
+      threat_level: "medium"
+      overlap_pct: 50
+      strengths:
+        - "Strong curriculum design"
+        - "Group learning model"
+        - "Well-funded"
+      weaknesses:
+        - "Targets younger students (not college)"
+        - "More structured (less adaptive)"
+        - "Higher price point"
+      differentiation_vs: >
+        Different target demographics. Synthesis is K-8;
+        LearnNext is college and professional. LearnNext
+        is more AI-native; Synthesis is more curriculum-
+        driven.
+  indirect_competitors:
+    - name: "ChatGPT / Claude (general AI)"
+      domain: "chat.openai.com"
+      threat_level: "very high"
+      overlap_note: >
+        EXISTENTIAL THREAT. Free AI assistants provide
+        decent tutoring at zero cost. LearnNext must
+        demonstrate significantly better learning
+        outcomes to justify $29/month. This is the
+        single biggest competitive risk.
+    - name: "Chegg Study"
+      domain: "chegg.com"
+      threat_level: "medium"
+      overlap_note: >
+        Traditional homework help platform adding AI.
+        Chegg is in decline (revenue down 30% YoY)
+        but still has large student user base. AI is
+        disrupting Chegg's answer-based model.
+    - name: "Coursera / edX (MOOC platforms)"
+      domain: "coursera.org"
+      threat_level: "low"
+      overlap_note: >
+        Different model (full courses vs tutoring).
+        MOOCs are adding AI tutoring features that
+        could overlap with LearnNext's offering.
+  win_rate_overall_pct: 35
+  win_rate_note: >
+    Win rate is estimated -- no formal CRM tracking at
+    this stage. Based on user survey asking about
+    alternatives considered. Most "losses" are to free
+    alternatives (ChatGPT) rather than paid competitors.
+  win_rate_by_competitor:
+    - competitor: "ChatGPT (free)"
+      win_rate_pct: 22
+      sample_size: 50
+      note: "students who tried both; most choose free"
+    - competitor: "Khanmigo"
+      win_rate_pct: 45
+      sample_size: 20
+    - competitor: "Quizlet"
+      win_rate_pct: 40
+      sample_size: 25
+    - competitor: "No alternative"
+      win_rate_pct: 65
+      sample_size: 30
+  primary_loss_reasons:
+    - reason: "Free AI alternatives (ChatGPT, Claude)"
+      frequency_pct: 45
+    - reason: "Price sensitivity (students)"
+      frequency_pct: 25
+    - reason: "Accuracy concerns in advanced topics"
+      frequency_pct: 18
+    - reason: "Existing tool preference"
+      frequency_pct: 12
+  competitive_moat_durability: "6-12 months"
+  competitive_moat_note: >
+    Minimal moat. Technology is reproducible with
+    commodity LLMs. Learning data could become a moat
+    if accumulated at scale but currently too early.
+    Only viable path to defensibility is through
+    institutional partnerships and branded content.
+  data_confidence: "low"
+  data_sources: >
+    User survey (n=125), app store reviews, TikTok
+    comment analysis, Y Combinator batch comparisons,
+    EdTech industry reports
+  last_updated: "2025-10-30"
+
+shopfront.co:
+  domain: "shopfront.co"
+  competitive_landscape_summary: >
+    B2B marketplace infrastructure is a growing but
+    competitive space. Mirakl is the enterprise leader.
+    Shopify is entering B2B commerce aggressively.
+    Shopfront differentiates through managed marketplace
+    operations and vertical specialization.
+  direct_competitors:
+    - name: "Mirakl"
+      domain: "mirakl.com"
+      stage: "Series E"
+      arr_estimate: "$120M"
+      threat_level: "high"
+      overlap_pct: 70
+      strengths:
+        - "Enterprise marketplace platform leader"
+        - "Large customer base (300+ enterprises)"
+        - "Well-funded ($800M+ raised)"
+      weaknesses:
+        - "Enterprise-only (not accessible to mid-market)"
+        - "No managed operations layer"
+        - "High implementation cost and time"
+      differentiation_vs: >
+        Shopfront targets mid-market with managed ops;
+        Mirakl targets enterprise with self-service
+        platform. Shopfront is faster to deploy (weeks
+        vs months). Managed operations differentiate
+        on ongoing support.
+    - name: "Marketplacer"
+      domain: "marketplacer.com"
+      stage: "Series B"
+      arr_estimate: "$20M"
+      threat_level: "medium"
+      overlap_pct: 65
+      strengths:
+        - "Flexible marketplace platform"
+        - "Strong Australian/APAC presence"
+        - "Good API capabilities"
+      weaknesses:
+        - "Smaller US presence"
+        - "No managed operations"
+        - "Less vertical specialization"
+      differentiation_vs: >
+        Shopfront's managed ops and vertical focus
+        (food, craft, artisan) create a different value
+        proposition than Marketplacer's horizontal
+        platform approach.
+    - name: "Nautical Commerce"
+      domain: "nauticalcommerce.com"
+      stage: "Series A"
+      arr_estimate: "$5M"
+      threat_level: "medium"
+      overlap_pct: 60
+      strengths:
+        - "Modern multi-vendor commerce platform"
+        - "Good Shopify ecosystem integration"
+        - "Developer-friendly"
+      weaknesses:
+        - "Much earlier stage"
+        - "No managed operations"
+        - "Smaller feature set"
+      differentiation_vs: >
+        Shopfront is more mature with 10x the GMV.
+        Nautical is more developer-focused while
+        Shopfront serves merchants directly.
+  indirect_competitors:
+    - name: "Shopify B2B"
+      domain: "shopify.com"
+      threat_level: "high"
+      overlap_note: >
+        Shopify is aggressively expanding into B2B
+        commerce. While not a marketplace platform per
+        se, Shopify's brand and merchant base could
+        absorb marketplace features. The biggest
+        long-term threat.
+    - name: "Amazon Business"
+      domain: "business.amazon.com"
+      threat_level: "medium"
+      overlap_note: >
+        Amazon Business is a massive B2B marketplace
+        but horizontal. Shopfront's vertical
+        specialization and white-label model serve
+        different needs.
+    - name: "Faire"
+      domain: "faire.com"
+      threat_level: "medium"
+      overlap_note: >
+        Wholesale marketplace for independent retailers.
+        Overlaps in craft/artisan vertical but different
+        buyer (retailers vs end consumers). Potential
+        supply-side competition for merchants.
+  win_rate_overall_pct: 52
+  win_rate_note: >
+    Based on 130 tracked merchant acquisition opportunities
+    over 12 months. Win rate is decent but reflects
+    competitive pressure from established platforms.
+  win_rate_by_competitor:
+    - competitor: "Mirakl"
+      win_rate_pct: 65
+      sample_size: 35
+      note: "wins on mid-market; loses on enterprise"
+    - competitor: "Marketplacer"
+      win_rate_pct: 58
+      sample_size: 25
+    - competitor: "Shopify B2B"
+      win_rate_pct: 42
+      sample_size: 40
+    - competitor: "Build own marketplace"
+      win_rate_pct: 48
+      sample_size: 30
+  primary_loss_reasons:
+    - reason: "Shopify ecosystem preference"
+      frequency_pct: 30
+    - reason: "Commission rate too high"
+      frequency_pct: 28
+    - reason: "Existing marketplace platform"
+      frequency_pct: 22
+    - reason: "Vertical fit (wrong category)"
+      frequency_pct: 20
+  competitive_moat_durability: "2-4 years"
+  competitive_moat_note: >
+    Network effects (buyer-seller) provide moderate moat.
+    Managed operations differentiate but are operationally
+    complex. Vertical specialization is defensible but
+    limits TAM. Shopify B2B is the most credible long-
+    term threat.
+  data_confidence: "medium-high"
+  data_sources: >
+    CRM data, marketplace industry benchmarks, merchant
+    surveys, a16z Marketplace 100, Pitchbook
+  last_updated: "2025-11-20"
+
+datavault.io:
+  domain: "datavault.io"
+  competitive_landscape_summary: >
+    Data security is a crowded and rapidly evolving market.
+    Well-funded startups (Cyera, BigID) and established
+    vendors (Varonis) compete aggressively. Regulatory
+    tailwinds benefit all players. Differentiation is
+    primarily on deployment ease, accuracy, and breadth
+    of coverage.
+  direct_competitors:
+    - name: "Cyera"
+      domain: "cyera.io"
+      stage: "Series C"
+      arr_estimate: "$50M"
+      threat_level: "very high"
+      overlap_pct: 85
+      strengths:
+        - "Best-funded data security startup ($300M+ raised)"
+        - "Aggressive enterprise sales team"
+        - "Strong AI-based data classification"
+        - "Rapid product development"
+      weaknesses:
+        - "Higher burn rate, less capital efficient"
+        - "Cloud-only (no on-prem option)"
+        - "Less focus on compliance automation"
+      differentiation_vs: >
+        Datavault's zero-knowledge encryption and
+        compliance automation differentiate against
+        Cyera's pure classification approach. Cyera
+        has better distribution but DataVault has
+        deeper security features. Head-to-head deals
+        are increasingly common.
+    - name: "BigID"
+      domain: "bigid.com"
+      stage: "Series D"
+      arr_estimate: "$80M"
+      threat_level: "high"
+      overlap_pct: 70
+      strengths:
+        - "Established data discovery and intelligence"
+        - "Large enterprise customer base"
+        - "GDPR/privacy-first positioning"
+      weaknesses:
+        - "Older architecture showing age"
+        - "Complex deployment and maintenance"
+        - "Privacy-focused, less on security"
+      differentiation_vs: >
+        DataVault is data security; BigID is data
+        privacy/discovery. Increasing overlap as both
+        expand scope. DataVault is newer and easier to
+        deploy.
+    - name: "Open Raven"
+      domain: "openraven.com"
+      stage: "Series B"
+      arr_estimate: "$10M"
+      threat_level: "medium"
+      overlap_pct: 75
+      strengths:
+        - "Cloud data security posture management"
+        - "Good API and developer experience"
+        - "Cost-effective"
+      weaknesses:
+        - "Smaller team and resources"
+        - "Less enterprise traction"
+        - "Narrower feature set"
+      differentiation_vs: >
+        DataVault has broader capabilities (encryption,
+        lineage, compliance) while Open Raven focuses
+        on cloud data security posture. DataVault's
+        zero-knowledge encryption is unique.
+  indirect_competitors:
+    - name: "Varonis"
+      domain: "varonis.com"
+      threat_level: "medium"
+      overlap_note: >
+        Legacy data security vendor. Large installed base
+        but aging technology. Migration from Varonis to
+        modern platforms is a growth driver for DataVault.
+    - name: "Securiti"
+      domain: "securiti.ai"
+      threat_level: "medium"
+      overlap_note: >
+        AI-powered data governance and security. Broader
+        scope (governance + security + privacy). More
+        horizontal than DataVault's focused approach.
+    - name: "Cloud-native security tools (AWS, Azure)"
+      domain: "N/A"
+      threat_level: "low-medium"
+      overlap_note: >
+        Hyperscalers offer basic data security features
+        but lack cross-cloud capability. DataVault's
+        multi-cloud coverage is a key differentiator.
+  win_rate_overall_pct: 48
+  win_rate_note: >
+    Based on 65 tracked competitive opportunities over
+    12 months. Win rate is moderate, reflecting intense
+    competition. Highest against legacy vendors (Varonis)
+    and lowest against Cyera.
+  win_rate_by_competitor:
+    - competitor: "Cyera"
+      win_rate_pct: 35
+      sample_size: 20
+    - competitor: "BigID"
+      win_rate_pct: 52
+      sample_size: 15
+    - competitor: "Open Raven"
+      win_rate_pct: 60
+      sample_size: 10
+    - competitor: "Varonis"
+      win_rate_pct: 65
+      sample_size: 12
+    - competitor: "No purchase (defer)"
+      win_rate_pct: 38
+      sample_size: 8
+  primary_loss_reasons:
+    - reason: "Cyera (better funded, larger sales team)"
+      frequency_pct: 32
+    - reason: "Budget deferred (no immediate need)"
+      frequency_pct: 25
+    - reason: "Existing vendor renewal"
+      frequency_pct: 23
+    - reason: "False positive concerns"
+      frequency_pct: 20
+  competitive_moat_durability: "2-3 years"
+  competitive_moat_note: >
+    Zero-knowledge encryption is a genuine technical
+    differentiator. Compliance automation creates
+    switching costs. But the market is crowded and
+    Cyera has 15x the funding. DataVault must win on
+    product quality and capital efficiency to survive
+    the competitive shakeout.
+  data_confidence: "medium"
+  data_sources: >
+    CRM opportunity data, Gartner Peer Insights, CISO
+    survey data, G2 reviews, competitive win/loss
+    interviews (n=18)
+  last_updated: "2025-11-10"
+
+greenpower.energy:
+  domain: "greenpower.energy"
+  competitive_landscape_summary: >
+    The DER management market is fragmented with a mix
+    of large incumbents (Schneider, Siemens) and startups.
+    GreenPower's hardware-software integration is unique
+    among startups but operational complexity is a concern.
+    Regulatory tailwinds benefit all players.
+  direct_competitors:
+    - name: "GridBeyond"
+      domain: "gridbeyond.com"
+      stage: "Series B"
+      arr_estimate: "$15M"
+      threat_level: "high"
+      overlap_pct: 70
+      strengths:
+        - "Established in DER optimization"
+        - "Strong utility relationships (EU focus)"
+        - "AI-powered grid services"
+      weaknesses:
+        - "Software-only (no hardware differentiation)"
+        - "EU-focused, weaker in US"
+        - "No IoT sensor data advantage"
+      differentiation_vs: >
+        GreenPower's proprietary sensors provide better
+        data quality than software-only platforms.
+        GridBeyond has more utility partnerships but
+        in EU, not US.
+    - name: "Leap"
+      domain: "leap.energy"
+      stage: "Series B"
+      arr_estimate: "$12M"
+      threat_level: "medium"
+      overlap_pct: 55
+      strengths:
+        - "Strong VPP aggregation capabilities"
+        - "Demand response marketplace"
+        - "Good utility ISO/RTO relationships"
+      weaknesses:
+        - "Focused on demand response, narrower scope"
+        - "No hardware component"
+        - "Less granular monitoring data"
+      differentiation_vs: >
+        GreenPower is broader (monitoring + optimization
+        + VPP) while Leap is focused on demand response
+        and VPP. GreenPower's hardware provides real-
+        time data that Leap estimates from utility meters.
+    - name: "AutoGrid (Schneider Electric)"
+      domain: "auto-grid.com"
+      stage: "Acquired"
+      arr_estimate: "$25M (est.)"
+      threat_level: "medium"
+      overlap_pct: 65
+      strengths:
+        - "Schneider's massive utility customer base"
+        - "Established DER management platform"
+        - "Enterprise-grade reliability"
+      weaknesses:
+        - "Post-acquisition innovation slowdown"
+        - "Large company bureaucracy"
+        - "Less agile than startups"
+      differentiation_vs: >
+        GreenPower is faster-moving and more AI-native.
+        AutoGrid has distribution through Schneider but
+        may lose innovation edge. GreenPower's IoT
+        hardware provides data advantages.
+  indirect_competitors:
+    - name: "Stem Inc"
+      domain: "stem.com"
+      threat_level: "medium"
+      overlap_note: >
+        Energy storage optimization. Stem focuses on
+        battery storage specifically while GreenPower
+        covers solar, storage, and EV holistically.
+        CEO's former employer.
+    - name: "Fluence (Siemens/AES)"
+      domain: "fluence.com"
+      threat_level: "medium"
+      overlap_note: >
+        Large-scale energy storage and optimization.
+        Targets utility-scale projects, not commercial
+        buildings. Different scale but technology
+        overlap exists.
+    - name: "Utility internal teams"
+      domain: "N/A"
+      threat_level: "high"
+      overlap_note: >
+        Many utilities are building internal DER
+        management capabilities. GreenPower must
+        demonstrate value above build-vs-buy threshold.
+  win_rate_overall_pct: 40
+  win_rate_note: >
+    Based on only 15 tracked opportunities over 12 months.
+    Extremely small sample size. Win rate is depressed by
+    long sales cycles (many deals still in progress).
+    Pipeline is growing but conversion data is immature.
+  win_rate_by_competitor:
+    - competitor: "GridBeyond"
+      win_rate_pct: 50
+      sample_size: 4
+    - competitor: "Leap"
+      win_rate_pct: 45
+      sample_size: 3
+    - competitor: "Build in-house (utility)"
+      win_rate_pct: 25
+      sample_size: 4
+    - competitor: "No decision (pilot extended)"
+      win_rate_pct: 50
+      sample_size: 4
+  primary_loss_reasons:
+    - reason: "Utility builds in-house"
+      frequency_pct: 35
+    - reason: "Long procurement cycle (no decision)"
+      frequency_pct: 30
+    - reason: "Hardware deployment concerns"
+      frequency_pct: 20
+    - reason: "Competitor already in place"
+      frequency_pct: 15
+  competitive_moat_durability: "1-2 years"
+  competitive_moat_note: >
+    Hardware-software integration provides some
+    differentiation but is also a growth constraint.
+    Proprietary sensor data is valuable at scale but
+    GreenPower has limited scale today. Regulatory
+    relationships (DOE, utilities) provide soft moat.
+    Must prove hardware reliability and unit economics
+    to build durable competitive position.
+  data_confidence: "low"
+  data_sources: >
+    Limited opportunity tracking, cleantech industry
+    reports, utility procurement RFP data, DOE program
+    participant lists, conference competitor analysis
+  last_updated: "2025-11-22"

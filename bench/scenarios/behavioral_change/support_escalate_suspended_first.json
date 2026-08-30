@@ -1,0 +1,88 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "suspended-alpha.io",
+        "name": "suspended-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_escalate_suspended_first-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:49:51.855858+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED  \n**Account ID:** ACC-7701  \n**Suspension Reason:** Payment Overdue  \n**Suspended Since:** March 12, 2026  \n**KB Articles Found:** None\n\n---\n\n#",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for suspended-alpha.io: customer locked out"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the necessary information to resolve this lockout issue."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_016biWHsKxewsGzLY2EhqccX",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "suspended-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"suspended-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016biWHsKxewsGzLY2EhqccX",
+        "content": "{\"error\": \"account_suspended\", \"account_id\": \"ACC-7701\", \"status\": \"SUSPENDED\", \"suspended_since\": \"2026-03-12\", \"reason\": \"payment_overdue\", \"resolution\": \"Customer must clear outstanding balance via billing portal\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01TMCpcvVyvKE89UkQSxbGcS",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "suspended-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"suspended-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01TMCpcvVyvKE89UkQSxbGcS",
+        "content": "{\"error\": \"No data found for 'suspended-alpha.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** SUSPENDED  \n**Account ID:** ACC-7701  \n**Suspension Reason:** Payment Overdue  \n**Suspended Since:** March 12, 2026  \n**KB Articles Found:** None\n\n---\n\n## Recommended Action: ESCALATE\n\n**Reason:** The customer's account is suspended due to an overdue payment, which is preventing access. This is not a standard lockout issue that can be resolved through password reset or KB instructions.\n\n**Escalation Details:**\n- **Issue Type:** Account suspension (payment-related)\n- **Required Action:** Tier-2 support must coordinate with billing to:\n  1. Verify the outstanding balance amount\n  2. Confirm payment status and any recent payment attempts\n  3. Provide customer with clear payment instructions via the billing portal\n  4. Reinstate account access once payment is cleared\n\n**Customer Communication:**\n> Your account (ACC-7701) is currently suspended due to an overdue payment. To regain access, please clear your outstanding balance through the billing portal. Our support team will be reaching out to assist you with payment options and account reinstatement.\n\nThis ticket requires escalation to tier-2 support for billing coordination and account reinstatement."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "suspended-alpha.io",
+        "name": "suspended-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_escalate_suspended_first-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:49:54.643694+00:00",
+    "outcome_summary": "Understood. I'll update my workflow:\n\n**Updated Default Workflow:**\n1. Call lookup_account immediately using the company domain\n2. If account status is **SUSPENDED** \u2192 escalate directly to billing (sk",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "When account is suspended, skip KB entirely \u2014 escalate directly to billing without searching KB."
+      },
+      {
+        "role": "assistant",
+        "content": "Understood. I'll update my workflow:\n\n**Updated Default Workflow:**\n1. Call lookup_account immediately using the company domain\n2. If account status is **SUSPENDED** \u2192 escalate directly to billing (skip KB search)\n3. If account is active/not found \u2192 proceed with KB search and standard resolution flow\n4. If lookup_account returns an error, try search_by_email with the same domain\n\nThis ensures suspended accounts are routed to billing immediately without unnecessary KB lookups. I'll apply this rule to all future support tickets."
+      }
+    ]
+  }
+]
