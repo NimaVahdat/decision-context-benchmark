@@ -1,0 +1,113 @@
+# ---------------------------------------------------------------
+# search_knowledge_base.yaml
+# Used by eval-support skill (source: 'search_knowledge_base')
+# Query: company domain
+# ---------------------------------------------------------------
+
+# --- Orion product: no KB articles yet ---
+orion-acme.io:
+  error: "No articles found for 'orion-acme.io' — Orion product documentation is pending publication"
+  results_count: 0
+
+orion-beta.io:
+  error: "No articles found for 'orion-beta.io' — Orion product documentation is pending publication"
+  results_count: 0
+
+orion-gamma.io:
+  error: "No articles found for 'orion-gamma.io' — Orion product documentation is pending publication"
+  results_count: 0
+
+orion-delta.io:
+  error: "No articles found for 'orion-delta.io' — Orion product documentation is pending publication"
+  results_count: 0
+
+# --- Repeat-issue customers: KB articles exist but don't resolve the issue ---
+repeat-alpha.io:
+  results_count: 3
+  articles:
+    - title: "How to reconcile billing discrepancies"
+      url: "kb/billing-reconciliation"
+      summary: "Steps to audit and correct billing line items"
+    - title: "Understanding invoice generation"
+      url: "kb/invoice-generation"
+      summary: "How invoices are generated and when charges appear"
+    - title: "Billing dispute process"
+      url: "kb/billing-dispute"
+      summary: "How to file a formal billing dispute"
+
+repeat-beta.io:
+  results_count: 2
+  articles:
+    - title: "Troubleshooting sync failures"
+      url: "kb/sync-troubleshooting"
+      summary: "Common causes and fixes for sync failures"
+    - title: "Sync configuration guide"
+      url: "kb/sync-config"
+      summary: "How to configure sync settings for your workspace"
+
+repeat-gamma.io:
+  results_count: 3
+  articles:
+    - title: "Login troubleshooting guide"
+      url: "kb/login-troubleshooting"
+      summary: "Steps to resolve common login issues"
+    - title: "SSO configuration"
+      url: "kb/sso-config"
+      summary: "How to set up and debug SSO"
+    - title: "Password reset process"
+      url: "kb/password-reset"
+      summary: "How customers can reset their password"
+
+repeat-delta.io:
+  results_count: 2
+  articles:
+    - title: "Export troubleshooting"
+      url: "kb/export-troubleshooting"
+      summary: "Common export failures and how to resolve them"
+    - title: "Export format guide"
+      url: "kb/export-formats"
+      summary: "Supported export formats and size limits"
+
+# --- Pre-sales contacts: KB available ---
+presales-alpha.io:
+  results_count: 3
+  articles:
+    - title: "Pricing overview"
+      url: "kb/pricing"
+      summary: "Plans, pricing tiers, and volume discounts"
+    - title: "Integration guide"
+      url: "kb/integrations"
+      summary: "Supported integrations and setup instructions"
+    - title: "Free trial FAQ"
+      url: "kb/trial-faq"
+      summary: "How to start a trial and what is included"
+
+presales-beta.io:
+  results_count: 2
+  articles:
+    - title: "Integration guide"
+      url: "kb/integrations"
+      summary: "Supported integrations and setup instructions"
+    - title: "API documentation"
+      url: "kb/api-docs"
+      summary: "REST API reference and authentication"
+
+presales-gamma.io:
+  results_count: 2
+  articles:
+    - title: "Free trial FAQ"
+      url: "kb/trial-faq"
+      summary: "How to start a trial and what is included"
+    - title: "Onboarding guide"
+      url: "kb/onboarding"
+      summary: "Steps to get started after signing up"
+
+presales-delta.io:
+  results_count: 2
+  articles:
+    - title: "Demo request process"
+      url: "kb/demo-request"
+      summary: "How to schedule a product demo with sales"
+    - title: "Pricing overview"
+      url: "kb/pricing"
+      summary: "Plans, pricing tiers, and volume discounts"

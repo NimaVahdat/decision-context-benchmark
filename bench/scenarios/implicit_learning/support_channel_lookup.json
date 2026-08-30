@@ -1,0 +1,254 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "chat-alpha.io",
+        "name": "chat-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_channel_lookup-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:38:20.224988+00:00",
+    "outcome_summary": "---\n\n## Support Ticket Summary\n\n**Account Status:** Active (Growth tier, Professional plan)\n\n**Key Findings:**\n- Account ID: ACC-5501\n- Email: user@chat-alpha.io\n- Latest Invoice: INV-10221 (Status: *",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for chat-alpha.io: customer can't find invoice"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll help you resolve this support ticket. Let me gather the relevant data for chat-alpha.io."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01NW65aAP9WUsDLbN1mCPhhx",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "chat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"chat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01NW65aAP9WUsDLbN1mCPhhx",
+        "content": "{\"error\": \"lookup_failed \\u2014 account_id not available in chat context\", \"hint\": \"Chat channel does not pass account_id. Use search_by_email instead.\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01DYX2FbUsjqYiVjwSgXa4wn",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "chat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"chat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01DYX2FbUsjqYiVjwSgXa4wn",
+        "content": "{\"error\": \"No data found for 'chat-alpha.io' in check_order_status\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01UjyZ2kx1Zsxei8gUTX57Dj",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "chat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"chat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01UjyZ2kx1Zsxei8gUTX57Dj",
+        "content": "{\"error\": \"No data found for 'chat-alpha.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "The lookup_account failed because the chat context doesn't provide an account_id. Let me try searching by email:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01RzoVqDbTaA17ivbNjWpqp3",
+        "arguments": {
+          "source": "search_by_email",
+          "query": "chat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_by_email\", \"query\": \"chat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01RzoVqDbTaA17ivbNjWpqp3",
+        "content": "## Search By Email \u2014 chat-alpha.io\n\n- **Account Id**: ACC-5501\n- **Email**: user@chat-alpha.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Open Tickets**: 1\n- **Balance Usd**: 0\n- **Latest Invoice Id**: INV-10221\n- **Latest Invoice Status**: overdue\n- **Note**: Invoice overdue 14 days \u2014 payment reminder sent"
+      },
+      {
+        "role": "assistant",
+        "content": "---\n\n## Support Ticket Summary\n\n**Account Status:** Active (Growth tier, Professional plan)\n\n**Key Findings:**\n- Account ID: ACC-5501\n- Email: user@chat-alpha.io\n- Latest Invoice: INV-10221 (Status: **OVERDUE** \u2014 14 days past due)\n- Payment reminder has already been sent\n\n**Recommended Action: RESOLVE**\n\n---\n\n## Resolution Steps\n\nThe customer's invoice is available in their account. Here's how to help them locate it:\n\n1. **Direct them to their billing dashboard** \u2014 They can access their invoices by logging into their account and navigating to **Billing** or **Invoices** section\n2. **Provide the invoice details:**\n   - Invoice ID: **INV-10221**\n   - Status: **Overdue** (14 days past due)\n3. **Action required:** A payment reminder has already been sent. If they haven't received it, ask them to check their spam/junk folder\n4. **Next steps:** Advise them to process payment immediately to avoid service interruption, or contact billing support if they have questions about the charges\n\nIf the customer cannot locate the invoice in their dashboard or needs a direct copy sent to their email, escalate to tier-2 support for manual invoice delivery."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "chat-beta.io",
+        "name": "chat-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_channel_lookup-c1",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:38:26.247542+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active \u2713\n\n**Account Details:**\n- **Account ID:** ACC-5502\n- **Email:** admin@chat-beta.io\n- **Current Tier:** Starter\n- **Plan Status:** Active since Nov",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for chat-beta.io: customer asking about subscription tier"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01FR3BcAuMPxnkyCrhG2Q1pL",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "chat-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"chat-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01FR3BcAuMPxnkyCrhG2Q1pL",
+        "content": "{\"error\": \"lookup_failed \\u2014 account_id not available in chat context\", \"hint\": \"Chat channel does not pass account_id. Use search_by_email instead.\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01SihriVAeG6GhU7yma1wuYB",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "chat-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"chat-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01SihriVAeG6GhU7yma1wuYB",
+        "content": "{\"error\": \"No data found for 'chat-beta.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Let me try searching by email to locate the account:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01VFbWUFZayquUHQjxHk4AxJ",
+        "arguments": {
+          "source": "search_by_email",
+          "query": "chat-beta.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_by_email\", \"query\": \"chat-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01VFbWUFZayquUHQjxHk4AxJ",
+        "content": "## Search By Email \u2014 chat-beta.io\n\n- **Account Id**: ACC-5502\n- **Email**: admin@chat-beta.io\n- **Tier**: startup\n- **Status**: active\n- **Plan**: Starter\n- **Open Tickets**: 0\n- **Current Plan Since**: 2025-11-01\n- **Subscription Tier**: Starter\n- **Note**: Recently upgraded from Free \u2014 still onboarding"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active \u2713\n\n**Account Details:**\n- **Account ID:** ACC-5502\n- **Email:** admin@chat-beta.io\n- **Current Tier:** Starter\n- **Plan Status:** Active since November 1, 2025\n- **Note:** Recently upgraded from Free plan and currently onboarding\n\n**Knowledge Base:** No specific KB articles found for this domain\n\n---\n\n## Recommended Action: **RESOLVE**\n\n**Response to Customer:**\n\nThank you for reaching out! Here's your current subscription information:\n\n- **Current Plan:** Starter Tier\n- **Status:** Active\n- **Active Since:** November 1, 2025\n\nSince you recently upgraded from the Free plan, you're still in the onboarding phase. \n\n**How can I help you with your subscription?**\n- If you'd like to upgrade to a higher tier, we offer additional features and capacity\n- If you have questions about what's included in your Starter plan, I'm happy to explain\n- If you're experiencing any issues with your current plan, please let me know the specifics\n\nPlease reply with any specific questions about your subscription tier, and I'll be glad to assist further!"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "chat-gamma.io",
+        "name": "chat-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_channel_lookup-c2",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:38:32.804186+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account ID:** ACC-5503  \n**Tier:** Enterprise  \n**Plan:** Enterprise  \n**Contract End Date:** 2027-06-30  \n**Current Usage:** 78% of monthly a",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for chat-gamma.io: customer needs usage report"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_016jRGbaTHYvVdMmuLHhBQDu",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "chat-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"chat-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016jRGbaTHYvVdMmuLHhBQDu",
+        "content": "{\"error\": \"lookup_failed \\u2014 account_id not available in chat context\", \"hint\": \"Chat channel does not pass account_id. Use search_by_email instead.\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_011DJ2KYmz8wJykrVETLR8g2",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "chat-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"chat-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_011DJ2KYmz8wJykrVETLR8g2",
+        "content": "{\"error\": \"No data found for 'chat-gamma.io' in search_knowledge_base\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Let me try searching by email to locate the account:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01VXxMWzRnrcZsWyUM8Xo2bF",
+        "arguments": {
+          "source": "search_by_email",
+          "query": "chat-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_by_email\", \"query\": \"chat-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01VXxMWzRnrcZsWyUM8Xo2bF",
+        "content": "## Search By Email \u2014 chat-gamma.io\n\n- **Account Id**: ACC-5503\n- **Email**: billing@chat-gamma.io\n- **Tier**: enterprise\n- **Status**: active\n- **Plan**: Enterprise\n- **Open Tickets**: 0\n- **Contract End Date**: 2027-06-30\n- **Usage This Month Pct**: 78\n- **Note**: High usage this month \u2014 may need plan upgrade"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account ID:** ACC-5503  \n**Tier:** Enterprise  \n**Plan:** Enterprise  \n**Contract End Date:** 2027-06-30  \n**Current Usage:** 78% of monthly allocation  \n\n**Knowledge Base Articles:** None found for this domain\n\n---\n\n## Recommended Action: **RESOLVE**\n\nThe customer has an active Enterprise account with current usage at 78% of their monthly allocation. \n\n**Step-by-Step Resolution:**\n\n1. **Provide Usage Report:** Generate and send the customer a detailed usage report showing:\n   - Current month usage: 78% of allocated quota\n   - Breakdown by service/feature (if available in your system)\n   - Historical usage trends (previous 3-6 months)\n   - Projected usage for the remainder of the month\n\n2. **Proactive Guidance:** Note that the account is flagged for high usage this month. Inform the customer:\n   - They are approaching their plan limits at 78% utilization\n   - Recommend reviewing usage patterns to avoid overage charges\n   - Offer to discuss plan upgrade options if usage continues to grow\n\n3. **Next Steps:** Ask if they need:\n   - Detailed usage breakdown by feature/user\n   - Recommendations for optimization\n   - Information about upgrading to a higher tier plan\n\n**Contact:** billing@chat-gamma.io"
+      }
+    ]
+  }
+]

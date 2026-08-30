@@ -1,0 +1,999 @@
+# ---------------------------------------------------------------
+# market.yaml
+# Used by eval-analyst skill (source: 'market')
+#
+# Contains: TAM/SAM/SOM, market position, competitors,
+#   differentiation, market trends, and regulatory landscape.
+# Data quality notes included per company.
+# ---------------------------------------------------------------
+
+delve.co:
+  domain: "delve.co"
+  tam: "48000000000"
+  tam_formatted: "$48B"
+  sam: "6200000000"
+  sam_formatted: "$6.2B"
+  som: "120000000"
+  som_formatted: "$120M"
+  tam_methodology: >
+    TAM based on global business analytics and BI market
+    (Gartner 2025 estimate). SAM narrowed to AI-native
+    analytics for mid-market companies (500-5000 employees)
+    in North America and Europe. SOM reflects realistic
+    5-year capture rate given competitive intensity.
+  market_position: "emerging challenger"
+  market_share_pct: "0.002"
+  category: "AI-native analytics"
+  primary_segment: "mid-market B2B"
+  geographic_focus: "North America"
+  competitors:
+    - name: "ThoughtSpot"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Sigma Computing"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "Mode Analytics"
+      overlap: "medium"
+      relative_size: "larger"
+    - name: "Metabase"
+      overlap: "medium"
+      relative_size: "similar"
+  competitive_note: >
+    Delve differentiates through natural-language query
+    interface and automated insight generation. Most
+    competitors still require SQL knowledge or drag-and-
+    drop configuration. However, incumbents (Tableau,
+    Looker) are rapidly adding AI features.
+  differentiation:
+    - "Natural language data exploration (no SQL needed)"
+    - "Automated anomaly detection and root cause analysis"
+    - "Sub-second query performance on datasets up to 10TB"
+    - "Purpose-built for product and growth analytics"
+  moat_assessment: >
+    Weak moat currently. Technology differentiation is
+    real but reproducible. No significant data network
+    effects or switching costs yet. Must build moat
+    through integrations and workflow embedding before
+    incumbents catch up on AI features.
+  market_trends:
+    - trend: "AI-first analytics replacing legacy BI"
+      impact: "strong positive"
+      timeframe: "2024-2028"
+    - trend: "Data democratization in mid-market"
+      impact: "positive"
+      timeframe: "2025-2027"
+    - trend: "Consolidation of analytics stack"
+      impact: "negative"
+      timeframe: "2026-2028"
+  regulatory_landscape: >
+    Minimal direct regulation. Indirect exposure through
+    customer data handling requirements (SOC 2, GDPR).
+    Company has SOC 2 Type I; Type II in progress.
+  market_timing: "favorable"
+  market_timing_note: >
+    Strong timing as AI-native tools gain acceptance in
+    enterprise. Window of opportunity is 18-24 months
+    before incumbents fully integrate AI capabilities.
+  data_confidence: "medium"
+  data_sources: >
+    Gartner BI market report (2025), company pitch deck,
+    competitor analysis from Forrester Wave, G2 reviews
+  last_updated: "2025-11-15"
+
+linear.app:
+  domain: "linear.app"
+  tam: "32000000000"
+  tam_formatted: "$32B"
+  sam: "4800000000"
+  sam_formatted: "$4.8B"
+  som: "800000000"
+  som_formatted: "$800M"
+  tam_methodology: >
+    TAM based on global project management and issue
+    tracking market (IDC 2025). SAM narrowed to software
+    development teams in tech companies with 50-10000
+    employees. SOM assumes realistic capture in a market
+    with strong incumbents.
+  market_position: "strong challenger"
+  market_share_pct: "0.58"
+  category: "developer project management"
+  primary_segment: "tech companies, engineering teams"
+  geographic_focus: "global (US-centric)"
+  competitors:
+    - name: "Jira (Atlassian)"
+      overlap: "very high"
+      relative_size: "much larger"
+    - name: "GitHub Issues/Projects"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Shortcut"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Asana"
+      overlap: "medium"
+      relative_size: "larger"
+    - name: "ClickUp"
+      overlap: "medium"
+      relative_size: "larger"
+  competitive_note: >
+    Linear has carved out a strong niche by focusing
+    exclusively on software development teams and
+    prioritizing speed and UX. The product is widely
+    considered the best issue tracker for engineering
+    teams. Main competitive risk is Jira's modernization
+    efforts and GitHub's expanding project management.
+  differentiation:
+    - "Fastest issue tracking UI in the market"
+    - "Opinionated workflows (cycles, triage)"
+    - "Deep GitHub/GitLab integration"
+    - "Offline-first architecture with real-time sync"
+    - "Strong developer brand and community"
+  moat_assessment: >
+    Moderate moat. Strong brand loyalty among developers.
+    Workflow habits create soft switching costs. Data
+    migration from Jira is a real barrier for competitors.
+    Risk: GitHub Projects is free and improving rapidly.
+  market_trends:
+    - trend: "Developer experience as competitive advantage"
+      impact: "strong positive"
+      timeframe: "ongoing"
+    - trend: "AI-assisted project management"
+      impact: "positive"
+      timeframe: "2025-2027"
+    - trend: "Platform consolidation (GitHub expanding)"
+      impact: "negative"
+      timeframe: "2025-2028"
+  regulatory_landscape: >
+    No direct regulatory exposure. Standard data
+    protection requirements (GDPR, SOC 2). Company is
+    SOC 2 Type II certified.
+  market_timing: "favorable"
+  market_timing_note: >
+    Developer tooling market is in a generational shift
+    as teams demand modern, fast tools. Linear is well-
+    positioned but must expand TAM beyond issue tracking
+    to sustain growth at scale.
+  data_confidence: "high"
+  data_sources: >
+    IDC project management market report, G2 Grid data,
+    Okta Businesses at Work report, developer surveys
+  last_updated: "2025-12-01"
+
+notion.so:
+  domain: "notion.so"
+  tam: "75000000000"
+  tam_formatted: "$75B"
+  sam: "18000000000"
+  sam_formatted: "$18B"
+  som: "3000000000"
+  som_formatted: "$3B"
+  tam_methodology: >
+    TAM based on global productivity and collaboration
+    software market (IDC 2025, includes docs, wikis,
+    project management, and knowledge bases). SAM
+    narrowed to connected workspace tools for knowledge
+    workers. SOM reflects realistic share in a
+    fragmented market.
+  market_position: "market leader"
+  market_share_pct: "1.39"
+  category: "connected workspace / productivity"
+  primary_segment: "knowledge workers, teams of all sizes"
+  geographic_focus: "global"
+  competitors:
+    - name: "Microsoft 365 / Loop"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Google Workspace"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Confluence (Atlassian)"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "Coda"
+      overlap: "very high"
+      relative_size: "smaller"
+    - name: "Slite"
+      overlap: "medium"
+      relative_size: "much smaller"
+  competitive_note: >
+    Notion occupies a unique position as an all-in-one
+    workspace that competes across multiple categories.
+    The "blocks" architecture enables flexibility that
+    specialized tools can't match. Main risk is Microsoft
+    Loop, which bundles similar functionality into M365
+    at no additional cost.
+  differentiation:
+    - "All-in-one workspace (docs, wikis, DBs, projects)"
+    - "Flexible block-based architecture"
+    - "Notion AI deeply integrated into workflow"
+    - "Strong template ecosystem and community"
+    - "Consumer-grade UX for enterprise use cases"
+  moat_assessment: >
+    Strong moat. Significant data lock-in as teams build
+    entire knowledge bases in Notion. Network effects
+    within organizations (shared workspaces). Brand
+    strength is exceptional among knowledge workers.
+    Template ecosystem creates additional stickiness.
+  market_trends:
+    - trend: "AI-powered knowledge management"
+      impact: "strong positive"
+      timeframe: "2024-2028"
+    - trend: "Consolidation of workplace tools"
+      impact: "strong positive"
+      timeframe: "ongoing"
+    - trend: "Enterprise security requirements"
+      impact: "neutral (requires investment)"
+      timeframe: "ongoing"
+    - trend: "Microsoft bundling competitive features"
+      impact: "negative"
+      timeframe: "2025-2027"
+  regulatory_landscape: >
+    GDPR compliance is critical for EU expansion. SOC 2
+    Type II and ISO 27001 certified. HIPAA compliance
+    available for healthcare customers on Enterprise plan.
+    FedRAMP authorization in progress.
+  market_timing: "favorable"
+  market_timing_note: >
+    AI integration provides a second growth curve. The
+    shift to hybrid work permanently increased demand
+    for async collaboration tools. Timing is favorable
+    for enterprise expansion.
+  data_confidence: "high"
+  data_sources: >
+    IDC collaboration market report, Gartner Magic
+    Quadrant, company blog announcements, Okta report,
+    industry analyst briefings
+  last_updated: "2025-10-20"
+
+retool.com:
+  domain: "retool.com"
+  tam: "28000000000"
+  tam_formatted: "$28B"
+  sam: "5500000000"
+  sam_formatted: "$5.5B"
+  som: "600000000"
+  som_formatted: "$600M"
+  tam_methodology: >
+    TAM based on global low-code/no-code development
+    platform market (Gartner 2025). SAM narrowed to
+    internal tool building for engineering teams at
+    tech-forward companies. SOM reflects capture
+    potential in the developer-oriented segment.
+  market_position: "category leader"
+  market_share_pct: "1.82"
+  category: "internal tool builder"
+  primary_segment: "engineering teams building internal tools"
+  geographic_focus: "global (US-dominant)"
+  competitors:
+    - name: "Appsmith"
+      overlap: "very high"
+      relative_size: "smaller"
+    - name: "Superblocks"
+      overlap: "very high"
+      relative_size: "smaller"
+    - name: "Budibase"
+      overlap: "high"
+      relative_size: "much smaller"
+    - name: "Airplane"
+      overlap: "high"
+      relative_size: "much smaller"
+    - name: "OutSystems"
+      overlap: "medium"
+      relative_size: "larger"
+  competitive_note: >
+    Retool defined the "internal tools" category and
+    maintains leadership through first-mover advantage
+    and breadth of integrations (80+ data sources).
+    Open-source alternatives (Appsmith, Budibase) compete
+    on price but lack enterprise features. The AI app
+    builder is a significant differentiator.
+  differentiation:
+    - "80+ native data source integrations"
+    - "AI-powered app generation from natural language"
+    - "Retool Workflows for backend automation"
+    - "Self-hosted deployment option for regulated industries"
+    - "Strongest brand in the internal tools category"
+  moat_assessment: >
+    Strong moat. Deep integration into internal workflows
+    creates high switching costs. Network effects within
+    organizations as more teams build on Retool. The
+    breadth of integrations is difficult to replicate.
+    Open-source risk is manageable -- enterprise features
+    (SSO, audit logs, permissions) justify premium pricing.
+  market_trends:
+    - trend: "AI-generated internal tools"
+      impact: "strong positive"
+      timeframe: "2025-2028"
+    - trend: "Platform engineering adoption"
+      impact: "positive"
+      timeframe: "2024-2027"
+    - trend: "Open-source low-code alternatives"
+      impact: "moderate negative"
+      timeframe: "ongoing"
+  regulatory_landscape: >
+    SOC 2 Type II, HIPAA, ISO 27001 certified. Self-
+    hosted option is critical for regulated industries
+    (finance, healthcare, government). On-prem deployment
+    is a key competitive advantage over cloud-only rivals.
+  market_timing: "very favorable"
+  market_timing_note: >
+    Every company is realizing they need more internal
+    tools but fewer engineers want to build them. AI
+    makes internal tool creation accessible to non-
+    engineers, expanding the market significantly.
+  data_confidence: "high"
+  data_sources: >
+    Gartner low-code MQ, Forrester Wave, company blog,
+    G2 Grid, developer community surveys
+  last_updated: "2025-12-10"
+
+resend.com:
+  domain: "resend.com"
+  tam: "12000000000"
+  tam_formatted: "$12B"
+  sam: "2200000000"
+  sam_formatted: "$2.2B"
+  som: "50000000"
+  som_formatted: "$50M"
+  tam_methodology: >
+    TAM based on global transactional and marketing email
+    market (Radicati Group 2025). SAM narrowed to
+    developer-focused transactional email APIs. SOM
+    assumes capture rate among modern tech companies.
+  market_position: "emerging challenger"
+  market_share_pct: "0.016"
+  category: "developer email API"
+  primary_segment: "developers and startups"
+  geographic_focus: "global"
+  competitors:
+    - name: "SendGrid (Twilio)"
+      overlap: "very high"
+      relative_size: "much larger"
+    - name: "Postmark"
+      overlap: "very high"
+      relative_size: "larger"
+    - name: "Amazon SES"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Mailgun (Sinch)"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "Loops"
+      overlap: "medium"
+      relative_size: "similar"
+  competitive_note: >
+    Resend differentiates through developer experience
+    (React Email) and modern API design. SendGrid has
+    degraded in quality post-Twilio acquisition, creating
+    an opening. Amazon SES is cheap but requires significant
+    setup. Resend's bet is that DX matters enough to win
+    despite price premiums over commodity email.
+  differentiation:
+    - "React Email: build emails with React components"
+    - "Modern REST API with excellent documentation"
+    - "Built-in deliverability monitoring and analytics"
+    - "Open-source email framework (community flywheel)"
+    - "Webhook-first architecture for event tracking"
+  moat_assessment: >
+    Weak-to-moderate moat. Email APIs are relatively
+    commodity. Resend's moat is primarily brand and DX.
+    React Email open-source project creates community
+    lock-in. API integration switching costs are real
+    but not prohibitive. Must build network effects
+    through ecosystem (templates, components).
+  market_trends:
+    - trend: "Developer experience as buying criteria"
+      impact: "strong positive"
+      timeframe: "ongoing"
+    - trend: "Email deliverability regulations (DMARC)"
+      impact: "positive"
+      timeframe: "2024-2026"
+    - trend: "Commoditization of transactional email"
+      impact: "negative"
+      timeframe: "ongoing"
+  regulatory_landscape: >
+    CAN-SPAM, GDPR, DMARC/DKIM compliance required.
+    New Google/Yahoo sender requirements (2024) raised
+    the bar for deliverability. This benefits Resend
+    as less technical senders need managed solutions.
+  market_timing: "favorable"
+  market_timing_note: >
+    SendGrid quality decline post-Twilio acquisition has
+    created a market opening. New DMARC requirements
+    increase demand for modern email infrastructure.
+  data_confidence: "medium"
+  data_sources: >
+    Radicati email market report, npm download stats,
+    GitHub star trends, competitor pricing pages,
+    developer survey data
+  last_updated: "2025-11-28"
+
+meridian.bio:
+  domain: "meridian.bio"
+  tam: "22000000000"
+  tam_formatted: "$22B"
+  sam: "3800000000"
+  sam_formatted: "$3.8B"
+  som: "200000000"
+  som_formatted: "$200M"
+  tam_methodology: >
+    TAM based on computational biology and bioinformatics
+    tools market (Grand View Research 2025). SAM narrowed
+    to AI-powered drug discovery platforms serving pharma
+    and biotech. SOM assumes capture among top-200 pharma
+    companies and large biotechs.
+  market_position: "early niche player"
+  market_share_pct: "0.021"
+  category: "computational biology platform"
+  primary_segment: "pharmaceutical R&D teams"
+  geographic_focus: "North America, Western Europe"
+  competitors:
+    - name: "Recursion Pharmaceuticals"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "Insitro"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "BenchSci"
+      overlap: "medium"
+      relative_size: "larger"
+    - name: "Elucidata"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Genedata"
+      overlap: "medium"
+      relative_size: "larger"
+  competitive_note: >
+    Meridian differentiates through multi-omics integration
+    and proprietary protein-folding prediction models.
+    Larger competitors (Recursion, Insitro) have more data
+    but operate as drug developers, not pure-play platforms.
+    The platform-only positioning avoids competitive
+    tension with pharma customers.
+  differentiation:
+    - "Multi-omics data integration (genomics, proteomics)"
+    - "Proprietary protein structure prediction models"
+    - "Platform-only model (no competing drug programs)"
+    - "Validated by 3 top-20 pharma partnerships"
+    - "Wet-lab validation loop integrated into platform"
+  moat_assessment: >
+    Moderate moat. Proprietary training data from pharma
+    partnerships creates a data flywheel. Regulatory
+    validation (FDA familiarity) is time-consuming to
+    replicate. However, foundational AI models (AlphaFold)
+    are open, and well-funded competitors are investing
+    heavily.
+  market_trends:
+    - trend: "AI-driven drug discovery adoption"
+      impact: "strong positive"
+      timeframe: "2023-2030"
+    - trend: "Multi-omics data explosion"
+      impact: "strong positive"
+      timeframe: "ongoing"
+    - trend: "Pharma budget tightening"
+      impact: "moderate negative"
+      timeframe: "2025-2026"
+  regulatory_landscape: >
+    Indirect FDA exposure through pharma customer
+    workflows. GxP compliance requirements for validated
+    environments. HIPAA compliance for patient data
+    handling. SOC 2 Type II certified.
+  market_timing: "favorable"
+  market_timing_note: >
+    AI drug discovery is in an investment supercycle.
+    Pharma companies are signing more platform deals to
+    reduce R&D timelines. Timing risk: AI hype could
+    lead to a correction if clinical results disappoint.
+  data_confidence: "medium"
+  data_sources: >
+    Grand View Research report, BioPharma Dive coverage,
+    company website, conference presentation slides,
+    pharma industry analyst calls
+  last_updated: "2025-11-05"
+
+finstack.io:
+  domain: "finstack.io"
+  tam: "55000000000"
+  tam_formatted: "$55B"
+  sam: "8500000000"
+  sam_formatted: "$8.5B"
+  som: "500000000"
+  som_formatted: "$500M"
+  tam_methodology: >
+    TAM based on global financial technology infrastructure
+    market (McKinsey Global Payments 2025). SAM narrowed
+    to banking-as-a-service and financial API infrastructure
+    for mid-market banks and fintechs. SOM reflects
+    realistic capture given regulatory barriers.
+  market_position: "strong challenger"
+  market_share_pct: "0.041"
+  category: "financial infrastructure / BaaS"
+  primary_segment: "mid-market banks, fintechs"
+  geographic_focus: "North America, expanding to EU"
+  competitors:
+    - name: "Plaid"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "Marqeta"
+      overlap: "medium"
+      relative_size: "larger"
+    - name: "Unit"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Synctera"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Treasury Prime"
+      overlap: "high"
+      relative_size: "similar"
+  competitive_note: >
+    Finstack differentiates through full-stack compliance
+    automation (KYC/AML built in) and multi-bank
+    connectivity. Most competitors focus on specific
+    verticals (cards, accounts, payments) while Finstack
+    offers unified infrastructure. EU expansion requires
+    PSD2 compliance work that is underway.
+  differentiation:
+    - "Full-stack compliance automation (KYC, AML, SAR)"
+    - "Multi-bank connectivity (35+ bank partnerships)"
+    - "Real-time ledger with sub-second settlement"
+    - "Unified API across payments, accounts, and cards"
+    - "SOX-ready audit trail for regulated institutions"
+  moat_assessment: >
+    Strong moat. Regulatory compliance is a massive
+    barrier to entry. Bank partnerships take 12-18
+    months to establish. Data handling certifications
+    (PCI DSS Level 1, SOC 1/2) are expensive and
+    time-consuming. Integration switching costs are
+    very high in financial services.
+  market_trends:
+    - trend: "Embedded finance growth"
+      impact: "strong positive"
+      timeframe: "2024-2030"
+    - trend: "Open banking regulations (PSD2, Section 1033)"
+      impact: "positive"
+      timeframe: "2025-2028"
+    - trend: "Fintech funding contraction"
+      impact: "moderate negative"
+      timeframe: "2024-2026"
+  regulatory_landscape: >
+    Heavily regulated. PCI DSS Level 1, SOC 1 Type II,
+    SOC 2 Type II, state money transmitter licenses (48
+    states). EU expansion requires EMI license and PSD2
+    compliance. Regulatory complexity is both a barrier
+    and a moat.
+  market_timing: "favorable"
+  market_timing_note: >
+    Open banking mandates (US Section 1033) create new
+    demand for compliant infrastructure. Mid-market banks
+    are accelerating digital transformation timelines.
+  data_confidence: "high"
+  data_sources: >
+    McKinsey Payments report, CB Insights fintech market
+    map, company investor update, Dealroom, regulatory
+    filings
+  last_updated: "2025-12-05"
+
+cloudlane.dev:
+  domain: "cloudlane.dev"
+  tam: "120000000000"
+  tam_formatted: "$120B"
+  sam: "22000000000"
+  sam_formatted: "$22B"
+  som: "2000000000"
+  som_formatted: "$2B"
+  tam_methodology: >
+    TAM based on global cloud infrastructure services
+    market (Synergy Research Group 2025). SAM narrowed
+    to multi-cloud orchestration and cloud management
+    platforms for enterprises. SOM reflects realistic
+    capture against hyperscaler lock-in.
+  market_position: "strong challenger"
+  market_share_pct: "0.030"
+  category: "multi-cloud orchestration"
+  primary_segment: "enterprise, government/federal"
+  geographic_focus: "North America, EMEA"
+  competitors:
+    - name: "HashiCorp"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "Pulumi"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Crossplane"
+      overlap: "medium"
+      relative_size: "smaller"
+    - name: "VMware Tanzu"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "Spot by NetApp"
+      overlap: "medium"
+      relative_size: "larger"
+  competitive_note: >
+    Cloudlane differentiates through unified control
+    plane for multi-cloud with cost optimization built
+    in. HashiCorp (Terraform) is the dominant IaC tool
+    but Cloudlane operates at a higher abstraction layer.
+    FedRAMP authorization is a significant advantage in
+    government sector. IBM acquisition of HashiCorp may
+    create disruption opportunity.
+  differentiation:
+    - "Unified multi-cloud control plane"
+    - "AI-powered cost optimization (avg 32% savings)"
+    - "FedRAMP High authorization"
+    - "Zero-downtime cloud migration tooling"
+    - "Custom network acceleration hardware"
+  moat_assessment: >
+    Strong moat. FedRAMP authorization is extremely
+    difficult to obtain (18-month process). Multi-cloud
+    orchestration becomes deeply embedded in infrastructure.
+    Proprietary hardware creates performance advantages.
+    Network effects from cross-cloud metadata.
+  market_trends:
+    - trend: "Cloud repatriation and multi-cloud adoption"
+      impact: "strong positive"
+      timeframe: "2024-2028"
+    - trend: "Government cloud modernization"
+      impact: "strong positive"
+      timeframe: "2024-2030"
+    - trend: "FinOps and cloud cost optimization"
+      impact: "positive"
+      timeframe: "ongoing"
+    - trend: "Hyperscaler lock-in deepening"
+      impact: "moderate negative"
+      timeframe: "ongoing"
+  regulatory_landscape: >
+    FedRAMP High authorized. SOC 2 Type II, ISO 27001,
+    ITAR compliant. Government contracts require CMMC
+    Level 2 certification (in progress). Export controls
+    apply to certain features.
+  market_timing: "very favorable"
+  market_timing_note: >
+    Multi-cloud is becoming the default enterprise
+    architecture. Cloud cost optimization is a board-
+    level priority. Government modernization budgets
+    are at all-time highs.
+  data_confidence: "high"
+  data_sources: >
+    Synergy Research cloud report, FedRAMP marketplace,
+    Gartner cloud management MQ, company press releases,
+    government contract databases (USAspending.gov)
+  last_updated: "2025-12-15"
+
+learnnext.ai:
+  domain: "learnnext.ai"
+  tam: "35000000000"
+  tam_formatted: "$35B"
+  sam: "5000000000"
+  sam_formatted: "$5B"
+  som: "40000000"
+  som_formatted: "$40M"
+  tam_methodology: >
+    TAM based on global EdTech market (HolonIQ 2025).
+    SAM narrowed to AI-powered tutoring and personalized
+    learning for higher education and professional
+    development. SOM reflects realistic capture given
+    very early stage and capital constraints.
+  market_position: "early entrant"
+  market_share_pct: "0.004"
+  category: "AI-powered personalized tutoring"
+  primary_segment: "college students, self-learners"
+  geographic_focus: "United States"
+  competitors:
+    - name: "Khan Academy (Khanmigo)"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Duolingo (non-language)"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "Quizlet Q-Chat"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "Synthesis"
+      overlap: "medium"
+      relative_size: "similar"
+    - name: "Numerade"
+      overlap: "medium"
+      relative_size: "larger"
+  competitive_note: >
+    Learnnext differentiates through Socratic AI tutoring
+    that adapts in real-time to student understanding.
+    Incumbents are adding AI but their core products were
+    not designed for it. Risk: ChatGPT and Claude are
+    free AI tutors, competing at zero marginal cost.
+  differentiation:
+    - "Real-time adaptive Socratic tutoring method"
+    - "Learning analytics dashboard for self-tracking"
+    - "Spaced repetition with AI-generated problems"
+    - "Multi-modal input (handwritten math, diagrams)"
+    - "Study group AI facilitator for collaborative learning"
+  moat_assessment: >
+    Weak moat. AI tutoring is easily replicable with
+    commodity LLMs. Differentiation is primarily UX
+    and pedagogy design. Must build moat through
+    learning data accumulation and institutional
+    partnerships. Free AI chatbots are an existential
+    threat to pure tutoring plays.
+  market_trends:
+    - trend: "AI tutoring replacing human tutoring"
+      impact: "strong positive"
+      timeframe: "2024-2030"
+    - trend: "University adoption of AI tools"
+      impact: "positive"
+      timeframe: "2025-2028"
+    - trend: "Free AI chatbots as tutoring substitutes"
+      impact: "strong negative"
+      timeframe: "ongoing"
+  regulatory_landscape: >
+    FERPA compliance required for university partnerships.
+    COPPA considerations if expanding to K-12. EU AI Act
+    may classify educational AI as "high risk," requiring
+    additional compliance measures.
+  market_timing: "uncertain"
+  market_timing_note: >
+    AI tutoring demand is exploding but so is supply.
+    The key question is whether purpose-built AI tutors
+    can command premium pricing over free general-purpose
+    AI assistants.
+  data_confidence: "low"
+  data_sources: >
+    HolonIQ EdTech report, Y Combinator batch data,
+    company pitch deck, TikTok engagement metrics,
+    university EdTech procurement surveys
+  last_updated: "2025-10-30"
+
+shopfront.co:
+  domain: "shopfront.co"
+  tam: "85000000000"
+  tam_formatted: "$85B"
+  sam: "12000000000"
+  sam_formatted: "$12B"
+  som: "700000000"
+  som_formatted: "$700M"
+  tam_methodology: >
+    TAM based on global B2B marketplace and commerce
+    platform market (Forrester 2025). SAM narrowed to
+    vertical B2B marketplace SaaS and managed marketplace
+    services. SOM reflects realistic capture in
+    fragmented vertical markets.
+  market_position: "emerging leader"
+  market_share_pct: "0.038"
+  category: "vertical B2B marketplace platform"
+  primary_segment: "mid-market B2B merchants"
+  geographic_focus: "North America, UK"
+  competitors:
+    - name: "Mirakl"
+      overlap: "very high"
+      relative_size: "larger"
+    - name: "Marketplacer"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Nautical Commerce"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Shopify (B2B)"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "BigCommerce (B2B)"
+      overlap: "medium"
+      relative_size: "larger"
+  competitive_note: >
+    Shopfront differentiates through managed marketplace
+    services (fulfillment, payments, dispute resolution)
+    that reduce merchant operational burden. Mirakl is the
+    main competitor but focuses on enterprise. Shopify B2B
+    is emerging but early. Shopfront's vertical focus
+    (specialty goods, artisan products) is a niche advantage.
+  differentiation:
+    - "Managed marketplace ops (fulfillment, payments)"
+    - "AI-powered product matching and recommendations"
+    - "Vertical-specific storefronts (food, craft, etc.)"
+    - "Built-in buyer protection and dispute resolution"
+    - "White-label marketplace option for brands"
+  moat_assessment: >
+    Moderate moat. Two-sided marketplace network effects
+    (more buyers attract sellers, vice versa). Merchant
+    tool integrations create switching costs. GMV data
+    enables better recommendations over time. Risk:
+    marketplaces are capital-intensive and winner-take-
+    most dynamics may not favor a mid-stage player.
+  market_trends:
+    - trend: "B2B commerce digitization"
+      impact: "strong positive"
+      timeframe: "2024-2030"
+    - trend: "Marketplace-as-a-service growth"
+      impact: "positive"
+      timeframe: "2025-2028"
+    - trend: "Direct-to-consumer competition"
+      impact: "moderate negative"
+      timeframe: "ongoing"
+  regulatory_landscape: >
+    Standard e-commerce regulations. PCI DSS compliance
+    for payment processing. Sales tax nexus complexity
+    for multi-state operations. EU Digital Services Act
+    may apply if expanding to EU marketplace operations.
+  market_timing: "favorable"
+  market_timing_note: >
+    B2B e-commerce is 10 years behind B2C in digital
+    adoption. The shift accelerated post-COVID and shows
+    no signs of slowing. Vertical marketplaces are
+    winning against horizontal platforms.
+  data_confidence: "medium-high"
+  data_sources: >
+    Forrester B2B commerce report, marketplace industry
+    benchmarks (a16z Marketplace 100), company investor
+    update, Pitchbook
+  last_updated: "2025-11-20"
+
+datavault.io:
+  domain: "datavault.io"
+  tam: "42000000000"
+  tam_formatted: "$42B"
+  sam: "8000000000"
+  sam_formatted: "$8B"
+  som: "250000000"
+  som_formatted: "$250M"
+  tam_methodology: >
+    TAM based on global cybersecurity market with focus
+    on data security segment (Cybersecurity Ventures
+    2025). SAM narrowed to data-centric security
+    platforms for enterprises handling sensitive data.
+    SOM reflects realistic capture among mid-market
+    and enterprise targets.
+  market_position: "emerging niche player"
+  market_share_pct: "0.015"
+  category: "data-centric security platform"
+  primary_segment: "enterprises with sensitive data"
+  geographic_focus: "North America"
+  competitors:
+    - name: "Varonis"
+      overlap: "high"
+      relative_size: "much larger"
+    - name: "BigID"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "Securiti"
+      overlap: "medium"
+      relative_size: "larger"
+    - name: "Open Raven"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Cyera"
+      overlap: "very high"
+      relative_size: "larger"
+  competitive_note: >
+    Datavault differentiates through real-time data flow
+    monitoring and automated classification. Cyera is the
+    closest competitor and is better funded. Varonis is
+    legacy but has massive installed base. Datavault's
+    cloud-native architecture is an advantage over legacy
+    vendors but a disadvantage vs. well-funded startups.
+  differentiation:
+    - "Real-time data flow monitoring across clouds"
+    - "Automated sensitive data classification (ML-based)"
+    - "Zero-knowledge encryption for data at rest"
+    - "Compliance automation (SOX, GDPR, CCPA, HIPAA)"
+    - "Data lineage tracking with audit trail"
+  moat_assessment: >
+    Moderate moat. Data security integration into
+    pipelines creates switching costs. Compliance
+    certifications take time to build. However, the
+    market is crowded with well-funded competitors.
+    Must differentiate on speed-to-value and ease of
+    deployment to win against larger rivals.
+  market_trends:
+    - trend: "Data breach frequency and cost increase"
+      impact: "strong positive"
+      timeframe: "ongoing"
+    - trend: "Privacy regulation proliferation"
+      impact: "strong positive"
+      timeframe: "2024-2028"
+    - trend: "Cybersecurity market consolidation"
+      impact: "moderate negative"
+      timeframe: "2025-2027"
+  regulatory_landscape: >
+    Deeply tied to regulatory compliance. SOC 2 Type II,
+    ISO 27001, HIPAA BAA. Product helps customers comply
+    with GDPR, CCPA, SOX, HIPAA, PCI DSS. Regulatory
+    tailwinds are a core growth driver.
+  market_timing: "very favorable"
+  market_timing_note: >
+    Data breaches are at an all-time high. New SEC
+    disclosure rules require faster breach reporting.
+    GDPR enforcement is increasing fines. Every trend
+    favors data security investment.
+  data_confidence: "medium"
+  data_sources: >
+    Cybersecurity Ventures market report, Gartner data
+    security MQ, company pitch deck, CISO survey data,
+    breach disclosure databases
+  last_updated: "2025-11-10"
+
+greenpower.energy:
+  domain: "greenpower.energy"
+  tam: "65000000000"
+  tam_formatted: "$65B"
+  sam: "8500000000"
+  sam_formatted: "$8.5B"
+  som: "80000000"
+  som_formatted: "$80M"
+  tam_methodology: >
+    TAM based on global energy management systems and
+    distributed energy resource (DER) management market
+    (BloombergNEF 2025). SAM narrowed to software
+    platforms for commercial and utility-scale DER
+    monitoring and optimization. SOM reflects realistic
+    capture given very early stage.
+  market_position: "early entrant"
+  market_share_pct: "0.001"
+  category: "DER monitoring and optimization platform"
+  primary_segment: "utilities, commercial building operators"
+  geographic_focus: "United States (California, Texas, Northeast)"
+  competitors:
+    - name: "Stem Inc"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "Fluence (Siemens/AES)"
+      overlap: "medium"
+      relative_size: "much larger"
+    - name: "AutoGrid (Schneider)"
+      overlap: "high"
+      relative_size: "larger"
+    - name: "GridBeyond"
+      overlap: "high"
+      relative_size: "similar"
+    - name: "Leap"
+      overlap: "medium"
+      relative_size: "similar"
+  competitive_note: >
+    Greenpower differentiates through hardware-software
+    integration (proprietary IoT sensors) and AI-driven
+    optimization. Most competitors are software-only or
+    large incumbents. Hardware-software integration is
+    a double-edged sword: better data but higher COGS
+    and deployment complexity.
+  differentiation:
+    - "Proprietary IoT sensors for real-time DER monitoring"
+    - "AI optimization across solar, storage, and EV"
+    - "Hardware-software integration for superior data"
+    - "Virtual power plant aggregation capabilities"
+    - "DOE-validated energy savings methodology"
+  moat_assessment: >
+    Weak-to-moderate moat. Hardware creates some barriers
+    but also slows growth. Proprietary sensor data is
+    valuable if scale is achieved. Regulatory relationships
+    (utility partnerships) take years to build. Risk:
+    well-funded incumbents (Schneider, Siemens) could
+    replicate the software layer.
+  market_trends:
+    - trend: "DER proliferation (solar, storage, EV)"
+      impact: "strong positive"
+      timeframe: "2024-2035"
+    - trend: "Virtual power plant aggregation"
+      impact: "strong positive"
+      timeframe: "2025-2030"
+    - trend: "IRA incentives for clean energy"
+      impact: "strong positive"
+      timeframe: "2024-2033"
+    - trend: "Utility resistance to distributed models"
+      impact: "moderate negative"
+      timeframe: "ongoing"
+  regulatory_landscape: >
+    IRA (Inflation Reduction Act) provides significant
+    incentives. FERC Order 2222 enables DER market
+    participation. State-level interconnection policies
+    vary widely. California NEM 3.0 creates both
+    opportunities and challenges.
+  market_timing: "very favorable"
+  market_timing_note: >
+    IRA incentives, FERC 2222, and rapidly declining
+    solar/storage costs create a perfect storm for DER
+    platforms. The market is in a 10-year growth cycle.
+    Timing risk is primarily execution, not market.
+  data_confidence: "low"
+  data_sources: >
+    BloombergNEF DER report, DOE grant database,
+    company pitch deck, cleantech industry conferences,
+    utility procurement RFP data
+  last_updated: "2025-11-22"

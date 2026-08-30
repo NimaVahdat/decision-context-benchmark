@@ -1,0 +1,438 @@
+[
+  {
+    "skill_name": "eval-analyst-adaptive",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-alpha.io",
+        "name": "unknown-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-alpha.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:02:56.992226+00:00",
+    "outcome_summary": "## Analysis Report: unknown-alpha.io\n\n### Financial Overview\n**Status: Data Unavailable**\n\nNo verified financial data is available for unknown-alpha.io. The company has:\n- No known funding rounds on r",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-alpha.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather data on unknown-alpha.io from available sources."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01YEQN4zDWEVYNNGa9n5sR26",
+        "arguments": {
+          "source": "financials",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01YEQN4zDWEVYNNGa9n5sR26",
+        "content": "{\"error\": \"No data found for 'unknown-alpha.io' in financials\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01LgmDRnRRZFBAR7BXE5UwAF",
+        "arguments": {
+          "source": "market",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01LgmDRnRRZFBAR7BXE5UwAF",
+        "content": "{\"error\": \"No data found for 'unknown-alpha.io' in market\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01CkuDdwLuJSSgzRSVGCx3NZ",
+        "arguments": {
+          "source": "team",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01CkuDdwLuJSSgzRSVGCx3NZ",
+        "content": "{\"error\": \"No data found for 'unknown-alpha.io' in team\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Let me try alternative sources:"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01WMuWdTCGU4XHcsN6G6XWsW",
+        "arguments": {
+          "source": "profile",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[eval_lookup({\"source\": \"profile\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01WMuWdTCGU4XHcsN6G6XWsW",
+        "content": "## Profile \u2014 unknown-alpha.io\n\n- **Domain**: unknown-alpha.io\n- **Overall Score**: 35\n- **Growth Score**: 40\n- **Unit Economics Score**: 30\n- **Team Score**: 35\n- **Market Score**: 30\n- **Product Score**: 40\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration, LinkedIn company page\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: No verified financial data, no known funding rounds, limited public information"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01R9NzgfhXh8pJQm24uTauNA",
+        "arguments": {
+          "source": "brief",
+          "query": "unknown-alpha.io"
+        },
+        "content": "[eval_lookup({\"source\": \"brief\", \"query\": \"unknown-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01R9NzgfhXh8pJQm24uTauNA",
+        "content": "{\"error\": \"No data found for 'unknown-alpha.io' in brief\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis Report: unknown-alpha.io\n\n### Financial Overview\n**Status: Data Unavailable**\n\nNo verified financial data is available for unknown-alpha.io. The company has:\n- No known funding rounds on record\n- 0% recurring revenue (indicating either early stage or non-SaaS model)\n- No accessible revenue, burn rate, runway, or margin data\n\n**Data Confidence: Very Low**\n\n### Market Position\n**Status: Insufficient Data**\n\nMarket analysis cannot be completed due to:\n- No market size data available\n- No competitive landscape information\n- No differentiation details documented\n- Limited public information overall\n\n**Market Score: 30/100** (indicating weak market positioning signals or insufficient data)\n\n### Team\n**Status: Limited Information**\n\nAvailable sources:\n- LinkedIn company page exists (minimal presence)\n- No detailed team composition, leadership structure, or notable hires documented\n- Team Score: 35/100\n\n### Assessment\n\n**Overall Score: 35/100** \u2014 This is a **high-risk profile** with critical data gaps.\n\n**Key Concerns:**\n1. **Opacity**: Extremely limited public information suggests either a very early-stage company or one with minimal market presence\n2. **No Financial Verification**: Complete absence of funding data or financial metrics makes valuation and viability assessment impossible\n3. **Unproven Business Model**: 0% recurring revenue indicates either pre-revenue status or a non-subscription model\n4. **Weak Signals Across Metrics**: Growth (40), Unit Economics (30), Team (35), and Market (30) scores are all below 50, suggesting underdeveloped operations\n\n**Recommendation**: \nWithout verified financial data, team details, or market validation, **unknown-alpha.io cannot be reliably analyzed**. Before any investment or partnership consideration, request:\n- Audited financial statements or cap table\n- Detailed team bios and organizational structure\n- Market validation and customer traction data\n- Clear business model documentation"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst-adaptive",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-beta.io",
+        "name": "unknown-beta.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-beta.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:03:05.499946+00:00",
+    "outcome_summary": "## Analysis: unknown-beta.io\n\n### Financial Overview\n**Data Status**: \u274c Unavailable\n\nNo financial data could be retrieved for unknown-beta.io. There is no verified information on revenue, growth, burn",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-beta.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather data on unknown-beta.io from available sources."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01P5TxEzrbvxhxvdQ6fmtYP4",
+        "arguments": {
+          "source": "financials",
+          "query": "unknown-beta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01P5TxEzrbvxhxvdQ6fmtYP4",
+        "content": "{\"error\": \"No data found for 'unknown-beta.io' in financials\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01FMARUCtWcicg4YNqbnsLG4",
+        "arguments": {
+          "source": "market",
+          "query": "unknown-beta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01FMARUCtWcicg4YNqbnsLG4",
+        "content": "{\"error\": \"No data found for 'unknown-beta.io' in market\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_014uNHPsEtqCw927Z9UZi6jF",
+        "arguments": {
+          "source": "team",
+          "query": "unknown-beta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_014uNHPsEtqCw927Z9UZi6jF",
+        "content": "{\"error\": \"No data found for 'unknown-beta.io' in team\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Let me try alternative sources:"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01XiDcqBWc2xYPupxSRTnsrV",
+        "arguments": {
+          "source": "profile",
+          "query": "unknown-beta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"profile\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01XiDcqBWc2xYPupxSRTnsrV",
+        "content": "## Profile \u2014 unknown-beta.io\n\n- **Domain**: unknown-beta.io\n- **Overall Score**: 30\n- **Growth Score**: 35\n- **Unit Economics Score**: 25\n- **Team Score**: 30\n- **Market Score**: 35\n- **Product Score**: 30\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration, Crunchbase stub\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: No verified financial data, no known team information"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01XpynBJNEdWj8UaPL2wzyHs",
+        "arguments": {
+          "source": "brief",
+          "query": "unknown-beta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"brief\", \"query\": \"unknown-beta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01XpynBJNEdWj8UaPL2wzyHs",
+        "content": "{\"error\": \"No data found for 'unknown-beta.io' in brief\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis: unknown-beta.io\n\n### Financial Overview\n**Data Status**: \u274c Unavailable\n\nNo financial data could be retrieved for unknown-beta.io. There is no verified information on revenue, growth, burn rate, runway, or margins. The profile indicates 0% recurring revenue, but this appears to reflect a lack of data rather than confirmed business metrics.\n\n### Market Position\n**Data Status**: \u274c Unavailable\n\nNo market data is available. The company's market size, competitive positioning, target segments, and differentiation cannot be assessed from available sources.\n\n### Team\n**Data Status**: \u274c Unavailable\n\nNo team information is available. Leadership, team size, and organizational structure are unknown.\n\n### Assessment\n\n**Overall Viability: HIGH RISK** \u26a0\ufe0f\n\nBased on available data:\n\n- **Overall Score**: 30/100 (very low)\n- **Data Confidence**: Very Low\n- **Key Risk Factors**:\n  - No verified financial data\n  - No known team information\n  - Minimal public presence (only domain registration and Crunchbase stub)\n  - 0% recurring revenue (likely indicating early/pre-revenue stage or data gap)\n\n**Conclusion**: unknown-beta.io appears to be either:\n1. An extremely early-stage or pre-launch venture with minimal public information\n2. An inactive or abandoned domain\n3. A stealth-mode company with intentionally limited disclosure\n\n**Recommendation**: Without verified financial data, team information, or market validation, this company cannot be meaningfully evaluated. Additional primary sources (direct company communication, pitch materials, or regulatory filings) would be needed for a substantive analysis."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst-adaptive",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-gamma.io",
+        "name": "unknown-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-gamma.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:03:12.944351+00:00",
+    "outcome_summary": "## Analysis Report: unknown-gamma.io\n\n### Financial Overview\n**Data Unavailable.** No financial data could be retrieved from available sources. The company's revenue, growth metrics, burn rate, runway",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-gamma.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather data on unknown-gamma.io from available sources."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01Ab6poWFoUuw3LQcaiMMs47",
+        "arguments": {
+          "source": "financials",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Ab6poWFoUuw3LQcaiMMs47",
+        "content": "{\"error\": \"No data found for 'unknown-gamma.io' in financials\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01NLhY8zN8MoiXgnvQ8Ztspj",
+        "arguments": {
+          "source": "market",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01NLhY8zN8MoiXgnvQ8Ztspj",
+        "content": "{\"error\": \"No data found for 'unknown-gamma.io' in market\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01FqCPKqmp1uUUY94JqacYGT",
+        "arguments": {
+          "source": "team",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01FqCPKqmp1uUUY94JqacYGT",
+        "content": "{\"error\": \"No data found for 'unknown-gamma.io' in team\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Let me try alternative sources:"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01TTPHaompehhbLEJnNALFjx",
+        "arguments": {
+          "source": "profile",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[eval_lookup({\"source\": \"profile\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01TTPHaompehhbLEJnNALFjx",
+        "content": "## Profile \u2014 unknown-gamma.io\n\n- **Domain**: unknown-gamma.io\n- **Overall Score**: 25\n- **Growth Score**: 30\n- **Unit Economics Score**: 20\n- **Team Score**: 25\n- **Market Score**: 30\n- **Product Score**: 25\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration only\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: Minimal public presence, no verified data"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01Fe2guWnHvW2TDRtxikhykx",
+        "arguments": {
+          "source": "brief",
+          "query": "unknown-gamma.io"
+        },
+        "content": "[eval_lookup({\"source\": \"brief\", \"query\": \"unknown-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Fe2guWnHvW2TDRtxikhykx",
+        "content": "{\"error\": \"No data found for 'unknown-gamma.io' in brief\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis Report: unknown-gamma.io\n\n### Financial Overview\n**Data Unavailable.** No financial data could be retrieved from available sources. The company's revenue, growth metrics, burn rate, runway, and margins are not documented in the evaluation database.\n\n### Market Position\n**Data Unavailable.** No market data exists in the system. Market size, competitive positioning, and differentiation cannot be assessed.\n\n### Team\n**Data Unavailable.** No team information is available. Leadership structure, team size, and notable hires are not documented.\n\n### Assessment\n\n**Overall Risk: VERY HIGH**\n\nBased on the limited profile data available:\n\n- **Overall Score: 25/100** \u2014 Significantly below viable thresholds across all dimensions\n- **Data Confidence: Very Low** \u2014 Only public domain registration data exists; no verified operational or financial information\n- **Recurring Revenue: 0%** \u2014 No recurring revenue model identified\n- **Key Risk Factors:**\n  - Minimal public presence\n  - No verified business data\n  - No documented team or leadership\n  - No financial metrics available\n  - No market validation evidence\n\n**Conclusion:** unknown-gamma.io appears to be either a very early-stage domain registration with no operational activity, or a company with virtually no public footprint. The evaluation system has insufficient data to assess viability, market fit, or financial health. This represents an extremely high-risk profile with no verifiable business fundamentals.\n\n**Recommendation:** Request additional information directly from the company or seek alternative data sources before making any investment or partnership decisions."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-analyst-adaptive",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "unknown-delta.io",
+        "name": "unknown-delta.io"
+      }
+    ],
+    "conversation_id": "real-seed-unknown-delta.io",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-28T05:03:21.565417+00:00",
+    "outcome_summary": "## Analysis Report: unknown-delta.io\n\n### Financial Overview\n**Data Status**: \u274c **Unavailable**\n\nNo financial data could be retrieved for unknown-delta.io. There is no information on revenue, growth, ",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Analyze unknown-delta.io"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather data on unknown-delta.io from available sources."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01VeLSzZ4GXBJE6SjVYc1LNi",
+        "arguments": {
+          "source": "financials",
+          "query": "unknown-delta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"unknown-delta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01VeLSzZ4GXBJE6SjVYc1LNi",
+        "content": "{\"error\": \"No data found for 'unknown-delta.io' in financials\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_012WVxtSC1mK5dRZknfoKNnB",
+        "arguments": {
+          "source": "market",
+          "query": "unknown-delta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"unknown-delta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_012WVxtSC1mK5dRZknfoKNnB",
+        "content": "{\"error\": \"No data found for 'unknown-delta.io' in market\"}"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01SB8fax7bqcM7Gpy4A43cES",
+        "arguments": {
+          "source": "team",
+          "query": "unknown-delta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"unknown-delta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01SB8fax7bqcM7Gpy4A43cES",
+        "content": "{\"error\": \"No data found for 'unknown-delta.io' in team\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "Let me try alternative sources:"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01Afia4yefJ5rp96vkXjwpzn",
+        "arguments": {
+          "source": "profile",
+          "query": "unknown-delta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"profile\", \"query\": \"unknown-delta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01Afia4yefJ5rp96vkXjwpzn",
+        "content": "## Profile \u2014 unknown-delta.io\n\n- **Domain**: unknown-delta.io\n- **Overall Score**: 28\n- **Growth Score**: 32\n- **Unit Economics Score**: 22\n- **Team Score**: 28\n- **Market Score**: 32\n- **Product Score**: 28\n- **Moat Rating**: unknown\n- **Recurring Revenue Pct**: 0\n- **Data Confidence**: very low\n- **Data Sources**: Public domain registration, job posting analysis\n- **Last Updated**: 2025-12-01\n- **Risk Factors**: No financial data, no funding history"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01SEkQWNBjLKsF4TMAeNWW6e",
+        "arguments": {
+          "source": "brief",
+          "query": "unknown-delta.io"
+        },
+        "content": "[eval_lookup({\"source\": \"brief\", \"query\": \"unknown-delta.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01SEkQWNBjLKsF4TMAeNWW6e",
+        "content": "{\"error\": \"No data found for 'unknown-delta.io' in brief\"}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Analysis Report: unknown-delta.io\n\n### Financial Overview\n**Data Status**: \u274c **Unavailable**\n\nNo financial data could be retrieved for unknown-delta.io. There is no information on revenue, growth, burn rate, runway, or margins. The profile indicates **no financial data exists** in available sources.\n\n### Market Position\n**Data Status**: \u26a0\ufe0f **Severely Limited**\n\n- **Market Score**: 32/100 (low)\n- No specific market size, competitive landscape, or differentiation data available\n- Unable to assess market opportunity or competitive positioning\n\n### Team\n**Data Status**: \u26a0\ufe0f **Severely Limited**\n\n- **Team Score**: 28/100 (low)\n- Data sourced only from job posting analysis\n- No leadership information, team size, or organizational structure available\n\n### Product & Operations\n**Data Status**: \u26a0\ufe0f **Severely Limited**\n\n- **Product Score**: 28/100 (low)\n- **Recurring Revenue**: 0% (indicates either pre-revenue or non-recurring business model)\n- **Moat Rating**: Unknown\n\n### Assessment\n\n**Overall Score: 28/100** \u2014 This is a **very high-risk profile** with critical data gaps.\n\n**Key Concerns:**\n1. **No Financial Data**: Complete absence of revenue, funding, or financial metrics makes viability assessment impossible\n2. **Pre-Revenue or Non-Recurring**: 0% recurring revenue suggests either early-stage or transactional business model\n3. **Extremely Low Data Confidence**: Marked as \"very low\" \u2014 data is based only on public domain registration and job postings\n4. **No Funding History**: No evidence of venture capital or institutional backing\n5. **Weak Scores Across Board**: All evaluation scores (growth, unit economics, team, market, product) are below 35/100\n\n**Conclusion**: unknown-delta.io appears to be either a very early-stage company, a dormant domain, or a company with minimal public presence. Without access to financial statements, funding records, or detailed operational data, a meaningful investment or partnership assessment is **not possible**. Further due diligence would require direct engagement with the company."
+      }
+    ]
+  }
+]

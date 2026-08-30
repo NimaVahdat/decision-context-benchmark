@@ -1,0 +1,926 @@
+# ---------------------------------------------------------------
+# financials.yaml
+# Used by eval-analyst skill (source: 'financials')
+#
+# Contains: revenue, growth, burn rate, runway, margins,
+#   unit economics, and funding history for each company.
+# Data quality varies by company stage and disclosure level.
+# ---------------------------------------------------------------
+
+delve.co:
+  domain: "delve.co"
+  arr: "4200000"
+  arr_formatted: "$4.2M"
+  mrr: "350000"
+  revenue_growth_yoy_pct: "185"
+  revenue_growth_qoq_pct: "22"
+  growth_trend: "accelerating"
+  growth_note: >
+    Q3 and Q4 2025 showed sequential acceleration after
+    landing two mid-market accounts. Growth prior to Q2
+    was ~140% YoY; recent quarters pulled the blended
+    number up. Caution: small base effect amplifies
+    percentages.
+  monthly_burn: "620000"
+  gross_burn: "740000"
+  net_burn: "620000"
+  runway_months: "14"
+  runway_note: >
+    Runway computed from last reported cash balance of
+    $8.7M divided by trailing-3-month average net burn.
+    Does not account for planned hiring in Q1 2026.
+  cash_on_hand: "8700000"
+  gross_margin_pct: "72"
+  net_margin_pct: "-148"
+  operating_margin_pct: "-142"
+  margin_note: >
+    Gross margin is strong for an AI/analytics product
+    due to efficient model hosting on dedicated GPUs.
+    Negative net margin typical for seed-stage with
+    heavy R&D spend.
+  cac: "18500"
+  ltv: "67000"
+  ltv_cac_ratio: "3.6"
+  payback_months: "11"
+  unit_economics_note: >
+    CAC includes only direct sales and marketing spend;
+    excludes founder selling time. LTV assumes 36-month
+    average lifetime at current ARPU with 8% monthly
+    logo churn. Peer median LTV/CAC at seed is ~2.5x.
+  arpu_monthly: "2900"
+  arpu_annual: "34800"
+  nrr_pct: "112"
+  funding_history:
+    - round: "Pre-Seed"
+      date: "2023-06"
+      amount: "1500000"
+      lead: "Y Combinator"
+      valuation_pre: "8000000"
+    - round: "Seed"
+      date: "2024-09"
+      amount: "9000000"
+      lead: "Greylock Partners"
+      valuation_pre: "38000000"
+  total_raised: "10500000"
+  last_valuation: "47000000"
+  valuation_arr_multiple: "11.2x"
+  peer_comparison: >
+    Among seed-stage AI/analytics peers (n=14 in our
+    dataset), delve.co ranks in the 72nd percentile for
+    ARR and 85th for growth. Burn efficiency (ARR / net
+    burn) of 0.56x is slightly below median of 0.65x.
+  data_confidence: "medium"
+  data_sources: "pitch deck (2024-09), founder interview, Crunchbase"
+  last_updated: "2025-11-15"
+
+linear.app:
+  domain: "linear.app"
+  arr: "28000000"
+  arr_formatted: "$28M"
+  mrr: "2333333"
+  revenue_growth_yoy_pct: "95"
+  revenue_growth_qoq_pct: "18"
+  growth_trend: "steady"
+  growth_note: >
+    Consistent high growth driven by organic word-of-mouth
+    and product-led adoption. Linear has maintained 90-100%
+    YoY growth for three consecutive years. Minimal paid
+    acquisition spend contributes to capital efficiency.
+  monthly_burn: "1800000"
+  gross_burn: "2900000"
+  net_burn: "566667"
+  runway_note: >
+    Near break-even. Runway effectively infinite at current
+    trajectory given strong MRR growth and disciplined spend.
+    Company has stated goal of profitability by mid-2026.
+  cash_on_hand: "52000000"
+  runway_months: "91"
+  gross_margin_pct: "88"
+  net_margin_pct: "-2"
+  operating_margin_pct: "5"
+  margin_note: >
+    Exceptional gross margins for a SaaS devtool. Operating
+    margin recently turned positive on a quarterly basis.
+    Net margin still slightly negative due to non-cash
+    stock-based compensation.
+  cac: "3200"
+  ltv: "142000"
+  ltv_cac_ratio: "44.4"
+  payback_months: "2"
+  unit_economics_note: >
+    Product-led growth creates extremely low CAC. The $3.2K
+    blended CAC includes content marketing and small
+    developer advocacy team. LTV calculation uses 48-month
+    average lifetime with 2.5% monthly logo churn and
+    strong expansion. These unit economics are top-decile
+    among all SaaS companies in our dataset.
+  arpu_monthly: "48"
+  arpu_annual: "576"
+  arpu_note: >
+    Per-seat pricing at $8-12/user/month. ARPU reflects
+    per-account average across ~40K paying teams. Enterprise
+    tier ($12/seat) is ~30% of revenue.
+  nrr_pct: "135"
+  funding_history:
+    - round: "Seed"
+      date: "2019-11"
+      amount: "4200000"
+      lead: "Sequoia Capital"
+      valuation_pre: "20000000"
+    - round: "Series A"
+      date: "2021-06"
+      amount: "35000000"
+      lead: "Sequoia Capital"
+      valuation_pre: "200000000"
+    - round: "Series B"
+      date: "2023-03"
+      amount: "50000000"
+      lead: "Accel"
+      valuation_pre: "600000000"
+  total_raised: "89200000"
+  last_valuation: "650000000"
+  valuation_arr_multiple: "23.2x"
+  peer_comparison: >
+    Among Series B devtools (n=23), linear.app is the clear
+    leader in capital efficiency (ARR / total raised = 0.31x
+    vs median 0.12x). Growth rate is 80th percentile.
+    Valuation multiple is 90th percentile, justified by
+    margins and NRR.
+  data_confidence: "high"
+  data_sources: >
+    Series B term sheet, secondary market data,
+    Pitchbook, former employee interviews
+  last_updated: "2025-12-01"
+
+notion.so:
+  domain: "notion.so"
+  arr: "250000000"
+  arr_formatted: "$250M"
+  mrr: "20833333"
+  revenue_growth_yoy_pct: "42"
+  revenue_growth_qoq_pct: "9"
+  growth_trend: "decelerating"
+  growth_note: >
+    Growth has naturally decelerated from >100% in 2022 to
+    ~42% as the base expands. Enterprise segment growing
+    faster (~65% YoY) while prosumer/SMB segment is closer
+    to 25%. AI features (Notion AI) contributed an estimated
+    $30-40M incremental ARR in 2025.
+  monthly_burn: "18000000"
+  gross_burn: "22000000"
+  net_burn: "1167000"
+  runway_note: >
+    Notion is effectively cash-flow positive on an operating
+    basis as of Q3 2025. The $350M cash position reflects
+    both fundraising and retained operating cash.
+  cash_on_hand: "350000000"
+  runway_months: "300"
+  gross_margin_pct: "82"
+  net_margin_pct: "-1"
+  operating_margin_pct: "3"
+  margin_note: >
+    Gross margins compressed ~3pp from 85% due to AI
+    compute costs (LLM inference for Notion AI). Operating
+    margin recently turned positive. Company targeting
+    10%+ operating margin by end of 2026.
+  cac: "8500"
+  ltv: "78000"
+  ltv_cac_ratio: "9.2"
+  payback_months: "6"
+  unit_economics_note: >
+    Blended CAC across self-serve and enterprise motion.
+    Enterprise CAC is ~$45K but LTV is ~$480K. Self-serve
+    CAC effectively $0 for organic signups (estimated 70%
+    of new accounts). LTV assumes 60-month average lifetime.
+  arpu_monthly: "16"
+  arpu_annual: "192"
+  arpu_note: >
+    Per-user pricing across free, Plus ($10/mo),
+    Business ($18/mo), and Enterprise ($25/mo). Blended
+    ARPU reflects large free-tier base converting at ~4%.
+  nrr_pct: "128"
+  funding_history:
+    - round: "Seed"
+      date: "2016-06"
+      amount: "2000000"
+      lead: "First Round Capital"
+      valuation_pre: "10000000"
+    - round: "Series A"
+      date: "2019-09"
+      amount: "10000000"
+      lead: "Index Ventures"
+      valuation_pre: "800000000"
+    - round: "Series B"
+      date: "2020-04"
+      amount: "50000000"
+      lead: "Index Ventures"
+      valuation_pre: "2000000000"
+    - round: "Series C"
+      date: "2021-10"
+      amount: "275000000"
+      lead: "Sequoia Capital"
+      valuation_pre: "10000000000"
+  total_raised: "337000000"
+  last_valuation: "10275000000"
+  valuation_arr_multiple: "41.1x"
+  peer_comparison: >
+    Among late-stage productivity tools (n=8), Notion leads
+    in absolute ARR. Growth is median for the cohort. The
+    valuation multiple of 41x is above the peer median of
+    28x, reflecting brand strength and AI optionality.
+  data_confidence: "high"
+  data_sources: >
+    Series C filings, secondary market transactions,
+    Pitchbook, press reports, employee Glassdoor data
+  last_updated: "2025-10-20"
+
+retool.com:
+  domain: "retool.com"
+  arr: "100000000"
+  arr_formatted: "$100M"
+  mrr: "8333333"
+  revenue_growth_yoy_pct: "55"
+  revenue_growth_qoq_pct: "11"
+  growth_trend: "steady"
+  growth_note: >
+    Retool has maintained 50-60% growth for two years,
+    driven by enterprise expansion and platform stickiness.
+    Workflows and AI-powered app builder launched in 2025
+    contributed ~$15M incremental ARR.
+  monthly_burn: "7500000"
+  gross_burn: "11000000"
+  net_burn: "2667000"
+  cash_on_hand: "195000000"
+  runway_months: "73"
+  runway_note: >
+    Strong cash position from Series D. Company targeting
+    cash-flow break-even by Q4 2026. Current burn rate
+    declining QoQ as revenue scales faster than opex.
+  gross_margin_pct: "85"
+  net_margin_pct: "-3"
+  operating_margin_pct: "1"
+  margin_note: >
+    Best-in-class gross margins for an internal tools
+    platform. Minimal compute costs since apps run in
+    customer environments. Operating leverage emerging.
+  cac: "32000"
+  ltv: "385000"
+  ltv_cac_ratio: "12.0"
+  payback_months: "8"
+  unit_economics_note: >
+    Enterprise-focused CAC reflects sales-led motion with
+    average 45-day sales cycle. LTV assumes 48-month
+    lifetime at $8K/month average contract value. Expansion
+    revenue is significant -- teams typically 3x their
+    initial contract within 18 months.
+  arpu_monthly: "8000"
+  arpu_annual: "96000"
+  nrr_pct: "142"
+  nrr_note: >
+    Exceptional NRR driven by seat-based expansion within
+    engineering orgs. Once one team adopts Retool, adjacent
+    teams follow. Top-quartile NRR among all SaaS in
+    our dataset.
+  funding_history:
+    - round: "Seed"
+      date: "2017-08"
+      amount: "3600000"
+      lead: "Y Combinator"
+      valuation_pre: "12000000"
+    - round: "Series A"
+      date: "2019-11"
+      amount: "20000000"
+      lead: "Sequoia Capital"
+      valuation_pre: "100000000"
+    - round: "Series B"
+      date: "2021-03"
+      amount: "45000000"
+      lead: "Addition"
+      valuation_pre: "500000000"
+    - round: "Series C"
+      date: "2022-07"
+      amount: "80000000"
+      lead: "Elad Gil"
+      valuation_pre: "2500000000"
+    - round: "Series D"
+      date: "2024-12"
+      amount: "120000000"
+      lead: "Insight Partners"
+      valuation_pre: "3200000000"
+  total_raised: "268600000"
+  last_valuation: "3320000000"
+  valuation_arr_multiple: "33.2x"
+  peer_comparison: >
+    Among Series D internal-tools/low-code peers (n=6),
+    Retool is the ARR leader. NRR of 142% is best-in-class
+    across all SaaS stages. Capital efficiency
+    (ARR / raised = 0.37x) is top quartile.
+  data_confidence: "high"
+  data_sources: >
+    Series D term sheet, board materials (partial),
+    Pitchbook, Crunchbase, industry analyst reports
+  last_updated: "2025-12-10"
+
+resend.com:
+  domain: "resend.com"
+  arr: "3500000"
+  arr_formatted: "$3.5M"
+  mrr: "291667"
+  revenue_growth_yoy_pct: "210"
+  revenue_growth_qoq_pct: "28"
+  growth_trend: "accelerating"
+  growth_note: >
+    Explosive growth from developer community adoption.
+    Resend's React Email open-source project drives top-
+    of-funnel awareness. Growth accelerated in Q3 2025
+    after launching transactional email analytics. Small
+    base caveat applies.
+  monthly_burn: "480000"
+  gross_burn: "580000"
+  net_burn: "288333"
+  cash_on_hand: "6200000"
+  runway_months: "21"
+  runway_note: >
+    Healthy runway for a seed-stage company. Burn is
+    primarily engineering salaries (8-person team). No
+    paid marketing spend -- all growth is organic via
+    open-source community.
+  gross_margin_pct: "68"
+  net_margin_pct: "-99"
+  operating_margin_pct: "-92"
+  margin_note: >
+    Gross margin reflects email delivery infrastructure
+    costs (AWS SES, dedicated IPs, deliverability
+    monitoring). Expected to improve to 75%+ at scale
+    as fixed infra costs amortize.
+  cac: "850"
+  ltv: "28000"
+  ltv_cac_ratio: "32.9"
+  payback_months: "1"
+  unit_economics_note: >
+    Near-zero CAC due to open-source-driven PLG motion.
+    The $850 blended CAC represents minimal DevRel spend
+    allocated per new paying account. LTV assumes 30-month
+    lifetime with 3.3% monthly churn. Developer tools with
+    API lock-in tend to have longer lifetimes than this
+    estimate suggests.
+  arpu_monthly: "45"
+  arpu_annual: "540"
+  arpu_note: >
+    Usage-based pricing starting at $20/month. Most
+    customers on the $20-$100/month tier. Enterprise
+    tier (custom pricing) is nascent but growing.
+  nrr_pct: "145"
+  funding_history:
+    - round: "Seed"
+      date: "2023-08"
+      amount: "7000000"
+      lead: "Andreessen Horowitz"
+      valuation_pre: "30000000"
+  total_raised: "7000000"
+  last_valuation: "37000000"
+  valuation_arr_multiple: "10.6x"
+  peer_comparison: >
+    Among seed-stage developer API companies (n=11),
+    resend.com has the highest growth rate and best
+    LTV/CAC ratio. Burn efficiency is above median.
+    Comparable to early-stage Postmark and Mailgun
+    trajectories but with superior organic growth.
+  data_confidence: "medium"
+  data_sources: "pitch deck (2023-08), founder blog posts, npm stats"
+  last_updated: "2025-11-28"
+
+meridian.bio:
+  domain: "meridian.bio"
+  arr: "8000000"
+  arr_formatted: "$8M"
+  mrr: "666667"
+  revenue_growth_yoy_pct: "120"
+  revenue_growth_qoq_pct: "19"
+  growth_trend: "accelerating"
+  growth_note: >
+    Strong growth driven by pharma partnerships for
+    computational biology platform. Three new enterprise
+    contracts signed in Q3 2025 added $1.8M in committed
+    ARR. Revenue recognition is lumpy due to milestone-
+    based contracts -- quarterly figures can be misleading.
+  monthly_burn: "1200000"
+  gross_burn: "1650000"
+  net_burn: "533333"
+  cash_on_hand: "18500000"
+  runway_months: "35"
+  runway_note: >
+    Comfortable runway bolstered by $2M NIH SBIR grant
+    received in Q2 2025 (not included in ARR). Grant
+    extends effective runway by ~4 months.
+  gross_margin_pct: "64"
+  net_margin_pct: "-80"
+  operating_margin_pct: "-72"
+  margin_note: >
+    Lower gross margins than pure SaaS due to wet-lab
+    validation costs and specialized compute (GPU
+    clusters for protein folding simulations). Margins
+    expected to improve as platform matures and lab
+    costs are passed through to customers.
+  cac: "95000"
+  ltv: "720000"
+  ltv_cac_ratio: "7.6"
+  payback_months: "14"
+  unit_economics_note: >
+    High CAC reflects long enterprise sales cycles in
+    pharma (6-9 months average). LTV is robust due to
+    multi-year contracts ($200K-$500K ACV) and high
+    switching costs. Small customer base (n=18) means
+    per-customer economics are volatile.
+  arpu_monthly: "37000"
+  arpu_annual: "444000"
+  nrr_pct: "118"
+  funding_history:
+    - round: "Pre-Seed"
+      date: "2022-03"
+      amount: "2200000"
+      lead: "SOSV"
+      valuation_pre: "9000000"
+    - round: "Seed"
+      date: "2023-01"
+      amount: "5000000"
+      lead: "Lux Capital"
+      valuation_pre: "22000000"
+    - round: "Series A"
+      date: "2024-10"
+      amount: "15000000"
+      lead: "a16z Bio + Health"
+      valuation_pre: "65000000"
+  total_raised: "22200000"
+  last_valuation: "80000000"
+  valuation_arr_multiple: "10.0x"
+  peer_comparison: >
+    Among Series A biotech-SaaS hybrids (n=9), meridian.bio
+    is mid-pack on ARR but top quartile on growth. Margins
+    are lower than pure-software peers. Valuation multiple
+    is conservative relative to comparable biotech platforms.
+  data_confidence: "medium"
+  data_sources: >
+    Series A data room (partial access), NIH grant filings,
+    Crunchbase, founder presentation at Bio+Health Summit
+  last_updated: "2025-11-05"
+
+finstack.io:
+  domain: "finstack.io"
+  arr: "35000000"
+  arr_formatted: "$35M"
+  mrr: "2916667"
+  revenue_growth_yoy_pct: "72"
+  revenue_growth_qoq_pct: "14"
+  growth_trend: "steady"
+  growth_note: >
+    Consistent growth fueled by mid-market banking and
+    fintech customers migrating from legacy financial
+    infrastructure. Strong Q4 2025 pipeline with $8M
+    in weighted opportunities. Growth is durable but
+    faces regulatory headwinds in EU expansion.
+  monthly_burn: "3200000"
+  gross_burn: "4800000"
+  net_burn: "283333"
+  cash_on_hand: "42000000"
+  runway_months: "148"
+  runway_note: >
+    Effectively infinite runway. Finstack is near
+    cash-flow positive and has stated intent to not
+    raise additional capital before IPO. Cash position
+    includes $42M from Series B plus accumulated
+    operating surplus.
+  gross_margin_pct: "78"
+  net_margin_pct: "-1"
+  operating_margin_pct: "4"
+  margin_note: >
+    Solid margins for fintech infrastructure. Payment
+    processing pass-through costs reduce gross margin
+    slightly vs. pure SaaS. Operating margin positive
+    on a trailing-12-month basis.
+  cac: "42000"
+  ltv: "510000"
+  ltv_cac_ratio: "12.1"
+  payback_months: "9"
+  unit_economics_note: >
+    CAC includes dedicated solutions engineering for
+    onboarding (typical in fintech infra). LTV reflects
+    very low churn (0.8% monthly) and strong expansion.
+    Mid-market banks are sticky once integrated due to
+    compliance and audit trail dependencies.
+  arpu_monthly: "12000"
+  arpu_annual: "144000"
+  nrr_pct: "132"
+  funding_history:
+    - round: "Seed"
+      date: "2021-04"
+      amount: "4500000"
+      lead: "Ribbit Capital"
+      valuation_pre: "18000000"
+    - round: "Series A"
+      date: "2022-09"
+      amount: "18000000"
+      lead: "Coatue Management"
+      valuation_pre: "90000000"
+    - round: "Series B"
+      date: "2024-06"
+      amount: "40000000"
+      lead: "Insight Partners"
+      valuation_pre: "280000000"
+  total_raised: "62500000"
+  last_valuation: "320000000"
+  valuation_arr_multiple: "9.1x"
+  peer_comparison: >
+    Among Series B fintech infrastructure companies (n=12),
+    finstack.io is top quartile in ARR and growth. Capital
+    efficiency (ARR / raised = 0.56x) is best-in-class for
+    the cohort. NRR of 132% is above the 120% fintech
+    median.
+  data_confidence: "high"
+  data_sources: >
+    Series B investor update (Q3 2025), board deck excerpt,
+    Pitchbook, Dealroom, fintech industry benchmarks
+  last_updated: "2025-12-05"
+
+cloudlane.dev:
+  domain: "cloudlane.dev"
+  arr: "65000000"
+  arr_formatted: "$65M"
+  mrr: "5416667"
+  revenue_growth_yoy_pct: "82"
+  revenue_growth_qoq_pct: "16"
+  growth_trend: "steady"
+  growth_note: >
+    Growth driven by multi-cloud orchestration demand as
+    enterprises repatriate workloads. Strong federal/gov
+    segment (~20% of ARR) with FedRAMP authorization.
+    International expansion (EMEA) contributed 15% of
+    new bookings in 2025.
+  monthly_burn: "5800000"
+  gross_burn: "8500000"
+  net_burn: "83333"
+  cash_on_hand: "85000000"
+  runway_months: "1020"
+  runway_note: >
+    Cash-flow positive on a trailing-6-month basis.
+    Runway is effectively unlimited. Company has
+    $85M in cash from Series C and accumulated profits.
+  gross_margin_pct: "74"
+  net_margin_pct: "2"
+  operating_margin_pct: "6"
+  margin_note: >
+    Gross margin reflects cloud infrastructure pass-
+    through costs. Company is investing in proprietary
+    hardware (custom network accelerators) that should
+    improve margins to ~80% by 2027. Recently profitable
+    on a GAAP basis.
+  cac: "55000"
+  ltv: "680000"
+  ltv_cac_ratio: "12.4"
+  payback_months: "10"
+  unit_economics_note: >
+    Enterprise sales cycle averages 90 days. CAC includes
+    dedicated SE time and POC infrastructure costs.
+    Government contracts have higher CAC ($120K) but
+    much higher LTV ($1.8M). Blended metrics mask
+    significant segment variation.
+  arpu_monthly: "22000"
+  arpu_annual: "264000"
+  nrr_pct: "138"
+  funding_history:
+    - round: "Seed"
+      date: "2020-07"
+      amount: "5500000"
+      lead: "Lightspeed Venture Partners"
+      valuation_pre: "22000000"
+    - round: "Series A"
+      date: "2021-11"
+      amount: "25000000"
+      lead: "Bessemer Venture Partners"
+      valuation_pre: "120000000"
+    - round: "Series B"
+      date: "2023-04"
+      amount: "55000000"
+      lead: "Greenoaks Capital"
+      valuation_pre: "450000000"
+    - round: "Series C"
+      date: "2025-02"
+      amount: "90000000"
+      lead: "General Catalyst"
+      valuation_pre: "1200000000"
+  total_raised: "175500000"
+  last_valuation: "1290000000"
+  valuation_arr_multiple: "19.8x"
+  peer_comparison: >
+    Among Series C cloud infrastructure companies (n=7),
+    cloudlane.dev has the highest growth rate and second-
+    highest ARR. Capital efficiency is strong at 0.37x
+    (ARR / raised). The unicorn valuation is well-supported
+    by operating metrics.
+  data_confidence: "high"
+  data_sources: >
+    Series C data room, quarterly investor updates,
+    FedRAMP marketplace listing, Pitchbook, Crunchbase
+  last_updated: "2025-12-15"
+
+learnnext.ai:
+  domain: "learnnext.ai"
+  arr: "1800000"
+  arr_formatted: "$1.8M"
+  mrr: "150000"
+  revenue_growth_yoy_pct: "320"
+  revenue_growth_qoq_pct: "35"
+  growth_trend: "accelerating"
+  growth_note: >
+    Hyper-growth from very small base. Product launched
+    publicly in Q1 2025 after 8 months of beta with 12
+    design partners. Growth is real but extremely early --
+    320% YoY is from $430K base. Retention data is too
+    immature (< 12 months) for reliable cohort analysis.
+  monthly_burn: "320000"
+  gross_burn: "380000"
+  net_burn: "170000"
+  cash_on_hand: "2800000"
+  runway_months: "16"
+  runway_note: >
+    Tight runway. Company is actively fundraising a seed
+    round targeted at $5-8M. Current burn is lean (5-person
+    team) but runway will compress if hiring planned
+    engineering roles.
+  gross_margin_pct: "58"
+  net_margin_pct: "-113"
+  operating_margin_pct: "-108"
+  margin_note: >
+    Below-average gross margins due to heavy LLM API costs
+    (GPT-4 for personalized tutoring). Company is
+    experimenting with fine-tuned smaller models to reduce
+    inference costs. Target gross margin of 70% by end of
+    2026.
+  cac: "2200"
+  ltv: "14000"
+  ltv_cac_ratio: "6.4"
+  payback_months: "4"
+  unit_economics_note: >
+    Low CAC driven by viral TikTok and YouTube content
+    targeting college students. LTV estimate is highly
+    uncertain -- uses projected 24-month lifetime but
+    only 9 months of data exist. Monthly churn appears
+    to be ~5% but seasonality (academic calendar) may
+    distort this.
+  arpu_monthly: "29"
+  arpu_annual: "348"
+  nrr_pct: "108"
+  funding_history:
+    - round: "Pre-Seed"
+      date: "2024-02"
+      amount: "3000000"
+      lead: "Reach Capital"
+      valuation_pre: "12000000"
+  total_raised: "3000000"
+  last_valuation: "15000000"
+  valuation_arr_multiple: "8.3x"
+  peer_comparison: >
+    Among pre-seed/seed EdTech AI companies (n=18),
+    learnnext.ai is in the 65th percentile for ARR.
+    Growth rate is top decile but base is small. Gross
+    margins are below the 68% median, which is a concern
+    if LLM costs don't decrease.
+  data_confidence: "low"
+  data_sources: >
+    Pre-seed pitch deck, founder call, Y Combinator
+    demo day recording. Limited verified financial data.
+  last_updated: "2025-10-30"
+
+shopfront.co:
+  domain: "shopfront.co"
+  arr: "45000000"
+  arr_formatted: "$45M"
+  mrr: "3750000"
+  revenue_growth_yoy_pct: "62"
+  revenue_growth_qoq_pct: "12"
+  growth_trend: "steady"
+  growth_note: >
+    Marketplace revenue is a blend of take-rate commissions
+    (60% of revenue) and SaaS subscriptions (40%). Growth
+    is driven by GMV expansion (~$900M trailing GMV) and
+    increasing take rate (currently 5.0%, up from 4.2%
+    YoY). SaaS component growing faster at ~85% YoY.
+  monthly_burn: "4200000"
+  gross_burn: "6500000"
+  net_burn: "450000"
+  cash_on_hand: "38000000"
+  runway_months: "84"
+  runway_note: >
+    Near break-even. Marketplace economics are improving
+    as GMV scales. Company expects consistent profitability
+    by Q2 2026 without additional funding.
+  gross_margin_pct: "62"
+  net_margin_pct: "-1"
+  operating_margin_pct: "3"
+  margin_note: >
+    Blended gross margin reflects marketplace transaction
+    costs (payment processing, fraud prevention, buyer
+    protection). Pure SaaS component has 85% gross margins.
+    Overall margin improving ~3pp annually as SaaS mix
+    grows.
+  cac: "18000"
+  ltv: "195000"
+  ltv_cac_ratio: "10.8"
+  payback_months: "7"
+  unit_economics_note: >
+    CAC reflects blended merchant acquisition cost. Organic
+    merchant signups (45% of total) have near-zero CAC.
+    Paid acquisition merchants cost ~$32K to acquire.
+    LTV assumes 42-month average merchant lifetime with
+    1.9% monthly churn.
+  arpu_monthly: "3200"
+  arpu_annual: "38400"
+  gmv_trailing_12m: "900000000"
+  take_rate_pct: "5.0"
+  nrr_pct: "125"
+  funding_history:
+    - round: "Seed"
+      date: "2020-09"
+      amount: "5000000"
+      lead: "Forerunner Ventures"
+      valuation_pre: "20000000"
+    - round: "Series A"
+      date: "2022-02"
+      amount: "22000000"
+      lead: "Accel"
+      valuation_pre: "110000000"
+    - round: "Series B"
+      date: "2024-01"
+      amount: "45000000"
+      lead: "Tiger Global"
+      valuation_pre: "350000000"
+  total_raised: "72000000"
+  last_valuation: "395000000"
+  valuation_arr_multiple: "8.8x"
+  peer_comparison: >
+    Among Series B marketplace platforms (n=10), shopfront.co
+    has median ARR but above-average growth. The take rate
+    of 5% is competitive. Capital efficiency (ARR / raised
+    = 0.63x) is strong for a marketplace business which
+    typically requires more capital.
+  data_confidence: "medium-high"
+  data_sources: >
+    Series B data room, investor update (Q2 2025),
+    Pitchbook, marketplace industry report (a16z)
+  last_updated: "2025-11-20"
+
+datavault.io:
+  domain: "datavault.io"
+  arr: "12000000"
+  arr_formatted: "$12M"
+  mrr: "1000000"
+  revenue_growth_yoy_pct: "95"
+  revenue_growth_qoq_pct: "17"
+  growth_trend: "accelerating"
+  growth_note: >
+    Growth accelerated in H2 2025 driven by new SEC and
+    GDPR compliance requirements. Enterprise pipeline
+    tripled after high-profile data breaches in the
+    financial sector. Regulatory tailwinds expected to
+    persist through 2027.
+  monthly_burn: "1500000"
+  gross_burn: "2100000"
+  net_burn: "500000"
+  cash_on_hand: "16000000"
+  runway_months: "32"
+  runway_note: >
+    Solid runway. Company may raise Series B in Q2 2026
+    from a position of strength (targeting $30-40M at
+    $200M+ pre-money). Current metrics support this
+    ambition.
+  gross_margin_pct: "80"
+  net_margin_pct: "-50"
+  operating_margin_pct: "-42"
+  margin_note: >
+    Strong gross margins for data security. R&D spend is
+    high (45% of revenue) as company builds proprietary
+    encryption and access-control features. Sales and
+    marketing at 35% of revenue reflects enterprise go-
+    to-market investment.
+  cac: "38000"
+  ltv: "420000"
+  ltv_cac_ratio: "11.1"
+  payback_months: "10"
+  unit_economics_note: >
+    Enterprise sales cycle averages 75 days. CAC includes
+    security audit and compliance review costs unique to
+    data security vendors. LTV reflects very low churn
+    (1.2% monthly) -- once integrated into data pipelines,
+    switching costs are prohibitive.
+  arpu_monthly: "8500"
+  arpu_annual: "102000"
+  nrr_pct: "130"
+  funding_history:
+    - round: "Seed"
+      date: "2022-06"
+      amount: "4800000"
+      lead: "Boldstart Ventures"
+      valuation_pre: "18000000"
+    - round: "Series A"
+      date: "2024-03"
+      amount: "14000000"
+      lead: "Menlo Ventures"
+      valuation_pre: "58000000"
+  total_raised: "18800000"
+  last_valuation: "72000000"
+  valuation_arr_multiple: "6.0x"
+  peer_comparison: >
+    Among Series A data security companies (n=15),
+    datavault.io is in the 80th percentile for ARR and
+    growth. Valuation multiple of 6x is below the 8x
+    median, suggesting potential undervaluation. NRR
+    is above the 118% cohort median.
+  data_confidence: "medium"
+  data_sources: >
+    Series A investor update (Q3 2025), founder interview,
+    Crunchbase, cybersecurity industry benchmarks
+  last_updated: "2025-11-10"
+
+greenpower.energy:
+  domain: "greenpower.energy"
+  arr: "500000"
+  arr_formatted: "$0.5M"
+  mrr: "41667"
+  revenue_growth_yoy_pct: "150"
+  revenue_growth_qoq_pct: "20"
+  growth_trend: "accelerating"
+  growth_note: >
+    Very early revenue from SaaS monitoring platform for
+    distributed energy resources. Growth is from a tiny
+    base ($200K ARR 12 months ago). Hardware revenue
+    (not included in ARR) adds ~$1.2M in project-based
+    revenue. Total revenue including hardware is ~$1.7M.
+  monthly_burn: "280000"
+  gross_burn: "350000"
+  net_burn: "238333"
+  cash_on_hand: "3500000"
+  runway_months: "15"
+  runway_note: >
+    Runway is tight. Company received $800K DOE grant
+    in Q4 2025 that extends effective runway by ~3
+    months. Actively fundraising Series A targeted at
+    $10-12M.
+  gross_margin_pct: "55"
+  net_margin_pct: "-572"
+  operating_margin_pct: "-548"
+  margin_note: >
+    Low gross margins reflect hardware component costs
+    in IoT sensors and gateway devices. Pure software
+    gross margin is ~78% but blended down by hardware.
+    At scale, company plans to shift to hardware-as-a-
+    service model to improve margins.
+  cac: "35000"
+  ltv: "85000"
+  ltv_cac_ratio: "2.4"
+  payback_months: "18"
+  unit_economics_note: >
+    CAC is elevated due to long pilot cycles with
+    utilities and commercial building operators (average
+    6 months from first contact to contract). LTV
+    estimate is speculative -- uses 36-month projected
+    lifetime but only 14 months of revenue data exists.
+    Customer base is very small (n=8 paying accounts).
+  arpu_monthly: "5200"
+  arpu_annual: "62400"
+  nrr_pct: "105"
+  nrr_note: >
+    NRR is low because customers are still in initial
+    deployment phase. Expansion revenue expected to
+    increase as customers connect more sites and DERs
+    to the platform.
+  funding_history:
+    - round: "Pre-Seed"
+      date: "2023-04"
+      amount: "1200000"
+      lead: "Powerhouse Ventures"
+      valuation_pre: "5000000"
+    - round: "Seed"
+      date: "2024-07"
+      amount: "4000000"
+      lead: "Congruent Ventures"
+      valuation_pre: "16000000"
+  total_raised: "5200000"
+  last_valuation: "20000000"
+  valuation_arr_multiple: "40.0x"
+  valuation_note: >
+    Extremely high ARR multiple is typical for early-
+    stage cleantech where investors price on TAM and
+    regulatory tailwinds rather than current revenue.
+    Not comparable to typical SaaS multiples.
+  peer_comparison: >
+    Among seed-stage cleantech/energy software companies
+    (n=20), greenpower.energy is below median on ARR but
+    above median on growth. LTV/CAC of 2.4x is below the
+    3.0x threshold many investors look for. Hardware-
+    software hybrid model adds complexity.
+  data_confidence: "low"
+  data_sources: >
+    Seed pitch deck, DOE grant application, founder
+    interview, cleantech industry report. Very limited
+    verified financial data.
+  last_updated: "2025-11-22"

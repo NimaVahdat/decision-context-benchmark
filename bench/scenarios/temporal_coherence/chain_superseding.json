@@ -1,0 +1,95 @@
+[
+  {
+    "skill_name": "eval-writer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "retool.com",
+        "name": "retool.com"
+      }
+    ],
+    "conversation_id": "real-seed-chain_superseding-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:04:47.269591+00:00",
+    "outcome_summary": "**Retool** is a low-code platform enabling engineers to build internal tools rapidly by connecting to 80+ databases and APIs via drag-and-drop components. The company has achieved exceptional traction",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Write a brief about retool.com"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01MrAUMxoVLV3z83hdKTWDUE",
+        "arguments": {
+          "source": "brief",
+          "query": "retool.com"
+        },
+        "content": "[eval_lookup({\"source\": \"brief\", \"query\": \"retool.com\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01MrAUMxoVLV3z83hdKTWDUE",
+        "content": "## Brief \u2014 retool.com\n\n- **Domain**: retool.com\n- **Company Name**: Retool\n- **Tagline**: Build internal tools, remarkably fast\n- **Product Summary**: Retool is a low-code platform for building internal tools. Engineers connect to databases and APIs via 80+ native integrations, then build UIs using drag-and-drop components. Features include Retool Workflows (backend automation), Retool Mobile, and an AI-powered app generator that creates tools from natural language descriptions. Self-hosted option available.\n\n- **Product Status**: generally available\n- **Founded**: 2017-03\n- **Hq City**: San Francisco\n- **Hq State**: CA\n- **Hq Country**: US\n- **Stage**: Series D\n- **Arr**: $100M\n- **Total Raised**: $268.6M\n- **Last Round Amount**: $120M\n- **Last Round Date**: 2024-12\n- **Lead Investor**: Insight Partners\n- **Headcount**: 420\n- **Headcount Note**: 420 FTEs. Hybrid model with SF HQ and NYC office. 50% engineering. Recently hired VP AI from Anthropic and Head of Federal Sales from Palantir.\n\n- **Traction Highlights**: ['55% YoY revenue growth', '12,500+ customers', '85% gross margin', '142% NRR (exceptional)', '$3.3B valuation', 'AI app builder launched 2025']\n- **Key Customers**: ['DoorDash', 'Amazon', 'NBC Universal', 'Brex', 'Plaid', 'Multiple Fortune 500 companies']\n- **Technology Stack**: TypeScript, React, Node.js, PostgreSQL, Go\n\n- **Business Model**: subscription SaaS (per-user, tiered) + self-hosted enterprise licenses\n\n- **Category**: Internal Tools\n- **Notable Facts**: [\"Defined the 'internal tools' category\", 'Y Combinator alumni', 'Self-hosted option is key competitive advantage', '142% NRR is top-decile among all SaaS']\n- **Data Confidence**: high\n- **Data Sources**: Series D coverage, Pitchbook, G2, industry analyst reports\n\n- **Last Updated**: 2025-12-10"
+      },
+      {
+        "role": "assistant",
+        "content": "**Retool** is a low-code platform enabling engineers to build internal tools rapidly by connecting to 80+ databases and APIs via drag-and-drop components. The company has achieved exceptional traction with 12,500+ customers including DoorDash, Amazon, and Brex, generating $100M ARR with 55% YoY growth and an industry-leading 142% NRR. Retool raised $120M in Series D funding (December 2024) at a $3.3B valuation, bringing total capital raised to $268.6M, and recently expanded capabilities with an AI-powered app generator and Workflows automation engine."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-writer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "retool.com",
+        "name": "retool.com"
+      }
+    ],
+    "conversation_id": "real-seed-chain_superseding-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:04:49.648634+00:00",
+    "outcome_summary": "**Retool** \u2014 Low-code platform for building internal tools\n\n- **What it does**: Connects to 80+ databases/APIs; drag-and-drop UI builder; Workflows automation; AI app generator; self-hosted option ava",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Use bullet points instead of prose."
+      },
+      {
+        "role": "assistant",
+        "content": "**Retool** \u2014 Low-code platform for building internal tools\n\n- **What it does**: Connects to 80+ databases/APIs; drag-and-drop UI builder; Workflows automation; AI app generator; self-hosted option available\n- **Traction**: 12,500+ customers; $100M ARR; 55% YoY growth; 142% NRR; $3.3B valuation\n- **Key customers**: DoorDash, Amazon, NBC Universal, Brex, Plaid, Fortune 500 companies\n- **Funding**: Series D, $120M raised (Dec 2024); $268.6M total raised; led by Insight Partners\n- **Team**: 420 FTEs; 50% engineering; recent hires from Anthropic and Palantir"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-writer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "retool.com",
+        "name": "retool.com"
+      }
+    ],
+    "conversation_id": "real-seed-chain_superseding-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:04:52.012048+00:00",
+    "outcome_summary": "**Retool** \u2014 Low-code platform for building internal tools\n\n1. **What it does**: Connects to 80+ databases/APIs; drag-and-drop UI builder; Workflows automation; AI app generator; self-hosted option av",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Actually, use a numbered list (1. 2. 3.) instead of bullet points."
+      },
+      {
+        "role": "assistant",
+        "content": "**Retool** \u2014 Low-code platform for building internal tools\n\n1. **What it does**: Connects to 80+ databases/APIs; drag-and-drop UI builder; Workflows automation; AI app generator; self-hosted option available\n2. **Traction**: 12,500+ customers; $100M ARR; 55% YoY growth; 142% NRR; $3.3B valuation\n3. **Key customers**: DoorDash, Amazon, NBC Universal, Brex, Plaid, Fortune 500 companies\n4. **Funding**: Series D, $120M raised (Dec 2024); $268.6M total raised; led by Insight Partners\n5. **Team**: 420 FTEs; 50% engineering; recent hires from Anthropic and Palantir"
+      }
+    ]
+  }
+]

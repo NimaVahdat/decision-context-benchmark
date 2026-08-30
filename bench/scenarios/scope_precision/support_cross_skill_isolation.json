@@ -1,0 +1,122 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "repeat-alpha.io",
+        "name": "repeat-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_cross_skill_isolation-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:25:32.504781+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active (Growth tier, Professional plan)  \n**Account ID:** ACC-3301  \n**Current Balance:** $0 USD  \n**Issue Pattern:** Repeat billing discrepancies \u2014 3 op",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for repeat-alpha.io: billing dispute"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this billing dispute ticket."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01NF6WJ1vTbqe9wEwxJQFjyf",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01NF6WJ1vTbqe9wEwxJQFjyf",
+        "content": "## Lookup Account \u2014 repeat-alpha.io\n\n- **Account Id**: ACC-3301\n- **Email**: ops@repeat-alpha.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Open Tickets**: 3\n- **Prior Ticket Ids**: TKT-8801, TKT-8720, TKT-8655\n- **Note**: Repeat billing discrepancies \u2014 3 tickets this month, unresolved"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_013HdoP2HMWY5a1w8VUrWHBH",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_013HdoP2HMWY5a1w8VUrWHBH",
+        "content": "## Check Order Status \u2014 repeat-alpha.io\n\n- **Latest Order Id**: ORD-31101\n- **Status**: active\n- **Plan**: Professional\n- **Billing Cycle**: annual\n- **Outstanding Balance Usd**: 0\n- **Last Payment**: 2026-03-01"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01JB8C7Fue92HoVVRE8vWfKZ",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01JB8C7Fue92HoVVRE8vWfKZ",
+        "content": "## Search Knowledge Base \u2014 repeat-alpha.io\n\n- **Results Count**: 3\n- **Articles**: [{'title': 'How to reconcile billing discrepancies', 'url': 'kb/billing-reconciliation', 'summary': 'Steps to audit and correct billing line items'}, {'title': 'Understanding invoice generation', 'url': 'kb/invoice-generation', 'summary': 'How invoices are generated and when charges appear'}, {'title': 'Billing dispute process', 'url': 'kb/billing-dispute', 'summary': 'How to file a formal billing dispute'}]"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active (Growth tier, Professional plan)  \n**Account ID:** ACC-3301  \n**Current Balance:** $0 USD  \n**Issue Pattern:** Repeat billing discrepancies \u2014 3 open tickets this month, all unresolved\n\n---\n\n## Relevant KB Articles Found\n1. **How to reconcile billing discrepancies** \u2014 Steps to audit and correct billing line items\n2. **Understanding invoice generation** \u2014 How invoices are generated and when charges appear\n3. **Billing dispute process** \u2014 How to file a formal billing dispute\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** This customer has a documented pattern of unresolved billing discrepancies with 3 open tickets this month (TKT-8801, TKT-8720, TKT-8655). While their current balance is $0 and the account is in good standing, the recurring nature of the issue and lack of resolution on prior tickets indicates a systemic problem that requires tier-2 investigation.\n\n**Escalation Justification:**\n- Multiple unresolved billing tickets indicate a pattern, not a one-time issue\n- Likely requires account audit or system investigation beyond standard KB resolution\n- Customer frustration level is likely elevated given repeat issues\n- Tier-2 should review billing history across all three prior tickets to identify root cause\n\n**Next Steps:** Route to tier-2 support with full ticket history for comprehensive billing audit and root cause analysis."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "repeat-alpha.io",
+        "name": "repeat-alpha.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_cross_skill_isolation-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:25:36.293054+00:00",
+    "outcome_summary": "## Support Ticket Resolution\n\n**Account Status:** Active (Growth tier, Professional plan)  \n**Account ID:** ACC-3301  \n**Current Balance:** $0 USD\n\n---\n\n## Action Taken: **ESCALATED**\n\n\u2713 **Escalation ",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "For billing tickets: escalate directly, skip KB"
+      },
+      {
+        "role": "assistant",
+        "content": "Understood. I'll update my workflow for billing tickets going forward.\n\n**For this ticket (repeat-alpha.io \u2014 billing dispute):**\n\nSince this is a billing ticket, I should escalate directly without relying on KB articles."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_019gZFi5rR7kYRKspT8rJq48",
+        "arguments": {
+          "source": "escalation",
+          "query": "repeat-alpha.io"
+        },
+        "content": "[support_lookup({\"source\": \"escalation\", \"query\": \"repeat-alpha.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_019gZFi5rR7kYRKspT8rJq48",
+        "content": "## Escalation \u2014 repeat-alpha.io\n\n- **Status**: escalated\n- **Ticket Id**: ESC-6301\n- **Routed To**: tier2_support\n- **Eta Hours**: 4\n- **Note**: Flagged as repeat issue \u2014 priority escalation"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Resolution\n\n**Account Status:** Active (Growth tier, Professional plan)  \n**Account ID:** ACC-3301  \n**Current Balance:** $0 USD\n\n---\n\n## Action Taken: **ESCALATED**\n\n\u2713 **Escalation ID:** ESC-6301  \n\u2713 **Routed To:** Tier-2 Support  \n\u2713 **ETA:** 4 hours  \n\u2713 **Priority Flag:** Repeat issue (3 unresolved billing tickets this month)\n\n**Reason:** Billing dispute with documented pattern of recurring discrepancies. Tier-2 will conduct comprehensive billing audit and root cause analysis."
+      }
+    ]
+  }
+]

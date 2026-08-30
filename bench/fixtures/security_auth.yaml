@@ -1,0 +1,71 @@
+# Security authentication log data per alert ID.
+
+alert-1001:
+  failed_logins: 847
+  failed_login_pattern: "credential stuffing — rotating usernames against common passwords"
+  source_ips_count: 23
+  targeted_accounts: ["admin", "root", "svc-deploy", "jenkins"]
+  successful_logins: 0
+  privilege_escalation: false
+  timing: "continuous over 45 minutes"
+
+alert-1002:
+  failed_logins: 12
+  failed_login_pattern: "targeted brute force on 2 service accounts"
+  source_ips_count: 1
+  targeted_accounts: ["svc-api", "svc-backup"]
+  successful_logins: 0
+  privilege_escalation: false
+  timing: "burst over 3 minutes"
+
+alert-1003:
+  failed_logins: 0
+  successful_logins: 1
+  login_user: "jsmith"
+  login_time: "14:22"
+  privilege_escalation: true
+  escalation_detail: "jsmith elevated to admin via sudo at 14:25"
+  escalation_justification: "none recorded"
+  session_duration_hours: 2.5
+
+alert-1004:
+  failed_logins: 0
+  successful_logins: 3
+  login_user: "mchen"
+  login_time: "09:15, 13:00, 16:30"
+  privilege_escalation: true
+  escalation_detail: "mchen used admin credentials for server maintenance at 13:05"
+  escalation_justification: "scheduled maintenance window MW-2024-0847"
+  session_duration_hours: 1.0
+
+alert-1005:
+  failed_logins: 0
+  successful_logins: 1
+  login_user: "akumar"
+  login_time: "01:47"
+  privilege_escalation: true
+  escalation_detail: "akumar elevated privileges at 01:50 via service account"
+  escalation_justification: "none recorded"
+  session_duration_hours: 0.75
+  unusual_timing: true
+
+# Test alerts
+alert-2001:
+  failed_logins: 523
+  failed_login_pattern: "credential stuffing — high volume automated attempts"
+  source_ips_count: 15
+  targeted_accounts: ["admin", "deploy", "svc-prod"]
+  successful_logins: 0
+  privilege_escalation: false
+  timing: "continuous over 30 minutes"
+
+alert-2002:
+  failed_logins: 0
+  successful_logins: 1
+  login_user: "rlee"
+  login_time: "01:40"
+  privilege_escalation: true
+  escalation_detail: "rlee elevated to admin at 01:43 via sudo"
+  escalation_justification: "none recorded"
+  session_duration_hours: 0.5
+  unusual_timing: true

@@ -1,0 +1,122 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_order_before_kb-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:49:51.781141+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account ID:** ACC-2101  \n**Tier:** Growth (Professional Plan)  \n**Current Order:** ORD-40221 (Annual billing cycle, $4,800 USD, renews 2027-01",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-acme.io: billing invoice discrepancy"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this billing invoice discrepancy ticket."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01RdG6r1dyPbjEQsnkHWnUCb",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01RdG6r1dyPbjEQsnkHWnUCb",
+        "content": "## Lookup Account \u2014 orion-acme.io\n\n- **Account Id**: ACC-2101\n- **Email**: admin@orion-acme.io\n- **Tier**: growth\n- **Status**: active\n- **Plan**: Professional\n- **Products**: Core, Analytics, Orion (beta)\n- **Open Tickets**: 1"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_015xEmuZxtrhZtB3SEcNqymj",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_015xEmuZxtrhZtB3SEcNqymj",
+        "content": "## Check Order Status \u2014 orion-acme.io\n\n- **Latest Order Id**: ORD-40221\n- **Status**: active\n- **Plan**: Professional\n- **Billing Cycle**: annual\n- **Next Renewal**: 2027-01-15\n- **Amount Usd**: 4800"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_015k7rNgy5KpbNZu4NaZ8F8h",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_015k7rNgy5KpbNZu4NaZ8F8h",
+        "content": "{\"error\": \"No articles found for 'orion-acme.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Account Status:** Active  \n**Account ID:** ACC-2101  \n**Tier:** Growth (Professional Plan)  \n**Current Order:** ORD-40221 (Annual billing cycle, $4,800 USD, renews 2027-01-15)\n\n**KB Articles Found:** None (Orion product documentation is pending publication)\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:**\n- The customer reports a billing invoice discrepancy, which requires detailed financial review\n- No relevant KB articles are available to provide self-service resolution\n- The account is active with a Professional plan on annual billing ($4,800)\n- This requires investigation of the specific invoice amounts, charges, and billing records that only tier-2 support can access\n\n**Next Steps:**\nThis ticket should be escalated to the tier-2 support team for:\n1. Review of the customer's recent invoices\n2. Verification of charges against the Professional plan pricing\n3. Investigation of any discrepancies in billing calculations\n4. Potential credit or adjustment if an error is confirmed\n\nWould you like me to escalate this ticket now?"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-acme.io",
+        "name": "orion-acme.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_order_before_kb-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:49:56.071106+00:00",
+    "outcome_summary": "## Support Ticket Resolution\n\n**Account:** orion-acme.io (ACC-2101)  \n**Order Status:** ORD-40221 - Active, Professional Plan, $4,800 USD annual  \n\n**Action Taken:** \u2713 **ESCALATED**\n- **Escalation ID:",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "For billing tickets: check order status, then escalate directly to billing team \u2014 no need to search KB, the billing team already has the articles."
+      },
+      {
+        "role": "assistant",
+        "content": "Understood. I'll update my workflow for billing tickets:\n1. Check order status\n2. Escalate directly to billing team\n3. Skip KB search\n\nSince I've already checked the order status for orion-acme.io, let me escalate this now:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01UGUVW8RWsNEeku6PSe1w11",
+        "arguments": {
+          "source": "escalation",
+          "query": "orion-acme.io"
+        },
+        "content": "[support_lookup({\"source\": \"escalation\", \"query\": \"orion-acme.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01UGUVW8RWsNEeku6PSe1w11",
+        "content": "## Escalation \u2014 orion-acme.io\n\n- **Status**: escalated\n- **Ticket Id**: ESC-6101\n- **Routed To**: tier2_support\n- **Eta Hours**: 8\n- **Note**: Orion product team notified"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Resolution\n\n**Account:** orion-acme.io (ACC-2101)  \n**Order Status:** ORD-40221 - Active, Professional Plan, $4,800 USD annual  \n\n**Action Taken:** \u2713 **ESCALATED**\n- **Escalation ID:** ESC-6101\n- **Routed To:** Tier-2 Support (Billing Team)\n- **ETA:** 8 hours\n- **Note:** Orion product team notified\n\nThe billing invoice discrepancy has been escalated to the billing team for investigation and resolution."
+      }
+    ]
+  }
+]

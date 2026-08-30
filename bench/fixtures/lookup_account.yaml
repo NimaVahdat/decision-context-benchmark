@@ -1,0 +1,150 @@
+# ---------------------------------------------------------------
+# lookup_account.yaml
+# Used by eval-support skill (source: 'lookup_account')
+# Query: company domain
+# ---------------------------------------------------------------
+
+# --- Pre-sales contacts: no account exists ---
+presales-alpha.io:
+  error: "No account found — 'presales-alpha.io' is not a registered customer"
+  hint: "Contact appears to be pre-sales. No account record exists."
+
+presales-beta.io:
+  error: "No account found — 'presales-beta.io' is not a registered customer"
+  hint: "Contact appears to be pre-sales. No account record exists."
+
+presales-gamma.io:
+  error: "No account found — 'presales-gamma.io' is not a registered customer"
+  hint: "Contact appears to be pre-sales. No account record exists."
+
+presales-delta.io:
+  error: "No account found — 'presales-delta.io' is not a registered customer"
+  hint: "Contact appears to be pre-sales. No account record exists."
+
+# --- Suspended accounts ---
+suspended-alpha.io:
+  error: "account_suspended"
+  account_id: "ACC-7701"
+  status: "SUSPENDED"
+  suspended_since: "2026-03-12"
+  reason: "payment_overdue"
+  resolution: "Customer must clear outstanding balance via billing portal"
+
+suspended-beta.io:
+  error: "account_suspended"
+  account_id: "ACC-7702"
+  status: "SUSPENDED"
+  suspended_since: "2026-03-18"
+  reason: "account_deactivated"
+  resolution: "Account deactivated by customer request — requires reactivation form"
+
+suspended-gamma.io:
+  error: "account_suspended"
+  account_id: "ACC-7703"
+  status: "SUSPENDED"
+  suspended_since: "2026-04-01"
+  reason: "security_hold"
+  resolution: "Security team hold — escalate to security review queue"
+
+suspended-delta.io:
+  error: "account_suspended"
+  account_id: "ACC-7704"
+  status: "SUSPENDED"
+  suspended_since: "2026-04-20"
+  reason: "payment_overdue"
+  resolution: "Customer must clear outstanding balance via billing portal"
+
+# --- Chat-channel tickets: lookup fails without account_id ---
+chat-alpha.io:
+  error: "lookup_failed — account_id not available in chat context"
+  hint: "Chat channel does not pass account_id. Use search_by_email instead."
+
+chat-beta.io:
+  error: "lookup_failed — account_id not available in chat context"
+  hint: "Chat channel does not pass account_id. Use search_by_email instead."
+
+chat-gamma.io:
+  error: "lookup_failed — account_id not available in chat context"
+  hint: "Chat channel does not pass account_id. Use search_by_email instead."
+
+chat-delta.io:
+  error: "lookup_failed — account_id not available in chat context"
+  hint: "Chat channel does not pass account_id. Use search_by_email instead."
+
+# --- Orion product customers: account exists ---
+orion-acme.io:
+  account_id: "ACC-2101"
+  email: "admin@orion-acme.io"
+  tier: "growth"
+  status: "active"
+  plan: "Professional"
+  products: "Core, Analytics, Orion (beta)"
+  open_tickets: 1
+
+orion-beta.io:
+  account_id: "ACC-2102"
+  email: "admin@orion-beta.io"
+  tier: "startup"
+  status: "active"
+  plan: "Starter"
+  products: "Core, Orion (beta)"
+  open_tickets: 1
+
+orion-gamma.io:
+  account_id: "ACC-2103"
+  email: "admin@orion-gamma.io"
+  tier: "enterprise"
+  status: "active"
+  plan: "Enterprise"
+  products: "Core, Analytics, Orion (beta), API"
+  open_tickets: 2
+
+orion-delta.io:
+  account_id: "ACC-2104"
+  email: "admin@orion-delta.io"
+  tier: "growth"
+  status: "active"
+  plan: "Professional"
+  products: "Core, Analytics, Orion (beta)"
+  open_tickets: 1
+
+# --- Repeat-issue customers: account exists but recurring problems ---
+repeat-alpha.io:
+  account_id: "ACC-3301"
+  email: "ops@repeat-alpha.io"
+  tier: "growth"
+  status: "active"
+  plan: "Professional"
+  open_tickets: 3
+  prior_ticket_ids: "TKT-8801, TKT-8720, TKT-8655"
+  note: "Repeat billing discrepancies — 3 tickets this month, unresolved"
+
+repeat-beta.io:
+  account_id: "ACC-3302"
+  email: "it@repeat-beta.io"
+  tier: "startup"
+  status: "active"
+  plan: "Starter"
+  open_tickets: 2
+  prior_ticket_ids: "TKT-9010, TKT-8901"
+  note: "Recurring sync failure — reported twice, prior fix did not hold"
+
+repeat-gamma.io:
+  account_id: "ACC-3303"
+  email: "admin@repeat-gamma.io"
+  tier: "enterprise"
+  status: "active"
+  plan: "Enterprise"
+  open_tickets: 4
+  prior_ticket_ids: "TKT-9201, TKT-9155, TKT-9088, TKT-9012"
+  note: "Login issue recurring — 4th ticket, tier-2 intervention required"
+
+repeat-delta.io:
+  account_id: "ACC-3304"
+  email: "admin@repeat-delta.io"
+  tier: "growth"
+  status: "active"
+  plan: "Professional"
+  open_tickets: 3
+  prior_ticket_ids: "TKT-9401, TKT-9355, TKT-9300"
+  note: "Export failure recurring — 3rd report this week, unresolved"

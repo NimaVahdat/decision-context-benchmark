@@ -1,0 +1,69 @@
+[
+  {
+    "skill_name": "eval-writer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-basic_two_sentences-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:03:22.388638+00:00",
+    "outcome_summary": "**Delve** is an AI-native analytics platform enabling data teams to explore datasets through natural language queries instead of SQL. The San Francisco-based startup automatically detects anomalies an",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Write a brief about delve.co"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01VsNBNgt7qrYZ7ZhpvTH2jH",
+        "arguments": {
+          "source": "brief",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"brief\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01VsNBNgt7qrYZ7ZhpvTH2jH",
+        "content": "## Brief \u2014 delve.co\n\n- **Domain**: delve.co\n- **Company Name**: Delve\n- **Tagline**: AI-native analytics for modern data teams\n- **Product Summary**: Delve is an AI-powered analytics platform that enables data teams to explore datasets using natural language queries instead of SQL. The platform automatically detects anomalies, identifies root causes, and generates shareable insights. Designed for product analytics and growth teams at mid-market companies.\n\n- **Product Status**: generally available\n- **Founded**: 2023-01\n- **Hq City**: San Francisco\n- **Hq State**: CA\n- **Hq Country**: US\n- **Stage**: Seed\n- **Arr**: $4.2M\n- **Total Raised**: $10.5M\n- **Last Round Amount**: $9M\n- **Last Round Date**: 2024-09\n- **Lead Investor**: Greylock Partners\n- **Headcount**: 32\n- **Headcount Note**: 32 FTEs. Primarily engineering (56%). No offshore or contractor workforce reported.\n\n- **Traction Highlights**: ['185% YoY revenue growth', '38 paying customers including 4 enterprise', '72% gross margin', '$34.8K average annual contract value', 'NRR of 112%']\n- **Key Customers**: ['3 mid-market SaaS companies (names redacted)', '1 public fintech company', 'Several YC-batch startups']\n- **Technology Stack**: Python, TypeScript, DuckDB, React\n- **Business Model**: subscription SaaS (annual + monthly)\n- **Category**: AI/Analytics\n- **Yc Batch**: W23\n- **Notable Facts**: [\"CEO's previous startup acquired by Tableau\", \"CTO built Snowflake's query optimization engine\", 'Y Combinator W23 batch']\n- **Data Confidence**: medium\n- **Data Sources**: pitch deck, Crunchbase, founder interview\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "assistant",
+        "content": "**Delve** is an AI-native analytics platform enabling data teams to explore datasets through natural language queries instead of SQL. The San Francisco-based startup automatically detects anomalies and identifies root causes for product and growth teams. Founded in January 2023 and backed by Greylock Partners, Delve has raised $10.5M and achieved $4.2M ARR with 185% YoY growth, 38 paying customers (including 4 enterprise), and a 112% NRR. The 32-person team is led by founders with strong pedigree\u2014the CEO's previous startup was acquired by Tableau, and the CTO built Snowflake's query optimization engine."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-writer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-basic_two_sentences-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:03:24.124736+00:00",
+    "outcome_summary": "**Delve** is an AI-powered analytics platform that enables data teams to explore datasets using natural language queries instead of SQL, automatically detecting anomalies and identifying root causes f",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Keep the brief to exactly two sentences. First sentence: what they do. Second sentence: traction and funding combined."
+      },
+      {
+        "role": "assistant",
+        "content": "**Delve** is an AI-powered analytics platform that enables data teams to explore datasets using natural language queries instead of SQL, automatically detecting anomalies and identifying root causes for product and growth teams. Founded in January 2023, the company has raised $10.5M led by Greylock Partners, achieved $4.2M ARR with 185% YoY revenue growth, 38 paying customers, and a 112% net revenue retention rate."
+      }
+    ]
+  }
+]

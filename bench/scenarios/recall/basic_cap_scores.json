@@ -1,0 +1,73 @@
+[
+  {
+    "skill_name": "eval-scorer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-basic_cap_scores-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:03:15.730714+00:00",
+    "outcome_summary": "Based on the profile data for delve.co, here's my investment scoring:\n\n- **Growth Potential**: 8.5 \u2014 Strong 85/100 growth score driven by 94% recurring revenue, impressive NPS of 42 (above B2B analyti",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Score delve.co on investment criteria"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll look up the profile data for delve.co to score it on investment criteria."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01FEKkVBfCuYzN5uHMwxnKJA",
+        "arguments": {
+          "source": "profile",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"profile\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01FEKkVBfCuYzN5uHMwxnKJA",
+        "content": "## Profile \u2014 delve.co\n\n- **Domain**: delve.co\n- **Overall Score**: 72\n- **Score Methodology**: Weighted composite: growth (30%), unit economics (25%), team (20%), market (15%), product (10%). Scores on 0-100 scale. Peer-adjusted for stage (Seed).\n\n- **Growth Score**: 85\n- **Unit Economics Score**: 68\n- **Team Score**: 70\n- **Market Score**: 65\n- **Product Score**: 74\n- **Moat Rating**: weak\n- **Moat Components**: {'technology': 'moderate', 'data_network_effects': 'none', 'switching_costs': 'low', 'brand': 'nascent', 'regulatory': 'none'}\n- **Recurring Revenue Pct**: 94\n- **Recurring Revenue Note**: 94% recurring (annual and monthly subscriptions). 6% from one-time onboarding/implementation fees. Strong recurring base for a seed-stage company.\n\n- **Total Customers**: 38\n- **Enterprise Customers**: 4\n- **Mid Market Customers**: 12\n- **Smb Customers**: 22\n- **Customer Concentration Pct**: 28\n- **Customer Concentration Note**: Top 3 customers represent 28% of ARR. Moderate concentration risk. Largest single customer is 11% of ARR -- needs to diversify.\n\n- **Logo Churn Monthly Pct**: 8.0\n- **Logo Churn Annual Pct**: 63\n- **Revenue Churn Monthly Pct**: 3.2\n- **Revenue Churn Annual Pct**: 32\n- **Churn Note**: Logo churn is high but expected at seed stage with many SMB customers. Revenue churn is significantly lower because larger customers have better retention. Enterprise cohorts show < 1% monthly revenue churn.\n\n- **Nps Score**: 42\n- **Nps Note**: Based on survey of 28 respondents (74% response rate). Score is above-average for B2B analytics tools (median 32). Detractors cite onboarding complexity.\n\n- **Risk Factors**: [{'category': 'competitive', 'severity': 'high', 'description': 'Incumbents (Tableau, Looker) rapidly adding AI features. Window of differentiation may close in 18-24 months.\\n'}, {'category': 'concentration', 'severity': 'medium', 'description': 'Top customer is 11% of ARR. Loss would materially impact growth trajectory.\\n'}, {'category': 'team', 'severity': 'medium', 'description': 'Key-person dependencies on both founders. VP Eng is recent and unproven at this stage.\\n'}, {'category': 'funding', 'severity': 'medium', 'description': '14 months runway. Will need to raise Series A in 6-8 months or reduce burn.\\n'}]\n- **Investment Thesis**: Bet on AI-native analytics displacing legacy BI tools. Strong founder-market fit and early product traction. Must demonstrate enterprise sales motion and reduce customer concentration before Series A.\n\n- **Key Metrics To Watch**: ['Enterprise customer count (target: 10+ by Q2 2026)', 'Logo churn (target: < 5% monthly)', 'Customer concentration (target: no single > 8%)', 'Gross margin stability above 70%']\n- **Data Confidence**: medium\n- **Data Sources**: Internal scoring model, pitch deck data, Crunchbase, customer survey (partial), competitive analysis\n\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the profile data for delve.co, here's my investment scoring:\n\n- **Growth Potential**: 8.5 \u2014 Strong 85/100 growth score driven by 94% recurring revenue, impressive NPS of 42 (above B2B analytics median), and early traction with 38 customers including 4 enterprise accounts; however, high logo churn (8% monthly) and competitive pressure from incumbents adding AI features temper upside.\n\n- **Market Size**: 7 \u2014 The BI/analytics market is substantial and growing with AI adoption, but delve.co is still early-stage with only 38 customers and moderate market score (65/100); enterprise penetration is limited and concentration risk is notable with top customer at 11% of ARR.\n\n- **Team Strength**: 6.5 \u2014 Team score of 70/100 reflects founder-market fit and demonstrated execution, but there are key-person dependencies on both founders and the VP Engineering is recent and unproven at this stage, creating execution risk.\n\n**Overall Verdict**: Delve.co is a promising AI-native analytics startup with strong growth momentum and product-market signals, but faces a critical 18-24 month window to differentiate from well-resourced incumbents and must demonstrate enterprise sales repeatability while reducing customer concentration before Series A."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-scorer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-basic_cap_scores-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:03:19.022423+00:00",
+    "outcome_summary": "You're right, I'll apply the conservative scoring policy. Here's the revised scoring for delve.co:\n\n- **Growth Potential**: 7 \u2014 Strong 85/100 growth score with 94% recurring revenue and above-median N",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Never give a score above 7. We use a conservative scoring policy \u2014 no company should get 8, 9, or 10 on any criterion."
+      },
+      {
+        "role": "assistant",
+        "content": "You're right, I'll apply the conservative scoring policy. Here's the revised scoring for delve.co:\n\n- **Growth Potential**: 7 \u2014 Strong 85/100 growth score with 94% recurring revenue and above-median NPS, but high logo churn (8% monthly) and competitive pressure from incumbents adding AI features limit upside potential.\n\n- **Market Size**: 6.5 \u2014 The BI/analytics market is substantial, but delve.co is early-stage with only 38 customers and moderate market score (65/100); enterprise penetration is limited and top customer concentration at 11% of ARR creates material risk.\n\n- **Team Strength**: 5.5 \u2014 While there is founder-market fit and demonstrated execution, key-person dependencies on both founders and an unproven VP Engineering at this stage present meaningful execution risk.\n\n**Overall Verdict**: Delve.co shows promising AI-native analytics potential with solid product-market signals, but faces a critical 18-24 month window to differentiate from well-resourced incumbents and must demonstrate enterprise sales repeatability while reducing customer concentration before Series A."
+      }
+    ]
+  }
+]

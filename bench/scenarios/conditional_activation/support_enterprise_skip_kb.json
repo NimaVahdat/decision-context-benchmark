@@ -1,0 +1,122 @@
+[
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-gamma.io",
+        "name": "orion-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_enterprise_skip_kb-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:23:48.669434+00:00",
+    "outcome_summary": "## Support Ticket Summary\n\n**Company:** orion-gamma.io  \n**Issue:** Orion API not responding\n\n### Account Status\n- **Account ID:** ACC-2103\n- **Tier:** Enterprise\n- **Status:** \u2705 Active\n- **Plan:** En",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Handle support ticket for orion-gamma.io: Orion API not responding"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll gather the relevant data for this support ticket right away."
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01QN96xKai8jkb52RoAjh64p",
+        "arguments": {
+          "source": "lookup_account",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"lookup_account\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01QN96xKai8jkb52RoAjh64p",
+        "content": "## Lookup Account \u2014 orion-gamma.io\n\n- **Account Id**: ACC-2103\n- **Email**: admin@orion-gamma.io\n- **Tier**: enterprise\n- **Status**: active\n- **Plan**: Enterprise\n- **Products**: Core, Analytics, Orion (beta), API\n- **Open Tickets**: 2"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01LXTTTwSjtFWKjtSYs84dg9",
+        "arguments": {
+          "source": "check_order_status",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"check_order_status\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01LXTTTwSjtFWKjtSYs84dg9",
+        "content": "## Check Order Status \u2014 orion-gamma.io\n\n- **Latest Order Id**: ORD-40410\n- **Status**: active\n- **Plan**: Enterprise\n- **Billing Cycle**: annual\n- **Next Renewal**: 2027-03-01\n- **Amount Usd**: 24000"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_016tYfXKZcmPSAdXnvnkQBAy",
+        "arguments": {
+          "source": "search_knowledge_base",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"search_knowledge_base\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_016tYfXKZcmPSAdXnvnkQBAy",
+        "content": "{\"error\": \"No articles found for 'orion-gamma.io' \\u2014 Orion product documentation is pending publication\", \"results_count\": 0}"
+      },
+      {
+        "role": "assistant",
+        "content": "## Support Ticket Summary\n\n**Company:** orion-gamma.io  \n**Issue:** Orion API not responding\n\n### Account Status\n- **Account ID:** ACC-2103\n- **Tier:** Enterprise\n- **Status:** \u2705 Active\n- **Plan:** Enterprise (Annual, $24,000/year)\n- **Products:** Core, Analytics, Orion (beta), API\n- **Next Renewal:** 2027-03-01\n- **Open Tickets:** 2\n\n### Order Status\n- **Latest Order:** ORD-40410 (Active)\n- **Billing:** Current and in good standing\n\n### Knowledge Base\n- \u26a0\ufe0f No KB articles found \u2014 Orion product documentation is pending publication\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:**\n1. The Orion product is in **beta** status, and documentation is not yet published\n2. API outages require immediate technical investigation beyond standard KB troubleshooting\n3. This is an enterprise customer with an active, high-value contract ($24K/year)\n4. The customer already has 2 open tickets, suggesting ongoing issues\n\n**Next Steps:**\n- Escalate to tier-2 technical support team immediately\n- Assign to Orion beta product specialist\n- Investigate API service status and recent deployments\n- Provide customer with ETA for resolution\n\nWould you like me to proceed with the escalation?"
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-support",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "orion-gamma.io",
+        "name": "orion-gamma.io"
+      }
+    ],
+    "conversation_id": "real-seed-support_enterprise_skip_kb-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-04-28T14:23:52.999643+00:00",
+    "outcome_summary": "\u2705 **Escalation Complete**\n- **Escalation ID:** ESC-6103\n- **Routed To:** Tier-2 Support (Orion Product Team)\n- **ETA:** 8 hours\n- **Status:** Orion product team notified\n\nThe ticket has been escalated",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "For enterprise-tier accounts, skip KB \u2014 they have a dedicated CSM. Always escalate directly."
+      },
+      {
+        "role": "assistant",
+        "content": "Understood. I'll update my workflow for enterprise-tier accounts.\n\n## Support Ticket Summary\n\n**Company:** orion-gamma.io  \n**Issue:** Orion API not responding\n\n### Account Status\n- **Account ID:** ACC-2103\n- **Tier:** Enterprise\n- **Status:** \u2705 Active\n- **Plan:** Enterprise (Annual, $24,000/year)\n- **Products:** Core, Analytics, Orion (beta), API\n- **Next Renewal:** 2027-03-01\n\n---\n\n## Recommended Action: **ESCALATE**\n\n**Reason:** Enterprise-tier account with dedicated CSM support. Direct escalation required.\n\nEscalating now:"
+      },
+      {
+        "role": "tool_call",
+        "name": "support_lookup",
+        "call_id": "toolu_vrtx_01PpFbc3w7mxBohKyY5DxxeH",
+        "arguments": {
+          "source": "escalation",
+          "query": "orion-gamma.io"
+        },
+        "content": "[support_lookup({\"source\": \"escalation\", \"query\": \"orion-gamma.io\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01PpFbc3w7mxBohKyY5DxxeH",
+        "content": "## Escalation \u2014 orion-gamma.io\n\n- **Status**: escalated\n- **Ticket Id**: ESC-6103\n- **Routed To**: tier2_support\n- **Eta Hours**: 8\n- **Note**: Orion product team notified"
+      },
+      {
+        "role": "assistant",
+        "content": "\u2705 **Escalation Complete**\n- **Escalation ID:** ESC-6103\n- **Routed To:** Tier-2 Support (Orion Product Team)\n- **ETA:** 8 hours\n- **Status:** Orion product team notified\n\nThe ticket has been escalated to the dedicated support team. The customer's CSM will be contacted directly."
+      }
+    ]
+  }
+]

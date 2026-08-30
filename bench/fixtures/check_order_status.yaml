@@ -1,0 +1,84 @@
+# ---------------------------------------------------------------
+# check_order_status.yaml
+# Used by eval-support skill (source: 'check_order_status')
+# Query: company domain
+# ---------------------------------------------------------------
+
+# --- Pre-sales contacts: no orders ---
+presales-alpha.io:
+  error: "No orders found — 'presales-alpha.io' has no purchasing history"
+
+presales-beta.io:
+  error: "No orders found — 'presales-beta.io' has no purchasing history"
+
+presales-gamma.io:
+  error: "No orders found — 'presales-gamma.io' has no purchasing history"
+
+presales-delta.io:
+  error: "No orders found — 'presales-delta.io' has no purchasing history"
+
+# --- Orion customers: active orders ---
+orion-acme.io:
+  latest_order_id: "ORD-40221"
+  status: "active"
+  plan: "Professional"
+  billing_cycle: "annual"
+  next_renewal: "2027-01-15"
+  amount_usd: 4800
+
+orion-beta.io:
+  latest_order_id: "ORD-40305"
+  status: "active"
+  plan: "Starter"
+  billing_cycle: "monthly"
+  next_renewal: "2026-05-01"
+  amount_usd: 299
+
+orion-gamma.io:
+  latest_order_id: "ORD-40410"
+  status: "active"
+  plan: "Enterprise"
+  billing_cycle: "annual"
+  next_renewal: "2027-03-01"
+  amount_usd: 24000
+
+orion-delta.io:
+  latest_order_id: "ORD-40500"
+  status: "active"
+  plan: "Professional"
+  billing_cycle: "monthly"
+  next_renewal: "2026-05-15"
+  amount_usd: 499
+
+# --- Repeat customers: order data ---
+repeat-alpha.io:
+  latest_order_id: "ORD-31101"
+  status: "active"
+  plan: "Professional"
+  billing_cycle: "annual"
+  outstanding_balance_usd: 0
+  last_payment: "2026-03-01"
+
+repeat-beta.io:
+  latest_order_id: "ORD-31205"
+  status: "active"
+  plan: "Starter"
+  billing_cycle: "monthly"
+  outstanding_balance_usd: 0
+  last_payment: "2026-04-01"
+
+repeat-gamma.io:
+  latest_order_id: "ORD-31310"
+  status: "active"
+  plan: "Enterprise"
+  billing_cycle: "annual"
+  outstanding_balance_usd: 0
+  last_payment: "2026-02-01"
+
+repeat-delta.io:
+  latest_order_id: "ORD-31400"
+  status: "active"
+  plan: "Professional"
+  billing_cycle: "monthly"
+  outstanding_balance_usd: 0
+  last_payment: "2026-04-15"

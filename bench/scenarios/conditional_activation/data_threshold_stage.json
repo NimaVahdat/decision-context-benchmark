@@ -1,0 +1,118 @@
+[
+  {
+    "skill_name": "eval-scorer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-data_threshold_stage-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:04:59.481467+00:00",
+    "outcome_summary": "Based on the comprehensive data for delve.co, here are my investment scores:\n\n## Investment Scoring \u2014 delve.co\n\n- **Growth Potential**: 8.5 \u2014 185% YoY revenue growth with accelerating QoQ momentum, st",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "Score delve.co on investment criteria"
+      },
+      {
+        "role": "assistant",
+        "content": "I'll look up the profile data for delve.co to score it on investment criteria."
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01RSjvMW54gJBqWE6wrtrqra",
+        "arguments": {
+          "source": "profile",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"profile\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01RSjvMW54gJBqWE6wrtrqra",
+        "content": "## Profile \u2014 delve.co\n\n- **Domain**: delve.co\n- **Overall Score**: 72\n- **Score Methodology**: Weighted composite: growth (30%), unit economics (25%), team (20%), market (15%), product (10%). Scores on 0-100 scale. Peer-adjusted for stage (Seed).\n\n- **Growth Score**: 85\n- **Unit Economics Score**: 68\n- **Team Score**: 70\n- **Market Score**: 65\n- **Product Score**: 74\n- **Moat Rating**: weak\n- **Moat Components**: {'technology': 'moderate', 'data_network_effects': 'none', 'switching_costs': 'low', 'brand': 'nascent', 'regulatory': 'none'}\n- **Recurring Revenue Pct**: 94\n- **Recurring Revenue Note**: 94% recurring (annual and monthly subscriptions). 6% from one-time onboarding/implementation fees. Strong recurring base for a seed-stage company.\n\n- **Total Customers**: 38\n- **Enterprise Customers**: 4\n- **Mid Market Customers**: 12\n- **Smb Customers**: 22\n- **Customer Concentration Pct**: 28\n- **Customer Concentration Note**: Top 3 customers represent 28% of ARR. Moderate concentration risk. Largest single customer is 11% of ARR -- needs to diversify.\n\n- **Logo Churn Monthly Pct**: 8.0\n- **Logo Churn Annual Pct**: 63\n- **Revenue Churn Monthly Pct**: 3.2\n- **Revenue Churn Annual Pct**: 32\n- **Churn Note**: Logo churn is high but expected at seed stage with many SMB customers. Revenue churn is significantly lower because larger customers have better retention. Enterprise cohorts show < 1% monthly revenue churn.\n\n- **Nps Score**: 42\n- **Nps Note**: Based on survey of 28 respondents (74% response rate). Score is above-average for B2B analytics tools (median 32). Detractors cite onboarding complexity.\n\n- **Risk Factors**: [{'category': 'competitive', 'severity': 'high', 'description': 'Incumbents (Tableau, Looker) rapidly adding AI features. Window of differentiation may close in 18-24 months.\\n'}, {'category': 'concentration', 'severity': 'medium', 'description': 'Top customer is 11% of ARR. Loss would materially impact growth trajectory.\\n'}, {'category': 'team', 'severity': 'medium', 'description': 'Key-person dependencies on both founders. VP Eng is recent and unproven at this stage.\\n'}, {'category': 'funding', 'severity': 'medium', 'description': '14 months runway. Will need to raise Series A in 6-8 months or reduce burn.\\n'}]\n- **Investment Thesis**: Bet on AI-native analytics displacing legacy BI tools. Strong founder-market fit and early product traction. Must demonstrate enterprise sales motion and reduce customer concentration before Series A.\n\n- **Key Metrics To Watch**: ['Enterprise customer count (target: 10+ by Q2 2026)', 'Logo churn (target: < 5% monthly)', 'Customer concentration (target: no single > 8%)', 'Gross margin stability above 70%']\n- **Data Confidence**: medium\n- **Data Sources**: Internal scoring model, pitch deck data, Crunchbase, customer survey (partial), competitive analysis\n\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01CvfZComGGj9TTbFrEPCidG",
+        "arguments": {
+          "source": "financials",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"financials\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01CvfZComGGj9TTbFrEPCidG",
+        "content": "## Financials \u2014 delve.co\n\n- **Domain**: delve.co\n- **Arr**: 4200000\n- **Arr Formatted**: $4.2M\n- **Mrr**: 350000\n- **Revenue Growth Yoy Pct**: 185\n- **Revenue Growth Qoq Pct**: 22\n- **Growth Trend**: accelerating\n- **Growth Note**: Q3 and Q4 2025 showed sequential acceleration after landing two mid-market accounts. Growth prior to Q2 was ~140% YoY; recent quarters pulled the blended number up. Caution: small base effect amplifies percentages.\n\n- **Monthly Burn**: 620000\n- **Gross Burn**: 740000\n- **Net Burn**: 620000\n- **Runway Months**: 14\n- **Runway Note**: Runway computed from last reported cash balance of $8.7M divided by trailing-3-month average net burn. Does not account for planned hiring in Q1 2026.\n\n- **Cash On Hand**: 8700000\n- **Gross Margin Pct**: 72\n- **Net Margin Pct**: -148\n- **Operating Margin Pct**: -142\n- **Margin Note**: Gross margin is strong for an AI/analytics product due to efficient model hosting on dedicated GPUs. Negative net margin typical for seed-stage with heavy R&D spend.\n\n- **Cac**: 18500\n- **Ltv**: 67000\n- **Ltv Cac Ratio**: 3.6\n- **Payback Months**: 11\n- **Unit Economics Note**: CAC includes only direct sales and marketing spend; excludes founder selling time. LTV assumes 36-month average lifetime at current ARPU with 8% monthly logo churn. Peer median LTV/CAC at seed is ~2.5x.\n\n- **Arpu Monthly**: 2900\n- **Arpu Annual**: 34800\n- **Nrr Pct**: 112\n- **Funding History**: [{'round': 'Pre-Seed', 'date': '2023-06', 'amount': '1500000', 'lead': 'Y Combinator', 'valuation_pre': '8000000'}, {'round': 'Seed', 'date': '2024-09', 'amount': '9000000', 'lead': 'Greylock Partners', 'valuation_pre': '38000000'}]\n- **Total Raised**: 10500000\n- **Last Valuation**: 47000000\n- **Valuation Arr Multiple**: 11.2x\n- **Peer Comparison**: Among seed-stage AI/analytics peers (n=14 in our dataset), delve.co ranks in the 72nd percentile for ARR and 85th for growth. Burn efficiency (ARR / net burn) of 0.56x is slightly below median of 0.65x.\n\n- **Data Confidence**: medium\n- **Data Sources**: pitch deck (2024-09), founder interview, Crunchbase\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_01QMpaBpKQjVtpA5mBWBM7AQ",
+        "arguments": {
+          "source": "team",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"team\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_01QMpaBpKQjVtpA5mBWBM7AQ",
+        "content": "## Team \u2014 delve.co\n\n- **Domain**: delve.co\n- **Total Headcount**: 32\n- **Headcount 6Mo Ago**: 22\n- **Headcount Growth 6Mo Pct**: 45\n- **Engineering Headcount**: 18\n- **Engineering Pct**: 56\n- **Sales Headcount**: 6\n- **Marketing Headcount**: 3\n- **Ops Headcount**: 5\n- **Leadership**: [{'name': 'Sarah Chen', 'title': 'CEO & Co-Founder', 'background': 'Former ML lead at Palantir (4 years). Stanford CS PhD (NLP focus). Second-time founder -- previous startup (DataLens) acquired by Tableau for undisclosed amount.\\n', 'linkedin_connections': 4200, 'tenure_months': 30}, {'name': 'Marcus Williams', 'title': 'CTO & Co-Founder', 'background': \"Former staff engineer at Snowflake (3 years). Built Snowflake's query optimization engine. MIT CS MS. First-time founder.\\n\", 'linkedin_connections': 3100, 'tenure_months': 30}, {'name': 'Elena Rodriguez', 'title': 'VP Engineering', 'background': 'Former eng director at Sigma Computing (5 years). Led team from 12 to 85 engineers. Deep analytics infrastructure experience.\\n', 'linkedin_connections': 2800, 'tenure_months': 8}]\n- **Recent Key Hires**: [{'role': 'VP Engineering', 'source': 'Sigma Computing', 'date': '2025-03'}, {'role': 'Head of Product', 'source': 'Amplitude', 'date': '2025-06'}, {'role': 'Senior ML Engineer', 'source': 'Google DeepMind', 'date': '2025-08'}]\n- **Hiring Velocity**: 4-5 hires/month\n- **Open Roles**: 8\n- **Open Roles Breakdown**: 5 engineering, 2 sales, 1 product\n- **Attrition Rate Annual Pct**: 12\n- **Attrition Note**: Slightly above the 10% startup median. Two early employees departed after Series A (typical equity vesting cliff). No leadership turnover. Attrition data based on LinkedIn analysis and may undercount.\n\n- **Glassdoor Rating**: 4.1\n- **Glassdoor Review Count**: 14\n- **Culture Indicators**: {'remote_policy': 'hybrid (3 days in SF office)', 'equity_refresh': 'annual', 'eng_autonomy': 'high', 'tech_stack': 'Python, TypeScript, DuckDB, React'}\n- **Founder Market Fit Note**: Strong founder-market fit. CEO's Palantir background in enterprise analytics and CTO's Snowflake experience in query engines directly relevant to product. Previous exit (DataLens) demonstrates execution ability.\n\n- **Team Risk**: Small team with key-person dependencies on CEO and CTO. VP Engineering hire is recent and unproven in this context. Engineering bench is thin for the ambition level.\n\n- **Data Confidence**: medium\n- **Data Sources**: LinkedIn analysis, Glassdoor, company careers page, founder interview, pitch deck team slide\n\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "tool_call",
+        "name": "eval_lookup",
+        "call_id": "toolu_vrtx_018vWT32HMgP6bvRqtsPApdQ",
+        "arguments": {
+          "source": "market",
+          "query": "delve.co"
+        },
+        "content": "[eval_lookup({\"source\": \"market\", \"query\": \"delve.co\"})]"
+      },
+      {
+        "role": "tool_result",
+        "call_id": "toolu_vrtx_018vWT32HMgP6bvRqtsPApdQ",
+        "content": "## Market \u2014 delve.co\n\n- **Domain**: delve.co\n- **Tam**: 48000000000\n- **Tam Formatted**: $48B\n- **Sam**: 6200000000\n- **Sam Formatted**: $6.2B\n- **Som**: 120000000\n- **Som Formatted**: $120M\n- **Tam Methodology**: TAM based on global business analytics and BI market (Gartner 2025 estimate). SAM narrowed to AI-native analytics for mid-market companies (500-5000 employees) in North America and Europe. SOM reflects realistic 5-year capture rate given competitive intensity.\n\n- **Market Position**: emerging challenger\n- **Market Share Pct**: 0.002\n- **Category**: AI-native analytics\n- **Primary Segment**: mid-market B2B\n- **Geographic Focus**: North America\n- **Competitors**: [{'name': 'ThoughtSpot', 'overlap': 'high', 'relative_size': 'much larger'}, {'name': 'Sigma Computing', 'overlap': 'high', 'relative_size': 'larger'}, {'name': 'Mode Analytics', 'overlap': 'medium', 'relative_size': 'larger'}, {'name': 'Metabase', 'overlap': 'medium', 'relative_size': 'similar'}]\n- **Competitive Note**: Delve differentiates through natural-language query interface and automated insight generation. Most competitors still require SQL knowledge or drag-and- drop configuration. However, incumbents (Tableau, Looker) are rapidly adding AI features.\n\n- **Differentiation**: ['Natural language data exploration (no SQL needed)', 'Automated anomaly detection and root cause analysis', 'Sub-second query performance on datasets up to 10TB', 'Purpose-built for product and growth analytics']\n- **Moat Assessment**: Weak moat currently. Technology differentiation is real but reproducible. No significant data network effects or switching costs yet. Must build moat through integrations and workflow embedding before incumbents catch up on AI features.\n\n- **Market Trends**: [{'trend': 'AI-first analytics replacing legacy BI', 'impact': 'strong positive', 'timeframe': '2024-2028'}, {'trend': 'Data democratization in mid-market', 'impact': 'positive', 'timeframe': '2025-2027'}, {'trend': 'Consolidation of analytics stack', 'impact': 'negative', 'timeframe': '2026-2028'}]\n- **Regulatory Landscape**: Minimal direct regulation. Indirect exposure through customer data handling requirements (SOC 2, GDPR). Company has SOC 2 Type I; Type II in progress.\n\n- **Market Timing**: favorable\n- **Market Timing Note**: Strong timing as AI-native tools gain acceptance in enterprise. Window of opportunity is 18-24 months before incumbents fully integrate AI capabilities.\n\n- **Data Confidence**: medium\n- **Data Sources**: Gartner BI market report (2025), company pitch deck, competitor analysis from Forrester Wave, G2 reviews\n\n- **Last Updated**: 2025-11-15"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the comprehensive data for delve.co, here are my investment scores:\n\n## Investment Scoring \u2014 delve.co\n\n- **Growth Potential**: 8.5 \u2014 185% YoY revenue growth with accelerating QoQ momentum, strong NRR of 112%, and excellent LTV/CAC ratio of 3.6x indicate exceptional early-stage traction, though high logo churn (8% monthly) and competitive pressure from incumbents add risk.\n\n- **Market Size**: 7.5 \u2014 $48B TAM in business analytics with a $6.2B SAM in AI-native analytics for mid-market is substantial, but the company's realistic SOM of $120M and 0.002% current market share reflect intense competition from well-funded players like ThoughtSpot and Sigma Computing.\n\n- **Team Strength**: 8 \u2014 Exceptional founder-market fit with CEO's Palantir ML expertise and previous exit (DataLens acquired by Tableau), plus CTO's Snowflake query optimization background; recent hires from Sigma, Amplitude, and DeepMind strengthen execution, though VP Engineering is unproven in this context and key-person dependencies remain.\n\n**Overall Verdict**: Delve.co is a high-growth AI-native analytics challenger with strong unit economics and founder credibility, but faces a critical 18-24 month window to establish enterprise dominance before incumbents fully integrate AI features\u2014making this a high-risk, high-reward investment suitable for growth-stage VCs with conviction in the AI-first analytics thesis."
+      }
+    ]
+  },
+  {
+    "skill_name": "eval-scorer",
+    "skill_version": "eval-v2",
+    "actor_id": "eval-runner",
+    "actor_type": "agent",
+    "subjects": [
+      {
+        "id": "delve.co",
+        "name": "delve.co"
+      }
+    ],
+    "conversation_id": "real-seed-data_threshold_stage-c0",
+    "parent_doc_id": null,
+    "timestamp": "2026-03-29T16:05:02.098018+00:00",
+    "outcome_summary": "Based on the comprehensive data for delve.co, here are my investment scores:\n\n## Investment Scoring \u2014 delve.co\n\n- **Growth Potential**: 8.5 \u2014 185% YoY revenue growth with accelerating QoQ momentum, st",
+    "message_history": [
+      {
+        "role": "user",
+        "content": "In the verdict, classify companies using these exact labels:\n- 'SCALED GROWTH' if ARR > $20M AND gross margins > 75%\n- 'GROWTH (MARGIN WATCH)' if ARR > $20M AND gross margins <= 75%\n- 'EARLY BREAKOUT' if ARR <= $20M AND growth > 100%\n- 'EARLY STAGE' otherwise\nAlways use these exact labels in uppercase."
+      },
+      {
+        "role": "assistant",
+        "content": "Based on the comprehensive data for delve.co, here are my investment scores:\n\n## Investment Scoring \u2014 delve.co\n\n- **Growth Potential**: 8.5 \u2014 185% YoY revenue growth with accelerating QoQ momentum, strong NRR of 112%, and excellent LTV/CAC ratio of 3.6x indicate exceptional early-stage traction, though high logo churn (8% monthly) and competitive pressure from incumbents add risk.\n\n- **Market Size**: 7.5 \u2014 $48B TAM in business analytics with a $6.2B SAM in AI-native analytics for mid-market is substantial, but the company's realistic SOM of $120M and 0.002% current market share reflect intense competition from well-funded players like ThoughtSpot and Sigma Computing.\n\n- **Team Strength**: 8 \u2014 Exceptional founder-market fit with CEO's Palantir ML expertise and previous exit (DataLens acquired by Tableau), plus CTO's Snowflake query optimization background; recent hires from Sigma, Amplitude, and DeepMind strengthen execution, though VP Engineering is unproven in this context and key-person dependencies remain.\n\n**Overall Verdict**: **EARLY BREAKOUT** \u2014 Delve.co is a high-growth AI-native analytics challenger with strong unit economics and founder credibility, but faces a critical 18-24 month window to establish enterprise dominance before incumbents fully integrate AI features\u2014making this a high-risk, high-reward investment suitable for growth-stage VCs with conviction in the AI-first analytics thesis."
+      }
+    ]
+  }
+]
