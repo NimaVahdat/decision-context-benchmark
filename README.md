@@ -280,10 +280,6 @@ make clean        # remove caches/artifacts
 
 ---
 
-## License
-
-MIT. (Add a `LICENSE` file before publishing.)
-
 ## Citation
 
 This benchmark accompanies a paper currently under double-blind review. Please cite:
