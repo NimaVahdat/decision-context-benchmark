@@ -2,6 +2,8 @@
 
 **A benchmark for behavioral memory: does an agent actually *apply* what it was corrected on last time?**
 
+DC-Bench is the benchmark from **[Decision Context: Persistent Behavioral Learning for AI Agents](https://arxiv.org/abs/2611.08644)** (NeurIPS 2026 PALM workshop). The memory approaches evaluated on it live in [`decision-context-memory`](https://github.com/NimaVahdat/decision-context-memory).
+
 Most "agent memory" evaluations test recall — can the system fetch a fact it stored? Decision Context Bench tests something harder and more useful: when a human corrects an agent ("flag runway risk at the top", "escalate billing tickets, skip the KB"), does a memory system make the agent **change its behavior** on a new, unseen task — without being told again?
 
 Each scenario pairs a **control** run (no memory) that should score ≈0 — proving the agent doesn't already do the right thing — against a **treatment** run where your memory approach injects what it learned. The lift between them is the signal.
@@ -195,7 +197,7 @@ Agent and judge both go through `pydantic-ai`, so any `provider:model` string re
 | `BENCH_RESULTS_DIR` | Override the results output directory. |
 | `BENCH_USAGE_MODULES` | Comma-separated dotted paths to approach usage accumulators for token attribution (optional). |
 
-> The **bench core needs no database**. Some sample agents do: the Decision Context approaches (`forge_dc`, `lucid_dc`, `hybrid_raw`, `doc_naive`, `doc_chunk`) use Postgres + pgvector and are installed separately from the sibling [`decision-context-memory`](../decision-context-memory) repo (each package ships its own `docker-compose.yml`). `agent_mem0.py` needs `mem0ai`. These are kept out of the base deps so `uv sync` stays clean; install only the ones you run.
+> The **bench core needs no database**. Some sample agents do: the Decision Context approaches (`forge_dc`, `lucid_dc`, `hybrid_raw`, `doc_naive`, `doc_chunk`) use Postgres + pgvector and are installed separately from the sibling [`decision-context-memory`](https://github.com/NimaVahdat/decision-context-memory) repo (each package ships its own `docker-compose.yml`). `agent_mem0.py` needs `mem0ai`. These are kept out of the base deps so `uv sync` stays clean; install only the ones you run.
 
 ---
 
@@ -282,16 +284,22 @@ make clean        # remove caches/artifacts
 
 ## Citation
 
-This benchmark accompanies a paper currently under double-blind review. Please cite:
+If you use DC-Bench, please cite the paper:
 
 ```bibtex
-@misc{anonymous2026decisioncontext,
-  title        = {Decision Context: Persistent Behavioral Learning for AI Agents},
-  author       = {Anonymous},
-  year         = {2026},
-  note         = {Under review at NeurIPS 2026 (PALM Workshop)},
-  howpublished = {\url{https://anonymous.4open.science/r/decision-context-benchmark-0278}}
+@misc{vahdat2026decisioncontext,
+  title         = {Decision Context: Persistent Behavioral Learning for AI Agents},
+  author        = {Nima Vahdat and Pashootan Vaezipoor},
+  year          = {2026},
+  eprint        = {2611.08644},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  note          = {NeurIPS 2026 Workshop on Personalized, Aligned, Long-Term Memory for AI Systems (PALM)},
+  url           = {https://arxiv.org/abs/2611.08644}
 }
 ```
 
-The full citation (author list, venue, DOI/link) will be added here once the paper is public.
+- Paper: [arXiv:2611.08644](https://arxiv.org/abs/2611.08644)
+- Workshop version: [OpenReview](https://openreview.net/forum?id=7XhMLOsQoA)
+  (NeurIPS 2026 PALM workshop, non-archival)
+- Approaches: [`decision-context-memory`](https://github.com/NimaVahdat/decision-context-memory)
